@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/itjfn6oc46op/public_html/rxmedicalweb.com
+    - /bin/cp -R index.html $DEPLOYPATH/
