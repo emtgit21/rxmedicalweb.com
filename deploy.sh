@@ -19,6 +19,6 @@ while IFS= read -r f; do
 done < <(git ls-files | grep -vE '^(\.cpanel\.yml|README\.md|deploy\.sh|\.github/)' | grep -v '/')
 echo "Deploying ${DOMAIN} -> ${DEST}"
 curl -sS -H "Authorization: cpanel ${CPANEL_USER}:${CPANEL_TOKEN}" \
-  "https://${CPANEL_HOST}:2083/execute/Fileman/upload_files?dir=${DEST}" "${args[@]}"
+  "https://${CPANEL_HOST}:2083/execute/Fileman/upload_files?overwrite=1&dir=${DEST}" "${args[@]}"
 echo
 echo "Done: https://${DOMAIN}/"
