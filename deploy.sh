@@ -18,7 +18,7 @@ API="https://${CPANEL_HOST}:2083/execute"
 
 urlenc() { python3 -c 'import urllib.parse,sys;print(urllib.parse.quote(sys.argv[1]))' "$1"; }
 
-FILES=$(git ls-files | grep -vE '^(\.cpanel\.yml|README\.md|deploy\.sh|\.gitignore|\.github/)')
+FILES=$(git ls-files | grep -vE '^(\.cpanel\.yml|README\.md|deploy\.sh|\.gitignore|\.github/|src/)')
 DIRS=$(echo "$FILES" | xargs -n1 dirname | sort -u | grep -v '^\.$' || true)
 
 # ensure remote directories exist (segment by segment)

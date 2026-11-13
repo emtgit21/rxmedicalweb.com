@@ -1,5 +1,6 @@
----
 deployment:
   tasks:
     - export DEPLOYPATH=/home/itjfn6oc46op/public_html/rxmedicalweb.com
-    - /bin/cp -R index.html $DEPLOYPATH/
+    - /bin/cp -R index.html sitemap.xml about contact-us dental-website-design medical-internet-marketing medical-website-design portfolio service assets $DEPLOYPATH/
+    - /bin/mkdir -p $DEPLOYPATH/wp-content
+    - /bin/cp -R wp-content/uploads $DEPLOYPATH/wp-content/
