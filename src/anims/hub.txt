@@ -1,0 +1,1 @@
+Four existing practice tools, EMR, Scheduler, CRM and Payments, connect one by one through an API and webhooks hub to our Website, App and AI agent, ending with one view of every patient.

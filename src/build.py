@@ -225,6 +225,7 @@ def page(path, title, desc, body, extra_head="", og_img="/assets/img/hero-clinic
 </main>
 {footer()}
 <script src="/assets/site.js?v={ver("assets/site.js")}" defer></script>
+<script src="/assets/chat.js?v={ver("assets/chat.js")}" defer></script>
 </body>
 </html>
 """
@@ -857,6 +858,34 @@ def build_articles():
                 f'<meta name="robots" content="noindex"></head><body><p><a href="{target}">Medical website design</a></p></body></html>\n')
 
 
+def build_chat_index():
+    """Knowledge for the site assistant: every answer is text that already exists on the site."""
+    docs = []
+    for s in SERVICES:
+        x = EXPLAIN.get(s["slug"], {})
+        kw = " ".join([s["name"], s["h1"], s["blurb"], s["lead"]] + [d["t"] for d in x.get("deliverables", [])]
+                      + [t["t"] for t in x.get("tools", [])] + [g["t"] for g in x.get("glossary", [])])
+        docs.append({"t": s["name"], "u": svc_url(s), "k": kw, "a": x.get("plain") or s["lead"], "s": 1})
+        for q in FAQS.get(s["slug"], []):
+            docs.append({"t": s["name"], "u": svc_url(s), "q": q["q"], "a": q["a"]})
+    groups = [{"g": g, "items": [{"t": s["name"], "u": svc_url(s)} for s in SERVICES if s["group"] == i]} for i, (g, _) in enumerate(GROUPS)]
+    general = [
+        {"t": "About Rx Medical Web", "u": "/about/", "q": "Who are you? What is Rx Medical Web? Tell me about your company agency team experience",
+         "a": "Rx Medical Web is a family owned, physician owned marketing agency in Fort Lauderdale. Medical marketing is all we do: since 2008 we have worked with more than 400 physicians and dentists, with an in-house team and a physician advisory board."},
+        {"t": "Empire Medical Training", "u": "/about/", "q": "Empire Medical Training partner partnership relationship courses trained",
+         "a": "We are the strategic marketing partner of Empire Medical Training and have marketed its courses for more than fifteen years. If you trained there and are adding a new procedure, we already know how to launch it."},
+        {"t": "How we use AI", "u": "/about/", "q": "Do you use AI artificial intelligence technology ChatGPT how",
+         "a": "We use the latest AI technology across our work: research, design, content drafts, video, call analysis and the AI agents we set up for practices. Because this is medicine, our staff and physician advisors review what AI produces before it is published."},
+        {"t": "Our work", "u": "/portfolio/", "q": "portfolio examples work clients sites you built case studies",
+         "a": "Our portfolio shows what we build and run for Empire Medical Training and its family of brands: the main website, the member portal, the iPhone and Android app, Empire On-Demand, AAOPM, Empire Verified and the provider locator."},
+        {"t": "Specialties", "u": "/", "q": "Which specialties do you work with? dentist dermatologist plastic surgeon med spa chiropractor aesthetics pain management",
+         "a": "We work only with medical practices: aesthetics, dermatology, plastic surgery, med spas, dentistry, gynecology, pain management, cardiology, chiropractic, family practice, weight loss and anti-aging medicine, among others."},
+    ]
+    data = {"docs": docs + general, "groups": groups, "phone": PHONE, "tel": PHONE_HREF, "email": EMAIL}
+    with open(os.path.join(ROOT, "assets", "chat-index.json"), "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, separators=(",", ":"))
+
+
 def build_sitemap():
     today = datetime.date.today().isoformat()
     urls = "".join(f"<url><loc>{SITE}{p}</loc><lastmod>{today}</lastmod></url>\n" for p in BUILT)
@@ -872,6 +901,7 @@ if __name__ == "__main__":
     build_contact()
     build_articles()
     build_404()
+    build_chat_index()
     build_sitemap()
     build_gallery()
     print(f"built {len(BUILT)} pages")
