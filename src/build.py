@@ -43,6 +43,31 @@ except FileNotFoundError:
     EXPLAIN = {}
 
 
+import hashlib
+import re as _re
+
+
+def ver(rel):
+    """Short content hash, so browsers can cache assets for a long time."""
+    return hashlib.md5(open(os.path.join(ROOT, rel), "rb").read()).hexdigest()[:8]
+
+
+def _minify(css):
+    css = _re.sub(r"/\*.*?\*/", "", css, flags=_re.S)
+    return _re.sub(r"\s+", " ", css).strip()
+
+
+FONT_CSS = _minify(open(os.path.join(ROOT, "assets", "fonts", "fonts.css"), encoding="utf-8").read())
+
+
+def anim_css():
+    """Inline the CSS of the custom graphics used on this page: one request less per graphic."""
+    keys = list(dict.fromkeys(PAGE_CSS))
+    if not keys:
+        return ""
+    return "<style>" + " ".join(_minify(open(os.path.join(ROOT, "assets", "anim", k + ".css"), encoding="utf-8").read()) for k in keys) + "</style>\n"
+
+
 def has_anim(key):
     return bool(key) and os.path.exists(os.path.join(ANIM_DIR, key + ".html"))
 
@@ -187,11 +212,11 @@ def page(path, title, desc, body, extra_head="", og_img="/assets/img/hero-clinic
 <meta property="og:image" content="{SITE}{og_img}">
 <meta name="theme-color" content="#0b2f38">
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/site.css">
-{"".join(f'<link rel="stylesheet" href="/assets/anim/{k}.css">' + chr(10) for k in dict.fromkeys(PAGE_CSS))}<script>document.documentElement.className='js'</script>
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="/assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>{FONT_CSS}</style>
+<link rel="stylesheet" href="/assets/site.css?v={ver("assets/site.css")}">
+{anim_css()}<script>document.documentElement.className='js'</script>
 {extra_head}</head>
 <body>
 {header(path)}
@@ -199,7 +224,7 @@ def page(path, title, desc, body, extra_head="", og_img="/assets/img/hero-clinic
 {body}
 </main>
 {footer()}
-<script src="/assets/site.js" defer></script>
+<script src="/assets/site.js?v={ver("assets/site.js")}" defer></script>
 </body>
 </html>
 """
@@ -278,7 +303,7 @@ def anim(spec, caption=""):
 
 # ---------------------------------------------------------------- pieces
 def who(t):
-    return (f'<div class="who"><img src="{UP}{t["img"]}" width="76" height="76" alt="" loading="lazy">'
+    return (f'<div class="who"><img src="{UP}{t["img"]}" width="76" height="76" alt="{e(t["name"])}" loading="lazy">'
             f'<div><b>{e(t["name"])}</b><span>{e(t["role"])}</span></div></div>')
 
 
@@ -558,8 +583,8 @@ def build_home():
     ld = """<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Rx Medical Web","url":"https://rxmedicalweb.com/","logo":"https://rxmedicalweb.com/wp-content/uploads/mainlogo.png","image":"https://rxmedicalweb.com/assets/img/hero-clinic.jpg","description":"Marketing agency dedicated to medical presence and marketing: websites, SEO, advertising, social media and AI agents for medical practices.","telephone":"+1-888-599-4548","email":"support@rxmedicalweb.com","foundingDate":"2008","address":{"@type":"PostalAddress","streetAddress":"2720 E. Oakland Park Blvd, Suite 103","addressLocality":"Fort Lauderdale","addressRegion":"FL","postalCode":"33306","addressCountry":"US"},"openingHours":"Mo-Fr 09:00-18:00","sameAs":["https://www.linkedin.com/company/rx-medical-web","https://www.facebook.com/rxmedicalweb/"]}</script>
 """
     page("/", "Rx Medical Web | Medical website design and marketing agency",
-         "Rx Medical Web is the marketing agency dedicated to medical practices: websites, SEO, ads, social media, AI agents and more. Strategic partner of Empire Medical Training.",
-         body, extra_head=ld)
+         "The marketing agency for medical practices: websites, SEO, ads, social media and AI agents. Strategic partner of Empire Medical Training.",
+         body, extra_head=ld + '<link rel="preload" as="image" href="/assets/img/hero-clinic.jpg" fetchpriority="high">\n')
 
 
 # ---------------------------------------------------------------- services
