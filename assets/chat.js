@@ -193,7 +193,7 @@
     '<header><div><b>Ask Rx Medical Web</b><small>Automated answers from this website · English o español</small></div><button class="rxchat-close" type="button" aria-label="Close the assistant">×</button></header>' +
     '<div class="rxchat-log" role="log" aria-live="polite"></div>' +
     '<form class="rxchat-form"><label class="vh" for="rxchat-input">Your question</label><input id="rxchat-input" type="text" autocomplete="off" placeholder="Ask about our services / Pregunta aquí" maxlength="200"><button type="submit">Send</button></form>' +
-    '<p class="rxchat-note">This assistant cannot give medical advice. Please do not enter patient information.</p>' +
+    '<p class="rxchat-note">This assistant cannot give medical advice. Please do not enter patient information. <a href="/privacy-policy/">Privacy</a></p>' +
     '</section>';
   document.body.appendChild(root);
   var openBtn = root.querySelector('.rxchat-open'), panel = root.querySelector('.rxchat-panel'), log = root.querySelector('.rxchat-log');

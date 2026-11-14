@@ -975,3 +975,6 @@ video { max-width: 100%; height: auto; }
 .rxchat-note { margin: 0; padding: 0 16px 12px; font-size: .74rem; line-height: 1.35; color: var(--ink-soft); background: #fff; }
 @media (max-width: 520px) { .rxchat-open { padding: 11px 16px 11px 13px; font-size: .95rem; } }
 @media print { .rxchat { display: none; } }
+
+.footer-legal a { text-decoration: underline; }
+.rxchat-note a { color: inherit; }

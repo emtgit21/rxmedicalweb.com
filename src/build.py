@@ -189,7 +189,7 @@ def footer():
       </ul></div>
     </div>
     <div class="footer-grid">{''.join(cols)}</div>
-    <div class="footer-legal"><span>© {YEAR} Rx Medical Web. All rights reserved.</span><span>Medical presence and marketing, Fort Lauderdale, Florida</span></div>
+    <div class="footer-legal"><span>© {YEAR} Rx Medical Web. All rights reserved. <a href="/privacy-policy/">Privacy policy</a></span><span>Medical presence and marketing, Fort Lauderdale, Florida</span></div>
   </div>
 </footer>"""
 
@@ -794,6 +794,72 @@ def build_portfolio():
     page("/portfolio/", "Our work | Rx Medical Web", "Websites and marketing built and run by Rx Medical Web.", body)
 
 
+PRIVACY_UPDATED = "November 14, 2026"
+PRIVACY_BODY = """
+<p class="meta">Last updated: {updated}</p>
+<p>This policy explains what information Rx Medical Web collects through this website, rxmedicalweb.com, how we use it and the choices you have. It covers this website only. Work we do for a client is governed by our agreement with that client.</p>
+
+<h2>Who we are</h2>
+<p>Rx Medical Web is a marketing agency for medical practices, located at 2720 E. Oakland Park Blvd, Suite 103, Fort Lauderdale, FL 33306. You can reach us at <a href="mailto:{email}">{email}</a> or <a href="{tel}">{phone}</a>.</p>
+
+<h2>Information you give us</h2>
+<ul>
+  <li><strong>When you contact us.</strong> If you call, e-mail or use the request form, we receive what you choose to send: typically your name, practice name, phone number, e-mail address, website and your message. The form on this site does not store anything on our server. It opens your own e-mail application with the details filled in, and nothing is sent until you send that e-mail.</li>
+  <li><strong>When you use the site assistant.</strong> The assistant in the corner of each page runs entirely in your browser. It looks up answers in the content of this website. What you type is not sent to us or to anyone else, and it is not stored.</li>
+</ul>
+<p>Please do not send us patient information or other protected health information through this website, the request form or the assistant.</p>
+
+<h2>Information collected automatically</h2>
+<ul>
+  <li><strong>Analytics.</strong> We use Google Analytics to understand how visitors use the site: which pages are viewed, roughly where visitors are located, the kind of device and browser, and how visitors arrived. Google Analytics uses cookies or similar identifiers to do this. You can learn how Google handles this information at <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">policies.google.com/technologies/partner-sites</a>, and you can opt out with the browser add-on at <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener">tools.google.com/dlpage/gaoptout</a>.</li>
+  <li><strong>Security and delivery.</strong> The site is delivered through Cloudflare, which processes your IP address and basic request details to deliver pages quickly and to protect the site from abuse. Cloudflare may set a cookie that is strictly necessary for security.</li>
+  <li><strong>Server logs.</strong> Our web server keeps standard logs of requests, including IP address, date and time, the page requested and the browser used. We use them to keep the site running and secure.</li>
+</ul>
+<p>We do not use advertising pixels on this website, and the fonts, images and video are served from our own site.</p>
+
+<h2>How we use information</h2>
+<ul>
+  <li>To answer your questions and prepare the analysis, plan or quote you asked for</li>
+  <li>To follow up about our services when you have contacted us</li>
+  <li>To understand how the site is used and improve it</li>
+  <li>To keep the site secure and prevent abuse</li>
+  <li>To comply with the law</li>
+</ul>
+
+<h2>How we share information</h2>
+<p>We do not sell your personal information, and we do not share it with other companies for their own marketing. We share it only with service providers that help us run this website and our business, such as Google (analytics and e-mail), Cloudflare (delivery and security) and DigitalOcean (hosting), and when the law requires it.</p>
+
+<h2>Text messages and e-mail</h2>
+<p>If you give us your phone number or e-mail address, we may use it to reply to your request. We send marketing text messages only to people who have agreed to receive them, and every message explains how to stop. Mobile opt-in information is not shared with third parties for their marketing.</p>
+
+<h2>How long we keep information</h2>
+<p>We keep messages and contact details for as long as needed to respond to you and to maintain our business records. Analytics data is kept for the retention period set in our Google Analytics account. Server logs are kept for a limited time and then deleted.</p>
+
+<h2>Your choices and rights</h2>
+<p>You can ask us what personal information we hold about you, ask us to correct or delete it, or ask us to stop contacting you. Depending on where you live, the law may give you additional rights. To make a request, write to <a href="mailto:{email}">{email}</a>. We will not treat you differently for making a request.</p>
+<p>Most browsers let you block or delete cookies. If you block them, the site will still work.</p>
+
+<h2>Children</h2>
+<p>This website is for medical professionals and practice staff. It is not directed to children, and we do not knowingly collect information from children under 13.</p>
+
+<h2>Links to other websites</h2>
+<p>This site links to other websites, including examples of our work. Their privacy practices are their own, and this policy does not cover them.</p>
+
+<h2>Changes to this policy</h2>
+<p>We may update this policy from time to time. The date at the top shows when it was last changed.</p>
+"""
+
+
+def build_privacy():
+    body = f"""{page_head([("Privacy policy", None)], "Privacy policy", "What this website collects, how we use it and the choices you have.")}
+<section class="section"><div class="wrap layout">
+  <div class="prose">{PRIVACY_BODY.format(updated=PRIVACY_UPDATED, email=EMAIL, tel=PHONE_HREF, phone=PHONE)}</div>
+  {slip("Questions about privacy?", "Write or call and we will answer.", [("Contact us", "/contact-us/"), ("About us", "/about/")], "More")}
+</div></section>"""
+    page("/privacy-policy/", "Privacy policy | Rx Medical Web",
+         "How Rx Medical Web handles information collected through rxmedicalweb.com.", body)
+
+
 def build_404():
     body = f"""<section class="page-head lost"><div class="wrap">
   <p class="lost-rx" aria-hidden="true">℞</p>
@@ -834,7 +900,7 @@ def build_contact():
     <label class="field"><span>What are you interested in?</span><select name="topic"><option>Free website analysis</option>{topics}<option>Something else</option></select></label>
     <label class="field"><span>Tell us about your practice</span><textarea name="message"></textarea></label>
     <button class="btn btn-ink" type="submit">Send request by e-mail</button>
-    <small>This opens your e-mail app with the details filled in. Please do not include patient information. You can also call us at {PHONE}.</small>
+    <small>This opens your e-mail app with the details filled in. Please do not include patient information. You can also call us at {PHONE}. See our <a href="/privacy-policy/">privacy policy</a>.</small>
   </form>
 </div></section>"""
     page("/contact-us/", "Contact us | Rx Medical Web",
@@ -903,6 +969,7 @@ if __name__ == "__main__":
     build_portfolio()
     build_contact()
     build_articles()
+    build_privacy()
     build_404()
     build_chat_index()
     build_sitemap()
