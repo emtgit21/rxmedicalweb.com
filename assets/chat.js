@@ -16,10 +16,29 @@
     rank: 'seo', google: 'seo', search: 'seo', brochure: 'print', brochures: 'print', printing: 'print', printed: 'print', cards: 'print',
     logo: 'brand', branding: 'brand', integrate: 'integration', integrations: 'integration', api: 'integration', webhook: 'integration',
     webhooks: 'integration', emr: 'emr', ehr: 'emr', store: 'ecommerce', shop: 'ecommerce', 'e-commerce': 'ecommerce', sell: 'ecommerce',
-    hipaa: 'compliance', ada: 'accessibility', accessible: 'accessibility' };
+    hipaa: 'compliance', ada: 'accessibility', accessible: 'accessibility',
+    // Spanish
+    pagina: 'web', paginas: 'web', sitio: 'web', sitios: 'web', web: 'web', anuncio: 'ad', anuncios: 'ad', publicidad: 'ad', pauta: 'ad',
+    redes: 'social', sociales: 'social', correo: 'email', correos: 'email', boletin: 'email', mensajes: 'sms', mensaje: 'sms', texto: 'sms',
+    resena: 'review', resenas: 'review', opiniones: 'review', reputacion: 'review', aplicacion: 'app', aplicaciones: 'app', celular: 'app',
+    cita: 'book', citas: 'book', agendar: 'book', reservas: 'book', reserva: 'book', agenda: 'book', impresion: 'print', imprimir: 'print',
+    folleto: 'print', folletos: 'print', tarjetas: 'print', marca: 'brand', logotipo: 'brand', diseno: 'design', posicionamiento: 'seo',
+    buscadores: 'seo', agente: 'agent', agentes: 'agent', inteligencia: 'ai', artificial: 'ai', ia: 'ai', integracion: 'integration',
+    integraciones: 'integration', integrar: 'integration', conectar: 'integration', conectarse: 'integration', conexion: 'integration', sistemas: 'integration', sistema: 'integration', systems: 'integration', connect: 'integration', prospectos: 'lead',
+    tienda: 'ecommerce', vender: 'ecommerce', portafolio: 'portfolio', estrategia: 'strategy', analitica: 'analytics', llamadas: 'call',
+    contenido: 'content', articulos: 'content', mantenimiento: 'maintenance', accesibilidad: 'accessibility', lanzamiento: 'launch',
+    lanzar: 'launch', mapa: 'local', mapas: 'local', cerca: 'local' };
+  var ES_STOP = ('el la los las un una unos unas de del al y o que en con por para como es son esta estan hay mi mis su sus nos me se lo le ' +
+    'les si no mas muy pero tambien hacen hace hacer tienen tiene pueden puede puedo quiero necesito ustedes usted ofrecen ofrece sobre ' +
+    'algo esto eso ese esa aqui ayudar ayuda ayudan ayudarme servicio').split(' ');
+  ES_STOP.forEach(function (w) { stop[w] = 1; });
+  function fold(str) { return (str || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ''); }
+  function isSpanish(str) {
+    return /[¿¡ñ]/.test(str.toLowerCase()) || /\b(hola|gracias|que|como|cuanto|cuanta|cuesta|donde|hacen|tienen|pueden|puedo|necesito|quiero|ustedes|para|pagina|paginas|pacientes|citas?|servicios|precio|costo|espanol|ayuda|redes|ofrecen|buenos|buenas)\b/.test(fold(str));
+  }
 
   function tokens(str) {
-    return (str || '').toLowerCase().replace(/[^a-z0-9\- ]+/g, ' ').split(/\s+/).map(function (w) {
+    return fold(str).replace(/[^a-z0-9\- ]+/g, ' ').split(/\s+/).map(function (w) {
       if (!w || stop[w]) return '';
       if (SYN[w]) return SYN[w];
       if (w.length > 5 && /ing$/.test(w)) w = w.slice(0, -3);
@@ -65,53 +84,115 @@
     return out;
   }
 
-  function contactLinks() {
-    return [{ t: 'Call ' + data.phone, u: data.tel }, { t: 'Request a free analysis', u: '/contact-us/#analysis' }];
+  var T = {
+    en: {
+      hello: 'Hello. I can answer basic questions about what Rx Medical Web does for medical practices. What would you like to know?',
+      thanks: 'You are welcome. If you would like to talk to a person, our team replies within 24 business hours.',
+      price1: 'Pricing depends on the practice and on what you need, so we do not publish a price list.',
+      price2: 'We start with a free website analysis, then give you a plan and a quote. We reply within 24 business hours.',
+      contact1: function () { return 'You can reach our team at ' + data.phone + ' or ' + data.email + ', Monday to Friday, 9 am to 6 pm Eastern.'; },
+      contact2: 'We reply within 24 business hours.',
+      where1: 'We are at 2720 E. Oakland Park Blvd, Suite 103, Fort Lauderdale, FL 33306.', where2: 'Our hours are Monday to Friday, 9 am to 6 pm.',
+      services: 'We do one thing: the online presence and marketing of medical practices. These are the areas we cover:',
+      medical: 'I can only answer questions about our marketing services, and I cannot give medical advice. For a health question, please contact your physician.',
+      patients1: 'Bringing in new patients usually takes a combination: being found on Google and on the map, ads for the treatments you want to grow, good reviews, and a website that makes it easy to call or book.',
+      patients2: 'These are the services that do that. A free website analysis will show where to start for your practice.',
+      start1: 'It starts with a free website analysis: we review your website, your rankings and your competitors and walk you through what we found.',
+      start2: 'Then we give you a plan and a quote. Once you approve it, our in-house team builds it and reports results to you every month.',
+      spanish: 'Yes. Our team speaks Spanish and English.',
+      maybe: 'This may be what you are looking for:',
+      none1: 'I do not have a good answer for that. I can only answer basic questions about our services, using what is on this website.',
+      none2: 'Our team will be glad to help directly.',
+      call: 'Call ', free: 'Request a free analysis', contactPage: 'Contact page', more: 'Read more: ', all: 'See all services'
+    },
+    es: {
+      hello: 'Hola. Puedo responder preguntas básicas sobre lo que Rx Medical Web hace por las consultas médicas. ¿Qué te gustaría saber?',
+      thanks: 'Con gusto. Si prefieres hablar con una persona, nuestro equipo responde en un máximo de 24 horas hábiles.',
+      price1: 'El precio depende de la consulta y de lo que necesite, por eso no publicamos una lista de precios.',
+      price2: 'Empezamos con un análisis gratuito de tu sitio web y después te damos un plan y una cotización. Respondemos en 24 horas hábiles.',
+      contact1: function () { return 'Puedes comunicarte con nuestro equipo al ' + data.phone + ' o a ' + data.email + ', de lunes a viernes, de 9 am a 6 pm (hora del Este).'; },
+      contact2: 'Respondemos en un máximo de 24 horas hábiles.',
+      where1: 'Estamos en 2720 E. Oakland Park Blvd, Suite 103, Fort Lauderdale, FL 33306.', where2: 'Atendemos de lunes a viernes, de 9 am a 6 pm.',
+      services: 'Hacemos una sola cosa: la presencia en línea y el marketing de consultas médicas. Estas son las áreas que cubrimos (las páginas están en inglés):',
+      medical: 'Solo puedo responder sobre nuestros servicios de marketing y no puedo dar consejo médico. Para una pregunta de salud, consulta a tu médico.',
+      patients1: 'Atraer pacientes nuevos suele requerir una combinación: aparecer en Google y en el mapa, anuncios para los tratamientos que quieres crecer, buenas reseñas y un sitio web donde sea fácil llamar o reservar.',
+      patients2: 'Estos son los servicios que lo hacen. Un análisis gratuito de tu sitio muestra por dónde empezar.',
+      start1: 'Todo empieza con un análisis gratuito: revisamos tu sitio web, tu posicionamiento y tu competencia, y te explicamos lo que encontramos.',
+      start2: 'Después te damos un plan y una cotización. Cuando lo apruebas, nuestro equipo lo construye y te reporta resultados cada mes.',
+      spanish: 'Sí. Nuestro equipo habla español e inglés.',
+      maybe: 'Esto puede ser lo que buscas (el detalle está en inglés):',
+      none1: 'No tengo una buena respuesta para eso. Solo puedo responder preguntas básicas sobre nuestros servicios con lo que está en este sitio.',
+      none2: 'Nuestro equipo te ayuda directamente con gusto.',
+      call: 'Llamar al ', free: 'Pedir un análisis gratuito', contactPage: 'Página de contacto', more: 'Ver más: ', all: 'Ver todos los servicios'
+    }
+  };
+
+  function svcLinks(urls) {
+    var out = [];
+    urls.forEach(function (u) { data.docs.some(function (d) { if (d.s && d.u === u) { out.push({ t: d.t, u: d.u }); return true; } return false; }); });
+    return out;
   }
 
   function answer(q) {
-    var s = q.toLowerCase().trim();
+    var es = isSpanish(q), L = es ? T.es : T.en;
+    var s = fold(q).trim();
     var hits = search(q), top = hits[0];
-    if (/^(hi|hello|hey|hola|good (morning|afternoon|evening))\b/.test(s) && s.length < 30)
-      return { text: ['Hello. I can answer basic questions about what Rx Medical Web does for medical practices. What would you like to know?'], chips: true };
-    if (/^(thanks|thank you|gracias|great|perfect|ok|okay)\b/.test(s) && s.length < 40)
-      return { text: ['You are welcome. If you would like to talk to a person, our team replies within 24 business hours.'], links: contactLinks() };
-    if (/(diagnos|symptom|should i take|what should i do about my|medication for|dosage|side effect|(chest|back|head|stomach) pain|my pain|i have (a |an )?(pain|fever|rash|headache))/.test(s))
-      return { text: ['I can only answer questions about our marketing services, and I cannot give medical advice. For a health question, please contact your physician.'] };
-    if (/\b(price|prices|pricing|cost|costs|how much|fee|fees|rates?|budget|quote|precio|costo|cuanto)\b/.test(s)) {
-      var links = contactLinks();
-      if (top && top.score > 4.5) links.unshift({ t: top.doc.t, u: top.doc.u });
-      return { text: ['Pricing depends on the practice and on what you need, so we do not publish a price list.', 'We start with a free website analysis, then give you a plan and a quote. We reply within 24 business hours.'], links: links };
+    var contact = [{ t: L.call + data.phone, u: data.tel }, { t: L.free, u: '/contact-us/#analysis' }];
+    var strong = top && top.score > 4.5;
+
+    if (/(diagnos|sintoma|symptom|should i take|que debo tomar|medication for|medicamento para|dosage|dosis|side effect|efecto secundario|(chest|back|head|stomach) pain|dolor de|my pain|i have (a |an )?(pain|fever|rash|headache)|tengo (dolor|fiebre))/.test(s))
+      return { text: [L.medical] };
+    if (/^(hi|hello|hey|hola|buenas|buenos dias|good (morning|afternoon|evening))\b/.test(s) && s.split(' ').length <= 3)
+      return { text: [L.hello], chips: true };
+    if (/^(thanks|thank you|gracias|muchas gracias|great|perfect|perfecto|ok|okay|vale)\b/.test(s) && s.length < 40)
+      return { text: [L.thanks], links: contact };
+    if (/\b(spanish|espanol|habla[ns]? espanol|en espanol)\b/.test(s))
+      return { text: [L.spanish], links: contact };
+    if (/\b(price|prices|pricing|cost|costs|how much|fee|fees|rates?|budget|quote|precio|precios|costo|costos|cuesta|cuestan|cuanto|cotizacion|presupuesto|tarifas?)\b/.test(s)) {
+      var pl = contact.slice();
+      if (top && top.score > 7) pl.unshift({ t: top.doc.t, u: top.doc.u });
+      return { text: [L.price1, L.price2], links: pl };
     }
-    if (/\b(phone number|your phone|call you|contact|talk to|speak (to|with)|human|a person|someone|your email|reach you|telefono|contacto|llamar)\b/.test(s))
-      return { text: ['You can reach our team at ' + data.phone + ' or ' + data.email + ', Monday to Friday, 9 am to 6 pm Eastern.', 'We reply within 24 business hours.'], links: contactLinks().concat([{ t: 'Contact page', u: '/contact-us/' }]) };
-    if (/(where|address|located|location|office|hours|open|horario|direccion)/.test(s) && !(top && top.score > 4))
-      return { text: ['We are at 2720 E. Oakland Park Blvd, Suite 103, Fort Lauderdale, FL 33306.', 'Our hours are Monday to Friday, 9 am to 6 pm.'], links: [{ t: 'Contact page', u: '/contact-us/' }] };
-    if (/^(who are you|who is rx|what is rx medical web|about (you|your company|the company|rx)|tell me about (you|your company|rx))/.test(s)) {
+    if (/\b(phone number|your phone|call you|contact|talk to|speak (to|with)|human|a person|someone|your email|reach you|meeting|appointment with you|schedule a call|telefono|contacto|contactar|llamar|llamada con|hablar con|persona|reunion|quiero una cita|agendar una (cita|llamada)|cita con ustedes)\b/.test(s))
+      return { text: [L.contact1(), L.contact2], links: contact.concat([{ t: L.contactPage, u: '/contact-us/' }]) };
+    if (/\b(where|address|located|location|office|hours|open|horario|direccion|donde|ubicacion|ubicados|oficina)\b/.test(s) && !strong)
+      return { text: [L.where1, L.where2], links: [{ t: L.contactPage, u: '/contact-us/' }] };
+    if (/^(who are you|who is rx|what is rx medical web|about (you|your company|the company|rx)|tell me about (you|your company|rx)|quienes son|quien es rx|que es rx)/.test(s)) {
       var about = data.docs.filter(function (d) { return d.t === 'About Rx Medical Web'; })[0];
       if (about) return { text: [about.a], links: [{ t: 'About us', u: '/about/' }, { t: 'Why choose us', u: '/about/why-choose-us/' }] };
     }
-    if (/(what (do you|services)|which services|all (your )?services|list of services|what can you do|servicios|que hacen)/.test(s))
-      return { text: ['We do one thing: the online presence and marketing of medical practices. These are the areas we cover:'], groups: true };
+    if (/(more|new|mas|nuevos|atraer|conseguir|get|getting|grow|crecer|aumentar).{0,25}(patients|pacientes|clients|clientes)|(patients|pacientes).{0,15}(more|mas|nuevos)|grow my practice|crecer mi (consulta|practica|clinica)/.test(s))
+      return { text: [L.patients1, L.patients2], links: svcLinks(['/service/search-engine-optimization/', '/service/local-seo/', '/service/pay-per-click/', '/service/reputation-management/', '/service/medical-website-design/']).concat([{ t: L.free, u: '/contact-us/#analysis' }]) };
+    if (/(how does (it|this) work|how do (we|i) (start|get started|begin)|get started|where do (we|i) start|next steps?|how do you work|what is the process|como funciona|como empez|como (trabajan|es el proceso)|por donde empiez|siguiente paso|help (me|my practice|us)|ayud(a|en|ar)(me|nos)? (con )?(mi|a mi|nuestra) (consulta|practica|clinica))/.test(s))
+      return { text: [L.start1, L.start2], links: contact.concat([{ t: L.all, u: '/#services' }]) };
+    if (/(what (do you|services)|which services|all (your )?services|list of services|what can you do|what do you offer|servicios|que hacen|que ofrecen|a que se dedican)/.test(s) || /^(marketing|services?|help|ayuda|info|informacion)$/.test(s))
+      return { text: [L.services], groups: true };
+
+    if (/(redes sociales|social media|instagram|facebook|tiktok)/.test(s) && !/\b(ads?|advertis|anuncios?|publicidad|pauta)/.test(s)) {
+      var sm = data.docs.filter(function (d) { return d.s && d.u === '/service/social-media/'; })[0];
+      if (sm) return { text: (es ? [L.maybe] : []).concat([sm.a]), links: [{ t: L.more + sm.t, u: sm.u }].concat(svcLinks(['/service/short-form-video/', '/service/search-engine-marketing/'])) };
+    }
     if (top && top.score > 2.2) {
       var seen = {}, more = [];
       seen[top.doc.u] = 1;
       hits.slice(1, 8).forEach(function (h) { if (h.score > 2 && !seen[h.doc.u] && more.length < 2) { seen[h.doc.u] = 1; more.push({ t: h.doc.t, u: h.doc.u }); } });
-      return { text: [top.doc.a], links: [{ t: 'Read more: ' + top.doc.t, u: top.doc.u }].concat(more) };
+      var text = [top.doc.a];
+      if (!strong || es) text.unshift(L.maybe);
+      return { text: text, links: [{ t: L.more + top.doc.t, u: top.doc.u }].concat(more) };
     }
-    return { text: ['I do not have an answer for that. I can only answer basic questions about our services, using what is on this website.', 'Our team will be glad to help directly.'], links: contactLinks(), chips: true };
+    return { text: [L.none1, L.none2], links: contact.concat([{ t: L.all, u: '/#services' }]), chips: true };
   }
 
   // ---------- interface ----------
-  var CHIPS = ['What services do you offer?', 'Can you connect to our current systems?', 'What are AI agents?', 'How much does a website cost?'];
+  var CHIPS = ['What services do you offer?', 'How do we get more patients?', 'How does it work?', 'What are AI agents?', 'How much does it cost?'];
   var root = document.createElement('div');
   root.className = 'rxchat';
   root.innerHTML =
     '<button class="rxchat-open" type="button" aria-expanded="false" aria-controls="rxchat-panel"><span aria-hidden="true">℞</span> Ask a question</button>' +
     '<section class="rxchat-panel" id="rxchat-panel" role="dialog" aria-label="Rx Medical Web assistant" hidden>' +
-    '<header><div><b>Ask Rx Medical Web</b><small>Automated answers from this website</small></div><button class="rxchat-close" type="button" aria-label="Close the assistant">×</button></header>' +
+    '<header><div><b>Ask Rx Medical Web</b><small>Automated answers from this website · English o español</small></div><button class="rxchat-close" type="button" aria-label="Close the assistant">×</button></header>' +
     '<div class="rxchat-log" role="log" aria-live="polite"></div>' +
-    '<form class="rxchat-form"><label class="vh" for="rxchat-input">Your question</label><input id="rxchat-input" type="text" autocomplete="off" placeholder="Ask about our services" maxlength="200"><button type="submit">Send</button></form>' +
+    '<form class="rxchat-form"><label class="vh" for="rxchat-input">Your question</label><input id="rxchat-input" type="text" autocomplete="off" placeholder="Ask about our services / Pregunta aquí" maxlength="200"><button type="submit">Send</button></form>' +
     '<p class="rxchat-note">This assistant cannot give medical advice. Please do not enter patient information.</p>' +
     '</section>';
   document.body.appendChild(root);
