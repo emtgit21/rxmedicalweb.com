@@ -35,3 +35,16 @@ Push to `main` and it is live within two minutes: a cron job on the droplet (`/e
 ## Contact form
 
 The site has no server-side code. The contact form opens the visitor's e-mail app with the details filled in. To collect submissions directly, point the form at a form handler or a CRM endpoint in `build_contact()`.
+
+## Call booking
+
+`/book-a-call/` talks to a small service, `server/booking.py` (standard library only), that runs on the droplet as the
+systemd unit `rxbooking` and is reached through nginx at `/api/booking/`. Bookings are stored in SQLite at
+`/var/lib/rxbooking/bookings.db`, outside the web root. Settings are in `/etc/rxbooking.env`.
+
+- After changing `server/booking.py`: push, wait for the pull, then `systemctl restart rxbooking` on the droplet.
+- Office hours, call length and lead time are constants at the top of the file.
+- Staff commands on the droplet, from `/var/www/rxmedicalweb.com`:
+  `RXB_DB=/var/lib/rxbooking/bookings.db python3 server/booking.py list | cancel <id> | block <YYYY-MM-DD> [note] | unblock <YYYY-MM-DD>`
+- `RXB_NOTIFY` (not set yet) names a command that receives each booking as JSON, to send notices.
+- The page is kept out of the sitemap and the navigation (`UNLISTED` in `src/build.py`) until notices are set up.
