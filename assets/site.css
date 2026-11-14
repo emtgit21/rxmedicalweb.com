@@ -922,3 +922,6 @@ video { max-width: 100%; height: auto; }
 @media (max-width: 860px) { .case { grid-template-columns: 1fr; } .case:nth-child(even) > .shot { order: 0; } }
 .lost { min-height: 70vh; display: grid; align-items: center; text-align: left; }
 .lost-rx { font-family: "Times New Roman", "Apple Symbols", serif; font-size: clamp(5rem, 14vw, 10rem); line-height: .8; color: var(--green); margin: 0 0 20px; }
+.case .shot img, .work-3 .shot img, .work .shot img { aspect-ratio: 1400 / 801; object-position: center top; }
+.case:nth-child(even) { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); }
+@media (max-width: 860px) { .case:nth-child(even) { grid-template-columns: 1fr; } }

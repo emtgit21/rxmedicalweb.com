@@ -454,7 +454,7 @@ def build_home():
     <div class="hero-grid">
       <div>
         <h1 aria-label="The marketing prescription for your medical practice.">{words("The marketing prescription for your medical practice.")}</h1>
-        <p class="lead">Rx Medical Web is the agency dedicated to medical presence and marketing. Websites, SEO, advertising, social media and AI agents, built by an in-house team with the latest AI technology and reviewed by physicians.</p>
+        <p class="lead">Rx Medical Web is the agency dedicated to medical presence and marketing. Websites, mobile apps, SEO, advertising, social media and AI agents, built by an in-house team with the latest AI technology and reviewed by physicians.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="/contact-us/#analysis">Request a free website analysis</a>
           <a class="btn btn-ghost" href="{PHONE_HREF}">Call {PHONE}</a>
