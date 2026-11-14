@@ -217,6 +217,9 @@ def page(path, title, desc, body, extra_head="", og_img="/assets/img/hero-clinic
 <style>{FONT_CSS}</style>
 <link rel="stylesheet" href="/assets/site.css?v={ver("assets/site.css")}">
 {anim_css()}<script>document.documentElement.className='js'</script>
+<!-- Google tag (Analytics property "Rx Medical Web") -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-TP682R68"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){{dataLayer.push(arguments);}}gtag('js', new Date());</script>
 {extra_head}</head>
 <body>
 {header(path)}
