@@ -50,7 +50,6 @@ SLOT_MIN = 30          # length of a call
 STEP_MIN = 30          # distance between start times
 LEAD_HOURS = 3         # earliest bookable time from now
 DAYS_AHEAD = 21        # how far ahead visitors can book
-LUNCH = (dt.time(12, 30), dt.time(13, 30))
 TOPICS = ["Free website analysis", "A new website", "SEO and AI search", "Advertising", "Social media and video",
           "AI agents and lead follow-up", "E-mail and text campaigns", "Launching a new service", "Something else"]
 LOCK = threading.Lock()
@@ -98,8 +97,7 @@ def open_slots():
         slots = []
         while t + dt.timedelta(minutes=SLOT_MIN) <= end:
             key = t.strftime("%Y-%m-%dT%H:%M")
-            in_lunch = LUNCH[0] <= t.time() < LUNCH[1]
-            if t >= earliest and key not in taken and not in_lunch:
+            if t >= earliest and key not in taken:
                 slots.append({"id": key, "utc": t.astimezone(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")})
             t += dt.timedelta(minutes=STEP_MIN)
         if slots:
