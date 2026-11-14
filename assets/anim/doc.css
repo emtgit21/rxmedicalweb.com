@@ -1,0 +1,39 @@
+.ax-doc{width:100%;max-width:520px;margin-inline:auto;height:300px;font-family:var(--sans);line-height:1.2}
+.ax-doc-stage{position:relative;height:100%;max-width:400px;margin-inline:auto}
+.ax-doc-page{position:absolute;left:0;top:20px;bottom:18px;width:84%;max-width:300px;box-sizing:border-box;padding:26px 16px 16px;background:#fff;color:var(--ink);border-radius:12px;box-shadow:0 18px 40px rgba(4,26,31,.4);display:flex;flex-direction:column;gap:10px}
+.ax-doc-tag{position:absolute;top:-12px;left:14px;padding:5px 10px;border-radius:999px;background:var(--copy-yellow);color:var(--ink);font-size:.72rem;font-weight:700;white-space:nowrap}
+.ax-doc-check{position:absolute;top:12px;right:14px;width:30px;height:30px;overflow:visible}
+.ax-doc-check path{fill:none;stroke:var(--green);stroke-width:4.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:0}
+.ax-doc-line{display:block;flex:none;height:8px;border-radius:4px;background:#dfeae7;width:100%}
+.ax-doc-head{height:10px;border-radius:5px;width:52%;background:var(--ink);margin-bottom:4px}
+.ax-doc-line:nth-of-type(3){width:94%}
+.ax-doc-line:nth-of-type(5){width:68%}
+.ax-doc-line:nth-of-type(6){width:48%}
+.ax-doc-line:nth-of-type(7){width:40%}
+.ax-doc-line:nth-of-type(8){width:26%}
+.ax-doc-stamp{align-self:flex-start;flex:none;margin:8px 0;padding:5px 10px;border:1.5px solid var(--green);border-radius:999px;background:var(--mint);color:var(--ink);font-size:.72rem;font-weight:700;white-space:nowrap;transform:rotate(-4deg);transform-origin:30% 50%;box-shadow:0 0 0 3px rgba(0,224,96,.16)}
+.ax-doc-card{position:absolute;right:0;bottom:0;width:46%;max-width:170px;box-sizing:border-box;padding:10px;display:grid;gap:10px;justify-items:start;background:var(--ink-2);border:1px solid rgba(255,255,255,.14);border-radius:12px;box-shadow:0 14px 30px rgba(4,26,31,.45)}
+.ax-doc-pub{display:inline-flex;align-items:center;gap:6px;padding:5px 10px 5px 8px;border-radius:999px;background:rgba(255,255,255,.12);color:#fff;font-size:.72rem;font-weight:700;white-space:nowrap}
+.ax-doc-dot{width:6px;height:6px;border-radius:50%;background:var(--cyan)}
+.ax-doc-chart{display:block;width:100%;height:auto;overflow:visible}
+.ax-doc-bar{fill:rgba(255,255,255,.2);transform-box:fill-box;transform-origin:50% 100%}
+.ax-doc-arrow{fill:none;stroke:var(--cyan);stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:0}
+@media (prefers-reduced-motion:no-preference){
+.js .anim:not(.in) .ax-doc-stage{opacity:0}
+.js .anim.in .ax-doc-stage{animation:ax-doc-stage 11s cubic-bezier(.2,.8,.2,1) infinite}
+.js .anim.in .ax-doc-tag{animation:ax-doc-tag 11s cubic-bezier(.2,.8,.2,1) infinite}
+.js .anim.in .ax-doc-line{animation:ax-doc-line 11s cubic-bezier(.5,0,.2,1) infinite;animation-delay:calc(var(--i)*.1s)}
+.js .anim.in .ax-doc-check path{animation:ax-doc-check 11s cubic-bezier(.5,0,.2,1) infinite}
+.js .anim.in .ax-doc-stamp{animation:ax-doc-stamp 11s cubic-bezier(.2,.8,.2,1) infinite}
+.js .anim.in .ax-doc-card{animation:ax-doc-card 11s cubic-bezier(.2,.8,.2,1) infinite}
+.js .anim.in .ax-doc-bar{animation:ax-doc-bar 11s cubic-bezier(.2,.8,.2,1) infinite;animation-delay:calc(var(--i)*.1s)}
+.js .anim.in .ax-doc-arrow{animation:ax-doc-arrow 11s cubic-bezier(.5,0,.2,1) infinite}
+@keyframes ax-doc-stage{0%{opacity:0;transform:translateY(10px)}4%,87%{opacity:1;transform:none}92%,100%{opacity:0;transform:none}}
+@keyframes ax-doc-tag{0%,3%{opacity:0;transform:translateY(6px) scale(.9)}8%,100%{opacity:1;transform:none}}
+@keyframes ax-doc-line{0%,6%{clip-path:inset(0 100% 0 0)}12%,92%{clip-path:inset(0 0 0 0)}92.4%,100%{clip-path:inset(0 100% 0 0)}}
+@keyframes ax-doc-check{0%,21%{stroke-dashoffset:1;opacity:0}21.5%{stroke-dashoffset:1;opacity:1}27%,100%{stroke-dashoffset:0;opacity:1}}
+@keyframes ax-doc-stamp{0%,27%{opacity:0;transform:rotate(-11deg) scale(1.4)}32%,100%{opacity:1;transform:rotate(-4deg)}}
+@keyframes ax-doc-card{0%,36%{opacity:0;transform:translateY(14px)}41%,100%{opacity:1;transform:none}}
+@keyframes ax-doc-bar{0%,40%{transform:scaleY(0)}46%,92%{transform:none}92.4%,100%{transform:scaleY(0)}}
+@keyframes ax-doc-arrow{0%,42%{stroke-dashoffset:1;opacity:0}42.5%{stroke-dashoffset:1;opacity:1}50%,100%{stroke-dashoffset:0;opacity:1}}
+}

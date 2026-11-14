@@ -1,0 +1,1 @@
+Messages from a website chat, a text line and a phone call flow into one AI agent, which produces a booking request for Friday 10:00 and hands it to the front desk, at any hour.

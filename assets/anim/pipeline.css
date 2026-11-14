@@ -1,0 +1,33 @@
+.ax-pipeline{--g:6px;position:relative;width:100%;max-width:520px;height:274px;margin-inline:auto;text-align:left}
+.ax-pipeline-cols{position:absolute;inset:0;display:grid;grid-template-columns:repeat(3,1fr);gap:var(--g)}
+.ax-pipeline-col{background:rgba(255,255,255,.07);border-radius:12px;padding:10px 10px 0;min-width:0}
+.ax-pipeline-head{display:flex;align-items:center;gap:6px;font-size:.8rem;font-weight:700;line-height:1.25;color:rgba(255,255,255,.78);white-space:nowrap}
+.ax-pipeline-head-on{color:#fff}
+.ax-pipeline-head-on::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--green);flex:none}
+.ax-pipeline-pill{position:absolute;z-index:2;top:36px;left:calc((100% - 2*var(--g))/3 + var(--g)/2);transform:translate(-50%,0);display:flex;align-items:center;gap:6px;padding:5px 11px;border-radius:999px;background:var(--copy-yellow);color:var(--ink);font-size:.74rem;font-weight:700;line-height:1.2;white-space:nowrap;box-shadow:0 6px 16px rgba(0,0,0,.22)}
+.ax-pipeline-pill::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--ink);flex:none}
+.ax-pipeline-lanes{position:absolute;left:0;right:0;top:72px;display:grid;gap:8px}
+.ax-pipeline-card{--s:calc(100% + 8px + var(--g));box-sizing:border-box;width:calc((100% - 2*var(--g))/3 - 8px);margin-left:4px;padding:8px 7px;display:grid;grid-template-columns:20px 1fr;gap:6px;align-items:center;background:#fff;color:var(--ink);border-radius:10px}
+.ax-pipeline-c1,.ax-pipeline-c2{transform:translate(calc(var(--s)*2),0);box-shadow:0 0 0 2px var(--green)}
+.ax-pipeline-c3{transform:translate(var(--s),0)}
+.ax-pipeline-av{position:relative;width:20px;height:20px;border-radius:50%;background:#dfeae7}
+.ax-pipeline-tick{position:absolute;inset:0;width:100%;height:100%;border-radius:50%;background:var(--green);fill:none;stroke:var(--ink);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ax-pipeline-bars{display:grid;gap:5px;min-width:0}
+.ax-pipeline-bars b{display:block;height:7px;border-radius:4px;background:#dfeae7}
+.ax-pipeline-bars b+b{width:60%}
+.ax-pipeline-tag{grid-column:1/-1;font-size:.72rem;font-weight:600;line-height:1.2;color:#4a727c;white-space:nowrap}
+@media (prefers-reduced-motion:no-preference){
+.js .anim:not(.in) .ax-pipeline-card,.js .anim:not(.in) .ax-pipeline-pill{opacity:0}
+.js .anim.in .ax-pipeline-c1{animation:ax-pipeline-c1 11s cubic-bezier(.5,0,.2,1) infinite}
+.js .anim.in .ax-pipeline-c2{animation:ax-pipeline-c2 11s cubic-bezier(.5,0,.2,1) infinite}
+.js .anim.in .ax-pipeline-c3{animation:ax-pipeline-c3 11s cubic-bezier(.5,0,.2,1) infinite}
+.js .anim.in .ax-pipeline-k1{animation:ax-pipeline-k1 11s cubic-bezier(.2,.8,.2,1) infinite}
+.js .anim.in .ax-pipeline-k2{animation:ax-pipeline-k2 11s cubic-bezier(.2,.8,.2,1) infinite}
+.js .anim.in .ax-pipeline-pill{animation:ax-pipeline-pill 11s cubic-bezier(.2,.8,.2,1) infinite}
+@keyframes ax-pipeline-c1{0%{opacity:0;transform:translate(0,10px);box-shadow:0 0 0 0 var(--green);animation-timing-function:cubic-bezier(.2,.8,.2,1)}5%,12%{opacity:1;transform:translate(0,0)}19%,29%{transform:translate(var(--s),0)}36%{transform:translate(calc(var(--s)*2),0);box-shadow:0 0 0 0 var(--green)}40%{box-shadow:0 0 0 2px var(--green)}94%{opacity:1;transform:translate(calc(var(--s)*2),0)}97%,100%{opacity:0;transform:translate(calc(var(--s)*2),0)}}
+@keyframes ax-pipeline-c2{0%,2%{opacity:0;transform:translate(0,10px);box-shadow:0 0 0 0 var(--green);animation-timing-function:cubic-bezier(.2,.8,.2,1)}7%,22%{opacity:1;transform:translate(0,0)}29%,43%{transform:translate(var(--s),0)}50%{transform:translate(calc(var(--s)*2),0);box-shadow:0 0 0 0 var(--green)}54%{box-shadow:0 0 0 2px var(--green)}94%{opacity:1;transform:translate(calc(var(--s)*2),0)}97%,100%{opacity:0;transform:translate(calc(var(--s)*2),0)}}
+@keyframes ax-pipeline-c3{0%,4%{opacity:0;transform:translate(0,10px);animation-timing-function:cubic-bezier(.2,.8,.2,1)}9%,36%{opacity:1;transform:translate(0,0)}43%,94%{opacity:1;transform:translate(var(--s),0)}97%,100%{opacity:0;transform:translate(var(--s),0)}}
+@keyframes ax-pipeline-k1{0%,36%{opacity:0;transform:scale(.4)}40%,100%{opacity:1;transform:scale(1)}}
+@keyframes ax-pipeline-k2{0%,50%{opacity:0;transform:scale(.4)}54%,100%{opacity:1;transform:scale(1)}}
+@keyframes ax-pipeline-pill{0%,18%{opacity:0;transform:translate(-50%,6px) scale(.9)}22%,94%{opacity:1;transform:translate(-50%,0) scale(1)}97%,100%{opacity:0;transform:translate(-50%,0) scale(1)}}
+}

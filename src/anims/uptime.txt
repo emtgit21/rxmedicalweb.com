@@ -1,0 +1,1 @@
+A website health monitor shows an Online status with a steady heartbeat line, while a checklist of backup, security update, content change and speed check is ticked off one by one.

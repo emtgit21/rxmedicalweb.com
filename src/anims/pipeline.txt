@@ -1,0 +1,1 @@
+A lead pipeline board with New, Contacted and Booked columns: three lead cards from a web form, a call and a chat arrive, a "Replied in 1 min" note appears, and the cards move across until two are marked booked in green.

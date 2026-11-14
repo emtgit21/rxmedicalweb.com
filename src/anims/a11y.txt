@@ -1,0 +1,1 @@
+A web page wireframe is scanned from top to bottom, three accessibility issues are flagged on faint text, an undescribed image and an unlabeled form field, each is fixed and checked off in green, and the page is marked Accessible.

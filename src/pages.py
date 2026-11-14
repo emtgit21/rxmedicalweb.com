@@ -795,11 +795,11 @@ TESTIMONIALS = [
 ]
 
 WORK = [
-    dict(name="Empire Medical Training", url="https://www.empiremedicaltraining.com/", img="portfolio-emt-700x525.png",
+    dict(name="Empire Medical Training", url="https://www.empiremedicaltraining.com/", img="portfolio-emt-700x525.png", shot="work-emt",
          note="Continuing medical education for physicians"),
-    dict(name="American Academy of Procedural Medicine", url="https://www.aaopm.com/", img="portfolio-aaopm-700x525.png",
+    dict(name="American Academy of Procedural Medicine", url="https://www.aaopm.com/", img="portfolio-aaopm-700x525.png", shot="work-aaopm",
          note="CME training in aesthetics, pain management and functional medicine"),
-    dict(name="Empire On-Demand", url="https://www.empireondemand.com/", img="portfolio-eod-700x525.png",
+    dict(name="Empire On-Demand", url="https://www.empireondemand.com/", img="portfolio-eod-700x525.png", shot="work-eod",
          note="Online continuing medical education platform"),
 ]
 

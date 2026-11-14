@@ -1,0 +1,1 @@
+A skincare product is added to the cart from a practice website, the payment is confirmed as paid, and a reorder reminder is set.

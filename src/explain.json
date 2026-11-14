@@ -1,0 +1,2354 @@
+{
+ "medical-website-design": {
+  "fit": [
+   "you are opening a new practice or location and need a professional website from day one",
+   "your current site looks dated, is hard to use on a phone or rarely produces a call",
+   "you serve patients in more than one language and want your site to speak to them in both"
+  ],
+  "plain": "A medical website is your practice's front door online: the place where patients read about your treatments, decide whether they trust you, and call or request an appointment. Almost every patient looks a practice up before booking, and every ad, search result and social post you run sends people back to the site. We design and program each one from scratch so it loads quickly, reads clearly on a phone and makes contacting your office the obvious next step.",
+  "steps": [
+   {
+    "d": "We talk through your goals, budget, the treatments you want to grow and the sites you like or dislike. If you already have a website, we review it and tell you what is worth keeping.",
+    "t": "Analysis"
+   },
+   {
+    "d": "Your assigned designer draws the layout of the home page and main pages so you can see the structure before anything is built. You tell us what to change and approve the direction.",
+    "t": "Sketch"
+   },
+   {
+    "d": "Our designers and programmers build the full site and prepare the text, with AI helping on research and first drafts and our team reviewing every page. You provide photos, provider bios and logos, and a physician checks the medical content.",
+    "t": "Design and development"
+   },
+   {
+    "d": "We test the site on phones, tablets and computers, check every form and phone number, then publish it once you sign off. After launch we show your staff how to make edits, and you watch the call reports to see what the site brings in.",
+    "t": "Testing and launch"
+   }
+  ],
+  "tools": [
+   {
+    "d": "This is the private editing area behind your website, similar to working in a word processor. We set it up and train your staff so routine updates do not depend on us.",
+    "t": "Content management system"
+   },
+   {
+    "d": "These are phone numbers that ring at your front desk as usual but record that the call came from your website. We use them to show you how many patient calls the site produces.",
+    "t": "Call tracking numbers"
+   },
+   {
+    "d": "These are software tools that can research topics, draft text and help check pages for errors. We use them to speed up the early work, and our team reviews everything before it goes live, with physician review for medical content.",
+    "t": "AI language models"
+   },
+   {
+    "d": "A blog is a section of your site for short articles, and integration means your site links to your social media profiles. We build both in so new articles and posts keep the site current and give patients more ways to reach you.",
+    "t": "Blog and social media integration"
+   }
+  ],
+  "glossary": [
+   {
+    "d": "A way of building a website so its layout automatically adjusts to fit a phone, tablet or computer screen.",
+    "t": "Responsive design"
+   },
+   {
+    "d": "The moment a website visitor takes the action you want, such as calling your office or sending an appointment request.",
+    "t": "Conversion"
+   },
+   {
+    "d": "The work of organizing and writing a website so search engines like Google understand it and show it to people searching for your services.",
+    "t": "Search engine optimization (SEO)"
+   }
+  ],
+  "deliverables": [
+   {
+    "d": "A look created from a blank page around your specialty, your taste and your budget, not a template shared with other practices.",
+    "t": "Custom design for your practice"
+   },
+   {
+    "d": "Every page is laid out for a small screen first and loads quickly, because most patients will visit from their phone.",
+    "t": "Pages that work on phones"
+   },
+   {
+    "d": "Pages are organized and labeled so Google can read what you treat and where you are, which helps patients find you.",
+    "t": "Search engine friendly structure"
+   },
+   {
+    "d": "You get a simple login where your staff can change text, photos, hours and blog posts without calling a programmer.",
+    "t": "A site you can edit"
+   },
+   {
+    "d": "Patients can request appointments or complete paperwork from home, set up with HIPAA requirements in mind and with your compliance contact.",
+    "t": "Online patient forms"
+   },
+   {
+    "d": "You can see the phone calls your website produces, and you can reach our staff by phone when you need help.",
+    "t": "Call reporting and phone support"
+   }
+  ]
+ },
+ "medical-spa-website-design": {
+  "fit": [
+   "you are a physician adding aesthetic treatments and need a site that presents them as a real part of your practice",
+   "your current website looks dated or generic next to the experience patients get in your office",
+   "you want one team to handle the site, social media and email instead of coordinating several vendors"
+  ],
+  "plain": "A medical spa website is your practice's online front door: a custom-designed site that presents your treatments, your team and your setting the way patients experience them in person. Most patients look up a practice before they call, so the site has to look right and also be easy to find on search engines and in answers from AI assistants. Our in-house team designs and builds it, then pairs it with the social media and email marketing that bring patients to it.",
+  "steps": [
+   {
+    "d": "We ask about your practice, the treatments you want to grow and the patients you want to reach. You tell us your priorities and share any existing logo, colors, photos and website access.",
+    "t": "Goals conversation"
+   },
+   {
+    "d": "We present a design for the site and draft the text for each page. You review both, correct anything that does not sound like your practice, and approve the treatment descriptions.",
+    "t": "Design and content"
+   },
+   {
+    "d": "Our programmers build the approved design and connect booking, forms and your electronic medical record system where needed. Anything that touches patient data is set up with HIPAA requirements in mind and with your compliance contact, so we need that person available.",
+    "t": "Build and connect"
+   },
+   {
+    "d": "We publish the site, then keep it maintained and adjust it as search engines and AI assistants change how they show results. You send us news, new treatments, staff changes and photos as they come up.",
+    "t": "Launch and upkeep"
+   }
+  ],
+  "tools": [
+   {
+    "d": "The software behind a website that stores its pages, text and images and lets them be edited without rebuilding the site. We build your site on one so updates such as a new treatment or a new provider can be made quickly.",
+    "t": "Content management system"
+   },
+   {
+    "d": "A scheduling tool that shows patients available times and takes their appointment requests through the website. We add it to your site and link it to the calendar or practice software your staff already uses, where that is possible.",
+    "t": "Online booking system"
+   },
+   {
+    "d": "Labels added to a page's code, invisible to visitors, that tell search engines exactly what the page contains, such as your address, hours and services. We add them so Google and AI assistants can describe your practice accurately.",
+    "t": "Structured data"
+   },
+   {
+    "d": "Software that can draft and summarize text, and that now answers many patient questions directly in search results. We use it to assist with first drafts and research, and our writers and physician staff review everything before it goes live. It never gives medical advice to patients.",
+    "t": "AI language models"
+   }
+  ],
+  "glossary": [
+   {
+    "d": "The work of organizing and writing a website so search engines understand it and show it to people looking for the services you offer.",
+    "t": "Search engine optimization (SEO)"
+   },
+   {
+    "d": "A way of building a site so its layout adjusts automatically to fit a phone, tablet or desktop screen.",
+    "t": "Responsive design"
+   },
+   {
+    "d": "A button or short line of text that tells a visitor what to do next, such as booking a consultation.",
+    "t": "Call to action"
+   }
+  ],
+  "deliverables": [
+   {
+    "d": "A site designed from scratch around your brand, photos and treatment menu, with no templates, so it looks like your practice.",
+    "t": "Custom designed website"
+   },
+   {
+    "d": "Pages explaining each treatment in plain language, drafted with AI assistance and reviewed by our physician staff before they are published.",
+    "t": "Physician reviewed treatment pages"
+   },
+   {
+    "d": "A booking tool on the site that lets patients request consultations and treatments at any hour, without calling your front desk.",
+    "t": "Online consultation booking"
+   },
+   {
+    "d": "A second language version of your pages, such as Spanish, so more patients in your area can read about your services.",
+    "t": "Bilingual site version"
+   },
+   {
+    "d": "Social media pages and email newsletters, written with our physician staff, that keep your practice in front of current and prospective patients.",
+    "t": "Social and email campaigns"
+   },
+   {
+    "d": "Ongoing updates, fixes and content changes handled by our staff, with a phone number you can call to reach a person.",
+    "t": "Maintenance and phone support"
+   }
+  ]
+ },
+ "landing-pages-funnels": {
+  "fit": [
+   "you already pay for ads and the clicks currently go to your home page",
+   "you are promoting a specific treatment, seasonal offer or event and want it to have its own page",
+   "your web inquiries often sit unanswered until someone at the front desk has a free moment"
+  ],
+  "plain": "A landing page is a single web page built around one treatment, promotion or event, with one clear next step such as requesting a consultation. A patient funnel is the full path around that page: the ad that brings the patient in, the form they fill out and the follow-up messages that help them book. Practices need this because a patient who clicks an ad for one treatment and arrives on a general home page has to hunt for the answer, and many leave before they find it.",
+  "steps": [
+   {
+    "d": "We talk through the treatment, the kind of patient you want to reach and the single action the page should ask for. You provide the offer details, your credentials and any patient photos you have written consent to use.",
+    "t": "Campaign brief"
+   },
+   {
+    "d": "AI tools help us draft the page and several variations, then our writers edit them and our physician advisors review the medical claims. You read the page and approve it before anything is published.",
+    "t": "Draft and review"
+   },
+   {
+    "d": "We link the form to the follow-up messages and to the way your office handles new inquiries, set up with HIPAA requirements in mind and with your practice's compliance contact. You tell us who receives the inquiries and when they can respond.",
+    "t": "Connect and launch"
+   },
+   {
+    "d": "Once the page is live, we run tests, read the results and adjust the page on a regular schedule. You let us know which inquiries turned into consultations so we improve the page based on real patients, not just form submissions.",
+    "t": "Test and refine"
+   }
+  ],
+  "tools": [
+   {
+    "d": "Software for creating standalone web pages that sit alongside your main website without rebuilding it. We use it to publish each campaign page and to change it quickly when a test shows a better version.",
+    "t": "Landing page builder"
+   },
+   {
+    "d": "Software that can draft text from instructions. We use it to produce first drafts and alternate headlines faster, and every page is edited by our team and reviewed by a physician advisor before it goes live.",
+    "t": "AI language models"
+   },
+   {
+    "d": "A system that sends pre-written messages the moment a form is submitted. We use it for confirmations and scheduling reminders only, and these messages never give medical advice.",
+    "t": "Text and email automation"
+   },
+   {
+    "d": "Measurement tools that record how visitors arrive on a page and what they do there. We set them up so you can see which ad led to which inquiry, without relying on guesswork.",
+    "t": "Analytics and conversion tracking"
+   }
+  ],
+  "glossary": [
+   {
+    "d": "The moment a visitor takes the action the page asks for, such as submitting a consultation request.",
+    "t": "Conversion"
+   },
+   {
+    "d": "The button or line of text that tells the patient what to do next, for example \"Request a consultation\".",
+    "t": "Call to action"
+   },
+   {
+    "d": "A person who has shared their contact details and shown interest but has not yet booked an appointment.",
+    "t": "Lead"
+   }
+  ],
+  "deliverables": [
+   {
+    "d": "A dedicated page for each treatment, promotion or event, written to answer the patient's question and point to one action.",
+    "t": "Campaign landing pages"
+   },
+   {
+    "d": "A clear offer and a short form that asks only for what your front desk needs to schedule a consultation.",
+    "t": "Offers and booking forms"
+   },
+   {
+    "d": "Before-and-after galleries, frequently asked questions and physician credentials, arranged so patients can judge your practice before they contact you.",
+    "t": "Trust-building content"
+   },
+   {
+    "d": "Automatic messages that confirm a patient's request right away and tell them what happens next, so inquiries do not go cold.",
+    "t": "Instant text and email follow-up"
+   },
+   {
+    "d": "Side-by-side trials of headlines, offers and layouts, with a plain summary of which version brought in more consultation requests.",
+    "t": "A/B test results"
+   },
+   {
+    "d": "A report that follows each inquiry from the ad click to the booked consultation, showing which campaigns fill your schedule.",
+    "t": "Click-to-consultation tracking"
+   }
+  ]
+ },
+ "medical-e-commerce": {
+  "fit": [
+   "you already recommend or sell products in the office and patients ask how to get more between visits",
+   "your front desk spends time taking reorders by phone and you would like those orders to come in online",
+   "you want to sell products under your practice's name but do not have staff who can build or run an online store"
+  ],
+  "plain": "An online medical store is a section of your practice website where patients can browse the skincare, supplements and other products you recommend, pay by card and have them shipped or set aside for pickup. It lets patients reorder between visits without calling the front desk, and it keeps those purchases with your practice instead of a general retailer. Our programmers build the store, connect the payments and load your products, so your staff does not have to learn e-commerce to get started.",
+  "steps": [
+   {
+    "d": "We talk through what you want to sell, how you want to be paid and how orders will reach patients. You provide your product list, prices and any rules your suppliers set for selling online.",
+    "t": "Plan the store"
+   },
+   {
+    "d": "We design the store, build the cart and open or connect your merchant account. You supply business and bank details for the payment application and decide on shipping, pickup and return policies.",
+    "t": "Build and connect"
+   },
+   {
+    "d": "We add your products, then place test orders to confirm that payments, taxes, shipping charges and confirmation emails all work. You review every product page and the checkout before anything goes public.",
+    "t": "Load and test"
+   },
+   {
+    "d": "We open the store to patients and show your staff how to see and fill orders. After that we host and maintain it, and you tell us when products, prices or stock change.",
+    "t": "Launch and maintain"
+   }
+  ],
+  "tools": [
+   {
+    "d": "This is the software that runs the store: it displays products, manages the cart and records each order. We install it on your practice website and configure it so your staff can look up orders in one place.",
+    "t": "E-commerce platform"
+   },
+   {
+    "d": "A payment gateway is the service that takes the card details a patient types in and passes them safely to the bank for approval. We connect it to your checkout so card numbers are handled by the payment processor and are not stored on your website.",
+    "t": "Payment gateway"
+   },
+   {
+    "d": "Digital wallets such as Apple Pay and Google Pay let a patient pay with a card already saved on their phone or computer. We add them at checkout so patients on a phone can pay without typing a card number.",
+    "t": "Digital wallets"
+   },
+   {
+    "d": "An SSL certificate encrypts the information that travels between a patient's browser and your website, shown by the padlock in the address bar. We install it and keep it current across the store and checkout.",
+    "t": "SSL certificate"
+   }
+  ],
+  "glossary": [
+   {
+    "d": "A type of bank account that allows a business to accept card payments and receive the money from those sales.",
+    "t": "Merchant account"
+   },
+   {
+    "d": "The final pages of an online store where the buyer enters a shipping address and payment details and confirms the order.",
+    "t": "Checkout"
+   },
+   {
+    "d": "The card industry's security rules for any business that accepts card payments, which apply to how the payment information is collected and handled.",
+    "t": "PCI compliance"
+   }
+  ],
+  "deliverables": [
+   {
+    "d": "A shop section designed with the same colors, fonts and layout as your practice website, so patients know they are still with you.",
+    "t": "Store built into your website"
+   },
+   {
+    "d": "The part of the store that holds what a patient has chosen, totals the order and walks them through paying for it.",
+    "t": "Custom shopping cart"
+   },
+   {
+    "d": "We set up the account that lets your practice accept cards and digital wallets online, with the money deposited to your bank.",
+    "t": "Merchant account and payments"
+   },
+   {
+    "d": "One page for each product with photos, a clear description, size options and price, written from the information you give us and approved by you.",
+    "t": "Product pages"
+   },
+   {
+    "d": "An option for patients to receive a product they use regularly on a schedule, charged automatically until they pause or cancel it.",
+    "t": "Subscriptions and repeat orders"
+   },
+   {
+    "d": "We keep the store online, apply software updates, fix problems and make product or price changes when you send them to us.",
+    "t": "Hosting and maintenance"
+   }
+  ]
+ },
+ "emr-patient-portals": {
+  "fit": [
+   "you already pay for an EMR with a patient portal but few patients use it",
+   "your front desk spends much of the day on refill requests, scheduling calls and paper forms",
+   "you are launching or redesigning your website and want the portal built into it from the start"
+  ],
+  "plain": "A patient portal is the secure login area that comes with your electronic medical record (EMR) system, where patients can fill out forms, request appointments, ask for refills and see results. This service connects that portal to your practice website, so patients start in one familiar place and are sent to the right portal page for each task. Without that connection, most patients never find the portal and call the front desk instead.",
+  "steps": [
+   {
+    "d": "We ask which EMR you use, which portal features are turned on and what patients call about most often. You provide a contact at the practice who knows the EMR and the name of your compliance contact.",
+    "t": "Discovery call"
+   },
+   {
+    "d": "We map which portal features will appear on the website and where, based on what your EMR allows. You review the plan and confirm with your EMR vendor any features that need to be switched on.",
+    "t": "Integration plan"
+   },
+   {
+    "d": "We add the links, pages and instructions, then test each path on phones and computers using a test account or a walkthrough with your staff. Patient information stays inside the portal, and the setup is done with HIPAA requirements in mind and reviewed with your compliance contact.",
+    "t": "Build and test"
+   },
+   {
+    "d": "After your approval we publish the changes and give your front desk a short guide for pointing patients to the website. We check the links periodically and update them when your EMR vendor changes its portal, and you tell us when you add or remove features.",
+    "t": "Launch and upkeep"
+   }
+  ],
+  "tools": [
+   {
+    "d": "The secure patient login area supplied by your EMR vendor, where records, messages and requests are kept. We do not rebuild or replace it, we connect your website to it using the links and options your vendor provides.",
+    "t": "EMR patient portal"
+   },
+   {
+    "d": "The software that runs your website and lets pages be edited without programming, such as WordPress. We use it to add the portal buttons, the resources page and the patient instructions.",
+    "t": "Content management system"
+   },
+   {
+    "d": "A small booking window supplied by many EMR vendors that can sit inside a web page. Where your EMR offers one, we place it on your site so patients request a time without hunting for the right screen.",
+    "t": "Embedded scheduling widget"
+   },
+   {
+    "d": "A tool that counts visits and clicks on your website without identifying individual patients. We use it to see how often the portal links are used and which pages need clearer directions, and we keep tracking limited to the public website.",
+    "t": "Website analytics"
+   }
+  ],
+  "glossary": [
+   {
+    "d": "A setup that lets a person use one username and password to reach more than one system, which some EMR vendors offer and some do not.",
+    "t": "Single sign-on"
+   },
+   {
+    "d": "A way for two software systems to exchange information automatically, which some EMR vendors make available to connect scheduling or forms to a website.",
+    "t": "API"
+   },
+   {
+    "d": "Any information that can identify a patient and relates to their health, care or payment, which HIPAA requires practices and their vendors to safeguard.",
+    "t": "Protected health information (PHI)"
+   }
+  ],
+  "deliverables": [
+   {
+    "d": "A clearly labeled patient portal button in your site's menu and on key pages, so patients reach the login in one click.",
+    "t": "Portal access on your website"
+   },
+   {
+    "d": "One page that gathers forms, appointment requests, refill requests and results, each with a short explanation and a direct link to the portal.",
+    "t": "Patient resources page"
+   },
+   {
+    "d": "Links to your EMR's intake and consent forms, so new patients complete paperwork at home and answers arrive in their chart.",
+    "t": "Online forms connection"
+   },
+   {
+    "d": "A booking link or embedded scheduler from your EMR, placed where patients look for it, including service pages and the contact page.",
+    "t": "Appointment request path"
+   },
+   {
+    "d": "Short, plain instructions on creating an account, resetting a password and requesting a refill, written to reduce phone calls to your staff.",
+    "t": "Patient how-to instructions"
+   },
+   {
+    "d": "A written record of every link, page and setting we added, so your staff and EMR vendor know exactly how things connect.",
+    "t": "Integration summary document"
+   }
+  ]
+ },
+ "online-booking": {
+  "fit": [
+   "your phones ring more than your front desk can answer, or callers often reach voicemail after hours",
+   "your patients still fill out paper forms on a clipboard in the waiting room and visits start late because of it",
+   "you pay for advertising and cannot tell which of it leads to booked appointments"
+  ],
+  "plain": "Online booking and patient intake is a set of tools on your website that lets a patient pick a visit time and complete their paperwork from a phone, at any hour, without calling your front desk. Many patients choose a practice in the evening or on a weekend, when nobody is there to answer the phone. We connect these tools to the scheduling system you already use, so your staff does not retype anything by hand.",
+  "steps": [
+   {
+    "d": "We talk through how patients book today and look at the scheduling system you use. You give us a contact at the front desk, your current forms and the name of your compliance contact.",
+    "t": "Review your setup"
+   },
+   {
+    "d": "We map each screen a patient will see, from the first button to the final confirmation, and draft the wording of forms and messages. You decide which visit types can be booked online and approve the text.",
+    "t": "Plan the patient path"
+   },
+   {
+    "d": "We install everything and connect it to your scheduling system, then run test bookings with your staff to confirm each one lands in the right place. Your compliance contact reviews any form that collects health information before it goes live.",
+    "t": "Build and test"
+   },
+   {
+    "d": "Once it is live, we watch where patients stop partway through and report which sources produce bookings. You tell us what the front desk is hearing, and we adjust the forms, messages and button placement.",
+    "t": "Launch and adjust"
+   }
+  ],
+  "tools": [
+   {
+    "d": "This is the software your staff already uses to keep the appointment calendar and patient records. We link online booking to it so new appointments show up there on their own.",
+    "t": "Practice management system"
+   },
+   {
+    "d": "This is the free listing that shows your practice in Google Search and Google Maps, with your hours, phone number and reviews. We add a booking link to it so patients can schedule straight from the search results.",
+    "t": "Google Business Profile"
+   },
+   {
+    "d": "These are web forms that protect what a patient types while it is sent and stored. We use them for intake and consent, set up with HIPAA requirements in mind and with your compliance contact.",
+    "t": "Secure online forms"
+   },
+   {
+    "d": "This is software that counts visits to your website and records what people do there, without identifying them as patients. We use it to see how many visitors start a booking, how many finish and where they came from.",
+    "t": "Website analytics"
+   }
+  ],
+  "glossary": [
+   {
+    "d": "A connection between two software systems that lets them pass information to each other automatically, so nobody has to enter it twice.",
+    "t": "Integration"
+   },
+   {
+    "d": "A contract, often shortened to BAA, that HIPAA requires between a practice and any outside company that handles patient health information on its behalf.",
+    "t": "Business associate agreement"
+   },
+   {
+    "d": "A patient who misses a scheduled appointment without canceling ahead of time, leaving an empty slot in the schedule.",
+    "t": "No-show"
+   }
+  ],
+  "deliverables": [
+   {
+    "d": "Clearly labeled buttons on your website, Google Business Profile and social pages that take a patient straight to your booking page.",
+    "t": "Book-now buttons"
+   },
+   {
+    "d": "Depending on your system, patients either send a preferred time for staff to approve or choose an open slot themselves.",
+    "t": "Requests or live scheduling"
+   },
+   {
+    "d": "Your paper forms rebuilt as phone-friendly versions that patients complete and sign at home before they arrive for the visit.",
+    "t": "Digital intake and consent forms"
+   },
+   {
+    "d": "Text and email messages that confirm each appointment and remind the patient beforehand, sent without anyone on your staff lifting a finger.",
+    "t": "Automatic confirmations and reminders"
+   },
+   {
+    "d": "For practices offering virtual visits, each booked patient receives a link to join the video appointment from their own device.",
+    "t": "Telehealth visit links"
+   },
+   {
+    "d": "A simple report showing which ads, searches or social posts led to booked appointments, so marketing decisions rest on real numbers.",
+    "t": "Booking source tracking"
+   }
+  ]
+ },
+ "website-accessibility-compliance": {
+  "fit": [
+   "your website was built several years ago and has never been checked for accessibility",
+   "you collect appointment requests or intake information online and are not sure where that information goes",
+   "your attorney or compliance officer has raised concerns about your website and you need someone to carry out the changes"
+  ],
+  "plain": "Website accessibility means your site can be used by every patient, including people who rely on a screen reader (software that reads the page aloud), who navigate with a keyboard instead of a mouse, or who have low vision. Compliance work covers the other half: making sure forms, tracking codes and security settings treat patient information carefully. We check your site for both, fix what we find, and work with your compliance officer or attorney on anything that needs a legal decision.",
+  "steps": [
+   {
+    "d": "We ask how your site is used, which forms collect patient information and who handles compliance at your practice. You give us site access and introduce us to your compliance officer or attorney.",
+    "t": "Initial conversation"
+   },
+   {
+    "d": "We test your pages with automated scanners and by hand, using a keyboard and a screen reader, and we list every tracking code on the site. You receive the report and tell us if any findings need your compliance contact's input.",
+    "t": "Audit"
+   },
+   {
+    "d": "We correct the problems, add captions, publish the accessibility statement and adjust forms, tags and privacy pages. Your compliance contact approves the policy wording and any decisions about patient data before they go live.",
+    "t": "Fixes and setup"
+   },
+   {
+    "d": "We recheck the site as pages and videos are added, apply security updates and respond to problems patients report. You forward us any feedback you receive and tell us about planned changes to the site.",
+    "t": "Ongoing monitoring"
+   }
+  ],
+  "tools": [
+   {
+    "d": "Software that reads a web page and flags common problems, such as text that is hard to see or images with no description. We use scanners to find issues quickly, then confirm each one by hand because automated tools miss a lot.",
+    "t": "Accessibility scanners"
+   },
+   {
+    "d": "Programs that read a website aloud for people who are blind or have low vision. We go through your site with one to hear what those patients hear and fix anything confusing or unreachable.",
+    "t": "Screen readers"
+   },
+   {
+    "d": "A control panel that holds the small pieces of code your site uses for advertising and visitor statistics. We use it to see what is collecting information on each page and to remove or restrict tracking where patients share health details.",
+    "t": "Tag manager"
+   },
+   {
+    "d": "The notice that tells visitors what your site stores in their browser and lets them accept or decline. We install it and configure it to match your privacy policy and what your compliance contact requires.",
+    "t": "Cookie consent banner"
+   }
+  ],
+  "glossary": [
+   {
+    "d": "The Web Content Accessibility Guidelines, an internationally recognized set of standards for making websites usable by people with disabilities.",
+    "t": "WCAG"
+   },
+   {
+    "d": "A short written description attached to an image that a screen reader speaks aloud so a patient who cannot see the image knows what it shows.",
+    "t": "Alt text"
+   },
+   {
+    "d": "A small piece of code from an advertising or analytics company that records what visitors do on your site and sends that information back to the company.",
+    "t": "Tracking pixel"
+   }
+  ],
+  "deliverables": [
+   {
+    "d": "A written review of your current site against the WCAG guidelines, listing each problem in plain language and ranked by how serious it is.",
+    "t": "Accessibility audit report"
+   },
+   {
+    "d": "Corrections to color contrast, headings, forms, image descriptions and keyboard navigation so patients with disabilities can read and use every page.",
+    "t": "Site fixes"
+   },
+   {
+    "d": "Accurate on-screen text for your videos, so patients who are deaf or hard of hearing can follow what is being said.",
+    "t": "Video captions"
+   },
+   {
+    "d": "A public page that explains your commitment to accessibility and gives patients a simple way to tell you when something does not work.",
+    "t": "Accessibility statement and feedback form"
+   },
+   {
+    "d": "Contact and intake forms set up with HIPAA requirements in mind, plus a check of tracking codes on pages where patients share health details.",
+    "t": "Patient form and tracking review"
+   },
+   {
+    "d": "Cookie consent, privacy policy pages, an SSL certificate, regular backups and security updates that keep your site protected and current.",
+    "t": "Privacy and security setup"
+   }
+  ]
+ },
+ "website-maintenance": {
+  "fit": [
+   "your website still shows old hours, former providers or services you no longer offer because no one has time to update it",
+   "you do not know who would fix your site if it went down, was hacked or lost its content",
+   "you want one team to call for hosting, updates, changes and questions instead of several separate vendors"
+  ],
+  "plain": "Website security and maintenance is the ongoing care that keeps your practice website online, protected, accurate and quick to load after it launches. A website runs on software that needs regular updates, and practice details such as hours, providers and services change often. A designated team handles all of it for you and makes the changes you request within 24 to 48 hours.",
+  "steps": [
+   {
+    "d": "We talk through how your website is built, where it is hosted and what has been causing trouble. You tell us who at the practice will send requests and approve changes.",
+    "t": "Review your site"
+   },
+   {
+    "d": "We move the site to our hosting or connect to your current setup, then put backups, security updates and monitoring in place. You provide logins for the website, the domain name and any online store.",
+    "t": "Set up access"
+   },
+   {
+    "d": "You send changes by email or phone, and we complete them within 24 to 48 hours. For anything medical, your team confirms the wording is accurate before it goes live.",
+    "t": "Handle your requests"
+   },
+   {
+    "d": "We check the site daily, apply updates, fix what breaks and keep improving how it appears in search. You read the reports and tell us what is changing at the practice.",
+    "t": "Maintain and report"
+   }
+  ],
+  "tools": [
+   {
+    "d": "This is the software your website is built on, such as WordPress, which lets pages be edited without rebuilding the site. We keep it and its add-ons updated and use it to make your changes.",
+    "t": "Content management system"
+   },
+   {
+    "d": "Hosting is the computer that stores your website and delivers it to visitors, and the SSL certificate is what puts the padlock in the browser's address bar. We manage both, and any form that collects patient information is set up with HIPAA requirements in mind and with your practice's compliance contact.",
+    "t": "Web hosting and SSL certificate"
+   },
+   {
+    "d": "A backup system saves copies of your whole website on a schedule and stores them apart from the live site. If an update goes wrong or the site is attacked, we use a recent copy to bring it back.",
+    "t": "Automated backups"
+   },
+   {
+    "d": "These are free Google tools that show how many people visit your site, which pages they read and which searches bring them there. We use them to build your reports and to spot errors Google finds on your pages.",
+    "t": "Google Analytics and Google Search Console"
+   }
+  ],
+  "glossary": [
+   {
+    "d": "A small add-on program that gives a website an extra feature, such as an appointment form, and that needs regular updates to stay secure.",
+    "t": "Plugin"
+   },
+   {
+    "d": "The address people type to reach your website, such as yourpractice.com, which is registered and renewed separately from the website itself.",
+    "t": "Domain name"
+   },
+   {
+    "d": "Harmful software that attackers place on a website to steal information, send visitors elsewhere or damage the site.",
+    "t": "Malware"
+   }
+  ],
+  "deliverables": [
+   {
+    "d": "We keep your website on a server we monitor, so it stays online and loads quickly for patients, including any online store.",
+    "t": "Managed website hosting"
+   },
+   {
+    "d": "We install software updates that close known security gaps and keep saved copies of your site so it can be restored.",
+    "t": "Security updates and backups"
+   },
+   {
+    "d": "Send us new hours, a new provider, updated photos or a new service page, and we make the change for you.",
+    "t": "Changes within 24 to 48 hours"
+   },
+   {
+    "d": "We look for links, images and pages that have stopped working and fix them before patients or search engines run into them.",
+    "t": "Broken link and page checks"
+   },
+   {
+    "d": "We keep refining page titles, descriptions and content so search engines such as Google understand what your practice offers and where.",
+    "t": "Onsite search engine optimization"
+   },
+   {
+    "d": "You receive marketing reports showing how people find and use your site, and our team answers questions and explains the numbers.",
+    "t": "Reports and direct support"
+   }
+  ]
+ },
+ "search-engine-optimization": {
+  "fit": [
+   "you offer procedures patients actively search for and your website does not appear near the top of the results",
+   "you are paying for every click on ads and want a steadier, more cost effective source of website visitors",
+   "your practice is willing to invest in work that builds gradually and holds its value with ongoing maintenance"
+  ],
+  "plain": "Search engine optimization, or SEO, is the ongoing work of making your practice website appear near the top of the results when patients search for the procedures you offer. Patients tend to choose from the first few results they see, so a site that ranks well brings in visitors without a fee for every click. It is not a one-time setup, so our staff works on your website daily.",
+  "steps": [
+   {
+    "d": "We talk with you about your procedures, your location and the patients you most want to reach. You tell us your priorities and give us access to your current website.",
+    "t": "Learn your practice"
+   },
+   {
+    "d": "We study how competing practices in your area rank and build your keyword list and content plan. You review the list and confirm it matches the procedures you want to promote.",
+    "t": "Research and plan"
+   },
+   {
+    "d": "We adjust the structure, set up the code on every page and write or revise the content. You or a designated clinician approve the medical content before it is published.",
+    "t": "Optimize the site"
+   },
+   {
+    "d": "We keep adding content, earning links and watching how your pages rank, adjusting as search engines and competitors change. You let us know about new procedures, providers or locations so the site stays current.",
+    "t": "Daily ongoing work"
+   }
+  ],
+  "tools": [
+   {
+    "d": "The search engine most patients use to find a doctor or research a procedure. It is the main place we work to have your pages appear, though the same work helps on other search engines too.",
+    "t": "Google Search"
+   },
+   {
+    "d": "A small block of code, invisible to visitors, that tells search engines plain facts such as your specialty, address and hours. We add it to every page so your practice is described correctly in the results.",
+    "t": "Structured data"
+   },
+   {
+    "d": "Software that shows which words people search for and how many other websites compete for them. We use it to choose terms that real patients use and that your practice has a realistic chance of ranking for.",
+    "t": "Keyword research tools"
+   },
+   {
+    "d": "Software that can draft and analyze text quickly. We use it to assist with research and first drafts, and our staff and physicians review everything before it goes on your site.",
+    "t": "AI language models"
+   }
+  ],
+  "glossary": [
+   {
+    "d": "The unpaid listings on a search results page, which a search engine orders by how relevant and trustworthy it judges each website to be.",
+    "t": "Organic results"
+   },
+   {
+    "d": "The page name written in a website's code, which appears as the clickable headline of your listing in the search results.",
+    "t": "Title tag"
+   },
+   {
+    "d": "Optimization methods that follow the search engines' published rules, as opposed to shortcuts that can get a website penalized or removed from the results.",
+    "t": "White hat SEO"
+   }
+  ],
+  "deliverables": [
+   {
+    "d": "A researched list of the words patients type when looking for your procedures, with a plan for which pages should target each one.",
+    "t": "Keyword list and strategy"
+   },
+   {
+    "d": "Your pages and menus arranged so that both patients and search engines can find every procedure you offer in a click or two.",
+    "t": "Reorganized site structure"
+   },
+   {
+    "d": "Titles, descriptions, image labels and structured data added to every page, so search engines can read what each page covers.",
+    "t": "Search-ready page code"
+   },
+   {
+    "d": "New and improved pages about your procedures, written or reviewed by physicians on our staff so the information is accurate and useful.",
+    "t": "Physician-reviewed content"
+   },
+   {
+    "d": "Relevant websites linking to yours, earned through honest methods only, which signals to search engines that your site can be trusted.",
+    "t": "Ethical link building"
+   },
+   {
+    "d": "Illustrated summaries of a procedure or topic that patients find easy to read and that other websites like to share and link to.",
+    "t": "Custom infographics"
+   }
+  ]
+ },
+ "local-seo": {
+  "fit": [
+   "you have moved, changed phone numbers or added a location, and old details still appear online",
+   "your patients come mostly from the surrounding area and other practices appear above you on the map",
+   "you have never claimed your Google profile or are not sure who controls it"
+  ],
+  "plain": "Local search engine optimization (local SEO) is the work of making your practice appear when someone nearby searches for a doctor, a dentist or a treatment you offer, whether on Google, on Google Maps or in medical directories. Search engines compare your name, address, phone number and hours across many websites, and listings that are missing, duplicated or wrong make them less confident about showing you. We correct those listings first, then build out your profiles and pages so patients in your area can find you and reach you.",
+  "steps": [
+   {
+    "d": "We ask about your locations, providers, services and the areas you want to draw patients from. You give us your current addresses, phone numbers and hours, plus access to any Google profile you already have.",
+    "t": "Intake conversation"
+   },
+   {
+    "d": "We search for every existing listing of your practice and fix or remove the ones that are incomplete, duplicated or wrong. You may need to answer a verification call, email or postcard from Google or a directory.",
+    "t": "Audit and cleanup"
+   },
+   {
+    "d": "We complete your profiles, submit your details, write the location and service pages and add the contact buttons. You approve the pages before they go live, and anything that connects to online booking or a form is set up with HIPAA requirements in mind and with your compliance contact.",
+    "t": "Build and publish"
+   },
+   {
+    "d": "We watch for new duplicates and unwanted edits, keep your listings current and share what we see in calls, direction requests and local searches. You tell us when hours, providers or services change.",
+    "t": "Ongoing upkeep"
+   }
+  ],
+  "tools": [
+   {
+    "d": "The free listing Google gives every business, which appears as the information panel patients see in search results. We use it as the main record of your practice and update it whenever something changes.",
+    "t": "Google Business Profile"
+   },
+   {
+    "d": "The map app and map results many patients use to find a nearby practice and get directions. We make sure each location has its own entry and that the pin sits at the right address and entrance.",
+    "t": "Google Maps"
+   },
+   {
+    "d": "Small labels added to your website's code that tell search engines plainly what your practice is, where it is and when it is open. We add them to your pages so the details match your listings exactly.",
+    "t": "Structured data"
+   },
+   {
+    "d": "Software that can compare and draft text quickly. We use it to help spot inconsistent listings and draft page copy, then our team reviews everything and a physician reviews medical content. It never gives medical advice.",
+    "t": "AI language models"
+   }
+  ],
+  "glossary": [
+   {
+    "d": "NAP stands for name, address and phone number, and consistency means those three details are written the same way everywhere your practice is listed.",
+    "t": "NAP consistency"
+   },
+   {
+    "d": "Any mention of your practice's name, address and phone number on another website, such as a directory or a review site.",
+    "t": "Citation"
+   },
+   {
+    "d": "The small group of businesses that Google shows next to a map at the top of the results for a nearby search.",
+    "t": "Local pack"
+   }
+  ],
+  "deliverables": [
+   {
+    "d": "A report of every listing we find for your practice, with duplicates removed and wrong details corrected.",
+    "t": "Listing audit and cleanup"
+   },
+   {
+    "d": "Your correct practice details submitted to the major data directories that supply information to maps, apps and voice assistants.",
+    "t": "Directory submissions"
+   },
+   {
+    "d": "A complete, verified profile with your services, hours, photos and categories, which we keep current as things change.",
+    "t": "Google Business Profile"
+   },
+   {
+    "d": "Profiles on the health directories where patients look up providers, claimed and filled in with accurate information for each practitioner.",
+    "t": "Medical directory listings"
+   },
+   {
+    "d": "A page on your website for each office and main service, written so nearby searches lead to the right page.",
+    "t": "Location and service pages"
+   },
+   {
+    "d": "Buttons on your pages and profiles that let a patient on a phone call you or request an appointment in one tap.",
+    "t": "One-tap contact buttons"
+   }
+  ]
+ },
+ "ai-search-optimization": {
+  "fit": [
+   "you have noticed patients mentioning that they looked up their options in ChatGPT or another AI assistant before calling.",
+   "your practice already has a working website and some search visibility, and you want to build on that foundation.",
+   "you are willing to have your physicians review medical content, since that review is a large part of what makes it trustworthy."
+  ],
+  "plain": "AI search optimization is the work of making your practice easy for AI assistants such as ChatGPT and Google's AI Overviews to understand and safe for them to recommend. These assistants build their answers from sources they trust, including clearly organized web pages, consistent listings, reviews and mentions on reputable sites. A practice that is hard for them to read is often left out of the answer, even when it ranks well in regular search results.",
+  "steps": [
+   {
+    "d": "We talk through your specialties, locations and priority procedures, then test how AI assistants answer the questions your patients would ask. You give us access to your website and listings and tell us which services matter most.",
+    "t": "Discovery and audit"
+   },
+   {
+    "d": "We turn the audit into an ordered list of fixes and new content, starting with what is most likely to help. You review the plan and confirm that the facts about your practice and physicians are accurate.",
+    "t": "Plan and priorities"
+   },
+   {
+    "d": "We add the markup, correct the listings and write the content, with AI assisting on drafts and our team editing every piece. Your physicians read and approve the medical content before anything is published.",
+    "t": "Build and review"
+   },
+   {
+    "d": "We keep checking how AI answers mention your practice and refine the work as these systems change. You tell us about new physicians, procedures or locations so your information stays current.",
+    "t": "Monitor and adjust"
+   }
+  ],
+  "tools": [
+   {
+    "d": "These are tools such as ChatGPT and the AI summaries at the top of Google results, which answer a question directly instead of only listing links. We ask them the questions your patients would ask and record what they say about your practice.",
+    "t": "AI assistants and AI Overviews"
+   },
+   {
+    "d": "This is a standard format of code, invisible to visitors, that describes the content of a page to search engines and AI systems. We add it to your site so your physicians, locations, procedures and reviews are read correctly.",
+    "t": "Structured data"
+   },
+   {
+    "d": "This is the free Google listing that shows your practice in Maps and local results, with your hours, phone number, photos and reviews. We keep it complete and accurate, because it is one of the sources AI systems rely on for local information.",
+    "t": "Google Business Profile"
+   },
+   {
+    "d": "This is the software your website runs on, such as WordPress, which lets pages be added and edited without rebuilding the site. We use it to publish the question-and-answer content and author pages, and to place the structured data.",
+    "t": "Content management system"
+   }
+  ],
+  "glossary": [
+   {
+    "d": "Another name for this service, used because AI assistants give a direct answer instead of a list of links.",
+    "t": "Answer engine optimization (AEO)"
+   },
+   {
+    "d": "A third name for the same work, where generative refers to AI that writes its own response from many sources.",
+    "t": "Generative engine optimization (GEO)"
+   },
+   {
+    "d": "A source that an AI answer links to or names as the place its information came from, which is one way a practice appears in the answer.",
+    "t": "Citation"
+   }
+  ],
+  "deliverables": [
+   {
+    "d": "A written report showing how AI assistants currently describe your practice and your competitors, including what they get wrong or leave out.",
+    "t": "AI visibility audit"
+   },
+   {
+    "d": "Behind-the-scenes labels added to your website that tell AI systems exactly who your physicians are, where you practice and what you offer.",
+    "t": "Structured data markup"
+   },
+   {
+    "d": "Pages that answer the questions patients ask in their own words, drafted with AI assistance and reviewed by editors and physicians before publishing.",
+    "t": "Patient question-and-answer content"
+   },
+   {
+    "d": "Your practice name, address, phone number, hours and services corrected to match across the directories and profiles that AI systems check.",
+    "t": "Directory and profile cleanup"
+   },
+   {
+    "d": "Pages that show which physician wrote or reviewed your medical content, with training and credentials, so readers and AI systems know who stands behind it.",
+    "t": "Author and credential pages"
+   },
+   {
+    "d": "Regular updates in plain language on whether and how your practice appears in AI answers, and what we plan to adjust next.",
+    "t": "Ongoing visibility reports"
+   }
+  ]
+ },
+ "pay-per-click": {
+  "fit": [
+   "you are opening a new location or adding a service and cannot wait for unpaid search results to build",
+   "your schedule has open appointments for specific procedures that you want to fill",
+   "you want to see which marketing dollars led to actual patient calls and bookings"
+  ],
+  "plain": "Pay-per-click marketing places a short text ad for your practice above the regular search results when someone nearby searches for a service you offer. You pay only when a person clicks the ad, which is where the name comes from. A practice needs it because it reaches patients at the moment they are looking for care, without waiting months for a website to climb the unpaid results.",
+  "steps": [
+   {
+    "d": "We ask about your services, service area, capacity and the monthly budget you are comfortable with. You tell us which procedures you want more patients for and who should approve ad wording.",
+    "t": "Discovery call"
+   },
+   {
+    "d": "We set up the campaigns, keywords, ads and landing pages, and send them to you for review. You give us access to your website and any existing ad account, and confirm that every claim in the ads is accurate.",
+    "t": "Account build"
+   },
+   {
+    "d": "We turn the ads on and connect call and booking tracking, set up with HIPAA requirements in mind and with your compliance contact. Your front desk only needs to answer the phone and handle requests as usual.",
+    "t": "Launch and tracking"
+   },
+   {
+    "d": "We review the search terms, adjust bids, test new ad wording and move budget toward what brings in patients. You tell us when your schedule, services or priorities change so the campaigns can follow.",
+    "t": "Ongoing management"
+   }
+  ],
+  "tools": [
+   {
+    "d": "This is the platform where businesses pay to show ads on Google search results. We build and manage your campaigns inside it, and the account stays in your practice's name.",
+    "t": "Google Ads"
+   },
+   {
+    "d": "These are phone numbers that forward to your regular line and record which ad led to the call. We place them on your ads and landing pages so every call can be traced to its source.",
+    "t": "Call tracking numbers"
+   },
+   {
+    "d": "Analytics software counts what visitors do on your website after they arrive. We use it to see which ads lead to completed booking forms and which lead to visitors leaving.",
+    "t": "Website analytics"
+   },
+   {
+    "d": "These are software programs that can draft and reword text quickly. We use them to draft ad variations and sort search data, and our team reviews everything before it runs, with physician review for medical content.",
+    "t": "AI language models"
+   }
+  ],
+  "glossary": [
+   {
+    "d": "The amount you pay each time someone clicks your ad, which varies with how many other advertisers want the same search phrase.",
+    "t": "Cost per click"
+   },
+   {
+    "d": "A rating Google gives each keyword based on how well your ad and landing page match the search, which affects your position and cost.",
+    "t": "Quality score"
+   },
+   {
+    "d": "A visitor taking the action you want, such as calling the office or submitting an appointment request.",
+    "t": "Conversion"
+   }
+  ],
+  "deliverables": [
+   {
+    "d": "Your account is arranged into separate campaigns for each service, so spending and results for each one stay easy to read.",
+    "t": "Organized ad account"
+   },
+   {
+    "d": "We divide your monthly ad spend among your services according to which ones matter most to your practice right now.",
+    "t": "Budget plan by service"
+   },
+   {
+    "d": "A researched list of the phrases patients type when looking for your services, plus phrases we block to avoid wasted clicks.",
+    "t": "Keyword list"
+   },
+   {
+    "d": "Several versions of each ad, drafted with AI assistance and reviewed by our team so the wording is accurate and appropriate.",
+    "t": "Written ads"
+   },
+   {
+    "d": "Each campaign gets its own web page that matches the ad and gives visitors one clear way to call or book.",
+    "t": "Campaign landing pages"
+   },
+   {
+    "d": "Regular reports show how many phone calls and appointment requests the ads produced, not only how many people clicked.",
+    "t": "Call and booking reports"
+   }
+  ]
+ },
+ "search-engine-marketing": {
+  "fit": [
+   "your market is crowded and competing practices already appear above you in search results",
+   "you are opening a location or adding a service and cannot wait for unpaid rankings to build",
+   "you have a set monthly ad budget and front desk staff ready to answer new inquiries promptly"
+  ],
+  "plain": "Paid advertising places your practice at the top of Google search results and in the feeds of people on Instagram, Facebook and TikTok, and you pay the platform each time someone clicks or views your ad. Unpaid search rankings (SEO) build slowly and may not be enough in a crowded market, so paid ads put you in front of patients as soon as a campaign starts. We can set up the account and teach your team to run it, or manage it for you.",
+  "steps": [
+   {
+    "d": "We ask about your services, your area, your competitors and what you want the ads to achieve. You tell us which treatments matter most and what monthly ad budget you are comfortable with.",
+    "t": "First conversation"
+   },
+   {
+    "d": "We build the accounts, structure the campaigns and connect them to your website so results can be measured. You give us website access, and anything that touches patient data is set up with HIPAA requirements in mind and with your compliance contact.",
+    "t": "Account setup"
+   },
+   {
+    "d": "We produce the ads and check them against each platform's rules for health and aesthetic advertising. You review and approve the wording, images and offers before anything goes live.",
+    "t": "Creative and launch"
+   },
+   {
+    "d": "We watch where the budget goes and move it toward the ads that bring inquiries, much as a broker manages a portfolio. You tell us which inquiries became patients, or your trained staff takes over the account with us available for questions.",
+    "t": "Ongoing adjustment"
+   }
+  ],
+  "tools": [
+   {
+    "d": "Google's system for buying the sponsored listings that appear above the regular search results. We use it to show your practice when someone nearby searches a phrase such as \"Botox Fort Lauderdale\".",
+    "t": "Google Ads"
+   },
+   {
+    "d": "Paid posts and videos that appear in people's feeds and stories, managed from one shared advertising account. We use them to reach people by location and interests, and they often cost less per click than search.",
+    "t": "Instagram and Facebook ads"
+   },
+   {
+    "d": "Short paid videos that appear between the regular videos people scroll through on TikTok. We use them mainly for aesthetic and wellness services, where a brief, visual introduction to the practice works well.",
+    "t": "TikTok ads"
+   },
+   {
+    "d": "Software that helps draft many versions of an ad, with different headlines, images and wording, and compares how each performs. Our team reviews every version before it runs and keeps the ones that bring inquiries.",
+    "t": "AI creative testing"
+   }
+  ],
+  "glossary": [
+   {
+    "d": "The most you agree to pay for one click on your ad, which the platform weighs against other advertisers to decide whose ad is shown.",
+    "t": "Bid"
+   },
+   {
+    "d": "A group of new people the platform finds because they resemble your best existing patients, built without sharing health information.",
+    "t": "Lookalike audience"
+   },
+   {
+    "d": "The action you want a person to take after clicking an ad, such as calling the office or submitting a booking request.",
+    "t": "Conversion"
+   }
+  ],
+  "deliverables": [
+   {
+    "d": "Accounts on Google and the social platforms, set up in your practice's name so the account and its history stay yours.",
+    "t": "Advertising accounts you own"
+   },
+   {
+    "d": "A written list of the search phrases we will bid on and the groups of people each social campaign will reach.",
+    "t": "Keyword and audience plan"
+   },
+   {
+    "d": "The written ads, images and short videos for each platform, drafted with AI assistance and reviewed by our team before anything runs.",
+    "t": "Ads and creative"
+   },
+   {
+    "d": "Follow-up ads shown to people who visited your website but did not book, keeping your practice in view while they decide.",
+    "t": "Retargeting campaigns"
+   },
+   {
+    "d": "Short campaigns built around promotions, new services or events, planned ahead so they start and stop on the dates you choose.",
+    "t": "Seasonal and event campaigns"
+   },
+   {
+    "d": "Either working sessions that teach your staff to create ads and maintain the account, or regular management and plain-language reports from us.",
+    "t": "Training or ongoing management"
+   }
+  ]
+ },
+ "reputation-management": {
+  "fit": [
+   "you provide good care but have only a handful of reviews, or most of them are several years old",
+   "your front desk has no time to ask for reviews or to check several sites for new ones",
+   "you are unsure how to answer a negative review without saying anything about the patient"
+  ],
+  "plain": "Reviews and reputation management is the ongoing work of asking patients for reviews, replying to the ones you receive and keeping your public listings correct. Patients usually read what others say about a practice before they call, and search engines and AI assistants use reviews as one of the signals for which practices to show. We run the process for you so it happens after every visit, not only when someone on your staff has a free moment.",
+  "steps": [
+   {
+    "d": "We look at where your practice is listed, what patients have written and what is out of date. You give us access to your Google Business Profile and other listings, or we help you claim them.",
+    "t": "Review your profiles"
+   },
+   {
+    "d": "We write the request messages and decide with you when they go out after a visit. Because this uses patient contact details, it is set up with HIPAA requirements in mind and with your compliance contact.",
+    "t": "Set up requests"
+   },
+   {
+    "d": "We settle the tone of your replies and who approves them. You name one person at the practice who can read drafts and say yes or ask for changes.",
+    "t": "Agree on replies"
+   },
+   {
+    "d": "Requests go out, we watch for new reviews, draft replies and keep your profile updated. You approve replies and tell us about changes such as new hours, providers or services.",
+    "t": "Run and report"
+   }
+  ],
+  "tools": [
+   {
+    "d": "This is the free listing that shows your practice in Google Search and Google Maps, with your rating, hours and photos. We manage it on your behalf and keep its details accurate.",
+    "t": "Google Business Profile"
+   },
+   {
+    "d": "This is software that gathers reviews from many sites into one place and sends the requests to patients. We set it up, connect your listings and handle it day to day.",
+    "t": "Review management platform"
+   },
+   {
+    "d": "These are the two channels patients are most likely to see shortly after an appointment. We use them to send one polite request with a link that opens the review form directly.",
+    "t": "Text and email messaging"
+   },
+   {
+    "d": "These are programs that can write a first version of a text from instructions. AI drafts the replies, then our team reviews and edits each one before it reaches you for approval, and it never gives medical advice.",
+    "t": "AI language models"
+   }
+  ],
+  "glossary": [
+   {
+    "d": "The practice of asking only satisfied patients for public reviews, which review sites prohibit and which we do not do.",
+    "t": "Review gating"
+   },
+   {
+    "d": "The average of all scores patients have given your practice on a site, shown as one to five stars next to your name.",
+    "t": "Star rating"
+   },
+   {
+    "d": "The page a site such as Google, Healthgrades or Yelp keeps about your practice, showing your name, address, phone number and reviews.",
+    "t": "Listing"
+   }
+  ],
+  "deliverables": [
+   {
+    "d": "Each patient receives a short text or email after the appointment with a direct link to leave a review.",
+    "t": "Review requests after visits"
+   },
+   {
+    "d": "Reviews from Google, Healthgrades, Yelp and other sites appear on a single screen, so nobody has to check each site separately.",
+    "t": "One review dashboard"
+   },
+   {
+    "d": "We write a reply to each review for you to approve, worded so it never reveals or confirms any patient information.",
+    "t": "Drafted replies for approval"
+   },
+   {
+    "d": "We keep your Google listing current with accurate hours, services, photos and regular posts, so patients find correct information when they search.",
+    "t": "Managed Google Business Profile"
+   },
+   {
+    "d": "You get a notification when a review needs attention, such as a low rating or a complaint, so it is not left unanswered.",
+    "t": "New review alerts"
+   },
+   {
+    "d": "Your published reviews are shown on your own site, where visitors can read them while deciding whether to book an appointment.",
+    "t": "Reviews on your website"
+   }
+  ]
+ },
+ "ai-chat-messaging": {
+  "fit": [
+   "your front desk regularly misses calls while helping the patients standing in front of them",
+   "you receive inquiries on evenings and weekends and nobody is available to respond until the next business day",
+   "you serve Spanish-speaking patients and do not always have a bilingual staff member available to answer"
+  ],
+  "plain": "AI agents are software assistants that answer patients on your website chat, your text line and your phone when your staff cannot, including at lunch and after hours. They answer common questions using only the information you approve, take booking requests and pass the conversation to your team when a person is needed. A practice needs this because a patient who gets no answer often calls the next practice on the list.",
+  "steps": [
+   {
+    "d": "We meet with you to understand how patients reach you today and where calls and messages go unanswered. You provide your services, hours, locations, policies and the questions your front desk hears most.",
+    "t": "Learn your practice"
+   },
+   {
+    "d": "AI drafts the answers and our team edits them, then you and your physicians review and approve every one before it is used. Clinical questions are marked to go straight to your staff, because the agents never give medical advice or diagnose.",
+    "t": "Write approved answers"
+   },
+   {
+    "d": "We connect the agents to your website, phone line and text number, working with your compliance contact so the setup is done with HIPAA requirements in mind. Your staff tries real scenarios and tells us what to correct before patients see anything.",
+    "t": "Connect and test"
+   },
+   {
+    "d": "After launch, we send reports on what patients ask most and where the agents had to pass a conversation to a person. You tell us what has changed in the practice, and we update the answers.",
+    "t": "Review and refine"
+   }
+  ],
+  "tools": [
+   {
+    "d": "These are the programs that understand a question written or spoken in everyday language and compose a reply. We restrict them to your approved information, so they answer from your policies and not from the open internet.",
+    "t": "AI language models"
+   },
+   {
+    "d": "This is technology that turns a caller's speech into text, finds the right answer and speaks it back in a natural voice. We set it to pick up after hours and to send any urgent or clinical call to the path you choose.",
+    "t": "Voice AI phone system"
+   },
+   {
+    "d": "This is a text line tied to your practice number, which lets software send and receive messages on your behalf. We use it for missed-call replies, reminders and follow-ups, with patient consent and opt-out handled properly.",
+    "t": "Business text messaging"
+   },
+   {
+    "d": "These are the connections between the agents and the systems you already use, such as your phone service and appointment calendar. We use them so booking requests and call notes arrive where your staff already works.",
+    "t": "Scheduling and phone integrations"
+   }
+  ],
+  "glossary": [
+   {
+    "d": "The collection of approved facts about your practice, such as services, prices and policies, that an agent is allowed to draw its answers from.",
+    "t": "Knowledge base"
+   },
+   {
+    "d": "The moment an agent stops and transfers a conversation to a human staff member because the question is clinical, sensitive or outside its approved answers.",
+    "t": "Escalation"
+   },
+   {
+    "d": "A written record of everything said between a patient and an agent, which your staff can read before they respond.",
+    "t": "Conversation transcript"
+   }
+  ],
+  "deliverables": [
+   {
+    "d": "A chat window on your site that answers questions about services, hours and locations, and collects booking requests for your front desk.",
+    "t": "Website chat assistant"
+   },
+   {
+    "d": "When a call goes unanswered, the caller receives a text from your practice within seconds, so the conversation continues instead of ending.",
+    "t": "Missed-call text-back"
+   },
+   {
+    "d": "A phone assistant that picks up when the office is closed, speaks English and Spanish, and records what each caller needs.",
+    "t": "After-hours voice agent"
+   },
+   {
+    "d": "Automatic text messages that remind patients of upcoming appointments and check in afterward, which saves your staff from making those calls by hand.",
+    "t": "Text reminders and follow-ups"
+   },
+   {
+    "d": "Whenever a person is needed, your team receives the full conversation, so nobody has to ask the patient to repeat themselves.",
+    "t": "Staff hand-off with context"
+   },
+   {
+    "d": "Call summaries for your manager, draft replies to reviews and messages for your approval, and a private assistant that answers new staff questions.",
+    "t": "Tools for your team"
+   }
+  ]
+ },
+ "social-media": {
+  "fit": [
+   "you know your practice should be active on social media but nobody on staff has the time to do it consistently",
+   "your profiles exist but have not been updated in months and no longer reflect the practice",
+   "you offer elective or cash-pay services that patients research and compare online before choosing a provider"
+  ],
+  "plain": "Social media management means a dedicated team plans, writes, designs and publishes posts on your practice's social networks, and answers the people who respond to them. Patients look for health information and get a feel for a practice on these networks long before they call, so a quiet or outdated profile can cost you their trust. You do not have to use social media yourself for it to work for your practice.",
+  "steps": [
+   {
+    "d": "We talk with you about your goals, services and ideal patients, then study the networks and practices in your market. You tell us which procedures matter most and who should approve content.",
+    "t": "Research"
+   },
+   {
+    "d": "We create or update your accounts and prepare the first batch of posts. You provide account access, your logo, photos of the office and team, and any rules your compliance contact wants followed.",
+    "t": "Profile setup"
+   },
+   {
+    "d": "We publish the first posts and turn on any agreed ads. You review and approve the opening content so the tone sounds like your practice.",
+    "t": "Launch"
+   },
+   {
+    "d": "We post every week, respond to your audience and report what is getting attention. You send us news, events and signed patient consent for any photos or stories we use.",
+    "t": "Ongoing weekly posts"
+   }
+  ],
+  "tools": [
+   {
+    "d": "The two networks where most patients browse photos, short videos and local business pages. We publish your posts here and answer the comments and messages they bring in.",
+    "t": "Instagram and Facebook"
+   },
+   {
+    "d": "A program that lets posts be prepared in advance and published automatically at set times. We use it to keep your accounts active every week without anyone at the practice having to log in.",
+    "t": "Social media scheduling software"
+   },
+   {
+    "d": "Software that can draft text and suggest ideas from a short instruction. We use it to draft captions and topic lists, then our writers edit them and a physician reviews anything medical before it goes out.",
+    "t": "AI language models"
+   },
+   {
+    "d": "The paid side of the networks, where a post can be shown to people by location, age or interests. We use them to put your events and services in front of nearby people who do not follow you yet.",
+    "t": "Social media advertising tools"
+   }
+  ],
+  "glossary": [
+   {
+    "d": "The total of likes, comments, shares and saves a post receives, which shows whether people actually paid attention to it.",
+    "t": "Engagement"
+   },
+   {
+    "d": "The number of different people who saw a post at least once, whether or not they follow you.",
+    "t": "Reach"
+   },
+   {
+    "d": "The moment a viewer takes the action you wanted, such as calling the office or filling out an appointment request form.",
+    "t": "Conversion"
+   }
+  ],
+  "deliverables": [
+   {
+    "d": "A short plan that names which networks you will use, who you are trying to reach and what topics you will cover.",
+    "t": "Written social media strategy"
+   },
+   {
+    "d": "A summary of what similar practices in your area post and where patients in your specialty spend time online.",
+    "t": "Competitor and market review"
+   },
+   {
+    "d": "Your accounts set up or cleaned up with correct contact details, logo, photos and a consistent description of your practice.",
+    "t": "Branded practice profiles"
+   },
+   {
+    "d": "Original photos, short videos and captions published every week, drafted with AI assistance and reviewed by our team and a physician.",
+    "t": "Weekly posts"
+   },
+   {
+    "d": "We watch your comments and messages, reply to routine questions and pass anything clinical or sensitive to your staff.",
+    "t": "Comment and message monitoring"
+   },
+   {
+    "d": "Paid campaigns for events, new services or special offers, with booking links adjusted so more viewers become appointment requests.",
+    "t": "Paid ads and promotions"
+   }
+  ]
+ },
+ "short-form-video": {
+  "fit": [
+   "you are comfortable speaking on camera for a few minutes at a time, or willing to try with our guidance",
+   "your patients ask the same questions again and again, and you would like to answer them once in a way many people can see",
+   "your practice has social media accounts that nobody on staff has the time to film or post for"
+  ],
+  "plain": "Short-form videos are vertical clips, usually under a minute, that people watch on their phones on Instagram, TikTok, YouTube Shorts and Facebook. For many patients, one of these clips is the first time they see and hear a doctor, and it shapes whether they feel comfortable booking. We plan, film, edit and publish these videos for your practice so you only need to show up for the filming.",
+  "steps": [
+   {
+    "d": "We talk with you and your staff about your services and the questions patients ask, then send a content plan for the month. You review it and tell us what to add, remove or avoid.",
+    "t": "Topic planning"
+   },
+   {
+    "d": "We come to your office and film everything in one session, guiding you through each topic so you do not need a script. You provide a block of time, a quiet room and, for any patient who appears on camera, their signed consent.",
+    "t": "Filming day"
+   },
+   {
+    "d": "We edit the footage, with AI assisting on the first cuts and our editors finishing the work, and our physician advisory board reviews the medical claims. You approve the final videos before anything goes public.",
+    "t": "Editing and review"
+   },
+   {
+    "d": "We post the approved videos on each network on a regular schedule and report on how they performed. You tell us what patients mention at the front desk, and we use both to shape the next plan.",
+    "t": "Publishing and reporting"
+   }
+  ],
+  "tools": [
+   {
+    "d": "These are the short video sections of Instagram and Facebook, where clips are shown to people nearby and to people interested in a topic, not only to your followers. We publish your videos here with a description and location details that fit your practice.",
+    "t": "Instagram Reels and Facebook Reels"
+   },
+   {
+    "d": "A phone app built entirely around short videos, which many people now use to look up health topics and local providers. We post versions of your videos formatted for it, so you do not need to learn the app yourself.",
+    "t": "TikTok"
+   },
+   {
+    "d": "The short video section of YouTube, which is owned by Google, so these clips can also appear when people search for a topic. We upload your videos here with clear titles based on the question each one answers.",
+    "t": "YouTube Shorts"
+   },
+   {
+    "d": "Editing programs that use AI to transcribe speech, draft captions and suggest where to cut a long recording into shorter clips. We use them to speed up the routine work, and our editors and physician reviewers check every video before it is published.",
+    "t": "AI-assisted video editing software"
+   }
+  ],
+  "glossary": [
+   {
+    "d": "A short vertical video, made to fill a phone screen, that social networks show to people who may not follow you yet.",
+    "t": "Reel"
+   },
+   {
+    "d": "The first second or two of a video, where a clear question or statement gives the viewer a reason to keep watching.",
+    "t": "Hook"
+   },
+   {
+    "d": "Taking one recording and editing it into several different videos or lengths so a single filming session goes further.",
+    "t": "Repurposing"
+   }
+  ],
+  "deliverables": [
+   {
+    "d": "A list of video topics for the month, drawn from the questions your patients and front desk hear most often.",
+    "t": "Monthly content plan"
+   },
+   {
+    "d": "Our crew films at your office in a single visit, recording enough short answers and clips to cover several weeks of posts.",
+    "t": "On-site filming session"
+   },
+   {
+    "d": "Each clip is trimmed, cleaned up and given on-screen captions so viewers can follow along with the sound off.",
+    "t": "Edited, captioned videos"
+   },
+   {
+    "d": "Every video gets a still image with a clear title, so your profile looks organized and people can find a topic quickly.",
+    "t": "Cover images"
+   },
+   {
+    "d": "AI-assisted editing helps us cut the same recording into different lengths and versions, and our editors check each one before it is used.",
+    "t": "Extra formats from footage"
+   },
+   {
+    "d": "We post each video on every network for you and send a report showing which topics people watched, saved and shared.",
+    "t": "Publishing and performance report"
+   }
+  ]
+ },
+ "e-mail-marketing": {
+  "fit": [
+   "you have years of patient email addresses in your records and rarely or never write to them",
+   "your patients come in for one treatment and often do not know about the other services you offer",
+   "you want to stay in regular contact with patients but nobody on your staff has time to write and send emails"
+  ],
+  "plain": "Email marketing management is a regular, planned flow of emails from your practice to your patients: newsletters, occasional promotions, event invitations and automatic messages such as a welcome note or a birthday greeting. We run the whole operation for you, from the patient list to the writing, sending and reporting. Patients who hear from you with useful information remember who you are, what you offer and how to reach you when they are ready to book.",
+  "steps": [
+   {
+    "d": "We talk through your services, your patients and how often you want to send. You provide your current patient contact list, your brand materials and the name of your compliance contact, so that patient data is handled with HIPAA requirements in mind.",
+    "t": "Discovery and access"
+   },
+   {
+    "d": "We prepare the list, design the templates, build the automatic emails and configure your sending domain so messages are recognized as coming from you. You approve the designs and confirm which patient groups make sense for your practice.",
+    "t": "Setup"
+   },
+   {
+    "d": "AI helps us draft and organize, our physicians write and review the medical content, and our team prepares each email. You review the calendar and can edit or decline anything before it is sent.",
+    "t": "Writing and review"
+   },
+   {
+    "d": "We send on the agreed schedule and report on who opened, who clicked and which bookings each campaign produced. We use those results to adjust topics and timing, and you tell us about new services or events to include.",
+    "t": "Sending and reporting"
+   }
+  ],
+  "tools": [
+   {
+    "d": "This is the software that stores your contact list, sends email to many people at once and records what happens to each message. We set it up and manage it for you, so your staff does not need to learn it.",
+    "t": "Email marketing platform"
+   },
+   {
+    "d": "These are settings on your web domain that prove to Gmail, Outlook and other providers that an email really comes from your practice. We configure them so your messages are more likely to reach the inbox and not the spam folder.",
+    "t": "Email authentication (SPF, DKIM and DMARC)"
+   },
+   {
+    "d": "These are short forms on your website where a visitor types an email address to request a free report. We build them into your site and connect them to your list, so each new contact is saved and receives the report automatically.",
+    "t": "Website sign-up forms"
+   },
+   {
+    "d": "These are software tools that can draft and summarize text. We use them to assist with drafts and subject line ideas, and every email is reviewed by our team and by physicians before it is sent; AI never gives medical advice to your patients.",
+    "t": "AI language models"
+   }
+  ],
+  "glossary": [
+   {
+    "d": "Dividing your contact list into groups, for example by treatment received or stated interest, so each group gets emails that apply to them.",
+    "t": "Segmentation"
+   },
+   {
+    "d": "A measure of whether your emails actually arrive in the inbox, as opposed to being blocked or sent to spam.",
+    "t": "Deliverability"
+   },
+   {
+    "d": "The share of recipients who opened an email and the share who clicked a link inside it, which together show how much interest a message produced.",
+    "t": "Open and click rates"
+   }
+  ],
+  "deliverables": [
+   {
+    "d": "We set up your contact list, remove bad or duplicate addresses and group patients by treatment and interest so messages stay relevant.",
+    "t": "A clean, organized patient list"
+   },
+   {
+    "d": "We design reusable email layouts with your logo, colors and contact details, so every message looks like it came from your practice.",
+    "t": "Branded email templates"
+   },
+   {
+    "d": "Our physicians write and review informative newsletters for your patients, and you can read, change or approve each one before it goes out.",
+    "t": "Physician-written newsletters"
+   },
+   {
+    "d": "You receive a monthly plan showing which newsletters, promotions and event invitations go out and when, at the interval you choose.",
+    "t": "A monthly sending calendar"
+   },
+   {
+    "d": "We build emails that send themselves at the right moment: a welcome series, post-visit follow-up, birthday greetings and notes to patients who have not returned.",
+    "t": "Automatic follow-up emails"
+   },
+   {
+    "d": "Visitors enter their email address to receive a free physician-written report, such as one on healthy skin, and join your list.",
+    "t": "Email capture on your website"
+   }
+  ]
+ },
+ "sms-marketing": {
+  "fit": [
+   "you have open appointment slots that often go unfilled on short notice.",
+   "your patients come back for repeat treatments and tend to forget when the next one is due.",
+   "you already send emails and want a faster channel for time-sensitive announcements."
+  ],
+  "plain": "SMS campaign management is the planning, writing, sending and tracking of text messages to patients who have agreed to hear from your practice. Because texts are usually read within minutes, they suit time-sensitive news such as an open appointment this week or a seasonal offer. Mobile carriers and consent laws set strict rules for business texting, and we handle those rules so your messages get through and your practice stays within them.",
+  "steps": [
+   {
+    "d": "We talk through your services, slow periods and how you collect patient phone numbers today. You tell us who answers messages at the front desk and who your compliance contact is.",
+    "t": "Review and plan"
+   },
+   {
+    "d": "We submit your business details to the carriers and build your sign-up forms and messaging account. You provide your legal business name, tax ID and practice address, which the carriers ask for.",
+    "t": "Register and set up"
+   },
+   {
+    "d": "AI helps us draft each message, our writers edit it, and a physician reviews anything that touches on treatments. Nothing is sent until you or your practice manager approve the wording and the send date.",
+    "t": "Write and approve"
+   },
+   {
+    "d": "We send the campaigns, watch the replies and share the results with you. Each round shows us which messages and send times your patients respond to, and we adjust the next campaign accordingly.",
+    "t": "Send and adjust"
+   }
+  ],
+  "tools": [
+   {
+    "d": "This is the software that stores your contact list, sends texts in bulk and records every reply and stop request. We set it up, run it for you and give you access to see everything that goes out.",
+    "t": "SMS marketing platform"
+   },
+   {
+    "d": "This is the industry process where a business identifies itself and describes the kind of messages it plans to send. We prepare and submit the application for your practice and respond to any questions the carriers raise.",
+    "t": "Carrier registration system"
+   },
+   {
+    "d": "These are programs that can draft text and answer simple written questions. We use them to prepare first drafts for our writers and to power the reply agent, which covers hours, directions and booking and never gives medical advice.",
+    "t": "AI language models"
+   },
+   {
+    "d": "This is the system your office already uses for appointments and patient contact details. Where it can connect to the texting platform, we link the two with HIPAA requirements in mind and with your practice's compliance contact involved.",
+    "t": "Practice scheduling software"
+   }
+  ],
+  "glossary": [
+   {
+    "d": "The standard ten-digit local phone number that businesses register with carriers in order to send text messages to customers.",
+    "t": "10DLC"
+   },
+   {
+    "d": "The Telephone Consumer Protection Act, the federal law that requires a business to have a person's permission before sending them marketing texts.",
+    "t": "TCPA"
+   },
+   {
+    "d": "The late evening and early morning period when marketing texts should not be sent, based on the time zone of the person receiving them.",
+    "t": "Quiet hours"
+   }
+  ],
+  "deliverables": [
+   {
+    "d": "Your practice's texting number is registered with the mobile carriers, which is required before business messages can be delivered reliably.",
+    "t": "Registered business number"
+   },
+   {
+    "d": "Sign-up forms and a join word patients can text, plus a dated record showing that each person agreed to receive messages.",
+    "t": "Opt-in forms and consent records"
+   },
+   {
+    "d": "Promotions, event invitations and last-minute openings written by us, approved by you and sent at a time patients are likely to respond.",
+    "t": "Written and scheduled campaigns"
+   },
+   {
+    "d": "Texts that go out on their own when a repeat treatment is due or after a visit, without health details in the message.",
+    "t": "Automatic reminders and follow-ups"
+   },
+   {
+    "d": "Patient replies go to your front desk or to an AI agent that handles routine questions and passes anything clinical to your staff.",
+    "t": "Two-way reply routing"
+   },
+   {
+    "d": "A plain summary after each campaign showing how many patients replied, how many booked and how many asked to stop receiving texts.",
+    "t": "Campaign reports"
+   }
+  ]
+ },
+ "physician-content-marketing": {
+  "fit": [
+   "you know your website needs more and better writing, but no one in the office has time to do it",
+   "you have collected patient email addresses and are not sending them anything on a regular basis",
+   "your current website firm expects you or your staff to supply the articles and blog posts"
+  ],
+  "plain": "Physician content marketing is the written material that represents your practice online: the pages of your website, blog posts, articles, press releases and the newsletters emailed to your patients. Patients and search engines both judge a practice by what it publishes, and AI assistants now quote websites directly, so the writing has to be clear, current and medically accurate. Physicians write or review the medical content, our internet writers prepare it for the web, and your staff is not asked to write anything.",
+  "steps": [
+   {
+    "d": "We talk with you about your services, your patients and what you want to be known for. You provide basic information about the practice, your physicians and any topics you want covered or avoided.",
+    "t": "Learn your practice"
+   },
+   {
+    "d": "We put together a list of pages, articles and newsletter subjects based on what patients search for and what your practice offers. You look over the list and tell us if anything is missing or off the mark.",
+    "t": "Plan the topics"
+   },
+   {
+    "d": "Our writers research and draft with the help of AI tools, a physician writes or reviews the medical content, and our internet staff makes it search engine friendly. You do not need to write, and you can read pieces before they go out if you wish.",
+    "t": "Write and review"
+   },
+   {
+    "d": "We post the content to your website, send the newsletters to your patient list and keep adding new material on a regular schedule. Your part is to tell us about news at the practice, such as a new service or physician.",
+    "t": "Publish and continue"
+   }
+  ],
+  "tools": [
+   {
+    "d": "This is the software behind your website that lets pages and blog posts be added or changed without rebuilding the site. We use it to publish and update your content, so your staff never has to log in.",
+    "t": "Content management system"
+   },
+   {
+    "d": "This is a service that stores a list of email addresses and sends the same message to everyone on it, with a way to unsubscribe. We use it to send your newsletters to the addresses your website collects, set up with HIPAA requirements in mind and with your practice's compliance contact.",
+    "t": "Email marketing platform"
+   },
+   {
+    "d": "These are computer programs that can research a topic and produce a first draft of text quickly. We use them to assist our writers, and a physician checks medical content before it is published, so nothing goes out on AI output alone.",
+    "t": "AI language models"
+   },
+   {
+    "d": "Google and similar search engines, along with AI assistants that answer questions by quoting websites, are how many patients first read about a practice. We write and format your content so these systems can read it easily and represent it accurately.",
+    "t": "Search engines and AI assistants"
+   }
+  ],
+  "glossary": [
+   {
+    "d": "The work of making a website easier for search engines such as Google to find, understand and show to people looking for what you offer.",
+    "t": "Search engine optimization (SEO)"
+   },
+   {
+    "d": "The process by which a search engine reads a web page and adds it to its records so the page can appear in search results.",
+    "t": "Indexing"
+   },
+   {
+    "d": "A list of email addresses from people who have agreed to receive messages from your practice.",
+    "t": "Opt-in list"
+   }
+  ],
+  "deliverables": [
+   {
+    "d": "Pages about your practice, physicians and services, written from the information you give us so they describe your practice accurately.",
+    "t": "Custom website pages"
+   },
+   {
+    "d": "Fresh pages and updates added as part of ongoing maintenance, so readers see current information and search engines have something new to index.",
+    "t": "Regular new content"
+   },
+   {
+    "d": "Physician-written newsletters emailed to the patients on your list, keeping your practice familiar until they are ready to book a visit.",
+    "t": "Patient email newsletters"
+   },
+   {
+    "d": "Educational pieces on the topics your patients ask about, published under your practice name to help people find you through search.",
+    "t": "Blog posts and articles"
+   },
+   {
+    "d": "Short announcements about news at your practice, such as a new physician, location or service, written and published for you.",
+    "t": "Press releases"
+   },
+   {
+    "d": "Every piece with medical content is written or checked by a physician before it is published, including anything first drafted with AI tools.",
+    "t": "Physician-reviewed medical accuracy"
+   }
+  ]
+ },
+ "video-testimonials": {
+  "fit": [
+   "you have happy patients who would gladly speak about their experience but nothing on your website that shows them",
+   "your website describes your services well but feels impersonal to someone visiting for the first time",
+   "you offer elective or aesthetic services where new patients want to hear from someone who has already been through it"
+  ],
+  "plain": "A medical video testimonial is a short, professionally filmed video in which your real patients describe, in their own words, what it was like to be cared for at your practice. Our videographers come to your office, interview the patients who volunteer and edit the footage into a finished video for your website. New visitors tend to trust a person they can see and hear more than a written quote, which makes them more comfortable contacting you.",
+  "steps": [
+   {
+    "d": "We talk with you about your practice, the services you want to highlight and a filming date that will not disrupt your schedule. You tell us which rooms we can use and who our day-of contact will be.",
+    "t": "Planning conversation"
+   },
+   {
+    "d": "You invite satisfied patients who are willing to appear on camera and collect their written permission. This step is set up with HIPAA requirements in mind and with your practice's compliance contact.",
+    "t": "Patient invitations"
+   },
+   {
+    "d": "Our crew arrives, sets up in the space you have chosen and interviews each volunteer in turn. You only need to keep that space available and have your patients arrive at their scheduled times.",
+    "t": "Filming day"
+   },
+   {
+    "d": "Our editors build the final video and send it to you with the files. Once you confirm it represents your practice accurately, it goes on your website, where it keeps working for you with every new visitor.",
+    "t": "Editing and publishing"
+   }
+  ],
+  "tools": [
+   {
+    "d": "This is the filming equipment that captures a sharp picture and clear voices, even in a busy office. We bring and operate all of it, so you do not need to buy or rent anything.",
+    "t": "Professional cameras and microphones"
+   },
+   {
+    "d": "These are the programs editors use to cut, arrange and polish raw footage. We use them to correct sound and color, add your practice name and logo, and shape the interviews into one finished piece.",
+    "t": "Video editing software"
+   },
+   {
+    "d": "This is an online service, such as YouTube or Vimeo, that stores a video and plays it smoothly on any phone or computer. The finished video can be stored there so it loads quickly on your website without slowing your pages down.",
+    "t": "Video hosting platform"
+   },
+   {
+    "d": "This is a small piece of behind-the-scenes code that tells search engines like Google that a page contains a video and what it is about. It can be added to the page that holds your testimonial, so the video supports your search engine optimization.",
+    "t": "Structured data"
+   }
+  ],
+  "glossary": [
+   {
+    "d": "Extra footage of your office, staff and surroundings that is shown while a patient is speaking to make the video more interesting to watch.",
+    "t": "B-roll"
+   },
+   {
+    "d": "A signed form in which a patient gives written permission for their image, voice and story to be used in your marketing.",
+    "t": "Patient authorization"
+   },
+   {
+    "d": "Placing a video on a web page so visitors can press play and watch it there without leaving your site.",
+    "t": "Embedding"
+   }
+  ],
+  "deliverables": [
+   {
+    "d": "Our videographers travel to your office and spend half a day filming, so patients and staff stay in familiar surroundings.",
+    "t": "Half-day on-site filming"
+   },
+   {
+    "d": "Our experienced interviewers put your volunteers at ease and ask simple questions, so their answers sound natural instead of rehearsed.",
+    "t": "Patient preparation and interviews"
+   },
+   {
+    "d": "We also film your office itself, giving future patients a look at the place before they ever walk in.",
+    "t": "Footage of your office"
+   },
+   {
+    "d": "Our editors select the strongest moments, trim the pauses and combine everything into one clear, well-paced story.",
+    "t": "Professional editing"
+   },
+   {
+    "d": "You receive a polished video of real patients describing their experience, ready to place on your website.",
+    "t": "Finished testimonial video"
+   },
+   {
+    "d": "The video files and final product are yours to keep, and everything is covered by one all-inclusive fee.",
+    "t": "Files you own"
+   }
+  ]
+ },
+ "patient-crm-automation": {
+  "fit": [
+   "you pay for advertising and cannot say with confidence which inquiries turned into booked patients",
+   "your front desk is too busy during clinic hours to answer every new inquiry within minutes",
+   "your treatments are repeated on a schedule and patients often drift away without a reminder"
+  ],
+  "plain": "A patient CRM (customer relationship management system) is one place that holds every person who has contacted your practice, what they asked about and what happened next. Lead management is the routine built around it: each new inquiry gets a fast reply, a series of follow-ups and a clear status until the person books or declines. Practices need it because most inquiries are lost through slow or forgotten follow-up, not through bad marketing.",
+  "steps": [
+   {
+    "d": "We review how inquiries reach you today and who answers them. You tell us your services, office hours, booking rules and who your compliance contact is.",
+    "t": "Map your intake"
+   },
+   {
+    "d": "We set up the CRM and connect it to your website, ads and call tracking, with HIPAA requirements in mind and with your compliance contact involved. You provide logins and, if you want, a list of past patients to import.",
+    "t": "Build and connect"
+   },
+   {
+    "d": "We draft the replies, follow-up sequences and reminders, with AI assisting and our team reviewing every message. You approve the wording and decide whether first responses come from your staff, our team or an AI agent.",
+    "t": "Write and approve"
+   },
+   {
+    "d": "We monitor the system, send your weekly report and adjust messages, scoring and routing based on what the numbers show. Your staff keeps each lead's status up to date and tells us when services or offers change.",
+    "t": "Run and refine"
+   }
+  ],
+  "tools": [
+   {
+    "d": "Software that stores every lead and patient contact with a full history of messages, calls and appointments. We configure it for your practice, train your staff and maintain it.",
+    "t": "CRM platform"
+   },
+   {
+    "d": "Phone numbers assigned to specific ads or pages that forward to your regular line and record which source produced each call. We use them to credit phone inquiries to the right campaign inside the CRM.",
+    "t": "Call tracking numbers"
+   },
+   {
+    "d": "Rules that send a prepared message when something happens, such as a form being submitted or a set number of months passing since a visit. We use it for first replies, follow-ups, treatment reminders and reactivation campaigns.",
+    "t": "Text and email automation"
+   },
+   {
+    "d": "Software that can answer a new inquiry by text or chat at any hour, ask basic questions and offer appointment times. Ours follow scripts you approve, never give medical advice and hand the conversation to a person when a question goes beyond scheduling.",
+    "t": "AI agents"
+   }
+  ],
+  "glossary": [
+   {
+    "d": "A person who has contacted your practice or shared their contact details but has not yet booked an appointment.",
+    "t": "Lead"
+   },
+   {
+    "d": "A visual board showing where each person stands, from first inquiry to consultation booked to treatment done.",
+    "t": "Pipeline"
+   },
+   {
+    "d": "The practice of tracing a booked patient back to the specific ad, search or post that first brought them to you.",
+    "t": "Attribution"
+   }
+  ],
+  "deliverables": [
+   {
+    "d": "Web forms, phone calls, texts, website chat and social media messages arrive in a single screen, so nothing sits unseen in a separate account.",
+    "t": "One shared inbox"
+   },
+   {
+    "d": "Each inquiry is labeled with the ad, campaign or page that produced it, so you know which marketing brings actual patients.",
+    "t": "Source tag on every lead"
+   },
+   {
+    "d": "New inquiries receive an immediate reply, then a planned series of messages over the following days until they book or opt out.",
+    "t": "Instant replies and follow-ups"
+   },
+   {
+    "d": "Inquiries are ranked by how ready the person appears to book and sent to the right staff member, so the best ones get called first.",
+    "t": "Lead scoring and routing"
+   },
+   {
+    "d": "Past patients receive reminders when a repeat treatment is due, plus birthday, promotion and event messages, and a note if they have been away.",
+    "t": "Recall and reactivation messages"
+   },
+   {
+    "d": "A short report each week shows how many leads came in, were contacted, booked or were lost, with the reason for each loss.",
+    "t": "Weekly lead report"
+   }
+  ]
+ },
+ "new-service-launch": {
+  "fit": [
+   "you recently completed a course in a new procedure and have not yet told your patients about it",
+   "your practice has room in the schedule for the new service and staff ready to answer questions about it",
+   "you want one team to handle the website, the announcements, the ads and the printed materials together"
+  ],
+  "plain": "A service launch is a coordinated plan that takes a procedure you have just trained in and makes it visible and bookable for patients. A new skill does not fill appointments on its own, because your current patients and the people in your area do not yet know you offer it. We prepare the pages, the announcements, the advertising and the in-office materials together, so the first bookings arrive while your training is still fresh.",
+  "steps": [
+   {
+    "d": "We talk through the procedure you trained in, who it is for in your practice, your capacity and the first month you want to fill. You tell us about your equipment, your schedule and any offer you have in mind.",
+    "t": "Discovery call"
+   },
+   {
+    "d": "We write and design the pages, messages, ads and printed materials, with AI assisting the drafts and our team and a physician reviewing them. You record a few short videos, check the medical content and approve everything before it goes out.",
+    "t": "Build and review"
+   },
+   {
+    "d": "We announce the service to your current patients first, then turn on the campaigns in your area. Your front desk uses the script we provide to answer questions and book the requests that come in.",
+    "t": "Launch"
+   },
+   {
+    "d": "We report which channels produced inquiries and bookings, and we shift effort toward what is working. You tell us how the appointments are going so the message matches what patients experience.",
+    "t": "Track and adjust"
+   }
+  ],
+  "tools": [
+   {
+    "d": "A landing page is a single web page built around one treatment and one action, which is requesting an appointment. We send ad visitors there so they are not distracted by the rest of your website.",
+    "t": "Landing pages"
+   },
+   {
+    "d": "These are services that send one message to many patients at once and show who opened it. We use them for your announcement, set up with HIPAA requirements in mind and together with your practice's compliance contact.",
+    "t": "Email and text messaging platforms"
+   },
+   {
+    "d": "These are paid placements on Google search results and on platforms such as Instagram and Facebook. We limit them to your area so your budget goes to people who could realistically become your patients.",
+    "t": "Google Ads and social media ads"
+   },
+   {
+    "d": "This is a way of recording which ad, email or page led to each form request or phone call. We use it to show you what the launch returned on the training you paid for.",
+    "t": "Conversion and call tracking"
+   }
+  ],
+  "glossary": [
+   {
+    "d": "The single next step a page or message asks the reader to take, such as requesting a consultation.",
+    "t": "Call to action"
+   },
+   {
+    "d": "The moment a visitor does what the page was built for, for example submitting the booking form or calling the office.",
+    "t": "Conversion"
+   },
+   {
+    "d": "Setting an ad campaign to appear only to people in a chosen area, such as the neighborhoods around your practice.",
+    "t": "Geotargeting"
+   }
+  ],
+  "deliverables": [
+   {
+    "d": "A permanent page on your website plus a focused page for ad visitors, both with content reviewed by a physician before publishing.",
+    "t": "Service and landing pages"
+   },
+   {
+    "d": "A clear opening offer for the new procedure and a simple online form so interested patients can request an appointment right away.",
+    "t": "Introductory offer and booking form"
+   },
+   {
+    "d": "Messages to the patients you already have, who trust you and are usually the first to book a new treatment.",
+    "t": "Patient announcement emails and texts"
+   },
+   {
+    "d": "Paid ads shown to people in your area who are searching for the treatment or likely to be interested in it.",
+    "t": "Local Google and social campaigns"
+   },
+   {
+    "d": "Brief clips of you explaining the treatment in your own words, used on your pages, social profiles and ads.",
+    "t": "Short physician videos"
+   },
+   {
+    "d": "Brochures, posters, a front desk script, consent forms and pre and post treatment instructions, all for your review and approval.",
+    "t": "In-office and clinical paperwork"
+   }
+  ]
+ },
+ "marketing-strategy": {
+  "fit": [
+   "you are opening a practice or adding a location and want a plan before you spend on marketing",
+   "you already pay for a website, ads or social media and cannot tell which of them brings in patients",
+   "your practice has grown by referrals and you now want a steadier, more predictable flow of new patients"
+  ],
+  "plain": "A marketing strategy is a written plan that says where your practice should spend its marketing money and effort, in what order, and how you will know whether it is working. Without one, practices tend to buy services one at a time, such as a new website here and some ads there, with no way to tell which of them brings in patients. Our business staff builds the plan around your specialty and your local competitors, and our physician advisory board adds what physicians know about how patients choose a doctor.",
+  "steps": [
+   {
+    "d": "We ask about your specialty, your goals, the procedures you want more of and what you have tried before. You tell us your rough budget and who on your team will be our main contact.",
+    "t": "First conversation"
+   },
+   {
+    "d": "We study your current marketing and your competitors. You give us view-only access to your website statistics, ad accounts and business listing, or we work from what is publicly visible if you have none of these.",
+    "t": "Audit and research"
+   },
+   {
+    "d": "We present the audit, the priorities, the budget and the 90-day roadmap in one meeting. You decide what to approve and who on your side owns each task assigned to the practice.",
+    "t": "Plan and roadmap"
+   },
+   {
+    "d": "We meet each month to compare results against the plan and adjust it. You share what the reports cannot show, such as how many inquiries became booked appointments.",
+    "t": "Monthly review"
+   }
+  ],
+  "tools": [
+   {
+    "d": "Software that counts how many people visit your website, where they came from and what they did there. We use it to see which marketing efforts send visitors who go on to call or request an appointment.",
+    "t": "Website analytics"
+   },
+   {
+    "d": "The free listing that shows your practice name, hours, photos and reviews in Google Search and Google Maps. We check how complete it is and how it compares with the listings of practices near you.",
+    "t": "Google Business Profile"
+   },
+   {
+    "d": "Phone numbers that forward to your front desk and record which ad or web page prompted each call. Where the plan recommends them, they are set up with HIPAA requirements in mind and with your practice's compliance contact.",
+    "t": "Call tracking numbers"
+   },
+   {
+    "d": "Software that can read and summarize large amounts of text quickly. AI assists us in sorting through competitor websites and patient review themes, and our staff and physicians review everything before it reaches your plan.",
+    "t": "AI language models"
+   }
+  ],
+  "glossary": [
+   {
+    "d": "Any single route by which patients find you, such as Google search, paid ads, social media, email or referrals.",
+    "t": "Marketing channel"
+   },
+   {
+    "d": "The moment a person takes the action you want, such as calling the office or submitting an appointment request.",
+    "t": "Conversion"
+   },
+   {
+    "d": "The amount spent on marketing divided by the number of people who contacted the practice as a result.",
+    "t": "Cost per lead"
+   }
+  ],
+  "deliverables": [
+   {
+    "d": "A written review of your website, search rankings, ads, patient reviews and nearby competitors, showing what is working and what is not.",
+    "t": "Marketing audit"
+   },
+   {
+    "d": "A ranked list of the marketing channels worth your money, with a suggested budget for each one and the reasoning behind it.",
+    "t": "Channel priorities and budget"
+   },
+   {
+    "d": "A calendar of tasks for the next 90 days, each with a named owner and a due date so nothing stalls.",
+    "t": "90-day roadmap"
+   },
+   {
+    "d": "A meeting each month where we go through the numbers with you and agree on what to keep, stop or change.",
+    "t": "Monthly results review"
+   },
+   {
+    "d": "Comments from practicing physicians on your plan, covering how patients in your specialty typically compare and choose a provider.",
+    "t": "Physician advisory input"
+   },
+   {
+    "d": "Direct access to our business and marketing staff for questions on hiring, vendors, new services or anything else the plan raises.",
+    "t": "One-on-one consultation"
+   }
+  ]
+ },
+ "medical-graphic-design": {
+  "fit": [
+   "you are opening a new practice or location and need a logo and printed materials from scratch",
+   "your current brochures, cards and signs were made at different times and no longer match each other",
+   "you want to encourage patient referrals and need something professional for staff to hand out"
+  ],
+  "plain": "Medical branding and graphic design is the work of creating your practice's visual identity: an original logo, a set of colors and typefaces, and the printed pieces patients actually hold, such as brochures and postcards. A practice needs it because patients judge professionalism by what they see, and mismatched materials from different vendors make a good practice look disorganized. We design and write everything as one matching set, so your front desk handouts, mailers and social media graphics all look like they come from the same place.",
+  "steps": [
+   {
+    "d": "We ask about your specialty, your patients, your budget and the look you like or dislike. You send us any existing logo, photos, provider bios and a list of the services you want to feature.",
+    "t": "Discovery conversation"
+   },
+   {
+    "d": "Our designers present logo options with matching colors and type, and you tell us what to keep and what to change. Once you approve a direction, it becomes the basis for every other piece.",
+    "t": "Logo and identity"
+   },
+   {
+    "d": "We write the brochure and postcard text, lay out each piece and send you proofs to review. You check names, credentials, services, promotions and contact details for accuracy before anything is finalized.",
+    "t": "Writing and layout"
+   },
+   {
+    "d": "We deliver final files ready for a print shop and for online use, organized so your staff can find them. When you add a provider, a service or a promotion, we update the affected pieces in the same style.",
+    "t": "Files and updates"
+   }
+  ],
+  "tools": [
+   {
+    "d": "Professional drawing programs that build a logo from shapes instead of pixels, so it stays sharp at any size from a business card to an outdoor sign. Our designers use them to create your logo and lay out your printed pieces.",
+    "t": "Vector design software"
+   },
+   {
+    "d": "Software that can draft text and suggest visual ideas quickly. We use it to assist with first drafts and early concepts, then our designers and writers refine the work, and physicians review any medical content before you see it.",
+    "t": "AI language and image models"
+   },
+   {
+    "d": "The standard file format print shops accept, with the correct size, margins and color settings built in. We prepare one for each piece so you can send it to the printer of your choice without extra setup.",
+    "t": "Print-ready PDF files"
+   },
+   {
+    "d": "An online folder that holds your logo files, style guide and templates in one place. We organize it so your staff, your printer and any future vendor all work from the same approved versions.",
+    "t": "Shared brand folder"
+   }
+  ],
+  "glossary": [
+   {
+    "d": "The combination of logo, colors, typefaces and layout style that makes your practice recognizable wherever it appears.",
+    "t": "Brand identity"
+   },
+   {
+    "d": "A preview of a design sent for your review and approval before it is printed or published.",
+    "t": "Proof"
+   },
+   {
+    "d": "A small extra margin of color or image beyond the edge of a printed piece, trimmed off so no white border shows.",
+    "t": "Bleed"
+   }
+  ],
+  "deliverables": [
+   {
+    "d": "A logo designed only for your practice, delivered in the formats needed for signs, print, your website and social media.",
+    "t": "Original logo files"
+   },
+   {
+    "d": "A short document listing your exact colors, typefaces and logo rules so anyone producing materials for you keeps them consistent.",
+    "t": "Brand style guide"
+   },
+   {
+    "d": "A custom brochure covering your credentials, background and services, written by our staff and designed with your logo and practice details.",
+    "t": "Practice brochure"
+   },
+   {
+    "d": "Single-topic brochures that explain one service to interested patients, with text our physician staff can write and you approve.",
+    "t": "Patient information brochures"
+   },
+   {
+    "d": "Handouts your staff give to patients to pass along to friends and family, describing your credentials, services and current promotions.",
+    "t": "Referral brochures"
+   },
+   {
+    "d": "A 6×9 postcard listing your services and contact details, plus stationery, business cards, posters, displays or social media graphics as needed.",
+    "t": "Services postcard and extras"
+   }
+  ]
+ },
+ "printing": {
+  "fit": [
+   "you are opening a new location or adding a service and need printed materials ready for patients",
+   "your brochures, cards and signs were made at different times by different vendors and no longer look alike",
+   "you want to reach households near your practice by mail without managing a printer and a mailing service yourself"
+  ],
+  "plain": "Printing and fulfillment means the paper side of your practice, such as brochures, cards, posters and mailers, is designed, printed and delivered to your office by one team. Print still does work a screen cannot: a brochure goes home with the patient, and a referral card travels to a friend. Because the same people handle your design and your printing, the colors and logos on paper match your website.",
+  "steps": [
+   {
+    "d": "We talk through what you need, how many, and where each piece will be used. You tell us the services to feature and send any existing logo files, photos or wording.",
+    "t": "Choose the pieces"
+   },
+   {
+    "d": "We lay out each piece and prepare the text, with AI assisting on drafts and our team reviewing everything, including physician review of medical content. You confirm that details such as hours, addresses and provider names are correct.",
+    "t": "Design and writing"
+   },
+   {
+    "d": "We send a proof for you to review and mark up. Once you approve it, the files go to the same print partner that produces Empire Medical Training's materials.",
+    "t": "Proof and print"
+   },
+   {
+    "d": "The finished pieces arrive at your door, or go out in the mail if it is a direct mail campaign. We keep your files on hand, so when supplies run low you ask for a reorder or an update instead of starting over.",
+    "t": "Ship and reorder"
+   }
+  ],
+  "tools": [
+   {
+    "d": "The professional programs used to arrange text, photos and logos on a page at exact print sizes. We use them to build each piece so it matches the look of your website.",
+    "t": "Graphic design software"
+   },
+   {
+    "d": "Software that can draft and tighten text quickly. We use it to prepare first drafts of brochure and care sheet wording, and then our writers and a physician review and correct every piece before you see it.",
+    "t": "AI language models"
+   },
+   {
+    "d": "The industrial equipment at our print partner that produces everything from small batches of cards to large banners. The press type and paper are matched to each job, so you do not have to choose them yourself.",
+    "t": "Commercial printing presses"
+   },
+   {
+    "d": "Postcards or letters sent through the postal service to chosen addresses or whole neighborhoods. We print, address and mail them for you, and if a mailing would use your own patient list, we set that up with HIPAA requirements in mind and with your practice's compliance contact.",
+    "t": "Direct mail and mailing lists"
+   }
+  ],
+  "glossary": [
+   {
+    "d": "A final preview of a printed piece, sent to you to check and approve before the full quantity is printed.",
+    "t": "Proof"
+   },
+   {
+    "d": "A tall, narrow card printed on sturdy paper, made to sit in a display stand at a front desk or waiting room.",
+    "t": "Rack card"
+   },
+   {
+    "d": "Thick, stiff paper used for business cards, postcards and appointment cards so they hold up to handling.",
+    "t": "Card stock"
+   }
+  ],
+  "deliverables": [
+   {
+    "d": "Layouts for each piece, built with your logo, colors and wording, and sized correctly so they print cleanly the first time.",
+    "t": "Print-ready designs"
+   },
+   {
+    "d": "A preview of every piece that you check for wording, phone numbers and colors, and nothing goes to press until you sign off.",
+    "t": "Proof for your approval"
+   },
+   {
+    "d": "Practice and procedure brochures, before and after care sheets, and menus of services or price lists that patients can take home and read.",
+    "t": "Patient handouts"
+   },
+   {
+    "d": "Business cards, appointment cards, referral cards, rack cards, gift and loyalty cards, plus letterhead, envelopes and folders that all share one look.",
+    "t": "Cards and office stationery"
+   },
+   {
+    "d": "Exam room posters, window graphics, banners and event displays that introduce your services to people in your office or at community events.",
+    "t": "Posters, banners and displays"
+   },
+   {
+    "d": "Finished pieces are shipped to your office, or postcards are printed, addressed and mailed to the neighborhoods around your practice.",
+    "t": "Delivery or direct mail"
+   }
+  ]
+ },
+ "medical-practice-kit": {
+  "fit": [
+   "you are opening a new practice or location and need the website, print materials and forms in place together",
+   "your current website looks fine but brings in few new patient inquiries, and your printed materials do not match it",
+   "you are adding aesthetic or elective procedures and your front desk has not been trained to handle calls from patients comparing providers"
+  ],
+  "plain": "The medical practice marketing kit is a complete marketing program in one package: a custom website built so patients can find you in search results, the printed materials for your office, a training manual for your front desk, and the consent and treatment forms for your procedures. A practice needs all of these to work together, because a website that brings in calls does little good if the phone is answered poorly or the paperwork is incomplete. You also get ongoing access to our physicians and business staff for advice as the practice grows.",
+  "steps": [
+   {
+    "d": "We talk with you about your specialty, the procedures you want to grow and the patients you want to reach. You provide your background, service list, logo, photos and any existing materials.",
+    "t": "Learn your practice"
+   },
+   {
+    "d": "Our designers, programmers, writers and videographers build the website and print pieces, with AI assisting on drafts and our staff and physicians reviewing the medical content. You review the drafts and tell us what to correct.",
+    "t": "Design and write"
+   },
+   {
+    "d": "We publish the website, deliver the print files and forms, and hand your team the front office manual. You set aside time for your staff to study it and name one person to manage website updates.",
+    "t": "Launch and train"
+   },
+   {
+    "d": "We stay available to review how the website and inquiries are performing and to advise on next steps. You bring us your questions, new procedures and any changes in the practice so the materials stay current.",
+    "t": "Ongoing consultation"
+   }
+  ],
+  "tools": [
+   {
+    "d": "This is the software behind your website that lets someone edit pages without knowing how to code. We set it up so your staff can change hours, add a provider or publish a blog post on their own.",
+    "t": "Content management system"
+   },
+   {
+    "d": "This is the practice of structuring and writing a website so Google and other search engines understand what you offer and where. We build it into the code, page titles and content from the start instead of adding it afterward.",
+    "t": "Search engine optimization"
+   },
+   {
+    "d": "This is an organized list of the people who gave you their email address through your website. We connect it to your sign-up forms and e-book downloads so you can send news and promotions to people who asked to hear from you.",
+    "t": "Email database"
+   },
+   {
+    "d": "These are short professionally filmed clips of you, your office and your services placed on key pages. Our staff videographers produce them because visitors who see and hear the physician are more comfortable making a first call.",
+    "t": "Website video"
+   }
+  ],
+  "glossary": [
+   {
+    "d": "The moment a website visitor takes the action you want, such as calling the office, filling out a form or requesting an appointment.",
+    "t": "Conversion"
+   },
+   {
+    "d": "Collecting a prospective patient's contact details, usually through a website form, so your office can follow up with them.",
+    "t": "Lead capture"
+   },
+   {
+    "d": "A way of building a website so its layout adjusts automatically to fit a phone, tablet or desktop screen.",
+    "t": "Responsive design"
+   }
+  ],
+  "deliverables": [
+   {
+    "d": "A website designed and coded for your practice, not a template, that works on phones and is built so search engines can read it.",
+    "t": "Custom practice website"
+   },
+   {
+    "d": "Sign-up forms and physician-written e-books that visitors download in exchange for their email address, building a contact list you own.",
+    "t": "Email capture and e-books"
+   },
+   {
+    "d": "Forms patients complete on your website before a visit, set up with HIPAA requirements in mind and with your compliance contact.",
+    "t": "Online patient forms"
+   },
+   {
+    "d": "Our employee manual that teaches your front desk staff how to handle new patient calls, answer questions and book consultations.",
+    "t": "Front Office Fundamentals manual"
+   },
+   {
+    "d": "Consent forms, physician procedure notes, diagrams and pre and post treatment instructions for the procedures you perform, ready for your own review.",
+    "t": "Consent and treatment documents"
+   },
+   {
+    "d": "A practice brochure, patient information and referral brochures, a 6×9 services postcard and business cards, all designed to match each other.",
+    "t": "Office print portfolio"
+   }
+  ]
+ },
+ "analytics-call-tracking": {
+  "fit": [
+   "you pay for more than one marketing channel and cannot say which one brings in new patients",
+   "your front desk is busy with calls but nobody knows what prompted people to pick up the phone",
+   "you want to base next year's marketing budget on recorded results instead of impressions and guesses"
+  ],
+  "plain": "Analytics and call tracking is a measurement system that records every call, form, chat and online booking your marketing produces, and shows which campaign each one came from. Without it, a practice sees its marketing bill but cannot tell which part of that spending brought in patients. With it, you can compare channels by what each inquiry cost and decide where to put your budget based on evidence.",
+  "steps": [
+   {
+    "d": "We talk through every way a patient can reach you today: phone lines, forms, chat and booking software. You tell us which marketing channels you run and who handles compliance at your practice.",
+    "t": "Map your inquiries"
+   },
+   {
+    "d": "We create the tracking numbers, connect your forms and booking tool, and configure privacy settings with HIPAA requirements in mind, together with your compliance contact. You give us access to the website and ad accounts and approve the call recording notice.",
+    "t": "Set up tracking"
+   },
+   {
+    "d": "We place test calls and submit test forms from each source to confirm everything is counted correctly and still reaches your front desk. You get dashboard access and a short walkthrough for you and your staff.",
+    "t": "Test and launch"
+   },
+   {
+    "d": "Each month we send the report, hold the review call and adjust campaigns based on what the data shows. You tell us which inquiries became real appointments, which makes the numbers more useful over time.",
+    "t": "Report and adjust"
+   }
+  ],
+  "tools": [
+   {
+    "d": "These are local phone numbers that forward to your regular line and record which ad or listing the caller saw. We assign one to each source through our own phone tracking system, and your existing number stays the same.",
+    "t": "Call tracking numbers"
+   },
+   {
+    "d": "This is software that counts visitors to your website and shows which pages they read before contacting you. We set it up so that health information patients share with you is not passed to advertising platforms.",
+    "t": "Website analytics"
+   },
+   {
+    "d": "This is a single screen that pulls numbers from your phone tracking, website, booking tool and ad accounts into one place. We build and maintain it, so you do not have to log in to several systems.",
+    "t": "Reporting dashboard"
+   },
+   {
+    "d": "This is software that can read a call transcript and write a short summary of it. We use it to draft summaries of recorded calls, which our team reviews; it never speaks with patients or gives medical advice.",
+    "t": "AI language models"
+   }
+  ],
+  "glossary": [
+   {
+    "d": "The process of working out which ad, search result or listing led a particular patient to contact you.",
+    "t": "Attribution"
+   },
+   {
+    "d": "Any action you want a website visitor to take, such as calling, filling in a form or booking an appointment.",
+    "t": "Conversion"
+   },
+   {
+    "d": "The amount spent on a channel divided by the number of calls, forms and bookings it produced.",
+    "t": "Cost per inquiry"
+   }
+  ],
+  "deliverables": [
+   {
+    "d": "A private web page you can open at any time to see calls, forms, bookings and costs side by side, updated continuously.",
+    "t": "Live results dashboard"
+   },
+   {
+    "d": "A separate phone number for each campaign, all ringing at your front desk, so every call is credited to the right source.",
+    "t": "Tracking numbers per source"
+   },
+   {
+    "d": "Every contact form, chat conversation and online appointment request is counted and tied to the ad, search or page that led to it.",
+    "t": "Form, chat and booking tracking"
+   },
+   {
+    "d": "AI drafts short summaries of recorded calls and our team reviews them, so you learn which treatments and questions patients raise most.",
+    "t": "Call recording summaries"
+   },
+   {
+    "d": "A written report each month that explains what happened, what each channel cost per inquiry, and what we think it means.",
+    "t": "Plain language monthly report"
+   },
+   {
+    "d": "A regular conversation where we go through the numbers together and agree on what to change, keep or stop next.",
+    "t": "Review call with our team"
+   }
+  ]
+ }
+}

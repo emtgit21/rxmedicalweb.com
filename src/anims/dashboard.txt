@@ -1,0 +1,1 @@
+A compact analytics dashboard with tiles for calls, forms and bookings, a bar chart with a rising trend line, and a call log where a new call arrives tagged as coming from a search ad.

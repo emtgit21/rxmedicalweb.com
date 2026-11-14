@@ -1,0 +1,1 @@
+Two versions of a landing page, A and B, receive visitors side by side; version B collects more booking requests and is marked as the winner.

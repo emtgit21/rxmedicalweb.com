@@ -19,6 +19,49 @@ SITE = "https://rxmedicalweb.com"
 YEAR = datetime.date.today().year
 UP = "/wp-content/uploads/"
 BUILT = []
+PAGE_CSS = []          # stylesheets for the custom animated graphics used on the page being built
+ANIM_DIR = os.path.join(ROOT, "src", "anims")
+# custom animated graphic for each service (falls back to the generic one in pages.py if the file is missing)
+CUSTOM_ANIM = {
+    "local-seo": "map", "online-booking": "booking", "e-mail-marketing": "inbox", "ai-chat-messaging": "agents",
+    "ai-search-optimization": "answer", "pay-per-click": "adslot", "search-engine-marketing": "socialads",
+    "social-media": "calendar", "short-form-video": "reel", "physician-content-marketing": "doc",
+    "video-testimonials": "camera", "patient-crm-automation": "pipeline", "new-service-launch": "launch",
+    "marketing-strategy": "roadmap", "medical-graphic-design": "brand", "printing": "press",
+    "medical-practice-kit": "kit", "analytics-call-tracking": "dashboard", "medical-e-commerce": "cart",
+    "emr-patient-portals": "portal", "website-accessibility-compliance": "a11y", "website-maintenance": "uptime",
+    "landing-pages-funnels": "abtest", "medical-spa-website-design": "devices",
+}
+try:
+    import json
+    FAQS = json.load(open(os.path.join(ROOT, "src", "faqs.json"), encoding="utf-8"))
+except FileNotFoundError:
+    FAQS = {}
+try:
+    EXPLAIN = json.load(open(os.path.join(ROOT, "src", "explain.json"), encoding="utf-8"))
+except FileNotFoundError:
+    EXPLAIN = {}
+
+
+def has_anim(key):
+    return bool(key) and os.path.exists(os.path.join(ANIM_DIR, key + ".html"))
+
+
+def has_video(name):
+    return os.path.exists(os.path.join(ROOT, "assets", "video", name + ".mp4"))
+
+
+def words(text):
+    """Wrap each word so the hero headline can rise in word by word."""
+    return " ".join(f'<span class="w"><span style="--i:{i}">{e(w)}</span></span>' for i, w in enumerate(text.split()))
+
+
+def media(name, alt, cls, w=1248, h=832, lazy=True):
+    """A living-photo clip when one exists, otherwise the still."""
+    if has_video(name):
+        return (f'<video class="{cls}" autoplay muted loop playsinline preload="metadata" poster="/assets/img/{name}.webp" '
+                f'width="{w}" height="{h}" aria-label="{e(alt)}"><source src="/assets/video/{name}.mp4" type="video/mp4"></video>')
+    return f'<img class="{cls}" src="/assets/img/{name}.webp" width="{w}" height="{h}" alt="{e(alt)}"{" loading=lazy" if lazy else ""}>'
 
 
 def e(s):
@@ -33,9 +76,16 @@ def svc_url(s):
 def menu():
     cols = []
     for gi, (gname, _) in enumerate(GROUPS):
-        links = "".join(f'<a href="{svc_url(s)}">{e(s["name"])}</a>' for s in SERVICES if s["group"] == gi)
-        cols.append(f"<div><h4>{e(gname)}</h4>{links}</div>")
-    return "".join(cols)
+        links = "".join(f'<a href="{svc_url(s)}" data-img="{s["img"]}" data-blurb="{e(s["blurb"])}">{e(s["name"])}</a>'
+                        for s in SERVICES if s["group"] == gi)
+        cols.append(f'<div><p class="mh"><button type="button" aria-expanded="false">{e(gname)}</button></p>{links}</div>')
+    first = SERVICES[0]
+    return f"""<div class="menu-cols">{"".join(cols)}</div>
+<aside class="menu-preview" aria-hidden="true">
+  <div class="menu-preview-img"><img src="/assets/img/{first["img"]}.webp" alt="" loading="lazy"></div>
+  <b>{e(first["name"])}</b><p>{e(first["blurb"])}</p>
+</aside>
+<div class="menu-foot"><span>Not sure where to start? We will look at your website and tell you.</span><a class="btn btn-ink" href="/contact-us/#analysis">Request a free analysis</a></div>"""
 
 
 def header(path):
@@ -47,6 +97,7 @@ def header(path):
     <a class="brand" href="/" aria-label="Rx Medical Web, home"><img src="{UP}mainlogo.png" width="400" height="83" alt="Rx Medical Web. Physicians Rx for Success"></a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
     <nav class="nav" id="nav" aria-label="Main">
+      <span class="nav-hl" aria-hidden="true"></span>
       <div class="nav-services">
         <button aria-expanded="false" aria-controls="services-menu">Services</button>
         <div class="menu" id="services-menu">{menu()}</div>
@@ -84,29 +135,30 @@ def footer():
     cols = []
     for gi, (gname, _) in enumerate(GROUPS):
         links = "".join(f'<li><a href="{svc_url(s)}">{e(s["name"])}</a></li>' for s in SERVICES if s["group"] == gi)
-        cols.append(f"<div><h4>{e(gname)}</h4><ul>{links}</ul></div>")
+        cols.append(f'<div><p class="fh">{e(gname)}</p><ul>{links}</ul></div>')
     return f"""<footer class="site-footer">
   <div class="wrap">
+    <p class="footer-sign" aria-hidden="true">Physicians Rx for Success</p>
     <div class="footer-top">
       <div class="footer-brand">
         <img src="{UP}mainlogo.png" width="400" height="83" alt="Rx Medical Web" loading="lazy">
         <address>2720 E. Oakland Park Blvd, Suite 103<br>Fort Lauderdale, FL 33306<br>Monday to Friday, 9 am to 6 pm</address>
       </div>
-      <div><h4>Contact</h4><ul>
+      <div><p class="fh">Contact</p><ul>
         <li><a href="{PHONE_HREF}">{PHONE}</a></li>
         <li><a href="{LOCAL_PHONE_HREF}">{LOCAL_PHONE}</a></li>
         <li><a href="mailto:{EMAIL}">{EMAIL}</a></li>
         <li><a href="/contact-us/">Contact us</a></li>
       </ul></div>
-      <div><h4>Company</h4><ul>
+      <div><p class="fh">Company</p><ul>
         <li><a href="/about/">About us</a></li>
         <li><a href="/about/why-choose-us/">Why choose us</a></li>
         <li><a href="/about/testimonials/">Testimonials</a></li>
         <li><a href="/portfolio/">Our work</a></li>
       </ul></div>
-      <div><h4>Strategic partner</h4><ul>
+      <div><p class="fh">Strategic partner</p><ul>
         <li><a href="https://www.empiremedicaltraining.com/" rel="noopener">Empire Medical Training</a></li>
-      </ul><h4 class="gap">Follow us</h4><ul>
+      </ul><p class="fh gap">Follow us</p><ul>
         <li><a href="https://www.linkedin.com/company/rx-medical-web" rel="noopener">LinkedIn</a></li>
         <li><a href="https://www.facebook.com/rxmedicalweb/" rel="noopener">Facebook</a></li>
       </ul></div>
@@ -139,7 +191,7 @@ def page(path, title, desc, body, extra_head="", og_img="/assets/img/hero-clinic
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
-<script>document.documentElement.className='js'</script>
+{"".join(f'<link rel="stylesheet" href="/assets/anim/{k}.css">' + chr(10) for k in dict.fromkeys(PAGE_CSS))}<script>document.documentElement.className='js'</script>
 {extra_head}</head>
 <body>
 {header(path)}
@@ -155,12 +207,21 @@ def page(path, title, desc, body, extra_head="", og_img="/assets/img/hero-clinic
     os.makedirs(os.path.dirname(out), exist_ok=True)
     with open(out, "w", encoding="utf-8") as f:
         f.write(doc)
-    BUILT.append(path)
+    PAGE_CSS.clear()
+    if not path.startswith("/dev/"):
+        BUILT.append(path)
 
 
 # ---------------------------------------------------------------- animated graphics
 def anim(spec, caption=""):
     kind = spec[0]
+    if kind == "x":
+        key = spec[1]
+        inner = open(os.path.join(ANIM_DIR, key + ".html"), encoding="utf-8").read()
+        label = open(os.path.join(ANIM_DIR, key + ".txt"), encoding="utf-8").read().strip()
+        PAGE_CSS.append(key)
+        cap = f"<figcaption>{caption}</figcaption>" if caption else ""
+        return f'<figure class="anim anim-x anim-{key}" role="img" aria-label="{e(label)}">{inner}{cap}</figure>'
     if kind == "flow":
         steps = spec[1]
         items = "".join(f'<li style="--i:{i}"><span>{e(t)}</span></li>' for i, t in enumerate(steps))
@@ -239,14 +300,14 @@ def testimonials_block(full=False):
 
 def work_cards(tag="h3"):
     return "".join(
-        f'<a href="{w["url"]}" rel="noopener"><div class="shot"><img src="{UP}{w["img"]}" width="700" height="525" alt="Screenshot of the {e(w["name"])} website" loading="lazy"></div>'
+        f'<a href="{w["url"]}" rel="noopener"><div class="shot"><img src="/assets/img/{w["shot"]}.webp" width="1400" height="801" alt="Screenshot of the {e(w["name"])} website" loading="lazy"></div>'
         f'<{tag}>{e(w["name"])}</{tag}><p>{e(w["note"])}</p></a>' for w in WORK)
 
 
 def page_head(crumbs, h1, lead, img=None, alt=""):
     trail = '<a href="/">Home</a>' + "".join(
         f'<span>/</span><a href="{u}">{e(t)}</a>' if u else f'<span>/</span>{e(t)}' for t, u in crumbs)
-    pic = f'<img class="page-head-img" src="/assets/img/{img}.webp" width="1248" height="832" alt="{e(alt)}">' if img else ""
+    pic = media(img, alt, "page-head-img", lazy=False) if img else ""
     cls = "page-head has-img" if img else "page-head"
     return f"""<section class="{cls}">
   <div class="wrap">
@@ -276,6 +337,81 @@ def slip(title, text, related=None, related_title="Related services"):
 </aside>"""
 
 
+# ---------------------------------------------------------------- home pieces
+SPECIALTIES = ["Aesthetics", "Dermatology", "Plastic surgery", "Med spas", "Dentistry", "Cosmetic dentistry", "Gynecology",
+               "Pain management", "Cardiology", "Chiropractic", "Family practice", "Weight loss", "Anti-aging medicine"]
+
+
+def marquee():
+    run = "".join(f"<span>{e(x)}</span>" for x in SPECIALTIES)
+    return (f'<div class="marquee"><p class="vh">We work with practices in: {e(", ".join(SPECIALTIES))}.</p>'
+            f'<div class="marquee-track" aria-hidden="true">{run}{run}</div></div>')
+
+
+def pick(custom, fallback):
+    return ("x", custom) if has_anim(custom) else fallback
+
+
+def story():
+    def links(*slugs):
+        by = {s["slug"]: s for s in SERVICES}
+        return '<div class="story-links">' + "".join(f'<a href="{svc_url(by[x])}">{e(by[x]["name"])}</a>' for x in slugs) + "</div>"
+    steps = [
+        ("They search, or ask an AI.", "Most patients start on Google, on a map or with an AI assistant. We work on all three, so your practice is the one they find.",
+         pick("answer", ("serp",)), links("search-engine-optimization", "local-seo", "ai-search-optimization", "pay-per-click")),
+        ("They land on a site built for them.", "A custom website and a landing page for each treatment answer the question that brought them, and make the next step obvious.",
+         pick("devices", ("build",)), links("medical-website-design", "landing-pages-funnels", "medical-spa-website-design")),
+        ("Someone answers right away.", "AI agents reply by chat, text and phone at any hour, and every lead is logged and followed until it books.",
+         pick("agents", ("chat", AGENT_CHAT)), links("ai-chat-messaging", "patient-crm-automation")),
+        ("They book from their phone.", "Online booking, intake forms and reminders by text. No phone tag, and fewer empty slots.",
+         pick("booking", ("flow", ["Picks a time", "Fills in intake", "Gets a reminder"])), links("online-booking", "sms-marketing")),
+        ("They tell other people.", "A review request after every visit and content worth sharing build the reputation new patients look for.",
+         ("stars",), links("reputation-management", "social-media", "short-form-video")),
+        ("They come back.", "Newsletters, reminders and reactivation campaigns bring patients back for the next treatment, and you see exactly what it produced.",
+         pick("inbox", ("chart",)), links("e-mail-marketing", "analytics-call-tracking")),
+    ]
+    items = "".join(f'<li class="story-step"><h3>{e(t)}</h3><p>{e(d)}</p>{l}{anim(a)}</li>' for t, d, a, l in steps)
+    return f"""<section class="section story">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2>How a patient reaches you, and how we help at every step.</h2>
+      <p>Every service we offer supports one step of this path. We measure the whole thing by the calls and bookings at the end.</p>
+    </div>
+    <div class="story-grid">
+      <div class="story-stage" aria-hidden="true"></div>
+      <ol class="story-steps">{items}</ol>
+    </div>
+  </div>
+</section>"""
+
+
+def partner():
+    return """<section class="section partner">
+  <div class="wrap">
+    <div class="partner-mark reveal"><div><b>Rx Medical Web</b><i>strategic partner of</i><b>Empire Medical Training</b></div></div>
+    <div>
+      <h2>Trained at Empire? We already know your next service.</h2>
+      <p class="lead">We have marketed Empire Medical Training's courses for more than fifteen years. When you bring a new procedure back to your practice, we know the questions patients ask about it and what it takes to fill your first month.</p>
+      <div class="actions">
+        <a class="btn btn-ink" href="/service/new-service-launch/">Launch a new service</a>
+        <a class="btn btn-line" href="/about/">About the partnership</a>
+      </div>
+    </div>
+  </div>
+</section>"""
+
+
+def faq_block(slug):
+    qs = FAQS.get(slug) or []
+    if not qs:
+        return "", ""
+    items = "".join(f'<details><summary>{e(q["q"])}</summary><p>{e(q["a"])}</p></details>' for q in qs)
+    ld = {"@context": "https://schema.org", "@type": "FAQPage",
+          "mainEntity": [{"@type": "Question", "name": q["q"], "acceptedAnswer": {"@type": "Answer", "text": q["a"]}} for q in qs]}
+    return (f'<div class="faq"><h2>Questions we hear</h2>{items}</div>',
+            '<script type="application/ld+json">' + json.dumps(ld, ensure_ascii=False).replace("</", "<\\/") + "</script>\n")
+
+
 # ---------------------------------------------------------------- home
 def build_home():
     groups = []
@@ -292,14 +428,14 @@ def build_home():
   <div class="wrap">
     <div class="hero-grid">
       <div>
-        <h1>The marketing prescription for your medical practice.</h1>
+        <h1 aria-label="The marketing prescription for your medical practice.">{words("The marketing prescription for your medical practice.")}</h1>
         <p class="lead">Rx Medical Web is the agency dedicated to medical presence and marketing. Websites, SEO, advertising, social media and AI agents, built by an in-house team with the latest AI technology and reviewed by physicians.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="/contact-us/#analysis">Request a free website analysis</a>
           <a class="btn btn-ghost" href="{PHONE_HREF}">Call {PHONE}</a>
         </div>
       </div>
-      <div class="pad" role="img" aria-label="A prescription from Rx Medical Web for your practice: a custom website; SEO, ads and AI search; AI agents around the clock; social, email and SMS. Refills monthly.">
+      <div class="pad-wrap"><div class="pad" role="img" aria-label="A prescription from Rx Medical Web for your practice: a custom website; SEO, ads and AI search; AI agents around the clock; social, email and SMS. Refills monthly.">
         <div class="pad-sheet" aria-hidden="true">
           <div class="pad-head">
             <div><strong>Rx Medical Web</strong><span>Physicians Rx for Success</span></div>
@@ -323,7 +459,7 @@ def build_home():
             <div class="pad-sign"><span class="hand write">Rx Medical Web</span>Your marketing team</div>
           </div>
         </div>
-      </div>
+      </div></div>
     </div>
     <dl class="facts">
       <div class="fact"><dt>Established</dt><dd>2008</dd></div>
@@ -334,9 +470,11 @@ def build_home():
   </div>
 </section>
 
+{marquee()}
+
 <section class="section" id="services">
   <div class="wrap">
-    <div class="section-head">
+    <div class="section-head reveal">
       <h2>Everything your practice needs to be found, chosen and booked.</h2>
       <p>One team for the whole job, from your first website to advanced campaigns. Pick a single service or let us run all of it.</p>
     </div>
@@ -346,7 +484,7 @@ def build_home():
 
 <section class="section ai-band">
   <div class="wrap">
-    <div class="section-head">
+    <div class="section-head reveal">
       <h2>The latest AI, working for your practice around the clock.</h2>
       <p>Patients search differently in 2026, and they expect an answer right away. We put current AI to work on both, with physicians checking the medicine.</p>
     </div>
@@ -357,7 +495,7 @@ def build_home():
         <p>SEO, local search and AI search optimization, so your practice shows up on Google, on the map and in AI answers.</p>
       </a>
       <a class="ai-card" href="/service/ai-chat-messaging/">
-        {anim(("chat", AGENT_CHAT))}
+        {anim(pick("agents", ("chat", AGENT_CHAT)))}
         <h3>Answered right away</h3>
         <p>AI agents reply by chat, text and phone at any hour, take the booking request and hand off to your staff.</p>
       </a>
@@ -370,19 +508,11 @@ def build_home():
   </div>
 </section>
 
-<section class="section section-mint">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>How a patient reaches you.</h2>
-      <p>Every service we offer supports one step of this path. We measure the whole thing by the calls and bookings at the end.</p>
-    </div>
-    {anim(("flow", ["Searches or asks AI", "Lands on your website", "Chats, calls or books", "Visits your practice", "Leaves a review", "Comes back"]))}
-  </div>
-</section>
+{story()}
 
 <section class="section">
   <div class="wrap split">
-    <img class="split-img" src="/assets/img/hero-team.webp" width="1280" height="720" alt="A marketing team and a physician advisor reviewing website designs" loading="lazy">
+    {media("hero-team", "A marketing team and a physician advisor reviewing website designs", "split-img reveal-mask", 1280, 720)}
     <div>
       <h2>Marketers who understand medicine.</h2>
       <p class="lead">We are a physician owned, family owned agency. Designers, programmers, marketers, MBAs and a physician advisory board work together in Fort Lauderdale. We do not outsource.</p>
@@ -394,6 +524,8 @@ def build_home():
     </div>
   </div>
 </section>
+
+{partner()}
 
 <section class="copy-sheet">
   <div class="wrap">
@@ -410,7 +542,7 @@ def build_home():
 
 <section class="section">
   <div class="wrap">
-    <div class="section-head">
+    <div class="section-head reveal">
       <h2>Recent work</h2>
       <p>Some of our most recent website launches.</p>
     </div>
@@ -431,22 +563,114 @@ def build_home():
 
 
 # ---------------------------------------------------------------- services
+def crumbs_html(crumbs):
+    return '<a href="/">Home</a>' + "".join(
+        f'<span>/</span><a href="{u}">{e(t)}</a>' if u else f'<span>/</span>{e(t)}' for t, u in crumbs)
+
+
+def sec_title(h2, p=""):
+    return f'<div class="sec-title reveal"><h2>{h2}</h2>{f"<p>{p}</p>" if p else ""}</div>'
+
+
+def x_fit(x):
+    items = "".join(f"<li>{e(t[0].upper() + t[1:])}</li>" for t in x.get("fit", []))
+    return f'<div class="fit"><h3>This is a good fit if</h3><ul>{items}</ul></div>' if items else ""
+
+
+def x_deliverables(x, variant):
+    d = x.get("deliverables", [])
+    cells = "".join(f'<div><h3>{e(i["t"])}</h3><p>{e(i["d"])}</p></div>' for i in d)
+    if variant == "sheet":
+        return f'<div class="dl-sheet"><div class="dl-sheet-in"><b>What you get <span>℞</span></b>{cells}</div></div>'
+    return f'<div class="dl-{variant}">{cells}</div>'
+
+
+def x_steps(x, variant):
+    return f'<ol class="st-{variant}">' + "".join(f'<li><h3>{e(i["t"])}</h3><p>{e(i["d"])}</p></li>' for i in x.get("steps", [])) + "</ol>"
+
+
+def x_tools(x, light=False):
+    return f'<div class="tl-grid{" light" if light else ""}">' + "".join(
+        f'<div><h3>{e(i["t"])}</h3><p>{e(i["d"])}</p></div>' for i in x.get("tools", [])) + "</div>"
+
+
+def x_glossary(x):
+    return '<dl class="gl">' + "".join(f'<div><dt>{e(i["t"])}</dt><dd>{e(i["d"])}</dd></div>' for i in x.get("glossary", [])) + "</dl>"
+
+
 def build_services():
-    for s in SERVICES:
-        group = GROUPS[s["group"]][0]
-        related = [(o["name"], svc_url(o)) for o in SERVICES if o["group"] == s["group"] and o is not s]
-        body = f"""{page_head([("Services", "/#services"), (group, None)], e(s["h1"]), e(s["lead"]), s["img"], s["alt"])}
-<section class="section">
-  <div class="wrap layout">
-    <div class="prose">
-      {anim(s["anim"], "Illustration, not client data" if s["anim"][0] == "chart" else "How it works")}
-      {s["body"]}
-    </div>
-    {slip("Talk to us about this service", "We reply within 24 business hours with packages and pricing.", related, "More in " + e(group.lower()))}
-  </div>
-</section>
+    for i, s in enumerate(SERVICES):
+        g = s["group"]
+        group = GROUPS[g][0]
+        related = [(o["name"], svc_url(o)) for o in SERVICES if o["group"] == g and o is not s]
+        nxt = SERVICES[(i + 1) % len(SERVICES)]
+        spec = pick(CUSTOM_ANIM.get(s["slug"], ""), s["anim"])
+        caption = "Illustration, not client data" if spec[0] == "chart" or spec[-1] == "dashboard" else ""
+        faq_html, faq_ld = faq_block(s["slug"])
+        x = EXPLAIN.get(s["slug"])
+        crumbs = crumbs_html([("Services", "/#services"), (group, None)])
+        h1, lead = e(s["h1"]), e(s["lead"])
+        side = slip("Talk to us about this service", "We reply within 24 business hours with packages and pricing.", related, "More in " + e(group.lower()))
+        details = f'<section class="section"><div class="wrap layout"><div class="prose"><p class="xp-kicker">The details</p>{s["body"]}</div>{side}</div></section>'
+        faq_sec = f'<section class="section tight faq-sec on-mint"><div class="wrap narrow">{faq_html}</div></section>' if faq_html else ""
+        graphic = anim(spec, caption)
+
+        if not x:   # explanation not written yet: simple layout
+            body = f"""{page_head([("Services", "/#services"), (group, None)], h1, lead, s["img"], s["alt"])}
+<section class="section"><div class="wrap layout"><div class="prose">{graphic}{s["body"]}{faq_html}</div>{side}</div></section>"""
+        elif g == 0:   # dark head with clip; grid of deliverables
+            body = f"""{page_head([("Services", "/#services"), (group, None)], h1, lead, s["img"], s["alt"])}
+<section class="section"><div class="wrap xp-two even"><div><p class="xp-kicker">In plain words</p><p class="xp-big">{e(x["plain"])}</p></div>{graphic}</div></section>
+<section class="section on-mint"><div class="wrap">{sec_title("What you get", "The concrete pieces we deliver, in plain language.")}{x_deliverables(x, "grid")}</div></section>
+<section class="section"><div class="wrap">{sec_title("How it works", "From the first conversation to ongoing results.")}{x_steps(x, "h")}</div></section>
+<section class="section on-dark"><div class="wrap">{sec_title("The tools involved, explained", "What each one is, and how we use it for your practice.")}{x_tools(x)}</div></section>
+{details}
+<section class="section tight flush-top"><div class="wrap xp-two"><div>{sec_title("Words you will hear")}{x_glossary(x)}</div>{x_fit(x)}</div></section>
+{faq_sec}"""
+        elif g == 1:   # light head, the graphic is the hero; rows; vertical steps
+            body = f"""<section class="page-head head-light"><div class="wrap"><nav class="crumbs" aria-label="Breadcrumb">{crumbs}</nav>
+  <div class="page-head-grid"><div><h1>{h1}</h1><p class="lead">{lead}</p></div>{graphic}</div></div></section>
+<section class="section"><div class="wrap xp-two"><div><p class="xp-kicker">In plain words</p><p class="xp-big">{e(x["plain"])}</p></div>{x_fit(x)}</div></section>
+<section class="section flush-top"><div class="wrap">{sec_title("What you get", "The concrete pieces we deliver, in plain language.")}{x_deliverables(x, "rows")}</div></section>
+<section class="section on-dark"><div class="wrap xp-two even"><div>{sec_title("How it works")}{x_steps(x, "v")}</div>{media(s["img"], s["alt"], "split-img reveal-mask")}</div></section>
+<section class="section"><div class="wrap">{sec_title("The tools involved, explained", "What each one is, and how we use it for your practice.")}{x_tools(x, light=True)}</div></section>
+<section class="section on-mint tight"><div class="wrap">{sec_title("Words you will hear")}{x_glossary(x)}</div></section>
+{details}
+{faq_sec}"""
+        elif g == 2:   # cinematic head; rail of cards
+            vid = media(s["img"], s["alt"], "cine-bg", lazy=False)
+            body = f"""<section class="page-head head-cine"><div class="wrap">{vid}<nav class="crumbs" aria-label="Breadcrumb">{crumbs}</nav>
+  <div><h1>{h1}</h1><p class="lead">{lead}</p></div></div></section>
+<section class="section on-dark"><div class="wrap xp-two even">{graphic}<div><p class="xp-kicker">In plain words</p><p class="xp-big">{e(x["plain"])}</p></div></div></section>
+<section class="section"><div class="wrap">{sec_title("What you get", "Swipe through the pieces we deliver.")}{x_deliverables(x, "rail")}</div></section>
+<section class="section on-mint"><div class="wrap">{sec_title("How it works", "From the first conversation to ongoing results.")}{x_steps(x, "h")}</div></section>
+<section class="section on-dark"><div class="wrap">{sec_title("The tools involved, explained", "What each one is, and how we use it for your practice.")}{x_tools(x)}</div></section>
+{details}
+<section class="section tight flush-top"><div class="wrap xp-two"><div>{sec_title("Words you will hear")}{x_glossary(x)}</div>{x_fit(x)}</div></section>
+{faq_sec}"""
+        else:          # yellow head with a taped print; prescription sheet
+            pic = media(s["img"], s["alt"], "page-head-img", lazy=False)
+            body = f"""<section class="page-head head-yellow"><div class="wrap"><nav class="crumbs" aria-label="Breadcrumb">{crumbs}</nav>
+  <div class="page-head-grid has-img-grid"><div><h1>{h1}</h1><p class="lead">{lead}</p></div><div class="print"><div class="print-in" data-note="{e(s["name"])}">{pic}</div></div></div></div></section>
+<section class="section"><div class="wrap xp-two even"><div><p class="xp-kicker">In plain words</p><p class="xp-big">{e(x["plain"])}</p></div>{graphic}</div></section>
+<section class="section on-mint"><div class="wrap xp-two even">{x_deliverables(x, "sheet")}<div>{x_fit(x)}</div></div></section>
+<section class="section"><div class="wrap">{sec_title("How it works", "From the first conversation to ongoing results.")}{x_steps(x, "h")}</div></section>
+<section class="section on-dark"><div class="wrap">{sec_title("The tools involved, explained", "What each one is, and how we use it for your practice.")}{x_tools(x)}</div></section>
+{details}
+<section class="section tight flush-top"><div class="wrap">{sec_title("Words you will hear")}{x_glossary(x)}</div></section>
+{faq_sec}"""
+        body += f"""
+<nav class="next" aria-label="Next service"><div class="wrap"><a href="{svc_url(nxt)}"><span><small>Next service</small><b>{e(nxt["name"])}</b></span><i aria-hidden="true"></i></a></div></nav>
 {closing()}"""
-        page(svc_url(s), f'{s["h1"]} | Rx Medical Web', s["lead"], body, og_img=f'/assets/img/{s["img"]}.jpg')
+        page(svc_url(s), f'{s["h1"]} | Rx Medical Web', s["lead"], body, extra_head=faq_ld, og_img=f'/assets/img/{s["img"]}.jpg')
+
+
+def build_gallery():
+    """Local review page for every animated graphic. Not linked, not in the sitemap, not deployed."""
+    keys = sorted(f[:-5] for f in os.listdir(ANIM_DIR) if f.endswith(".html")) if os.path.isdir(ANIM_DIR) else []
+    cells = "".join(f'<div><h3>{k}</h3>{anim(("x", k))}</div>' for k in keys)
+    body = f'<section class="section"><div class="wrap"><h1>Animated graphics</h1><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:28px">{cells}</div></div></section>'
+    page("/dev/gallery/", "Gallery", "Internal review page.", body, extra_head='<meta name="robots" content="noindex">\n')
 
 
 # ---------------------------------------------------------------- other pages
@@ -554,4 +778,5 @@ if __name__ == "__main__":
     build_contact()
     build_articles()
     build_sitemap()
+    build_gallery()
     print(f"built {len(BUILT)} pages")
