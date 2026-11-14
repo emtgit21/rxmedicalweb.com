@@ -132,6 +132,44 @@
     steps.forEach(function (st) { so.observe(st); });
   }
 
+  // 90-day plan: the graphic stays pinned and advances with the scroll (scrollytelling).
+  var plan = document.querySelector('.sp-plan');
+  var sc = plan && plan.querySelector('.sc');
+  if (sc && !calm && window.CSS && CSS.supports('position', 'sticky') && CSS.supports('width', 'clamp(0px, 1px, 2px)')) {
+    var pSteps = sc.querySelectorAll('ol > li');
+    var scenes = sc.querySelectorAll('.sc-scene');
+    var marks = sc.querySelectorAll('.sc-rail span');
+    var dayEl = sc.querySelector('.sc-day b');
+    var days = [1, 14, 30, 75, 90];
+    if (pSteps.length === 4 && scenes.length === 4) {
+      plan.classList.add('sc-live');
+      var pRaf = 0, lastDay = 0;
+      var draw = function () {
+        pRaf = 0;
+        var narrow = window.innerWidth <= 900;
+        var focal = window.innerHeight * (narrow ? 0.84 : 0.6), span = narrow ? 0.55 : 0.8;
+        var act = 0, prog = 0;
+        pSteps.forEach(function (li, i) {
+          var r = li.getBoundingClientRect();
+          if (focal >= r.top) { act = i; prog = Math.min(1, Math.max(0, (focal - r.top) / (r.height * span))); }
+        });
+        sc.style.setProperty('--t', ((act + prog) / 4).toFixed(4));
+        var d = Math.round(days[act] + (days[act + 1] - days[act]) * prog);
+        if (d !== lastDay) { dayEl.textContent = d; lastDay = d; }
+        for (var i = 0; i < 4; i++) {
+          pSteps[i].classList.toggle('on', i === act); pSteps[i].classList.toggle('past', i < act);
+          scenes[i].classList.toggle('on', i === act); scenes[i].classList.toggle('past', i < act);
+          marks[i].classList.toggle('on', i <= act); marks[i].classList.toggle('cur', i === act);
+          scenes[i].style.setProperty('--p', i < act ? 1 : i > act ? 0 : prog.toFixed(4));
+        }
+      };
+      var ask = function () { if (!pRaf) pRaf = requestAnimationFrame(draw); };
+      window.addEventListener('scroll', ask, { passive: true });
+      window.addEventListener('resize', ask);
+      draw();
+    }
+  }
+
   // Living-photo clips play only while visible.
   // Phones show the hero as a still image, so the hero clip is never downloaded there.
   var heroClip = document.querySelector('.hero-bg');

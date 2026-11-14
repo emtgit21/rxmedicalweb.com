@@ -930,6 +930,25 @@ def res_teaser():
 </section>"""
 
 
+# Pinned graphic of the 90-day plan. Decorative: site.js drives it from the scroll position.
+PLAN_STAGE = '''<div class="sc-stage" aria-hidden="true"><div class="sc-card">
+        <div class="sc-top"><div class="sc-day"><small>Day</small><b>1</b></div><div class="sc-rail"><i></i><span>Audit</span><span>Foundation</span><span>Launch</span><span>Review</span></div></div>
+        <div class="sc-scenes">
+          <div class="sc-scene s1"><div class="a-site"><i class="a-dots"></i><i class="a-hero"></i><i class="a-l"></i><i class="a-l"></i><i class="a-l s"></i><i class="a-scan"></i></div>
+            <ul class="a-list"><li style="--at:.12">Website</li><li style="--at:.26">Google profile and listings</li><li style="--at:.4">Reviews</li><li style="--at:.54">Ads and phone handling</li></ul></div>
+          <div class="sc-scene s2"><em>Where your calls come from</em>
+            <ul class="b-bars"><li style="--at:.1;--w:86%">Search<i></i></li><li style="--at:.2;--w:64%">Maps<i></i></li><li style="--at:.3;--w:48%">Ads<i></i></li><li style="--at:.4;--w:30%">Referrals<i></i></li></ul>
+            <ul class="b-tog"><li style="--at:.3">Listings corrected</li><li style="--at:.45">Call tracking</li><li style="--at:.6">Dashboard</li></ul></div>
+          <div class="sc-scene s3"><div class="c-card c1" style="--at:.08"><u></u><i></i><i></i><i class="s"></i><span>Pages published</span></div>
+            <div class="c-card c2" style="--at:.24"><u></u><i></i><i class="s"></i><span>Campaigns live</span></div>
+            <div class="c-card c3" style="--at:.4"><p>Thanks for reaching out. Here are two times this week.</p><span>Follow-up on</span></div></div>
+          <div class="sc-scene s4"><em>Your 90-day review</em>
+            <svg viewBox="0 0 400 150"><defs><linearGradient id="scg" x1="0" x2="1"><stop offset="0" stop-color="#00c0d0"/><stop offset="1" stop-color="#00e060"/></linearGradient></defs><path class="d-grid" d="M0 37H400M0 75H400M0 112H400"/><path class="d-line" pathLength="1" d="M4 128C50 124 70 108 110 104S170 96 200 78 262 70 296 46 360 30 396 16"/></svg>
+            <ul class="d-notes"><li style="--at:.3">What worked</li><li style="--at:.44">What we change</li><li style="--at:.58">Next 90 days</li></ul></div>
+        </div>
+      </div></div>'''
+
+
 def build_specialties():
     by = {s["slug"]: s for s in SERVICES}
     for slug, sp in SPECS.items():
@@ -945,7 +964,8 @@ def build_specialties():
         plays = "".join(
             f'<a class="sp-play" href="{svc_url(by[pl["slug"]])}"><img src="/assets/img/{pic(pl["slug"])}.webp" width="1248" height="832" alt="" loading="lazy">'
             f'<div><h3>{e(pl["t"])}</h3><p>{e(pl["d"])}</p><i>{e(by[pl["slug"]]["name"])}</i></div></a>' for pl in sp["plays"] if pl["slug"] in by)
-        plan = "".join(f'<li><b>{e(st["t"])}</b><p>{e(st["d"])}</p></li>' for st in sp["plan"])
+        whens = ["Weeks 1–2", "Month 1", "Months 2–3", "Day 90"]
+        plan = "".join(f'<li data-when="{whens[i] if i < 4 else ""}"><b>{e(st["t"])}</b><p>{e(st["d"])}</p></li>' for i, st in enumerate(sp["plan"]))
         care = "".join(f"<li>{e(c)}</li>" for c in sp["care"])
         faqs = "".join(f'<details><summary>{e(q["q"])}</summary><p>{e(q["a"])}</p></details>' for q in sp["faqs"])
         url = f"/specialties/{slug}/"
@@ -991,7 +1011,10 @@ def build_specialties():
 <section class="section sp-plan" id="plan">
   <div class="wrap">
     <div class="section-head reveal"><h2>Your first 90 days with us.</h2><p>You always know what we are working on and what it produced.</p></div>
-    <ol>{plan}</ol>
+    <div class="sc">
+      {PLAN_STAGE}
+      <ol>{plan}</ol>
+    </div>
   </div>
 </section>
 <section class="section sp-care-sec">
