@@ -925,3 +925,14 @@ video { max-width: 100%; height: auto; }
 .case .shot img, .work-3 .shot img, .work .shot img { aspect-ratio: 1400 / 801; object-position: center top; }
 .case:nth-child(even) { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); }
 @media (max-width: 860px) { .case:nth-child(even) { grid-template-columns: 1fr; } }
+
+/* v5: phones get a still hero (lighter, faster) and a shorter entrance */
+@media (max-width: 700px) {
+  .hero-bg { display: none; }
+  .hero-video { background: var(--ink) url(/assets/img/hero-clinic-m.webp) center / cover; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .js .hero .w > span { animation-duration: .7s; animation-delay: calc(var(--i) * .03s); }
+  .js .hero .lead { animation-delay: .25s; } .js .hero .hero-actions { animation-delay: .32s; } .js .hero .facts { animation-delay: .5s; }
+  .js .hero .pad-wrap { animation-delay: .1s; animation-duration: .9s; }
+}

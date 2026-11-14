@@ -107,7 +107,7 @@ def menu():
     first = SERVICES[0]
     return f"""<div class="menu-cols">{"".join(cols)}</div>
 <aside class="menu-preview" aria-hidden="true">
-  <div class="menu-preview-img"><img src="/assets/img/{first["img"]}.webp" alt="" loading="lazy"></div>
+  <div class="menu-preview-img"><img src="/assets/img/{first["img"]}.webp" alt="{e(first["alt"])}" loading="lazy"></div>
   <b>{e(first["name"])}</b><p>{e(first["blurb"])}</p>
 </aside>
 <div class="menu-foot"><span>Not sure where to start? We will look at your website and tell you.</span><a class="btn btn-ink" href="/contact-us/#analysis">Request a free analysis</a></div>"""
@@ -303,7 +303,7 @@ def anim(spec, caption=""):
 
 # ---------------------------------------------------------------- pieces
 def who(t):
-    return (f'<div class="who"><img src="{UP}{t["img"]}" width="76" height="76" alt="{e(t["name"])}" loading="lazy">'
+    return (f'<div class="who"><img src="/assets/img/t-{t["img"].rsplit(".", 1)[0].lower()}.webp" width="76" height="76" alt="{e(t["name"])}" loading="lazy">'
             f'<div><b>{e(t["name"])}</b><span>{e(t["role"])}</span></div></div>')
 
 
@@ -447,7 +447,7 @@ def build_home():
         groups.append(f'<div class="formulary-group"><h3>{e(gname)}<small>{e(gdesc)}</small></h3><ul class="formulary-list">{rows}</ul></div>')
 
     body = f"""<section class="hero hero-video">
-  <video class="hero-bg" autoplay muted loop playsinline preload="metadata" poster="/assets/img/hero-clinic.jpg" aria-hidden="true" tabindex="-1">
+  <video class="hero-bg" autoplay muted loop playsinline preload="metadata" poster="/assets/img/hero-clinic.webp" aria-hidden="true" tabindex="-1">
     <source src="/assets/video/hero.mp4" type="video/mp4">
   </video>
   <div class="wrap">
@@ -584,7 +584,7 @@ def build_home():
 """
     page("/", "Rx Medical Web | Medical website design and marketing agency",
          "The marketing agency for medical practices: websites, SEO, ads, social media and AI agents. Strategic partner of Empire Medical Training.",
-         body, extra_head=ld + '<link rel="preload" as="image" href="/assets/img/hero-clinic.jpg" fetchpriority="high">\n')
+         body, extra_head=ld + '<link rel="preload" as="image" href="/assets/img/hero-clinic.webp" fetchpriority="high" media="(min-width: 701px)"><link rel="preload" as="image" href="/assets/img/hero-clinic-m.webp" fetchpriority="high" media="(max-width: 700px)">\n')
 
 
 # ---------------------------------------------------------------- services
