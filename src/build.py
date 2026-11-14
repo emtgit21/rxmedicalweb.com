@@ -141,10 +141,11 @@ def header(path):
       <a href="/resources/"{cur('/resources/')}>Resources</a>
       <a href="/about/"{cur('/about/')}>About</a>
       <a href="/contact-us/"{cur('/contact-us/')}>Contact</a>
+      <a href="/book-a-call/"{cur('/book-a-call/')}>Book a call</a>
     </nav>
     <div class="header-cta">
       <a class="header-phone" href="{PHONE_HREF}">{PHONE}</a>
-      <a class="btn btn-primary" href="/contact-us/#analysis">Free website analysis</a>
+      <a class="btn btn-primary" href="/contact-us/#analysis">Free analysis</a>
     </div>
   </div>
 </header>"""

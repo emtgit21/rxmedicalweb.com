@@ -1305,3 +1305,11 @@ video { max-width: 100%; height: auto; }
 .form-ok { margin: 18px 0 0; padding: 14px 18px; border-radius: 12px; background: #e3f4ee; color: var(--ink); font-weight: 600; }
 .closing-contact .closing-book { justify-self: start; margin-top: 14px; color: #cfe3e0; font-weight: 600; text-underline-offset: 4px; }
 .closing-contact .closing-book:hover, .closing-contact .closing-book:focus-visible { color: var(--green); }
+
+/* v11: seven items in the header (Book a call added), so each one gets a little less padding */
+@media (min-width: 981px) { .nav > a, .nav-services > button { padding-inline: 10px; } }
+@media (min-width: 981px) and (max-width: 1150px) { .nav > a, .nav-services > button { padding-inline: 7px; font-size: .93rem; } .header-cta { margin-left: 6px; } }
+@media (max-width: 1400px) { .header-phone { display: none; } }
+@media (max-width: 980px) { .site-header.open .nav > :nth-child(7) { animation-delay: .2s; } .site-header.open .nav > :nth-child(8) { animation-delay: .24s; } .site-header.open .header-cta { animation-delay: .3s; } }
+@media (min-width: 981px) and (max-width: 1060px) { .nav > a, .nav-services > button { padding-inline: 4px; font-size: .9rem; } .nav { gap: 2px; } .header-cta .btn { padding-inline: .9em; } }
+@media (min-width: 1401px) { .site-header:not(.scrolled) .nav > a, .site-header:not(.scrolled) .nav-services > button { padding-inline: 8px; } .header-cta { gap: 12px; } }
