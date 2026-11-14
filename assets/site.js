@@ -202,6 +202,14 @@
     graphics.forEach(function (g) { g.classList.add('in'); });
   }
 
+  // Analytics: count taps on phone numbers and e-mail addresses, and where on the page they were.
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href^="tel:"], a[href^="mailto:"]');
+    if (!a || !window.gtag) return;
+    var where = a.closest('.site-header') ? 'header' : a.closest('footer') ? 'footer' : a.closest('.closing') ? 'closing' : 'page';
+    window.gtag('event', a.getAttribute('href').indexOf('tel:') === 0 ? 'phone_click' : 'email_click', { link_location: where, page_path: location.pathname });
+  });
+
   // Contact form: sent to the office through the site's own endpoint. If that fails
   // (or the browser has no fetch), it composes an e-mail in the visitor's mail app instead.
   var form = document.querySelector('form[data-mailto]');
@@ -238,7 +246,7 @@
             form.reset();
             fBtn.style.display = 'none';
             if (fOk) { fOk.hidden = false; fOk.focus && fOk.focus(); }
-            if (window.dataLayer) window.dataLayer.push({ event: 'generate_lead', form_id: 'analysis' });
+            if (window.gtag) window.gtag('event', 'generate_lead', { method: 'contact_form', topic: body.topic });
           } else if (res.status === 422 || res.status === 429) {
             if (fErr) fErr.textContent = res.j.error || 'Please check the form.';
             var bad = res.j.field && form.querySelector('[name="' + res.j.field + '"]');

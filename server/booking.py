@@ -140,11 +140,11 @@ def ics(row):
     return "\r\n".join(lines) + "\r\n"
 
 
-def send_mail(subject, text, reply_to=""):
-    """Send a plain-text message to the office through Mailgun. True when Mailgun accepted it."""
+def send_mail(subject, text, reply_to="", to="", sender="Rx Medical Web website"):
+    """Send a plain-text message through Mailgun, to the office unless `to` is given. True when Mailgun accepted it."""
     if not MAIL_KEY:
         return False
-    fields = {"from": f"Rx Medical Web website <website@{MAIL_DOMAIN}>", "to": MAIL_TO, "subject": subject[:200], "text": text}
+    fields = {"from": f"{sender} <website@{MAIL_DOMAIN}>", "to": to or MAIL_TO, "subject": subject[:200], "text": text}
     if reply_to:
         fields["h:Reply-To"] = reply_to
     req = urllib.request.Request(f"https://api.mailgun.net/v3/{MAIL_DOMAIN}/messages", data=urlencode(fields).encode())
@@ -166,6 +166,30 @@ def booking_text(row, event):
     return "\n".join(lines)
 
 
+def visitor_text(row, event):
+    """Confirmation for the person who booked. Times are Eastern, plus their own time zone when it differs."""
+    when = describe(row["slot"])
+    try:
+        local = slot_dt(row["slot"]).astimezone(ZoneInfo(row["visitor_tz"]))
+        if local.utcoffset() != slot_dt(row["slot"]).utcoffset():
+            when += " (" + local.strftime("%I:%M %p").lstrip("0") + " in your time zone, " + row["visitor_tz"].replace("_", " ") + ")"
+    except Exception:
+        pass
+    first = row["name"].split()[0] if row["name"].split() else "there"
+    site = "https://rxmedicalweb.com"
+    if event == "cancelled":
+        lines = [f"Hi {first},", "", f"Your call with Rx Medical Web on {when} has been cancelled.", "",
+                 f"If you would like another time, you can pick one here: {site}/book-a-call/"]
+    else:
+        lines = [f"Hi {first},", "", "Your call with Rx Medical Web is booked.", "", "When:  " + when, "How:   We will call you at " + row["phone"],
+                 "About: " + row["topic"], "", "The call lasts about 30 minutes. Please do not share patient information on the call or by e-mail.", "",
+                 f"Add it to your calendar: {site}/api/booking/ics?t={row['token']}",
+                 f"Need to cancel? {site}/api/booking/cancel?t={row['token']}"]
+    lines += ["", "Questions? Reply to this e-mail or call 1-888-599-4548.", "",
+              "Rx Medical Web", "2720 E. Oakland Park Blvd, Suite 103, Fort Lauderdale, FL 33306", site]
+    return "\n".join(lines)
+
+
 def notify(row, event):
     if not NOTIFY and not MAIL_KEY:
         return
@@ -177,6 +201,9 @@ def notify(row, event):
             if MAIL_KEY:
                 word = "New call booked" if event == "booked" else "Call cancelled"
                 ok = send_mail(f"{word}: {row['name']}, {describe(row['slot'])}", booking_text(row, event), row["email"])
+                subject = "Your call with Rx Medical Web is booked" if event == "booked" else "Your call with Rx Medical Web is cancelled"
+                if not send_mail(subject, visitor_text(row, event), MAIL_TO, to=row["email"], sender="Rx Medical Web"):
+                    print(f"confirmation not delivered to the visitor for booking #{row['id']} ({event})", flush=True)
             if NOTIFY:
                 r = subprocess.run(NOTIFY.split() + [event], input=json.dumps(data).encode(), timeout=60, capture_output=True)
                 ok = ok or r.returncode == 0

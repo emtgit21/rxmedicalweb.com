@@ -877,7 +877,7 @@ PRIVACY_BODY = """
 <h2>Information you give us</h2>
 <ul>
   <li><strong>When you contact us.</strong> If you call, e-mail or use the request form, we receive what you choose to send: typically your name, practice name, phone number, e-mail address, website and your message. When you send the request form, our server passes what you entered to our team by e-mail through our e-mail delivery provider (Mailgun) and does not keep a copy on the web server. If that delivery fails, the form opens your own e-mail application with the details filled in instead.</li>
-  <li><strong>When you book a call.</strong> The booking page stores what you enter on our server: the time you picked, your name, phone number, e-mail address and, if you add them, your practice, website and a note. We use it to prepare for and make that call. You can cancel from the link shown after you book.</li>
+  <li><strong>When you book a call.</strong> The booking page stores what you enter on our server: the time you picked, your name, phone number, e-mail address and, if you add them, your practice, website and a note. We use it to prepare for and make that call, and we send a confirmation to the e-mail address you gave through our e-mail delivery provider (Mailgun). You can cancel from the link shown after you book or from that e-mail.</li>
   <li><strong>When you use the site assistant.</strong> The assistant in the corner of each page runs entirely in your browser. It looks up answers in the content of this website. What you type is not sent to us or to anyone else, and it is not stored.</li>
 </ul>
 <p>Please do not send us patient information or other protected health information through this website, the request form or the assistant.</p>
@@ -1203,7 +1203,7 @@ def build_booking():
         <svg viewBox="0 0 48 48" width="56" height="56" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="#00e060"/><path d="M14 25l7 7 13-15" fill="none" stroke="#0b2f38" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <h2>Your call is booked</h2>
         <p class="bk-when"></p>
-        <p>We will call you at <b class="bk-phone"></b>. If something changes, call us at {PHONE}.</p>
+        <p>We will call you at <b class="bk-phone"></b>. A confirmation is on its way to your e-mail. If something changes, call us at {PHONE}.</p>
         <a class="btn btn-ink bk-ics" href="#">Add to my calendar</a>
         <p class="fine"><a class="bk-cancel" href="#">Cancel this call</a></p>
       </div>
