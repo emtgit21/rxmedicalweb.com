@@ -283,7 +283,7 @@ SERVICES = [
     dict(group=1, slug="search-engine-optimization", name="Search engine optimization",
          h1="Search engine optimization for doctors",
          lead="SEO gets your practice website to appear high in the results when patients search for the procedures you offer.",
-         blurb="Daily work on keywords, code, links and content to reach the first page.",
+         blurb="Ongoing work on content, code and authority so patients find your practice.",
          img="analytics-desk", alt="Analyst looking at search performance charts",
          anim=("serp",),
          body="""
@@ -869,14 +869,15 @@ ABOUT_BODY = """
 """
 
 WHY_BODY = """
-<h2>Our guarantee</h2>
-<p>We offer a full, 100% money back guarantee in writing if you are not satisfied with your website. If you are not happy with your website within the first 15 days after your initial deposit, we refund your entire advance payment. We are confident you will love our work.</p>
+<h2>Experts in medical marketing</h2>
+<p>Medical marketing is all we do. We know how patients choose a physician, what they ask before a procedure and what a practice is allowed to say. That knowledge comes from working with physicians and dentists every day since 2008, with a physician advisory board beside our marketers.</p>
+<p>A general agency has to learn your field at your expense. We already speak it, from aesthetics and pain management to dentistry and primary care, so your marketing is accurate from the first draft and gets to work sooner.</p>
 
 <h2>Our pricing</h2>
-<p>Our pricing is reasonable and in most cases more cost effective because of how efficiently we work. Be careful with agencies whose prices are unbelievably low and whose promises are unrealistic. A refund policy protects you somewhat, but it cannot give back the time you lost. When you choose an agency, shop around, compare prices, quality and staff, review their portfolio and make sure there is a written refund policy.</p>
+<p>Our pricing is reasonable and in most cases more cost effective because of how efficiently we work. Be careful with agencies whose prices are unbelievably low and whose promises are unrealistic. The wrong choice costs more than money, because it cannot give back the time you lost. When you choose an agency, compare quality, staff and experience in medicine, and review their portfolio.</p>
 
 <h2>How we measure results</h2>
-<p>No matter how much traffic your website gets, the end result should always be a patient contacting your practice about your services, most often by phone. Our results and call tracking system lets you see that for yourself. Our clients pay our fees only when we achieve first page results for them.</p>
+<p>No matter how much traffic your website gets, the end result should always be a patient contacting your practice about your services, most often by phone. Our results and call tracking system lets you see that for yourself.</p>
 
 <h2>Our team</h2>
 <ul>

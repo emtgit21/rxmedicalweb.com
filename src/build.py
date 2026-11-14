@@ -539,7 +539,7 @@ def build_home():
   <div class="wrap split">
     {media("hero-team", "A marketing team and a physician advisor reviewing website designs", "split-img reveal-mask", 1280, 720)}
     <div>
-      <h2>Marketers who understand medicine.</h2>
+      <h2>Experts in medical marketing.</h2>
       <p class="lead">We are a physician owned, family owned agency. Designers, programmers, marketers, MBAs and a physician advisory board work together in Fort Lauderdale. We do not outsource.</p>
       <div class="cols-2 split-cols">
         <div><h3>Strategic partner of Empire Medical Training</h3><p>We have marketed Empire's courses for more than fifteen years. When you add a procedure you learned there, we already know how to launch it.</p></div>
@@ -746,14 +746,14 @@ def build_about():
          "Rx Medical Web is a family owned, physician owned medical marketing agency in Fort Lauderdale, serving more than 400 physicians and dentists since 2008.", body)
 
     why_nav = [("About us", "/about/"), ("Testimonials", "/about/testimonials/"), ("Our work", "/portfolio/")]
-    body = f"""{page_head([("About us", "/about/"), ("Why choose us", None)], "Why choose us?", "A written guarantee, fair pricing and a team that understands medicine.")}
+    body = f"""{page_head([("About us", "/about/"), ("Why choose us", None)], "Why choose us?", "We are experts in medical marketing: it is all we do, with fair pricing and a team that understands medicine.")}
 <section class="section"><div class="wrap layout">
   <div class="prose">{WHY_BODY}</div>
   {slip("Ask us anything", "We are glad to explain how we work before you decide.", why_nav, "More about us")}
 </div></section>
 {closing()}"""
     page("/about/why-choose-us/", "Why choose us | Rx Medical Web",
-         "A written money back guarantee, fair pricing, results tracking and an in-house team of marketers, MBAs and physicians.", body)
+         "Experts in medical marketing: fair pricing, results tracking and an in-house team of marketers, MBAs and physicians.", body)
 
     body = f"""{page_head([("About us", "/about/"), ("Testimonials", None)], "Testimonials", "Good words from good people: physicians and practice owners we have worked with.")}
 <section class="section"><div class="wrap">{testimonials_block(full=True)}</div></section>
@@ -793,7 +793,7 @@ def build_404():
 
 def build_contact():
     topics = "".join(f"<option>{e(s['name'])}</option>" for s in SERVICES)
-    body = f"""{page_head([("Contact us", None)], "Contact us and we will give you a solution.", "We appreciate your business and guarantee a response within 24 business hours, including our packages and pricing.")}
+    body = f"""{page_head([("Contact us", None)], "Contact us and we will give you a solution.", "We appreciate your business and reply within 24 business hours, including our packages and pricing.")}
 <section class="section"><div class="wrap contact-grid">
   <div>
     <dl class="contact-list">
