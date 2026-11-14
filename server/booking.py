@@ -194,6 +194,27 @@ def notify(row, event):
     threading.Thread(target=run, daemon=True).start()
 
 
+def retry_notices():
+    """Every ten minutes, send again the notice of any upcoming call whose e-mail did not go out."""
+    while True:
+        time.sleep(600)
+        try:
+            if not MAIL_KEY:
+                continue
+            old = (dt.datetime.now(dt.timezone.utc) - dt.timedelta(minutes=3)).isoformat(timespec="seconds")
+            with db() as con:
+                rows = con.execute("SELECT * FROM booking WHERE status = 'booked' AND notified = 0 AND slot >= ? AND created < ?",
+                                   (dt.datetime.now(TZ).strftime("%Y-%m-%dT%H:%M"), old)).fetchall()
+            for row in rows:
+                if send_mail(f"New call booked: {row['name']}, {describe(row['slot'])}", booking_text(row, "booked"), row["email"]):
+                    with db() as con:
+                        con.execute("UPDATE booking SET notified = 1 WHERE id = ?", (row["id"],))
+                else:
+                    break
+        except Exception as ex:
+            print("retry error:", ex, flush=True)
+
+
 def too_many(ip):
     now = time.time()
     recent = [t for t in HITS.get(ip, []) if now - t < 3600]
@@ -365,5 +386,6 @@ if __name__ == "__main__":
         cli(sys.argv[1:])
     else:
         init()
+        threading.Thread(target=retry_notices, daemon=True).start()
         print(f"rxbooking listening on 127.0.0.1:{PORT}, database {DB}", flush=True)
         ThreadingHTTPServer(("127.0.0.1", PORT), Handler).serve_forever()
