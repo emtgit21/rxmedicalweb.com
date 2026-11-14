@@ -998,6 +998,7 @@ video { max-width: 100%; height: auto; }
 .sp-tiles.big .sp-tile span { padding: 28px; }
 .sp-tile i { display: inline-flex; align-items: center; gap: 8px; font-style: normal; font-size: .92rem; font-weight: 600; color: var(--green); margin-top: 8px; opacity: 0; transform: translateY(6px); transition: opacity .25s ease, transform .35s var(--ease-out); }
 .sp-tile i::after { content: "→"; }
+.sp-tile:hover, .sp-tile:focus-visible { color: #fff; }
 .sp-tile:hover img, .sp-tile:focus-visible img { transform: scale(1.06); }
 .sp-tile:hover i, .sp-tile:focus-visible i { opacity: 1; transform: none; }
 @media (hover: none) { .sp-tile i { opacity: 1; transform: none; } }
