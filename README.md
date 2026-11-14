@@ -22,11 +22,15 @@ To add a service, add one entry to `SERVICES` in `src/pages.py`. It appears in t
 
 ## Deployment
 
-1. Push to `main` on GitHub.
-2. In cPanel → Git Version Control → rxmedicalweb.com → Manage → Pull or Deploy: click **Update from Remote**, then **Deploy HEAD Commit**.
-3. `.cpanel.yml` copies the site into `/home/itjfn6oc46op/public_html/rxmedicalweb.com`.
+The site is served by nginx on the DigitalOcean droplet `rxmedicalweb` (134.209.164.194, NYC3).
 
-A new top-level folder or file must be added to the copy task in `.cpanel.yml`. `./deploy.sh` is the alternative: it uploads every tracked file through the cPanel API. `src/` is harmless on the server but does not need to be there.
+Push to `main` and it is live within two minutes: a cron job on the droplet (`/etc/cron.d/rxmedicalweb-pull`) resets `/var/www/rxmedicalweb.com` to `origin/main`. Never edit files on the server; they are overwritten.
+
+- nginx config: `/etc/nginx/sites-available/rxmedicalweb.com` (blocks `.git`, `src/`, `dev/`)
+- HTTPS: Let's Encrypt through certbot, renewed by `certbot.timer`
+- DNS: A record at GoDaddy points to the droplet
+
+`.cpanel.yml` and `deploy.sh` belong to the old GoDaddy cPanel hosting and are no longer used.
 
 ## Contact form
 
