@@ -19,6 +19,7 @@ SITE = "https://rxmedicalweb.com"
 YEAR = datetime.date.today().year
 UP = "/wp-content/uploads/"
 BUILT = []
+UNLISTED = {"/book-a-call/"}   # live but not linked or in the sitemap until booking notices are set up
 PAGE_CSS = []          # stylesheets for the custom animated graphics used on the page being built
 ANIM_DIR = os.path.join(ROOT, "src", "anims")
 # custom animated graphic for each service (falls back to the generic one in pages.py if the file is missing)
@@ -251,7 +252,7 @@ def page(path, title, desc, body, extra_head="", og_img="/assets/img/hero-clinic
     with open(out, "w", encoding="utf-8") as f:
         f.write(doc)
     PAGE_CSS.clear()
-    if not path.startswith("/dev/"):
+    if not path.startswith("/dev/") and path not in UNLISTED:
         BUILT.append(path)
 
 
@@ -1074,6 +1075,68 @@ def build_resources():
          "Free guides for physicians and practice managers: AI search, Google Business Profile, reviews, missed calls, video, patient privacy and more.", body)
 
 
+def build_booking():
+    def field(name, label, typ="text", req=False, auto=""):
+        ac = f' autocomplete="{auto}"' if auto else ""
+        opt = "" if req else " <i>optional</i>"
+        return f'<label class="bk-f"><span>{label}{opt}</span><input type="{typ}" name="{name}"{" required" if req else ""}{ac}></label>'
+    body = f"""<section class="bk-hero">
+  <div class="wrap bk-grid">
+    <div class="bk-intro">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span>Book a call</nav>
+      <p class="sp-kicker">Thirty minutes, no charge</p>
+      <h1>Pick a time. We will call you.</h1>
+      <p class="lead">Tell us about your practice and what you want more of. You will talk with someone from our team who works only with medical practices.</p>
+      <ol class="bk-what">
+        <li><b>Before the call</b>We look at your website, your Google profile and your reviews.</li>
+        <li><b>On the call</b>We tell you what we would fix first, and answer your questions.</li>
+        <li><b>After the call</b>You get a written plan with packages and pricing. No obligation.</li>
+      </ol>
+      <p class="bk-alt">Rather call now? <a href="{PHONE_HREF}">{PHONE}</a>, Monday to Friday, 9 am to 6 pm Eastern.</p>
+    </div>
+    <div class="bk-card" data-booking>
+      <div class="bk-pick">
+        <h2><i>1</i>Pick a day</h2>
+        <div class="bk-days" role="group" aria-label="Day"></div>
+        <h2><i>2</i>Pick a time</h2>
+        <div class="bk-times" role="group" aria-label="Time"></div>
+        <p class="bk-tz"></p>
+        <p class="bk-status" role="status">Loading open times…</p>
+        <noscript><p>The calendar needs JavaScript. Please call us at {PHONE} or write to {EMAIL}.</p></noscript>
+      </div>
+      <form class="bk-form" novalidate>
+        <h2><i>3</i>Where do we call you?</h2>
+        <p class="bk-sel">Your call: <b class="bk-chosen">no time picked yet</b></p>
+        <div class="bk-fields">
+          {field("name", "Your name", req=True, auto="name")}
+          {field("practice", "Practice", auto="organization")}
+          {field("phone", "Phone", "tel", True, "tel")}
+          {field("email", "E-mail", "email", True, "email")}
+          {field("website", "Website", auto="url")}
+          <label class="bk-f"><span>Topic</span><select name="topic"></select></label>
+          <label class="bk-f bk-wide"><span>Anything we should know <i>optional</i></span><textarea name="notes" rows="2"></textarea></label>
+          <label class="bk-hp" aria-hidden="true">Company URL<input type="text" name="company_url" tabindex="-1" autocomplete="off"></label>
+        </div>
+        <p class="bk-error" role="alert"></p>
+        <button type="submit" class="btn btn-primary" disabled>Book the call</button>
+        <p class="fine">Please do not include patient information. We use your details only to prepare for and make this call. See our <a href="/privacy-policy/">privacy policy</a>.</p>
+      </form>
+      <div class="bk-done" aria-live="polite">
+        <svg viewBox="0 0 48 48" width="56" height="56" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="#00e060"/><path d="M14 25l7 7 13-15" fill="none" stroke="#0b2f38" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h2>Your call is booked</h2>
+        <p class="bk-when"></p>
+        <p>We will call you at <b class="bk-phone"></b>. If something changes, call us at {PHONE}.</p>
+        <a class="btn btn-ink bk-ics" href="#">Add to my calendar</a>
+        <p class="fine"><a class="bk-cancel" href="#">Cancel this call</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+<script src="/assets/booking.js?v={ver("assets/booking.js")}" defer></script>"""
+    page("/book-a-call/", "Book a call | Rx Medical Web",
+         "Pick a time for a free 30-minute call with Rx Medical Web. We look at your practice's website first and tell you what we would fix.", body)
+
+
 def build_404():
     body = f"""<section class="page-head lost"><div class="wrap">
   <p class="lost-rx" aria-hidden="true">℞</p>
@@ -1192,6 +1255,7 @@ if __name__ == "__main__":
     build_specialties()
     build_resources()
     build_privacy()
+    build_booking()
     build_404()
     build_chat_index()
     build_sitemap()
