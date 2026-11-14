@@ -1,0 +1,834 @@
+{
+ "med-spa-aesthetics": {
+  "name": "Med spas and aesthetics",
+  "img": "sp-med-spa-aesthetics",
+  "alt": "An aesthetic injector examining a client's face in a medical spa treatment room",
+  "h1": "Marketing for med spas and aesthetic practices",
+  "lead": "Your patients choose you with their eyes first, pay out of pocket, and decide whether to return every few months. Marketing for an aesthetic practice has to win the first visit and earn the next one.",
+  "searches": [
+   "best med spa near me",
+   "lip filler before and after",
+   "how much does botox cost",
+   "laser hair removal near me",
+   "who should do my filler",
+   "body contouring without surgery options",
+   "microneedling or chemical peel",
+   "med spa with physician on site"
+  ],
+  "challenges": [
+   {
+    "d": "When every practice in town advertises a per-unit special, patients learn to shop by discount and leave for the next one. Your marketing has to show who is holding the syringe and why that matters, so you are chosen for trust and not for the lowest offer.",
+    "t": "Competing on price alone"
+   },
+   {
+    "d": "Most of the value of an aesthetic patient comes from the visits after the first, yet many practices spend everything on new leads and nothing on bringing people back. Without reminders, memberships and follow-up, patients drift to whoever shows up in their feed next.",
+    "t": "One visit, then silence"
+   },
+   {
+    "d": "Aesthetic patients message at night from Instagram, a web form or a text, and they often contact several practices at once. If your front desk replies the next afternoon, the consultation has usually been booked somewhere else.",
+    "t": "Inquiries that go unanswered"
+   }
+  ],
+  "plays": [
+   {
+    "d": "We design custom sites with a page for each treatment, galleries of your own results, provider credentials up front and booking within reach on every screen. No templates, so you do not look like the med spa down the street.",
+    "t": "A site that looks like your practice feels",
+    "slug": "medical-spa-website-design"
+   },
+   {
+    "d": "We work on your Google Business Profile, directory listings and area landing pages so your practice can appear when someone nearby searches for injectables, laser or body contouring. Each treatment gets its own page instead of one long services list.",
+    "t": "Found when patients search by treatment",
+    "slug": "local-seo"
+   },
+   {
+    "d": "We set up a steady, simple way to ask patients for reviews after their visit and draft thoughtful replies for your approval. Replies are written with patient privacy in mind, so they never confirm who was treated or for what.",
+    "t": "Reviews that name the treatment and the provider",
+    "slug": "reputation-management"
+   },
+   {
+    "d": "We plan, film and edit short videos of your physicians and providers explaining treatments and showing the practice. Patients get to know the person before the consultation, which is what a static promotion cannot do.",
+    "t": "Reels with your injectors on camera",
+    "slug": "short-form-video"
+   },
+   {
+    "d": "Leads from Instagram, ads, web forms and calls land in one place, get a fast reply and are followed until they book or decline. Patient information is handled with HIPAA requirements in mind.",
+    "t": "Every inquiry answered and followed",
+    "slug": "patient-crm-automation"
+   },
+   {
+    "d": "We plan and send reminders when a patient is due for their next treatment, plus membership offers and event invitations, with two-way replies your staff can pick up. Only patients who have opted in receive them.",
+    "t": "Texts that bring patients back",
+    "slug": "sms-marketing"
+   }
+  ],
+  "plan": [
+   {
+    "d": "In the first weeks we review your site, profiles, reviews, ads and how inquiries are handled today, and we talk with your providers and front desk. We agree on the treatments that matter most to the practice.",
+    "t": "Audit and listening"
+   },
+   {
+    "d": "During the first month we correct your listings, set up call tracking and lead capture, and begin work on treatment pages and the review request process. You see where calls and bookings come from in one dashboard.",
+    "t": "Fix the foundation"
+   },
+   {
+    "d": "Next we publish new pages, film the first round of short videos with your providers and start campaigns for your priority treatments. Text and e-mail follow-up for existing patients goes live.",
+    "t": "Launch and film"
+   },
+   {
+    "d": "By day 90 we sit down with you to review which channels produced calls and bookings and which did not. We shift effort toward what is working and set the plan for the following quarter.",
+    "t": "Review and adjust"
+   }
+  ],
+  "care": [
+   "Before-and-after photos and patient testimonials generally call for written patient consent and an honest presentation of typical results, and we build campaigns with these in mind while your practice confirms the specifics with its counsel.",
+   "Advertising that names prescription products such as neuromodulators, or that makes claims about results, is subject to federal, state and platform rules, so we write conservatively and the practice confirms the wording with its counsel or compliance contact.",
+   "Replies to reviews and social comments should never confirm that someone is a patient or mention their treatment, and we draft every reply with patient privacy and HIPAA requirements in mind."
+  ],
+  "faqs": [
+   {
+    "a": "Yes. We work with physician-owned practices and with med spas that operate under a medical director. Because we are physician owned ourselves, we understand how supervision and credentials should be presented, and we ask your medical director to review clinical content.",
+    "q": "Do you work with med spas that are not owned by a physician?"
+   },
+   {
+    "a": "Most practices post well but have no path from a post to a booked consultation. We add planning, video of your providers, paid campaigns where they make sense, and a system that captures and answers each inquiry. You can keep posting day-to-day moments while we handle the structure around them.",
+    "q": "We already post on Instagram ourselves. What would you add?"
+   },
+   {
+    "a": "AI helps us draft and organize content, and our in-house team edits it. Anything medical is reviewed by a physician before it is published, and nothing goes live without your approval.",
+    "q": "Who writes our treatment pages and posts?"
+   },
+   {
+    "a": "Yes. As the strategic marketing partner of Empire Medical Training, we often work with physicians who are adding a procedure to their practice. Our new service launch covers the treatment page, announcement to your existing patients, and campaigns to bring in the first bookings.",
+    "q": "Can you help us launch a treatment we just trained on?"
+   }
+  ]
+ },
+ "dermatology": {
+  "name": "Dermatology",
+  "img": "sp-dermatology",
+  "alt": "A dermatologist examining a patient's forearm with a dermatoscope",
+  "h1": "Marketing for dermatology practices, medical and cosmetic",
+  "lead": "A dermatology practice runs two businesses under one roof: insured medical visits with long waits and cash-pay cosmetic services. We market each on its own terms, starting with the conditions patients search for.",
+  "searches": [
+   "dermatologist near me accepting new patients",
+   "who treats adult acne",
+   "mole check appointment this week",
+   "eczema specialist for children",
+   "best dermatologist for hair loss",
+   "skin cancer screening near me",
+   "botox by a board certified dermatologist",
+   "does insurance cover mole removal"
+  ],
+  "challenges": [
+   {
+    "d": "When new medical patients wait weeks for an appointment, more demand for general visits does not help the practice. Marketing has to point toward the services and providers with open capacity, and make it easy for patients to find the right first step.",
+    "t": "A full medical schedule"
+   },
+   {
+    "d": "A patient worried about a changing mole and a patient comparing cosmetic injectors want very different things from the same site. If the two are mixed together, medical patients doubt the seriousness and cosmetic patients go to a med spa down the street.",
+    "t": "Two audiences, one website"
+   },
+   {
+    "d": "Most people type a symptom or a diagnosis, not the word dermatologist. A practice with one general services page is hard to find for acne, eczema, psoriasis, hair loss, rosacea and the many other conditions it treats every day.",
+    "t": "Patients search by condition"
+   }
+  ],
+  "plays": [
+   {
+    "d": "We build and maintain condition and procedure pages that match how patients search, from acne and eczema to skin checks and Mohs surgery. Each one explains what the visit involves and how to book.",
+    "t": "A page for every condition you treat",
+    "slug": "search-engine-optimization"
+   },
+   {
+    "d": "AI assists with drafts, and physicians review every article and page before it is published. Your dermatologists approve anything that carries their name.",
+    "t": "Skin content reviewed by physicians",
+    "slug": "physician-content-marketing"
+   },
+   {
+    "d": "We design a custom site that gives medical dermatology and cosmetic services their own navigation, tone and calls to action. Insurance information sits with the medical side, and consultations sit with the cosmetic side.",
+    "t": "One site with clear medical and cosmetic paths",
+    "slug": "medical-website-design"
+   },
+   {
+    "d": "Patients choose a visit type, see the providers and locations that offer it, and complete intake from their phone. Forms that collect health information are handled with HIPAA requirements in mind.",
+    "t": "Booking that sorts patients by visit type",
+    "slug": "online-booking"
+   },
+   {
+    "d": "We manage profiles, directory listings and location pages for every office, including physician assistants and nurse practitioners with shorter waits. Hours, insurance notes and services stay accurate across all of them.",
+    "t": "Google Maps visibility for each location and provider",
+    "slug": "local-seo"
+   },
+   {
+    "d": "We run paid search for the services where you have capacity and want growth, such as injectables, lasers and cosmetic consultations. Each campaign is measured by calls and bookings, not clicks.",
+    "t": "Paid campaigns for cosmetic and cash-pay services",
+    "slug": "pay-per-click"
+   }
+  ],
+  "plan": [
+   {
+    "d": "In the first weeks we review your site, search visibility, listings and reviews, and we ask where your schedule has room. That tells us which services, providers and locations to promote first.",
+    "t": "Audit and capacity review"
+   },
+   {
+    "d": "In the first month we map the medical and cosmetic paths of your site, set up call tracking and analytics, and correct your profiles and listings. You see where calls and bookings come from before we spend on ads.",
+    "t": "Structure and tracking"
+   },
+   {
+    "d": "We publish the first group of physician-reviewed condition pages and launch paid campaigns for the cosmetic services you chose. Booking and intake are connected so patients land in the right visit type.",
+    "t": "Content and campaigns"
+   },
+   {
+    "d": "By day 90 we sit down with you to review calls, bookings and which pages and campaigns produced them. We then set priorities for the next quarter together.",
+    "t": "Review and adjust"
+   }
+  ],
+  "care": [
+   "Before-and-after photos need written patient consent for marketing use and should show typical, unretouched results under consistent conditions, so we build galleries and ads with these points in mind and the practice confirms its consent forms with counsel.",
+   "Advertising for prescription products such as neuromodulators, and any statement about results, is subject to federal and state advertising rules and to platform policies, so we write campaigns with these in mind and recommend the practice confirm specific claims with its counsel or compliance contact.",
+   "Testimonials and replies to reviews must not reveal that someone is a patient or disclose anything about their care, so we draft replies and testimonial releases with HIPAA requirements in mind and the practice confirms its policy with counsel."
+  ],
+  "faqs": [
+   {
+    "a": "Marketing for a busy practice is about directing demand, not adding to the backlog. We focus on the services, providers and locations where you have openings, which is often cosmetic work, newer providers or a second office. We also make booking and intake easier so your front desk spends less time on the phone.",
+    "q": "Our medical schedule is already booked out. Why would we need marketing?"
+   },
+   {
+    "a": "Yes. We present cosmetic services as part of a physician-led dermatology practice, with your training and medical standards up front. The cosmetic section gets its own look and booking path while the practice keeps one identity.",
+    "q": "Can you grow our cosmetic side without making us look like a med spa?"
+   },
+   {
+    "a": "AI assists with research and first drafts, and physicians review the content before it is published. Your dermatologists have final approval, and we do not publish claims about whether a treatment works.",
+    "q": "Who writes the content about skin conditions?"
+   },
+   {
+    "a": "In most cases, yes. We connect to EMR, scheduling and payment tools through their APIs and webhooks, and we confirm what your system supports before we begin. Patient information is handled with HIPAA requirements in mind, and our AI agents answer questions about scheduling and services but never give medical advice.",
+    "q": "Can your booking and chat tools work with our EMR?"
+   }
+  ]
+ },
+ "plastic-surgery": {
+  "name": "Plastic surgery",
+  "img": "sp-plastic-surgery",
+  "alt": "A plastic surgeon showing a tablet to a patient during a consultation",
+  "h1": "Marketing for plastic surgery practices and surgeons",
+  "lead": "Plastic surgery patients research for months, compare surgeons by their galleries and ask about cost before they ever call. We build marketing that stays useful through that whole decision, from first search to booked consultation.",
+  "searches": [
+   "best plastic surgeon near me",
+   "how much does a tummy tuck cost",
+   "rhinoplasty before and after photos",
+   "breast augmentation recovery time",
+   "mommy makeover financing options",
+   "how to choose a facelift surgeon",
+   "board certified plastic surgeon near me",
+   "questions to ask at a plastic surgery consultation"
+  ],
+  "challenges": [
+   {
+    "d": "A patient may visit your site many times over several months before requesting a consultation, and most of that research happens without you knowing. If nothing keeps your practice in front of them during that time, the surgeon who stayed in touch gets the call.",
+    "t": "A long, quiet decision cycle"
+   },
+   {
+    "d": "Patients judge a surgeon by before-and-after photos of people who look like them, for the procedure they want. A gallery that is slow, hard to filter or thin for your main procedures loses patients who never tell you why they left.",
+    "t": "The gallery carries the decision"
+   },
+   {
+    "d": "Many inquiries are about price or financing, arrive after hours and go to several practices at once. When a reply takes a day or the follow-up stops after one call, the marketing spend that produced the lead is wasted.",
+    "t": "Inquiries that never reach consultation"
+   }
+  ],
+  "plays": [
+   {
+    "d": "We design custom sites where before-and-after cases can be filtered by procedure, each procedure has its own detailed page, and surgeon credentials and financing information are easy to find. Every page leads to a consultation request.",
+    "t": "A site built around your gallery and your surgeons",
+    "slug": "medical-website-design"
+   },
+   {
+    "d": "We build and maintain content for each procedure you offer, covering the questions patients ask about candidacy, recovery, cost and choosing a surgeon. AI assists with drafts, and physicians review the medical content before it is published.",
+    "t": "Procedure pages that answer months of research",
+    "slug": "search-engine-optimization"
+   },
+   {
+    "d": "Every form, call and message goes into one pipeline, gets a fast reply and is followed up on a schedule until the patient books or declines. Patient information is handled with HIPAA requirements in mind.",
+    "t": "Follow-up from inquiry to consultation",
+    "slug": "patient-crm-automation"
+   },
+   {
+    "d": "We run search and social campaigns organized by procedure, each pointing to its own page, and we measure them by consultation requests and calls instead of clicks. Ad copy and images are prepared with each platform's rules on cosmetic procedures in mind.",
+    "t": "Paid campaigns by procedure",
+    "slug": "search-engine-marketing"
+   },
+   {
+    "d": "We help you ask satisfied patients for reviews at the right point after surgery and keep your profiles accurate across the sites patients check. Replies are drafted so they never confirm that someone is a patient or reveal details of their care.",
+    "t": "Reviews that speak for the surgeon",
+    "slug": "reputation-management"
+   },
+   {
+    "d": "We film patients who have agreed to share their experience, on site at your practice, and edit the footage for your procedure pages, ads and social channels. Written consent is collected before anything is published.",
+    "t": "Patient stories on camera",
+    "slug": "video-testimonials"
+   }
+  ],
+  "plan": [
+   {
+    "d": "In the first weeks we review your site, gallery, search visibility, ad accounts and how inquiries are handled today. We set up call tracking and a dashboard so every consultation request can be traced to its source.",
+    "t": "Audit and tracking"
+   },
+   {
+    "d": "In the first month we agree on the procedures you most want to grow and rebuild or create their pages, with gallery cases, financing information and a clear consultation request. Physicians review the medical content.",
+    "t": "Priority procedures first"
+   },
+   {
+    "d": "We launch paid campaigns for those procedures and turn on the lead follow-up sequences, including e-mail and text for patients who are still deciding. Your front desk gets a simple process for answering new inquiries quickly.",
+    "t": "Campaigns and follow-up"
+   },
+   {
+    "d": "By day 90 we sit down with you to go through which procedures and channels produced consultations and where patients dropped out. We adjust budgets and content and set the plan for the next quarter.",
+    "t": "Review and next steps"
+   }
+  ],
+  "care": [
+   "Before-and-after photos and patient testimonials generally require the patient's written authorization for marketing use, and photos should show real patients of the practice without editing that changes the outcome shown, so we build galleries and campaigns with these points in mind and the practice confirms its consent forms with counsel.",
+   "Claims about results, recovery, safety or a surgeon's credentials and board certification are regulated by advertising rules and state medical boards, and advertising platforms place their own limits on cosmetic procedure ads, so we write copy with these in mind and the practice confirms specific claims with its counsel or compliance contact.",
+   "Replies to online reviews should not confirm that the reviewer is a patient or mention any detail of their care, and financing offers may carry disclosure requirements of their own, so we draft replies and offers with these in mind and the practice confirms the details with counsel."
+  ],
+  "faqs": [
+   {
+    "a": "Yes. We organize your existing cases by procedure, prepare them for fast loading and build a gallery patients can filter. We ask you to confirm that each patient has authorized marketing use, and we can suggest a consistent photo routine for future cases.",
+    "q": "Can you work with the before-and-after photos we already have?"
+   },
+   {
+    "a": "It depends on your market, your starting point and the procedures you focus on, so we do not promise a date or a number. Paid campaigns and faster follow-up tend to show their effect sooner than search optimization, which builds over a longer period. The dashboard shows you from the start what each channel is producing.",
+    "q": "How long before we see more consultation requests?"
+   },
+   {
+    "a": "Yes, and we recommend it. We start with the procedures you most want to grow and build pages, campaigns and follow-up around those. Other procedures are added as the first ones are working.",
+    "q": "Can we focus on certain procedures instead of everything we offer?"
+   },
+   {
+    "a": "Our in-house team writes it, with AI assisting on drafts and physicians reviewing the medical content. You approve everything before it goes live, and we edit it to match how your surgeons explain each procedure to their own patients.",
+    "q": "Who writes the content about our procedures?"
+   }
+  ]
+ },
+ "dental": {
+  "name": "Dental practices",
+  "img": "sp-dental",
+  "alt": "A dentist and an assistant talking with a patient in a dental operatory",
+  "h1": "Marketing for general, cosmetic and implant dental practices",
+  "lead": "Dental patients choose from a short list of nearby offices, and they ask about insurance before anything else. We market for both sides of your schedule: steady hygiene recall and the implant and cosmetic cases that take longer to decide.",
+  "searches": [
+   "emergency dentist open now",
+   "dentist near me that takes my insurance",
+   "how much do dental implants cost",
+   "best cosmetic dentist for veneers",
+   "dentist accepting new patients",
+   "teeth whitening at the dentist",
+   "same day crown dentist near me",
+   "is invisalign or braces better for adults"
+  ],
+  "challenges": [
+   {
+    "d": "Most patients pick a dentist from the few practices that appear in the map results for their neighborhood, and several offices near you are competing for those same spots. Your reviews, your Google profile and the accuracy of your listings carry as much weight as your website.",
+    "t": "Many offices, one small map"
+   },
+   {
+    "d": "New patients want to know whether you take their plan before they read anything about your dentists or your technology. If the website and the front desk cannot answer that quickly and clearly, the patient calls the next office on the list.",
+    "t": "Insurance questions come first"
+   },
+   {
+    "d": "A cleaning or a toothache is booked within minutes, while implants, veneers and aligners are researched for weeks and compared across several offices. One message and one budget rarely serve both, so high-value cases get lost when everything is marketed like a new patient special.",
+    "t": "Two very different patient decisions"
+   }
+  ],
+  "plays": [
+   {
+    "d": "We manage your Google Business Profile, directory listings and location pages so your office appears for the general, emergency and cosmetic searches made around you. Each location and each main service gets its own page written for the area you draw patients from.",
+    "t": "Show up on the map for your neighborhood",
+    "slug": "local-seo"
+   },
+   {
+    "d": "We set up review requests after hygiene and treatment visits and draft replies that never confirm who is a patient or what was done. Your profiles stay accurate across the sites patients check before they call.",
+    "t": "A steady flow of patient reviews",
+    "slug": "reputation-management"
+   },
+   {
+    "d": "We build a custom site with clear pages for accepted plans, financing, emergencies and each procedure, from cleanings to implants and veneers. Patients find the answer they came for and a way to book on the same screen.",
+    "t": "A site that answers insurance and cost questions",
+    "slug": "medical-website-design"
+   },
+   {
+    "d": "Patients request or book hygiene, new patient and emergency visits at any hour and complete intake forms before they arrive. Where your practice management software allows it, we connect booking to your schedule, and form data is handled with HIPAA requirements in mind.",
+    "t": "Booking and new patient forms by phone",
+    "slug": "online-booking"
+   },
+   {
+    "d": "We run separate campaigns for urgent searches and for higher-value cases, each sent to its own landing page. We measure them by calls and booked consultations so you can see what each kind of case costs to acquire.",
+    "t": "Paid search for emergencies, implants and aligners",
+    "slug": "pay-per-click"
+   },
+   {
+    "d": "We plan and send text and e-mail reminders for overdue cleanings, unused benefits before the plan year ends and treatment plans that were presented but never scheduled. Patients can reply by text, and your front desk gets the conversation.",
+    "t": "Hygiene recall and unscheduled treatment follow-up",
+    "slug": "sms-marketing"
+   }
+  ],
+  "plan": [
+   {
+    "d": "In the first weeks we review your website, Google profile, listings, reviews and current advertising, and we set up call tracking and a dashboard. We also learn your plans accepted, your schedule capacity and which procedures you want more of.",
+    "t": "Audit and tracking"
+   },
+   {
+    "d": "During the first month we correct listings, complete your Google profile, start review requests and rewrite the insurance, emergency and new patient pages. Online booking and intake forms go live once they are tested with your front desk.",
+    "t": "Fix the foundations"
+   },
+   {
+    "d": "Next we start paid search for emergency and high-value cases with dedicated landing pages, and we begin recall messages to overdue hygiene patients. Procedure content is drafted with AI assistance and reviewed by our team and clinical advisors before it is published.",
+    "t": "Launch campaigns"
+   },
+   {
+    "d": "By day 90 we sit down with you to review calls and bookings by source, covering new patients, recall visits and consultations. We move budget toward what is producing appointments and set the plan for the next quarter.",
+    "t": "Review and adjust"
+   }
+  ],
+  "care": [
+   "Before-and-after photos of smile makeovers, implants and whitening need written patient consent and should show typical cases without implying every patient will see the same result, and we build campaigns with this in mind.",
+   "Many state dental boards have rules on advertising specialty credentials, terms such as \"specialist\" or \"painless,\" and how discounts, free exams and financing offers are disclosed, so the practice should confirm its wording with its counsel or compliance contact.",
+   "Replies to reviews and use of testimonials must never confirm that someone is a patient or reveal treatment details without authorization, and we write replies and collect testimonials with HIPAA requirements in mind."
+  ],
+  "faqs": [
+   {
+    "a": "Plan directories send patients who are choosing by network, and they still look at your reviews and website before calling. We work on the map results, your reputation and your site so more of those patients choose you, and we build demand for implant, cosmetic and other cases that directories do not bring in.",
+    "q": "We already get most new patients from insurance directories. What would you add?"
+   },
+   {
+    "a": "In many cases, yes. We connect through the APIs and integrations your software vendor makes available, and where a direct connection is not possible we set up a booking request flow that your front desk confirms. We check what your system supports before we promise a specific setup.",
+    "q": "Can you connect online booking to our practice management software?"
+   },
+   {
+    "a": "These patients research longer, compare offices and worry about cost, so we give each procedure its own page, landing page and follow-up sequence. Leads are tracked from the first inquiry to the consultation, so your team knows who still needs a call back.",
+    "q": "How do you market implants and cosmetic cases differently from general dentistry?"
+   },
+   {
+    "a": "AI assists with drafts, and our in-house writers and clinical reviewers edit every page before it goes to you for approval. Nothing is published about your procedures, credentials or offers until your dentist has signed off.",
+    "q": "Who writes the content about dental procedures?"
+   }
+  ]
+ },
+ "weight-loss": {
+  "name": "Medical weight loss",
+  "img": "sp-weight-loss",
+  "alt": "A physician reviewing progress on a tablet with a patient",
+  "h1": "Marketing for medical weight loss practices",
+  "lead": "Demand for physician-supervised weight loss is high, and so is the competition from telehealth brands. We help local practices earn that demand with marketing that respects the rules on advertising prescription medications.",
+  "searches": [
+   "medical weight loss near me",
+   "doctor supervised weight loss program",
+   "glp-1 weight loss doctor near me",
+   "how much does medical weight loss cost",
+   "weight loss clinic that takes new patients",
+   "is medical weight loss covered by insurance",
+   "weight loss injections with a doctor",
+   "best weight loss program with physician"
+  ],
+  "challenges": [
+   {
+    "d": "Large online companies advertise heavily for the same searches your patients use. A local practice has to show clearly what it offers that a subscription website does not, such as in-person visits, lab work and a physician who knows the patient.",
+    "t": "Competing with national telehealth brands"
+   },
+   {
+    "d": "Ad platforms and regulators treat prescription drug names, compounded medications and weight loss claims with extra scrutiny. Campaigns written without these rules in mind get disapproved, or put the practice at risk.",
+    "t": "Advertising rules for prescription medications"
+   },
+   {
+    "d": "Most weight loss programs run on monthly visits or memberships, so the value of a patient depends on how long they stay. Marketing that stops at the first appointment leaves the practice refilling the same seats every month.",
+    "t": "Keeping patients in the program"
+   }
+  ],
+  "plays": [
+   {
+    "d": "We build a dedicated page for each program you offer, covering who it is for, what the visits involve, how pricing works and how to start. Each page is tested and revised based on the consultations it produces.",
+    "t": "Program pages that explain and book",
+    "slug": "landing-pages-funnels"
+   },
+   {
+    "d": "We write and manage campaigns around your program and your physicians, with ad copy and keywords prepared for the platform policies on prescription drugs. We measure them by calls and booked consultations.",
+    "t": "Paid search within medication ad policies",
+    "slug": "pay-per-click"
+   },
+   {
+    "d": "We work on your Google Business Profile, directory listings and location pages so patients looking for a nearby physician find you alongside the national brands. This is where a local practice has an advantage a telehealth company does not.",
+    "t": "Visibility in your own area",
+    "slug": "local-seo"
+   },
+   {
+    "d": "Weight loss inquiries often go to several providers at once. We capture every lead, respond quickly and follow up until the patient books or declines, with patient information handled with HIPAA requirements in mind.",
+    "t": "Fast follow-up on every inquiry",
+    "slug": "patient-crm-automation"
+   },
+   {
+    "d": "We manage e-mail sequences for new patients, active members and those who have lapsed, with content drafted with AI assistance and reviewed by physicians. The goal is to keep patients informed and connected to your program between visits.",
+    "t": "Communication that supports retention",
+    "slug": "e-mail-marketing"
+   },
+   {
+    "d": "Patients schedule a consultation and complete intake forms at any hour, without waiting for a call back. Forms that collect health information are built with HIPAA requirements in mind.",
+    "t": "Consultations booked from a phone",
+    "slug": "online-booking"
+   }
+  ],
+  "plan": [
+   {
+    "d": "In the first weeks we review your programs, pricing model, current marketing and local competitors, and we go through your ad accounts for policy problems. You receive a written plan with priorities.",
+    "t": "Review and plan"
+   },
+   {
+    "d": "During the first month we build or rework your program pages, booking and intake flow, and call tracking. Your physicians review the medical content before it is published.",
+    "t": "Build the foundation"
+   },
+   {
+    "d": "We start paid search and local SEO work, and connect lead follow-up so every inquiry gets a prompt reply. Retention e-mails for current patients begin at the same stage.",
+    "t": "Launch campaigns"
+   },
+   {
+    "d": "By day 90 we sit down with you to review which channels produce calls, consultations and enrolled patients. We shift budget and effort toward what the numbers support.",
+    "t": "Measure and adjust"
+   }
+  ],
+  "care": [
+   "Advertising that names prescription medications, including GLP-1 drugs and compounded versions, is subject to platform policies and to federal and state rules on drug promotion, so we build campaigns with these in mind and your practice should confirm specifics with its counsel.",
+   "Claims about how much weight patients lose, before-and-after photos and testimonials need written patient consent, typical-result context and care not to imply a guaranteed outcome, and we prepare this material with those points in mind while your practice confirms the final wording with counsel.",
+   "Replies to online reviews must never confirm that someone is a patient or mention their treatment, and membership or subscription billing terms should be disclosed clearly in your marketing, both of which we account for in our work and your practice should verify with its compliance contact."
+  ],
+  "faqs": [
+   {
+    "a": "Each platform has its own policies on prescription drug terms, and they change. We build campaigns around your program, your physicians and the consultation, and we prepare ad copy with the current policies in mind. Where a certification or approval from the platform is required, we help you through the application.",
+    "q": "Can you advertise GLP-1 medications on Google and Meta for us?"
+   },
+   {
+    "a": "We do not try to win on price. We present what a local, physician-supervised program includes, such as in-person evaluation, monitoring and a continuing relationship with a physician, so patients who value those things can find and choose you.",
+    "q": "How do we compete with online companies that charge less?"
+   },
+   {
+    "a": "AI assists with drafts, and our writers and physicians review and edit everything before it reaches you. Your own physicians give final approval, so the content reflects how your practice treats patients.",
+    "q": "Who writes the medical content on our pages and e-mails?"
+   },
+   {
+    "a": "Yes. We manage e-mail and text communication for active and lapsed patients, and we connect it to your scheduling or CRM tools where their systems allow. Our reporting shows new enrollments and returning patients separately so you can see both.",
+    "q": "Can you help with patient retention, not only new patients?"
+   }
+  ]
+ },
+ "pain-management": {
+  "name": "Pain management",
+  "img": "sp-pain-management",
+  "alt": "A physician assessing a patient's shoulder in a clinic",
+  "h1": "Marketing for pain management and interventional practices",
+  "lead": "Pain practices grow through two doors: physicians who refer and patients who search on their own, often older and often insured. We build marketing that serves both, with the care this specialty's advertising requires.",
+  "searches": [
+   "pain management doctor near me",
+   "what is a nerve block for back pain",
+   "pain clinic that takes medicare",
+   "alternatives to back surgery",
+   "who treats sciatica that won't go away",
+   "epidural steroid injection what to expect",
+   "regenerative medicine for knee pain",
+   "pain specialist accepting new patients near me"
+  ],
+  "challenges": [
+   {
+    "d": "Referring physicians want to know your training, your procedures and how quickly you see their patients, while patients want to know whether you treat their condition and take their insurance. Most pain practice websites speak to neither group clearly.",
+    "t": "Two audiences, one practice"
+   },
+   {
+    "d": "Ad platforms and regulators look closely at anything that touches prescription medication, opioids or claims of relief, and regenerative treatments draw extra attention. Campaigns written without that in mind get disapproved, or attract patients who are not a fit for an interventional practice.",
+    "t": "Advertising platforms treat pain cautiously"
+   },
+   {
+    "d": "Many of your patients are older, call instead of filling out forms, and want to confirm coverage before they book. If the phone goes unanswered or the site is hard to read, they move on to the next practice on the list.",
+    "t": "Older patients and insurance questions"
+   }
+  ],
+  "plays": [
+   {
+    "d": "We build condition and procedure pages in plain language for patients, plus a clear section for referring offices with your credentials, the procedures you perform and how to send a patient. Type, contrast and navigation are chosen with older readers in mind.",
+    "t": "A site for patients and referring physicians",
+    "slug": "medical-website-design"
+   },
+   {
+    "d": "We work on your Google Business Profile, directory listings and location pages so your practice appears for searches about back pain, sciatica, joint pain and the procedures you offer in the area you serve. Insurance and new patient information is kept accurate everywhere it appears.",
+    "t": "Show up when patients search by condition",
+    "slug": "local-seo"
+   },
+   {
+    "d": "AI assists with drafts, and physicians review every piece before it is published. The content explains what a procedure involves and what a visit looks like, without claims about outcomes.",
+    "t": "Physician-reviewed pages on conditions and procedures",
+    "slug": "physician-content-marketing"
+   },
+   {
+    "d": "We help you ask for reviews at the right moment and draft replies that never confirm someone is a patient or mention their care. Patient information is handled with HIPAA requirements in mind.",
+    "t": "Reviews that reassure cautious patients",
+    "slug": "reputation-management"
+   },
+   {
+    "d": "AI agents answer by phone, text and chat around the clock, take insurance and referral details, and route the patient to your scheduling staff. They never give medical advice, and anything clinical is passed to your team.",
+    "t": "Every call and message answered",
+    "slug": "ai-chat-messaging"
+   },
+   {
+    "d": "We run campaigns around conditions and procedures, with wording and keyword exclusions that keep you away from medication-seeking searches. Results are measured by calls and booked appointments, not clicks.",
+    "t": "Paid search written for an interventional practice",
+    "slug": "pay-per-click"
+   }
+  ],
+  "plan": [
+   {
+    "d": "In the first weeks we review your site, listings, reviews, ad accounts and phone handling, and we ask where your patients come from now: which referring offices, which insurers, which procedures you want to grow.",
+    "t": "Listen and audit"
+   },
+   {
+    "d": "During the first month we correct listings, set up call tracking and a reporting dashboard, and begin the pages for your priority conditions and procedures, each reviewed by a physician.",
+    "t": "Fix the foundation"
+   },
+   {
+    "d": "Next we publish the referring physician section, start review requests, turn on the AI agents for calls and messages, and launch paid search if it fits your goals.",
+    "t": "Open both doors"
+   },
+   {
+    "d": "By day 90 we sit down with you and look at which channels produced calls and bookings, what your staff is hearing from patients, and what we change for the next quarter.",
+    "t": "Review and adjust"
+   }
+  ],
+  "care": [
+   "Advertising that mentions prescription medication, opioids or controlled substances is restricted by ad platforms and regulators, so we build campaigns around conditions and procedures with these limits in mind, and the practice should confirm specifics with its counsel.",
+   "Claims about pain relief, results or avoiding surgery, and any description of regenerative treatments, need careful and supportable wording, so we write without promises of outcome and the practice confirms final language with its counsel or compliance contact.",
+   "Testimonials, patient stories and replies to reviews can reveal health information and usually call for written patient authorization, so we build review and testimonial work with HIPAA requirements in mind and the practice confirms its consent process with counsel."
+  ],
+  "faqs": [
+   {
+    "a": "Yes. We make it easy for a referring office to see who you are, what you treat and how to send a patient, and we can produce print and e-mail materials for the offices you want to reach. Patient-facing marketing then adds a second source of new patients alongside those referrals.",
+    "q": "Most of our patients come from physician referrals. Can marketing help with that?"
+   },
+   {
+    "a": "We write campaigns around conditions and interventional procedures, exclude medication-related searches, and state clearly on the landing pages what your practice does and does not offer. We cannot filter every inquiry, but the wording and targeting shape who calls, and our AI agents and intake forms can ask screening questions you approve.",
+    "q": "How do you keep our ads from attracting people who only want medication?"
+   },
+   {
+    "a": "You can present them as services your practice offers, but this is an area where regulators and ad platforms pay close attention to claims. We describe what the treatment and visit involve without stating what it will do for a patient, and we ask that your counsel review the final wording.",
+    "q": "Can we market regenerative treatments?"
+   },
+   {
+    "a": "AI assists with research and first drafts, and physicians review the medical content before anything goes live. You see and approve every page, and nothing is published in your name without your sign-off.",
+    "q": "Who writes the medical content, and do you use AI?"
+   }
+  ]
+ },
+ "hormone-anti-aging": {
+  "name": "Hormone therapy and anti-aging",
+  "img": "sp-hormone-anti-aging",
+  "alt": "A physician talking with a couple in a wellness clinic lounge",
+  "h1": "Marketing for hormone therapy and anti-aging practices",
+  "lead": "Your patients research for weeks before they call, pay out of pocket, and stay only if they understand their program. We build marketing that educates first and keeps every claim careful.",
+  "searches": [
+   "hormone replacement therapy near me",
+   "testosterone clinic for men",
+   "bioidentical hormones for menopause",
+   "what is peptide therapy",
+   "iv therapy near me",
+   "how much does hormone therapy cost",
+   "doctor who specializes in hormones",
+   "wellness membership with lab testing"
+  ],
+  "challenges": [
+   {
+    "d": "Patients read about symptoms, labs and options for weeks before they contact anyone, and they compare several practices along the way. If your site does not answer their questions in plain language, they finish their research somewhere else.",
+    "t": "Long research before the first call"
+   },
+   {
+    "d": "Advertising platforms restrict how prescription treatments and health conditions can be promoted, and regulators watch claims about hormones and peptides closely. Ads and pages written without that in mind get disapproved or put the practice at risk.",
+    "t": "Strict limits on claims and ads"
+   },
+   {
+    "d": "Without insurance bringing patients back, the practice relies on memberships, follow-up labs and refills staying on schedule. A new patient who drifts away after the first visit costs far more to replace than to keep.",
+    "t": "Cash-pay revenue depends on retention"
+   }
+  ],
+  "plays": [
+   {
+    "d": "We publish articles and treatment pages on hormone replacement, peptides and IV therapy that explain what a patient can expect from a consultation. AI assists with drafts, and physicians review every piece before it goes live.",
+    "t": "Education written and reviewed by physicians",
+    "slug": "physician-content-marketing"
+   },
+   {
+    "d": "We design a custom site that walks patients through your process, from labs and consultation to follow-up, and presents memberships and pricing as clearly as you want them shown.",
+    "t": "A site that explains your programs",
+    "slug": "medical-website-design"
+   },
+   {
+    "d": "We build content around the questions patients ask about symptoms, testing and treatment options, and keep your pages technically sound so search engines can read them. Local work covers Google Maps and the areas you serve.",
+    "t": "Be found during the research phase",
+    "slug": "search-engine-optimization"
+   },
+   {
+    "d": "Hormone patients often inquire, go quiet and return weeks later. We capture each lead, respond quickly and keep in touch with helpful information until they are ready to schedule, with patient data handled with HIPAA requirements in mind.",
+    "t": "Follow every inquiry until it books",
+    "slug": "patient-crm-automation"
+   },
+   {
+    "d": "We write newsletters and automated sequences that remind patients about follow-up labs, explain new services and give members a reason to stay. The content is written by physicians and managed for you.",
+    "t": "Keep members engaged between visits",
+    "slug": "e-mail-marketing"
+   },
+   {
+    "d": "We build campaigns around consultations and services rather than drug names where platform policies require it, and we measure them by calls and bookings. Each treatment gets its own page so the ad and the message match.",
+    "t": "Paid search within platform rules",
+    "slug": "pay-per-click"
+   }
+  ],
+  "plan": [
+   {
+    "d": "In the first weeks we review your site, listings, ads and current claims, and learn which programs and memberships matter most to the practice. We agree on a plan and on how we will count calls and bookings.",
+    "t": "Review and plan"
+   },
+   {
+    "d": "During the first month we set up tracking, correct your listings, and begin rewriting or building the core treatment pages with physician review. Lead capture and follow-up are connected to the tools you already use.",
+    "t": "Build the foundation"
+   },
+   {
+    "d": "Next we launch campaigns for your priority services, publish the first educational articles and start e-mail sequences for new inquiries and existing members.",
+    "t": "Launch and educate"
+   },
+   {
+    "d": "By day 90 we sit down with you to review which channels produced calls and bookings, what patients asked about most, and where to put the next quarter's effort.",
+    "t": "Measure and adjust"
+   }
+  ],
+  "care": [
+   "Claims about what hormone therapy, peptides or IV therapy can do must be accurate and supportable, and words such as safe, proven or anti-aging results invite scrutiny, so we write with these limits in mind and the practice confirms final language with its counsel.",
+   "Advertising prescription drugs and compounded medications is subject to federal and state rules as well as each ad platform's own policies, which may restrict drug names and require certifications, so we build campaigns with these in mind and the practice should confirm the requirements with its counsel or compliance contact.",
+   "Testimonials, before-and-after photos and replies to reviews need written patient consent and must never confirm that someone is a patient or reveal health details, so we handle them with HIPAA requirements in mind and the practice confirms its policies with counsel."
+  ],
+  "faqs": [
+   {
+    "a": "Each platform has its own policies on prescription drug terms, and some require the advertiser to hold specific certifications. We structure campaigns around consultations, symptoms education and services in ways that fit those policies, and we tell you plainly what is and is not allowed. The practice should confirm regulatory questions with its counsel.",
+    "q": "Can you advertise testosterone and other prescription treatments on Google and Meta?"
+   },
+   {
+    "a": "AI assists with research and first drafts, and our in-house writers shape each piece. Physicians review medical content before it is published, and you approve everything that carries your name.",
+    "q": "Who writes our medical content?"
+   },
+   {
+    "a": "Yes. We present memberships clearly on your site, build pages and follow-up for people who are considering one, and run e-mail and text campaigns that keep current members informed and engaged. We can also connect online payments and booking to your existing systems.",
+    "q": "Can you help us sell and retain wellness memberships?"
+   },
+   {
+    "a": "Yes. As the strategic marketing partner of Empire Medical Training, we work often with physicians adding a new service after a course. We prepare the treatment page, announcements to your current patients and an initial campaign, with claims reviewed carefully.",
+    "q": "We are adding peptides or IV therapy after a training course. Can you help us launch it?"
+   }
+  ]
+ },
+ "family-practice": {
+  "name": "Family practice",
+  "img": "sp-family-practice",
+  "alt": "A family physician greeting a child and a parent in a clinic hallway",
+  "h1": "Marketing for family practice and primary care",
+  "lead": "A primary care practice runs on full schedules and insurance panels, and many are now adding cash services such as aesthetics or weight loss. We market both sides without making your practice look like two different businesses.",
+  "searches": [
+   "family doctor accepting new patients",
+   "primary care doctor near me",
+   "same day sick visit appointment",
+   "doctor that takes my insurance",
+   "annual physical for adults",
+   "medical weight loss program near me",
+   "primary care doctor who does botox",
+   "hormone therapy from my family doctor"
+  ],
+  "challenges": [
+   {
+    "d": "Insured patients looking for a family doctor and cash patients looking for weight loss or aesthetics search differently and decide differently. Your marketing has to speak to each without confusing the other or diluting the trust you have built as the family doctor.",
+    "t": "Two audiences, one practice"
+   },
+   {
+    "d": "Most of your patients have no idea you now offer a new service, and many are already buying it somewhere else. The fastest growth for a new service line often comes from your own panel, which means it depends on e-mail, text and what your staff says in the room.",
+    "t": "Existing patients do not know"
+   },
+   {
+    "d": "Your phones are busy with refills, referrals and scheduling, so new-patient calls and cash-service inquiries wait or go unanswered. Marketing that produces more calls without a way to answer them only adds pressure on your staff.",
+    "t": "A front desk already at capacity"
+   }
+  ],
+  "plays": [
+   {
+    "d": "We take a new procedure from your training certificate to your first bookings, with the service page, patient materials, staff talking points and announcement campaign planned together. As the strategic marketing partner of Empire Medical Training, we know the services primary care physicians tend to add.",
+    "t": "Launch your first cash service",
+    "slug": "new-service-launch"
+   },
+   {
+    "d": "We work on your Google Maps profile, directory listings and area pages so nearby families looking for a primary care physician find accurate hours, insurance information and a way to book.",
+    "t": "Be found as the neighborhood doctor",
+    "slug": "local-seo"
+   },
+   {
+    "d": "We design a custom site where primary care and your cash services each have a clear home, with insurance accepted, new-patient steps and service pages easy to reach from a phone.",
+    "t": "One site for both sides",
+    "slug": "medical-website-design"
+   },
+   {
+    "d": "New patients book and complete intake forms from their phone at any hour, with forms handled with HIPAA requirements in mind. Your staff spends less time on the phone collecting the same details.",
+    "t": "Booking that spares the front desk",
+    "slug": "online-booking"
+   },
+   {
+    "d": "We plan and send campaigns that introduce new services to your existing panel, with content drafted with AI assistance and reviewed by physicians. Messages are written for the patients who are appropriate to contact and who have agreed to hear from you.",
+    "t": "Tell the patients you already have",
+    "slug": "e-mail-marketing"
+   },
+   {
+    "d": "We help you ask more patients for reviews, keep your profiles accurate and write thoughtful replies that never confirm or reveal anything about a patient's care.",
+    "t": "Reviews that reflect your care",
+    "slug": "reputation-management"
+   }
+  ],
+  "plan": [
+   {
+    "d": "In the first weeks we review your site, listings, reviews, payer mix, schedule capacity and the services you offer or plan to add. We agree on which patients you want more of and what your staff can realistically handle.",
+    "t": "Learn your practice"
+   },
+   {
+    "d": "In the first month we correct your listings, set up call tracking and online booking, and start work on the pages for primary care and each cash service.",
+    "t": "Fix the foundations"
+   },
+   {
+    "d": "We announce the new or priority service to your existing patients by e-mail, text and in-office materials, and give your staff simple language for the conversation.",
+    "t": "Launch to your panel"
+   },
+   {
+    "d": "By day 90 we sit down with you to go over which channels produced calls and bookings, what the front desk is hearing and where to put the next quarter's effort.",
+    "t": "Review and adjust"
+   }
+  ],
+  "care": [
+   "Advertising for weight loss and hormone services often involves prescription drugs, and the rules on naming medications, describing compounded products and stating expected results are specific, so we write campaigns with these in mind and your practice should confirm the details with its counsel.",
+   "Before-and-after photos and patient testimonials for aesthetic or weight loss services call for written consent and careful wording about individual results, and we build campaigns with these points in mind while you confirm requirements with your counsel or compliance contact.",
+   "Marketing to your existing patients by e-mail or text, and replying to online reviews, both touch patient privacy, so we handle lists and replies with HIPAA requirements in mind and recommend your practice confirm its policies with counsel."
+  ],
+  "faqs": [
+   {
+    "a": "For most primary care practices we recommend keeping the new service on your main site with its own section, because your reputation as the family doctor is the reason patients will trust you with it. A separate brand can make sense if you plan a distinct location or a full med spa. We talk through both options with you before anything is built.",
+    "q": "We are adding weight loss or aesthetics. Should it have its own website and brand?"
+   },
+   {
+    "a": "Yes, but the goal changes. Instead of more volume across the board, we focus on the patients and services you have room for, such as a new provider's panel, a specific payer mix or cash services that fit into set blocks of time.",
+    "q": "Our schedule is nearly full. Is marketing still worth it?"
+   },
+   {
+    "a": "Our AI agents can answer by chat, text and phone around the clock to handle questions about hours, insurance accepted, services and booking, then hand off to your staff when a person is needed. They never give medical advice, and conversations are handled with HIPAA requirements in mind.",
+    "q": "Can your AI agents answer our phones and messages?"
+   },
+   {
+    "a": "AI assists with drafts, and our in-house writers and physicians review and edit everything before it reaches you. You approve the final copy, so it reflects how you practice and what you actually offer.",
+    "q": "Who writes the medical content for our site?"
+   }
+  ]
+ }
+}

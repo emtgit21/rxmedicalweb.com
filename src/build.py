@@ -93,6 +93,13 @@ def e(s):
     return html.escape(s, quote=True)
 
 
+SPECS = json.load(open(os.path.join(ROOT, "src", "specialties.json"), encoding="utf-8"))
+RESOURCES = json.load(open(os.path.join(ROOT, "src", "resources.json"), encoding="utf-8"))
+GUIDE = "/assets/guides/medical-marketing-checklist-2026.pdf"
+RES_DATE = "November 13, 2026"
+RES_ISO = "2026-11-13"
+
+
 def svc_url(s):
     return f"/service/{s['slug']}/"
 
@@ -127,9 +134,10 @@ def header(path):
         <button aria-expanded="false" aria-controls="services-menu">Services</button>
         <div class="menu" id="services-menu">{menu()}</div>
       </div>
-      <a href="/about/"{cur('/about/')}>About</a>
+      <a href="/specialties/"{cur('/specialties/')}>Specialties</a>
       <a href="/portfolio/"{cur('/portfolio/')}>Our work</a>
-      <a href="/about/testimonials/"{cur('/about/testimonials/')}>Testimonials</a>
+      <a href="/resources/"{cur('/resources/')}>Resources</a>
+      <a href="/about/"{cur('/about/')}>About</a>
       <a href="/contact-us/"{cur('/contact-us/')}>Contact</a>
     </nav>
     <div class="header-cta">
@@ -161,6 +169,10 @@ def footer():
     for gi, (gname, _) in enumerate(GROUPS):
         links = "".join(f'<li><a href="{svc_url(s)}">{e(s["name"])}</a></li>' for s in SERVICES if s["group"] == gi)
         cols.append(f'<div><p class="fh">{e(gname)}</p><ul>{links}</ul></div>')
+    sp = "".join(f'<li><a href="/specialties/{k}/">{e(v["name"])}</a></li>' for k, v in SPECS.items())
+    cols.append(f'<div><p class="fh">Specialties</p><ul>{sp}</ul></div>')
+    rs = "".join(f'<li><a href="/resources/{a["slug"]}/">{e(a["title"])}</a></li>' for a in RESOURCES[:6])
+    cols.append(f'<div class="wide"><p class="fh">Resources</p><ul>{rs}<li><a href="/resources/">All resources</a></li></ul></div>')
     return f"""<footer class="site-footer">
   <div class="wrap">
     <p class="footer-sign" aria-hidden="true">Physicians Rx for Success</p>
@@ -180,6 +192,8 @@ def footer():
         <li><a href="/about/why-choose-us/">Why choose us</a></li>
         <li><a href="/about/testimonials/">Testimonials</a></li>
         <li><a href="/portfolio/">Our work</a></li>
+        <li><a href="/specialties/">Specialties</a></li>
+        <li><a href="/resources/">Resources</a></li>
       </ul></div>
       <div><p class="fh">Strategic partner</p><ul>
         <li><a href="https://www.empiremedicaltraining.com/" rel="noopener">Empire Medical Training</a></li>
@@ -500,6 +514,7 @@ def build_home():
 </section>
 
 {marquee()}
+{spec_tiles_section()}
 
 <section class="section" id="services">
   <div class="wrap">
@@ -555,6 +570,7 @@ def build_home():
 </section>
 
 {partner()}
+{res_teaser()}
 
 <section class="section on-dark integrate">
   <div class="wrap xp-two even">
@@ -752,6 +768,7 @@ def build_about():
   </div>
 </div></section>
 {partner()}
+{res_teaser()}
 <section class="section on-mint"><div class="wrap">{sec_title("Our story")}<ol class="story-line">{tl}</ol></div></section>
 <section class="section"><div class="wrap layout">
   <div class="prose"><p class="xp-kicker">The details</p>{ABOUT_BODY}</div>
@@ -860,6 +877,203 @@ def build_privacy():
          "How Rx Medical Web handles information collected through rxmedicalweb.com.", body)
 
 
+# ---------------------------------------------------------------- specialties and resources
+def ld(obj):
+    return '<script type="application/ld+json">' + json.dumps(obj, ensure_ascii=False).replace("</", "<\\/") + "</script>\n"
+
+
+def spec_tiles(tag="h3", skip=None):
+    return "".join(
+        f'<a class="sp-tile" href="/specialties/{k}/"><img src="/assets/img/{v["img"]}.webp" width="1248" height="832" alt="{e(v["alt"])}" loading="lazy">'
+        f'<span><{tag}>{e(v["name"])}</{tag}><i>See the plan</i></span></a>' for k, v in SPECS.items() if k != skip)
+
+
+def spec_tiles_section():
+    return f"""<section class="section sp-home">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2>A plan written for your specialty.</h2>
+      <p>A med spa and a pain clinic do not find patients the same way. Pick your field and see what we would do first.</p>
+    </div>
+    <div class="sp-tiles">{spec_tiles()}</div>
+  </div>
+</section>"""
+
+
+def res_card(a, tag="h3"):
+    return (f'<a class="res-card" href="/resources/{a["slug"]}/"><div class="res-card-img"><img src="/assets/img/{a["img"]}.webp" width="1248" height="832" alt="{e(a["alt"])}" loading="lazy"></div>'
+            f'<p class="res-min">{a["min"]} min read</p><{tag}>{e(a["title"])}</{tag}><p>{e(a["dek"])}</p></a>')
+
+
+def guide_band():
+    return f"""<div class="guide-band reveal">
+  <div class="guide-cover" aria-hidden="true"><b>40 points</b><span>for your practice's marketing in 2026</span><i>Rx Medical Web</i></div>
+  <div>
+    <h2>The 40-point marketing checklist for medical practices</h2>
+    <p>Every key point from our guides on one printable list: AI search, Google profile, reviews, missed calls, video, privacy and more. Free, no form to fill in.</p>
+    <a class="btn btn-ink" href="{GUIDE}" download>Download the checklist (PDF)</a>
+  </div>
+</div>"""
+
+
+def res_teaser():
+    return f"""<section class="section res-home">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2>Advice you can use this week.</h2>
+      <p>Practical guides from our team for physicians and practice managers. <a href="/resources/">See all resources</a></p>
+    </div>
+    <div class="res-grid">{"".join(res_card(a) for a in RESOURCES[:3])}</div>
+  </div>
+</section>"""
+
+
+def build_specialties():
+    by = {s["slug"]: s for s in SERVICES}
+    for slug, sp in SPECS.items():
+        asks = "".join(f'<span style="--i:{i}">{e(q)}</span>' for i, q in enumerate(sp["searches"]))
+        chal = "".join(f'<li><b>{e(c["t"])}</b><p>{e(c["d"])}</p></li>' for c in sp["challenges"])
+        used, pool = set(), [x["img"] for x in SERVICES]
+        def pic(sl):
+            im = by[sl]["img"]
+            if im in used:
+                im = next((x for x in pool if x not in used), im)
+            used.add(im)
+            return im
+        plays = "".join(
+            f'<a class="sp-play" href="{svc_url(by[pl["slug"]])}"><img src="/assets/img/{pic(pl["slug"])}.webp" width="1248" height="832" alt="" loading="lazy">'
+            f'<div><h3>{e(pl["t"])}</h3><p>{e(pl["d"])}</p><i>{e(by[pl["slug"]]["name"])}</i></div></a>' for pl in sp["plays"] if pl["slug"] in by)
+        plan = "".join(f'<li><b>{e(st["t"])}</b><p>{e(st["d"])}</p></li>' for st in sp["plan"])
+        care = "".join(f"<li>{e(c)}</li>" for c in sp["care"])
+        faqs = "".join(f'<details><summary>{e(q["q"])}</summary><p>{e(q["a"])}</p></details>' for q in sp["faqs"])
+        url = f"/specialties/{slug}/"
+        head = ld({"@context": "https://schema.org", "@type": "FAQPage",
+                   "mainEntity": [{"@type": "Question", "name": q["q"], "acceptedAnswer": {"@type": "Answer", "text": q["a"]}} for q in sp["faqs"]]})
+        head += ld({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": SITE + "/"},
+            {"@type": "ListItem", "position": 2, "name": "Specialties", "item": SITE + "/specialties/"},
+            {"@type": "ListItem", "position": 3, "name": sp["name"], "item": SITE + url}]})
+        body = f"""<section class="sp-hero">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/specialties/">Specialties</a><span>/</span>{e(sp["name"])}</nav>
+    <div class="sp-hero-grid">
+      <div>
+        <p class="sp-kicker">Rx for {e(sp["name"].lower())}</p>
+        <h1>{e(sp["h1"])}</h1>
+        <p class="lead">{e(sp["lead"])}</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="/contact-us/#analysis">Request a free analysis</a>
+          <a class="btn btn-ghost" href="#plan">See the first 90 days</a>
+        </div>
+      </div>
+      <div class="sp-visual">
+        {media(sp["img"], sp["alt"], "sp-photo", lazy=False)}
+        <div class="sp-ask" aria-hidden="true"><em>Patients are asking</em><div class="sp-ask-box"><svg viewBox="0 0 24 24" width="18" height="18"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M16.5 16.5 21 21" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg><div class="sp-ask-roll">{asks}</div></div></div>
+        <p class="vh">Examples of what patients search for: {e("; ".join(sp["searches"]))}.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section sp-chal">
+  <div class="wrap">
+    <div class="section-head reveal"><h2>What makes this specialty different to market.</h2><p>We start from how your patients decide, not from a list of services.</p></div>
+    <ol>{chal}</ol>
+  </div>
+</section>
+<section class="section sp-plays-sec">
+  <div class="wrap">
+    <div class="section-head reveal"><h2>What we would put to work first.</h2><p>Six services, in the order we would usually start. Each one opens a full explanation.</p></div>
+    <div class="sp-plays">{plays}</div>
+  </div>
+</section>
+<section class="section sp-plan" id="plan">
+  <div class="wrap">
+    <div class="section-head reveal"><h2>Your first 90 days with us.</h2><p>You always know what we are working on and what it produced.</p></div>
+    <ol>{plan}</ol>
+  </div>
+</section>
+<section class="section sp-care-sec">
+  <div class="wrap sp-care-grid">
+    <div class="sp-care reveal">
+      <h2>Advertising with care</h2>
+      <ul>{care}</ul>
+      <p class="fine">General information, not legal advice.</p>
+    </div>
+    <div class="faq"><h2>Questions we hear from {e(sp["name"].lower())}</h2>{faqs}</div>
+  </div>
+</section>
+<section class="section sp-more">
+  <div class="wrap">
+    <div class="section-head reveal"><h2>Other specialties we work with.</h2><p>We work only with medical practices. If yours is not listed, <a href="/contact-us/">ask us</a>.</p></div>
+    <div class="sp-tiles small">{spec_tiles(skip=slug)}</div>
+  </div>
+</section>
+{closing(f"Let us look at your practice.", "Send us your website. We will tell you what we would fix first, at no charge.")}"""
+        page(url, f'{sp["h1"]} | Rx Medical Web', words(sp["lead"]) if len(sp["lead"]) < 165 else sp["lead"][:157].rsplit(" ", 1)[0] + "…", body, head, og_img=f'/assets/img/{sp["img"]}.jpg')
+
+    body = f"""{page_head([("Specialties", None)], "Marketing built around your specialty", "Each field of medicine finds its patients differently. Choose yours to see the challenges we plan for, the services we would start with and what the first 90 days look like.")}
+<section class="section"><div class="wrap">
+  <div class="sp-tiles big">{spec_tiles("h2")}</div>
+  <p class="sp-also">We also work with practices in {e(", ".join(x.lower() for x in SPECIALTIES if x not in ("Aesthetics", "Dermatology", "Plastic surgery", "Med spas", "Dentistry", "Pain management", "Family practice", "Weight loss", "Anti-aging medicine")))} and other fields. <a href="/contact-us/">Tell us about yours</a>.</p>
+</div></section>
+{partner()}
+{closing()}"""
+    page("/specialties/", "Medical marketing by specialty | Rx Medical Web",
+         "Marketing plans for med spas, dermatology, plastic surgery, dental, weight loss, pain management, hormone therapy and family practice.", body)
+
+
+def build_resources():
+    by = {s["slug"]: s for s in SERVICES}
+    for i, a in enumerate(RESOURCES):
+        url = f'/resources/{a["slug"]}/'
+        rel = [(by[x]["name"], svc_url(by[x])) for x in a["rel"] if x in by]
+        nxt = [RESOURCES[(i + n) % len(RESOURCES)] for n in (1, 2, 3)]
+        take = "".join(f"<li>{e(t)}</li>" for t in a["takeaways"])
+        head = ld({"@context": "https://schema.org", "@type": "Article", "headline": a["title"], "description": a["dek"],
+                   "image": f'{SITE}/assets/img/{a["img"]}.jpg', "datePublished": RES_ISO, "dateModified": RES_ISO,
+                   "author": {"@type": "Organization", "name": "Rx Medical Web", "url": SITE + "/about/"},
+                   "publisher": {"@type": "Organization", "name": "Rx Medical Web", "logo": {"@type": "ImageObject", "url": f"{SITE}{UP}mainlogo.png"}},
+                   "mainEntityOfPage": SITE + url})
+        body = f"""<section class="res-hero">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/resources/">Resources</a></nav>
+    <div class="res-hero-grid">
+      <div><p class="res-min">Guide · {a["min"]} min read</p><h1>{e(a["title"])}</h1><p class="lead">{e(a["dek"])}</p><p class="res-by">By the Rx Medical Web team · {RES_DATE}</p></div>
+      <img class="res-hero-img" src="/assets/img/{a["img"]}.webp" width="1248" height="832" alt="{e(a["alt"])}">
+    </div>
+  </div>
+</section>
+<section class="section"><div class="wrap layout">
+  <article class="prose res-body">
+    <div class="res-take"><h2>In short</h2><ul>{take}</ul></div>
+    {a["html"]}
+    <p class="fine">This article is general information for medical practices. It is not legal or medical advice.</p>
+  </article>
+  {slip("Want help with this?", "We will look at your practice and tell you what we would do first.", rel, "Services in this guide")}
+</div></section>
+<section class="section res-next"><div class="wrap">
+  <div class="section-head"><h2>Keep reading</h2><p><a href="/resources/">All resources</a></p></div>
+  <div class="res-grid">{"".join(res_card(x) for x in nxt)}</div>
+  {guide_band()}
+</div></section>
+{closing()}"""
+        page(url, f'{a["title"]} | Rx Medical Web', a["dek"], body, head, og_img=f'/assets/img/{a["img"]}.jpg')
+
+    f0 = RESOURCES[0]
+    body = f"""{page_head([("Resources", None)], "Resources for medical practices", "Practical guides on finding patients, answering them and keeping them, written by our team for physicians and practice managers.")}
+<section class="section"><div class="wrap">
+  <a class="res-feature reveal" href="/resources/{f0["slug"]}/">
+    <div class="res-card-img"><img src="/assets/img/{f0["img"]}.webp" width="1248" height="832" alt="{e(f0["alt"])}"></div>
+    <div><p class="res-min">Start here · {f0["min"]} min read</p><h2>{e(f0["title"])}</h2><p>{e(f0["dek"])}</p><span class="btn btn-ink">Read the guide</span></div>
+  </a>
+  <div class="res-grid">{"".join(res_card(a, "h2") for a in RESOURCES[1:])}</div>
+  {guide_band()}
+</div></section>
+{closing("Have a question we have not covered?", "Ask us. We answer within 24 business hours.")}"""
+    page("/resources/", "Resources for medical practices | Rx Medical Web",
+         "Free guides for physicians and practice managers: AI search, Google Business Profile, reviews, missed calls, video, patient privacy and more.", body)
+
+
 def build_404():
     body = f"""<section class="page-head lost"><div class="wrap">
   <p class="lost-rx" aria-hidden="true">℞</p>
@@ -950,6 +1164,12 @@ def build_chat_index():
         {"t": "Specialties", "u": "/", "q": "Which specialties do you work with? dentist dermatologist plastic surgeon med spa chiropractor aesthetics pain management",
          "a": "We work only with medical practices: aesthetics, dermatology, plastic surgery, med spas, dentistry, gynecology, pain management, cardiology, chiropractic, family practice, weight loss and anti-aging medicine, among others."},
     ]
+    for k, sp in SPECS.items():
+        general.append({"t": sp["name"], "u": f"/specialties/{k}/", "q": sp["name"] + " " + sp["h1"] + " " + " ".join(sp["searches"]), "a": sp["lead"] + " See our plan for this specialty."})
+        for q in sp["faqs"]:
+            general.append({"t": sp["name"], "u": f"/specialties/{k}/", "q": q["q"], "a": q["a"]})
+    for a in RESOURCES:
+        general.append({"t": a["title"], "u": f'/resources/{a["slug"]}/', "q": a["title"] + " " + a["dek"], "a": a["takeaways"][0] + " " + a["takeaways"][1]})
     data = {"docs": docs + general, "groups": groups, "phone": PHONE, "tel": PHONE_HREF, "email": EMAIL}
     with open(os.path.join(ROOT, "assets", "chat-index.json"), "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, separators=(",", ":"))
@@ -969,6 +1189,8 @@ if __name__ == "__main__":
     build_portfolio()
     build_contact()
     build_articles()
+    build_specialties()
+    build_resources()
     build_privacy()
     build_404()
     build_chat_index()
