@@ -1,0 +1,43 @@
+.ax-answer{width:100%;max-width:520px;min-height:240px;margin-inline:auto;display:flex;flex-direction:column;justify-content:center;gap:12px}
+.ax-answer-q{margin:0;align-self:flex-end;max-width:88%;padding:10px 14px;border-radius:14px 14px 5px 14px;background:rgba(255,255,255,.12);font-size:.86rem;font-weight:600;line-height:1.35}
+.ax-answer-card{background:#fff;color:var(--ink);border-radius:14px;padding:clamp(14px,4vw,20px);box-shadow:0 12px 30px rgba(0,0,0,.18)}
+.ax-answer-head{display:flex;align-items:center;gap:8px;margin-bottom:12px}
+.ax-answer-mark{width:22px;height:22px;border-radius:50%;background:var(--ink);display:grid;place-items:center;flex:none}
+.ax-answer-mark svg{width:12px;height:12px;fill:#fff;display:block}
+.ax-answer-title{font-size:.78rem;font-weight:700;line-height:1}
+.ax-answer-text{display:flex;flex-direction:column;gap:8px}
+.ax-answer-line{display:flex;align-items:center;gap:6px;height:22px}
+.ax-answer-l3{width:62%}
+.ax-answer-bar{flex:var(--f,1) 1 0;min-width:0;height:8px;border-radius:4px;background:#dfeae7}
+.ax-answer-pill{flex:none;padding:0 9px;height:22px;line-height:22px;border-radius:999px;background:var(--green);font-size:.78rem;font-weight:700;white-space:nowrap}
+.ax-answer-src{margin-top:14px;padding-top:12px;border-top:1px solid var(--rule)}
+.ax-answer-label{display:block;font-size:.72rem;font-weight:600;line-height:1;color:#5b7a80;margin-bottom:8px}
+.ax-answer-chips{display:flex;gap:6px}
+.ax-answer-chip{flex:1 1 0;min-width:0;max-width:72px;height:26px;padding:0 9px;border-radius:999px;background:var(--mint);display:flex;align-items:center;gap:5px;font-size:.72rem;font-weight:700;white-space:nowrap}
+.ax-answer-chip-you{flex:none;max-width:none;background:var(--green)}
+.ax-answer-dot{flex:none;width:6px;height:6px;border-radius:50%;background:#b9cdc8}
+.ax-answer-chip-you .ax-answer-dot{background:var(--ink)}
+.ax-answer-chipbar{flex:1;min-width:6px;height:7px;border-radius:4px;background:#cfdedb}
+@media (prefers-reduced-motion:no-preference){
+.js .anim:not(.in) .ax-answer{opacity:0}
+.js .anim.in .ax-answer{animation:ax-answer-loop 11s cubic-bezier(.5,0,.2,1) infinite}
+.js .anim.in .ax-answer-q{animation:ax-answer-q 11s cubic-bezier(.2,.8,.2,1) infinite}
+.js .anim.in .ax-answer-card{animation:ax-answer-card 11s cubic-bezier(.2,.8,.2,1) infinite}
+.js .anim.in .ax-answer-l1{animation:ax-answer-l1 11s cubic-bezier(.5,0,.2,1) infinite}
+.js .anim.in .ax-answer-l2{animation:ax-answer-l2 11s cubic-bezier(.5,0,.2,1) infinite}
+.js .anim.in .ax-answer-l3{animation:ax-answer-l3 11s cubic-bezier(.5,0,.2,1) infinite}
+.js .anim.in .ax-answer-pill{animation:ax-answer-pill 11s cubic-bezier(.2,.8,.2,1) infinite}
+.js .anim.in .ax-answer-label{animation:ax-answer-label 11s cubic-bezier(.2,.8,.2,1) infinite}
+.js .anim.in .ax-answer-chip{animation:ax-answer-chip 11s cubic-bezier(.2,.8,.2,1) infinite both;animation-delay:calc(var(--i) * .15s)}
+.js .anim.in .ax-answer-chip-you{animation:ax-answer-chip 11s cubic-bezier(.2,.8,.2,1) infinite both,ax-answer-lit 11s cubic-bezier(.2,.8,.2,1) infinite;animation-delay:calc(var(--i) * .15s),0s}
+@keyframes ax-answer-loop{0%{opacity:0}2%,92%{opacity:1}96%,100%{opacity:0}}
+@keyframes ax-answer-q{0%{opacity:0;transform:translateY(10px)}6%,100%{opacity:1;transform:none}}
+@keyframes ax-answer-card{0%,6%{opacity:0;transform:translateY(12px)}12%,100%{opacity:1;transform:none}}
+@keyframes ax-answer-l1{0%,13%{clip-path:inset(-10px 100% -10px -10px)}20%,100%{clip-path:inset(-10px -10px -10px -10px)}}
+@keyframes ax-answer-l2{0%,20%{clip-path:inset(-10px 100% -10px -10px)}28%,100%{clip-path:inset(-10px -10px -10px -10px)}}
+@keyframes ax-answer-l3{0%,28%{clip-path:inset(-10px 100% -10px -10px)}33%,100%{clip-path:inset(-10px -10px -10px -10px)}}
+@keyframes ax-answer-pill{0%,34%{background-color:#e6efec;box-shadow:0 0 0 0 rgba(0,224,96,.45)}39%{background-color:#00e060;box-shadow:0 0 0 0 rgba(0,224,96,.45)}46%,100%{background-color:#00e060;box-shadow:0 0 0 8px rgba(0,224,96,0)}}
+@keyframes ax-answer-label{0%,39%{opacity:0}44%,100%{opacity:1}}
+@keyframes ax-answer-chip{0%,41%{opacity:0;transform:translateY(6px)}47%,95%{opacity:1;transform:none}97%,100%{opacity:0;transform:none}}
+@keyframes ax-answer-lit{0%,50%{background-color:#eef6f3;box-shadow:0 0 0 0 rgba(0,224,96,.45)}55%{background-color:#00e060;box-shadow:0 0 0 0 rgba(0,224,96,.45)}62%,100%{background-color:#00e060;box-shadow:0 0 0 8px rgba(0,224,96,0)}}
+}

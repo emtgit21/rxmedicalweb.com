@@ -1,0 +1,1 @@
+A med spa website assembles in sync on a desktop browser and a phone, with a hero image, headline, green Book now button and three treatment tiles, and the phone's button is tapped.

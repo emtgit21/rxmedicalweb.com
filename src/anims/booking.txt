@@ -1,0 +1,1 @@
+A phone screen at 9:42 pm shows a week calendar where the Thursday 4:00 slot is selected and turns green, a Booked confirmation appears, and a reminder notification for tomorrow at 4:00 slides down.

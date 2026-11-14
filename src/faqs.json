@@ -1,0 +1,506 @@
+{
+ "medical-website-design": [
+  {
+   "q": "How does the website design process work?",
+   "a": "We follow four stages: analysis, sketch, design and development, and testing. We start by learning your goals, your budget and your taste, then assign a designer who stays with your project from the first sketch to launch. Our designers and programmers build each site from scratch in house, and people review everything before it goes live."
+  },
+  {
+   "q": "How much does a medical website cost, and how long does it take to build?",
+   "a": "Both depend on your practice, including the number of pages, the features you need and how much content has to be created. We provide a quote and a plan after a free analysis of your goals and your current online presence. Projects usually move faster when your team can review sketches and drafts promptly."
+  },
+  {
+   "q": "We already have a website. Do we need to start over?",
+   "a": "Not necessarily. We can review your current site to see how effective it is and recommend simple changes that suit your practice and your budget. We judge a site by whether patients can find it and whether it brings in revenue, so a full rebuild only makes sense if the existing site falls short on those points."
+  },
+  {
+   "q": "How will we know if the new website is bringing in patients?",
+   "a": "Our results and phone tracking system lets you see the calls your website produces, so you can judge the site on patient inquiries instead of appearance alone. We cannot promise specific rankings or call volumes, since those depend on your market, your competition and the marketing you run alongside the site. What we can do is build with layouts and features that have been shown to generate results and give you a clear view of the calls coming in."
+  }
+ ],
+ "medical-spa-website-design": [
+  {
+   "q": "How long does it take to build a med spa website, and what does it cost?",
+   "a": "Both depend on the practice: the number of treatments you offer, whether you need a bilingual site, and whether you want online booking, EMR integration or ongoing marketing alongside the site. We start with a free analysis of your practice and goals, then give you a quote and a plan that lays out the scope and schedule."
+  },
+  {
+   "q": "What do we need to provide to get the project started?",
+   "a": "Mainly your goals, a clear list of the treatments and services you offer, and a sense of the experience patients have when they walk into your practice, since the site is custom built to match it. You do not have to write everything yourself, because our physician staff helps write the content. Photos of your space, team and branding are useful if you have them, as they help the design reflect your actual practice."
+  },
+  {
+   "q": "We are a family practice just adding aesthetic services. Is this a fit for us, or only for established med spas?",
+   "a": "It fits both. We work with plastic surgeons, dermatologists and family practitioners who are adding aesthetics, as well as established skin care and aesthetics centers. The strategy is designed after we learn your goals, so a practice introducing a few treatments gets a different plan than a full service med spa."
+  },
+  {
+   "q": "What should we watch out for when comparing agencies for a med spa website?",
+   "a": "Ask whether the site is built from a template, whether the work is outsourced, and who writes the content and supports the site after launch. We do not use templates or outsource, our designers, programmers and internet specialists work in house, and maintenance and phone support with our staff are included. Be cautious of anyone who promises specific search rankings, since search engines change their algorithms constantly and AI assistants now answer many patient questions directly, so no agency controls those results."
+  }
+ ],
+ "landing-pages-funnels": [
+  {
+   "q": "Why do we need a separate landing page if we already have a website?",
+   "a": "Your home page has to serve every visitor and every service, so someone who clicked an ad for one treatment has to hunt for the information they wanted. A landing page covers that one treatment, answers the patient's question and gives them one clear way to book. Campaign traffic generally converts better when the page matches the ad that brought the patient there."
+  },
+  {
+   "q": "What do you need from our practice to build a page?",
+   "a": "We need the details of the treatment, promotion or event you want to promote, along with the offer you are comfortable making. Before-and-after photos you have permission to use, physician credentials and the questions patients ask most often help us build the gallery, FAQ and credentials sections. We also need to know how your team handles consultation requests so the form and the text and email follow-up fit your booking process."
+  },
+  {
+   "q": "How long does it take and what does it cost?",
+   "a": "Both depend on your practice, including how many treatments, promotions or events need their own page and how much content you already have. We start with a free analysis and then give you a quote and a plan. AI tools let us produce and test variations quickly, but every page still goes through a review of its medical claims by our physician advisors before it goes live."
+  },
+  {
+   "q": "What happens after a patient fills out the form, and how will we know the page is working?",
+   "a": "The patient gets an instant follow-up by text and email, so the inquiry is acknowledged while they are still interested. We track each lead from the first click to the booked consultation, which shows you which ads and pages bring in consultations and not just form submissions. We also run A/B tests of headlines, offers and layouts and keep the versions that perform better."
+  }
+ ],
+ "medical-e-commerce": [
+  {
+   "q": "What do we need to provide to get the store started?",
+   "a": "We need your product list with photos, descriptions and prices, plus a decision on which payment methods you want to accept. If you do not have product photos or written descriptions yet, tell us and we will plan for that as part of the setup. We handle the store design, the merchant account and loading the products."
+  },
+  {
+   "q": "Does the store live on our current practice website or on a separate site?",
+   "a": "We build the shopping cart into your practice website, and we design the store to match the look of the rest of your site. Patients can move from reading about your services to buying a product without feeling like they left your practice. This also lets you promote products on the same pages patients already visit."
+  },
+  {
+   "q": "How long does it take to launch, and what does it cost?",
+   "a": "Both depend on your practice: the number of products, the payment options you want, whether you need subscriptions, and the condition of your current website. We start with a free analysis and then give you a quote and a plan with the steps involved."
+  },
+  {
+   "q": "What should we watch out for before selling products online?",
+   "a": "Think through the day-to-day work first: who will pack and ship orders, how you will handle returns, and who keeps inventory and prices current. Sales tax and rules on shipping certain products vary by state, so it is worth checking with your accountant or attorney before launch. On our side, we host and maintain the store, and for items patients buy regularly we can set up subscriptions and repeat orders."
+  }
+ ],
+ "emr-patient-portals": [
+  {
+   "q": "How does connecting our EMR's patient portal to our website actually work?",
+   "a": "Your EMR vendor already provides the online patient portal, and we connect it to your medical website as part of an overall integration plan. Patients then reach forms, appointments and prescription refills from one place on your site instead of hunting for a separate login link. The medical records themselves stay inside your EMR's portal, and your website serves as the front door to it."
+  },
+  {
+   "q": "What do we need to provide to get started?",
+   "a": "We need to know which EMR you use, whether its patient portal is already active, and which features you want patients to reach from the site, such as online forms, appointments or refill requests. It also helps to have a contact at your office or at your EMR vendor who can confirm the portal settings and links. To go over the details, you can call us at 954-358-2856."
+  },
+  {
+   "q": "How long does the integration take and what does it cost?",
+   "a": "Both depend on your practice, mainly on which EMR you use, what its portal allows and how your current website is built. We provide a quote and a plan after a free analysis of your setup, so you know the scope before any work begins."
+  },
+  {
+   "q": "What should we watch out for before linking the portal to our site?",
+   "a": "The features available to patients depend on what your EMR's portal supports, so it is worth confirming with your vendor which functions are turned on, such as lab results, online forms or appointment requests. Your staff should also be ready to handle the requests that come in through the portal, because a refill or appointment request that sits unanswered frustrates patients. We recommend placing the portal link where patients can find it easily on every page, since a portal that is hard to find tends to go unused."
+  }
+ ],
+ "online-booking": [
+  {
+   "q": "Will this work with the scheduling system we already use?",
+   "a": "Yes, we connect online booking and intake to the system you already have, so your staff does not copy anything by hand. Whether patients see real-time open slots or send an appointment request depends on what your system supports. We check that at the start and tell you which option fits."
+  },
+  {
+   "q": "How long does setup take and what does it cost?",
+   "a": "It depends on your scheduling system, how many forms you need, and how many locations and providers are involved. We start with a free analysis of your current setup, then give you a plan and a quote before any work begins."
+  },
+  {
+   "q": "What do we need to provide to get started?",
+   "a": "We need access to your website and scheduling system, your current intake and consent forms, and the appointment types you want patients to be able to book online. It also helps to have access to your Google Business Profile and social pages so we can add book-now buttons there. If your forms collect health information, we will ask for your compliance contact as well."
+  },
+  {
+   "q": "How do you handle HIPAA for intake and consent forms?",
+   "a": "Forms that collect health information are set up with HIPAA requirements in mind, and we work with your compliance contact on the details. Your practice remains responsible for its own compliance decisions, so we recommend having that person review the forms and the tools involved before launch."
+  }
+ ],
+ "website-accessibility-compliance": [
+  {
+   "q": "How does an accessibility audit of our current website work?",
+   "a": "We review your existing site against the WCAG guidelines and check how it performs for patients using screen readers, a keyboard, small phones or low vision. From there we fix the issues we find, such as contrast, headings, forms, images and keyboard navigation, and add captions to video. We also publish an accessibility statement and give patients a way to report problems."
+  },
+  {
+   "q": "Will this make our website HIPAA compliant or protect us from an accessibility complaint?",
+   "a": "We cannot promise either, because we are a marketing agency, not a law firm. We set up contact and intake forms with HIPAA requirements in mind and build to the WCAG guidelines, which lowers the risk of a complaint but does not remove it. For legal questions, we work with your compliance officer or attorney and implement what they require."
+  },
+  {
+   "q": "Why do tracking tags and pixels on our site need a review?",
+   "a": "Advertising and analytics tools can collect data on pages where patients share health information, such as appointment requests or intake forms, and send it to third parties. We review which tags and pixels are running on those pages so you and your compliance officer can decide what should stay, change or be removed. We also set up cookie consent and privacy policy pages so patients can see how their data is handled."
+  },
+  {
+   "q": "How long does the work take, and what does it cost?",
+   "a": "Both depend on your practice, including the size of your site, how it was built and how many issues the audit turns up. We start with a free analysis and then give you a quote and a plan. It helps if you can provide access to your website and connect us with whoever handles compliance for your practice."
+  }
+ ],
+ "website-maintenance": [
+  {
+   "q": "What do we need to send you when we want something changed on our website?",
+   "a": "Tell our support team what you want updated and send any details only your practice has, such as new provider information, service descriptions, office hours or photos. We handle the website modifications, image updates and content additions from there. The clearer the request, the less back and forth is needed before the change goes live."
+  },
+  {
+   "q": "What does the security side of the service cover?",
+   "a": "We apply security updates to your website and keep backups of it, so there is a recent copy to restore from if something goes wrong. We also check regularly for broken links, images and pages. No website can be made completely immune to attacks, but outdated software is one of the most common ways sites get compromised, and keeping it current reduces that risk."
+  },
+  {
+   "q": "Our website is already built. Why does it need ongoing maintenance?",
+   "a": "Search engines tend to favor sites that are accurate, up to date and working properly, and a site left alone slowly collects outdated information, broken links and unpatched software. Our maintenance includes onsite search engine optimization, content additions and regular checks to keep the site in good shape. We also provide marketing reports and analytics so you can see how the site is performing."
+  },
+  {
+   "q": "How much does website maintenance cost?",
+   "a": "It depends on your practice, including the size of your website and whether you sell products online and need e-commerce hosting and maintenance. We start with a free analysis of your current site and then give you a quote based on what it needs."
+  }
+ ],
+ "search-engine-optimization": [
+  {
+   "q": "How long does it take for SEO to show results for a medical practice?",
+   "a": "It depends on your practice, your specialty, how competitive your local market is and the current state of your website. SEO generally builds over months rather than days, because search engines need time to read and trust the changes. After a free analysis of your site and your competition, we give you a plan with realistic expectations for your situation."
+  },
+  {
+   "q": "What do you need from us to get started?",
+   "a": "We start by learning about your practice: the procedures you offer, the patients you want to reach and the area you serve. From there, our staff builds your keyword list and analyzes your competition, so most of the work falls on us. Your time is mainly needed at the beginning and for reviewing content before it goes live."
+  },
+  {
+   "q": "Do we have to write the content for our website ourselves?",
+   "a": "No. We have physicians on staff who write and review content for your website, as well as for your email campaigns and social media. You can review what we write to make sure it reflects how your practice works."
+  },
+  {
+   "q": "Is SEO a one-time project or ongoing work?",
+   "a": "It is ongoing, and our staff works on your website daily. The heaviest effort comes at the start, when we set up title tags, descriptions, image tags and structured data for every page and build out your content and links. Once the site is optimized correctly, only a small maintenance effort is needed to hold your rankings, which is what makes SEO more cost effective than paying for every click."
+  }
+ ],
+ "local-seo": [
+  {
+   "q": "How is your approach to local SEO different from simply submitting our practice to directories?",
+   "a": "Many companies only send your information to the major data directories and stop there. We first look for the incomplete, duplicate or wrong listings of your practice that already exist, because those can hurt your rankings. Once they are fixed, we build your directory listings, Google Business Profile and location pages on a clean base."
+  },
+  {
+   "q": "How long does it take before we see a difference in local search?",
+   "a": "It depends on your practice, your area and the condition of your current listings. Corrections to listings can take time to be picked up across directories and by search engines, so local SEO generally builds gradually and does not change overnight. After a free analysis, we give you a plan that reflects your starting point."
+  },
+  {
+   "q": "What do you need from our practice to get started?",
+   "a": "We need your accurate practice details, such as the exact name, address, phone number, hours and services for each location. Access to your existing Google Business Profile, if you have one, lets us update it without creating a duplicate. It also helps to tell us about past addresses, old phone numbers or former practice names, since these are a common source of wrong listings."
+  },
+  {
+   "q": "We have more than one location and offer several services. Can local SEO handle that?",
+   "a": "Yes. We build landing pages for each location and each service, so a patient searching in a specific area finds the page that matches what they are looking for. Each location also needs its own complete and correct listings, and we add call-to-action buttons that let patients call or book in one tap."
+  }
+ ],
+ "ai-search-optimization": [
+  {
+   "q": "How is AI search optimization different from the SEO we already do?",
+   "a": "Traditional SEO helps your pages rank in the list of links, and it still brings in most search traffic. AI search optimization builds on that foundation by making your practice easy for AI assistants to understand and safe for them to recommend, through structured data, consistent listings, clear question-and-answer content and visible physician credentials. We treat the two as one effort, not competing ones."
+  },
+  {
+   "q": "What will you need from our practice to get started?",
+   "a": "We need accurate, current details about your physicians, locations and procedures, plus access to your website and your main directory and review profiles. Because the question-and-answer content is reviewed by physicians, we also ask for some of your providers' time to check what we write and confirm credentials for their author pages. We handle the audit, structured data, writing and monitoring."
+  },
+  {
+   "q": "How long does it take to see our practice appear in AI answers, and what does it cost?",
+   "a": "Both depend on your practice: your specialty, your market, how many locations and providers you have, and the current state of your website and listings. AI systems update their sources on their own schedule, so visibility tends to build gradually and we monitor it over time. We start with a free analysis of how AI assistants describe your practice today, then provide a plan and a quote."
+  },
+  {
+   "q": "Can you guarantee that ChatGPT or Google's AI Overviews will recommend our practice?",
+   "a": "No, and you should be careful with any agency that says it can. These systems decide on their own which sources to trust, and no one outside them controls the answers. What we can do is the groundwork they reward, and then track how your visibility in AI answers changes so you can see what the work is producing."
+  }
+ ],
+ "pay-per-click": [
+  {
+   "q": "How do you set up and manage a pay-per-click campaign for a medical practice?",
+   "a": "We start by organizing the account into a clear structure, assigning budget across campaigns, and building keyword coverage around the services you offer. From there we work on quality score, create a landing page for each campaign, and set up call and booking tracking so we can see which ads bring in patients."
+  },
+  {
+   "q": "How much does it cost, and how soon will we see patient inquiries?",
+   "a": "Both depend on your practice, including your specialty, your local competition, and the services you want to promote. Paid search generally works faster than organic methods because ads can appear as soon as a campaign is live, but we do not promise specific results. We provide a quote and a plan after a free analysis of your practice."
+  },
+  {
+   "q": "What do you need from our practice to get started?",
+   "a": "We need to know which services you want to promote, the area you draw patients from, and how patients currently call or book with you. That lets us structure the account around your priorities and connect call and booking tracking to the way your front desk actually works."
+  },
+  {
+   "q": "How will we know whether the ads are bringing in patients and not just clicks?",
+   "a": "Traffic alone is not the goal, so we measure phone calls and bookings from patients interested in your services. Our results and phone tracking system shows you those calls and bookings directly. It is worth watching these numbers instead of clicks or impressions, since a campaign can generate plenty of visits without producing appointments."
+  }
+ ],
+ "search-engine-marketing": [
+  {
+   "q": "Why would we need paid advertising if we are already investing in SEO?",
+   "a": "In crowded markets, SEO alone may not be enough to keep your practice visible for the searches that matter most. Paid search places your website at the top of the results page as soon as the campaign starts, so a patient typing a phrase such as \"Botox Fort Lauderdale\" can see your ad right away. The two work best side by side, with paid advertising filling the gaps while organic visibility builds."
+  },
+  {
+   "q": "Can we run the ad account ourselves, or do you have to manage it?",
+   "a": "Either option works. We can set up the account and show your team how to create ads, bid on keywords and maintain it, or we can manage the campaigns for you. Because every click uses part of your budget, we recommend whoever runs it treats it like a portfolio that needs regular attention."
+  },
+  {
+   "q": "How much should we budget, and how soon will the ads start running?",
+   "a": "Both depend on your practice, your specialty, your market and how competitive your keywords are. Ad spend is paid directly to the platform, such as Google, and it is separate from the work of setting up and managing the campaigns. We provide a quote and a plan after a free analysis of your practice and its market."
+  },
+  {
+   "q": "Should we advertise on Google or on social platforms like Instagram, Facebook and TikTok?",
+   "a": "It depends on how patients look for your services. Google Ads reaches people who are actively searching for a treatment or provider, while social campaigns reach defined audiences and often cost less per click than search. For social, we build the audiences, produce the creative and follow each platform's rules for health and aesthetic advertising, and we can add retargeting for visitors who did not book."
+  }
+ ],
+ "reputation-management": [
+  {
+   "q": "How do the review requests work, and what do you need from us to get started?",
+   "a": "After a visit, we send the patient a request by text or email asking them to leave a review. To set that up, we need a way to know when a visit has taken place and how to reach the patient, so we work out with your office how that information gets to us. We also need access to your Google Business Profile and your other review profiles so we can monitor and manage them."
+  },
+  {
+   "q": "Can we send requests only to patients we know had a good experience?",
+   "a": "No. We ask every patient the same way and do not filter who gets a request. Selecting only happy patients goes against the rules of the review sites, and asking everyone keeps your reviews honest and your profiles in good standing."
+  },
+  {
+   "q": "Who writes the replies to reviews, and how do you handle patient privacy?",
+   "a": "We draft the replies and send them to you for approval, so nothing is posted without your sign-off. Each reply is written so it never reveals patient information, including in responses to negative reviews where it can be tempting to explain what happened. We also alert you when a new review needs attention so it does not sit unanswered."
+  },
+  {
+   "q": "How long does it take to see more reviews, and what does the service cost?",
+   "a": "Both depend on the practice: your patient volume, how many profiles you have and what shape they are in today. Reviews generally build gradually as requests go out after each visit, and we cannot promise a specific rating or ranking. We start with a free analysis and then give you a plan and a quote based on what we find."
+  }
+ ],
+ "ai-chat-messaging": [
+  {
+   "q": "What happens when a patient asks the agent a medical question?",
+   "a": "The agents do not give medical advice or diagnose. Clinical questions go to your team, and whenever a person is needed the agent hands off to your staff with the conversation attached, so nobody has to ask the patient to repeat themselves."
+  },
+  {
+   "q": "What do you need from us to set the agents up?",
+   "a": "We train the agents on your services, hours, locations and policies, so we need that information in its current form. You also review and approve the answers, because the agents are limited to what you sign off on."
+  },
+  {
+   "q": "How long does setup take and what does it cost?",
+   "a": "Both depend on your practice: how many locations you have, which channels you want (website chat, text, phone) and how much material the agents need to learn. We start with a free analysis and then give you a plan and a quote."
+  },
+  {
+   "q": "How do you handle patient privacy and control over what the agent says?",
+   "a": "We do the setup with HIPAA requirements in mind, and the agents only give answers you have approved. You also get reports on what patients ask most, which makes it easier to spot gaps and adjust the approved answers over time."
+  }
+ ],
+ "social-media": [
+  {
+   "q": "Do I or my staff need to be active on social media for this to work?",
+   "a": "No. Our team of social media professionals creates and maintains your networks, so you do not need to use social media personally. We develop the content and handle community management, which keeps your practice in front of patients between visits."
+  },
+  {
+   "q": "What does the process look like once we start?",
+   "a": "We begin by researching the social networks that fit your practice, along with your competitors and local marketplace. From there we set up your profiles, launch, and move into ongoing weekly posts. Strategy, content creation, ad management, and events and promotions are part of each project."
+  },
+  {
+   "q": "How long does it take to see new patients from social media?",
+   "a": "It depends on your practice, your specialty, and where your profiles stand today. Social media generally builds over time, as regular interaction builds confidence and followers gradually become patients. After a free analysis, we provide a plan that outlines what to expect for your situation."
+  },
+  {
+   "q": "How much does social media management cost?",
+   "a": "The cost depends on your practice, including the networks involved and how much ad management and content your plan calls for. We provide a quote after a free analysis of your current presence and goals."
+  }
+ ],
+ "short-form-video": [
+  {
+   "q": "How much of my time does filming take?",
+   "a": "We film at your office in a single session that covers weeks of posts, so you are not pulled away from patients every few days. Before the session we prepare a monthly content plan built around the questions your patients ask, so you know what you will be talking about when the camera is on. After that, editing, captions, cover images and publishing are on us."
+  },
+  {
+   "q": "What do we need to provide on our end?",
+   "a": "Mainly your time for the filming session, a suitable space in your office, and your input on the questions patients ask most often. If we film before-and-after or procedure content, we handle it with patient consent, so we will need your team's help identifying patients who are willing to take part. You do not need your own equipment or editing software."
+  },
+  {
+   "q": "Who checks that what I say on video is medically accurate and appropriate?",
+   "a": "Our physician advisory board reviews medical claims before anything is published. This matters with short video because a thirty second answer leaves little room for nuance, and an overstated claim can create problems for a practice. You remain the expert on camera, and the review is a second set of clinical eyes before the video goes live."
+  },
+  {
+   "q": "What does it cost and how soon will videos start going out?",
+   "a": "Both depend on the practice, including how many videos you want each month, which networks you want to be on, and how soon we can schedule filming at your office. We start with a free analysis and then give you a quote and a plan based on what we find. Once videos are publishing, we report on what performed so the next month's plan can be adjusted."
+  }
+ ],
+ "e-mail-marketing": [
+  {
+   "q": "Who writes the newsletters, and do we get a say in what goes out?",
+   "a": "Our physicians write and review each newsletter, so the content is informative rather than a sales pitch. You set how often emails are sent, and you can review or change the content before it goes to your list."
+  },
+  {
+   "q": "What do we need to provide to get started?",
+   "a": "We mainly need your current patient email list, your brand materials such as logo and colors, and an idea of the treatments and promotions you want to feature. From there we handle list setup, clean-up and segmentation by treatment and interest, design templates that match your brand, and set up deliverability so your emails reach the inbox."
+  },
+  {
+   "q": "How much does email marketing management cost, and how long does setup take?",
+   "a": "Both depend on your practice, including the size and condition of your list, how often you want to send, and which automations you need. We start with a free analysis and then give you a quote and a plan that fits your situation."
+  },
+  {
+   "q": "How will we know whether the emails are bringing in appointments?",
+   "a": "We send reports that show opens, clicks and the bookings each campaign produced, so you can see which newsletters, promotions and event invitations patients respond to. Keep in mind that email works through steady contact over time, so results are best judged across several campaigns instead of a single send."
+  }
+ ],
+ "sms-marketing": [
+  {
+   "q": "What do we need to provide to get started?",
+   "a": "We need your business phone number so we can register it with the carriers, plus a clear picture of how patients currently give you their contact details. From there we set up the opt-in forms, keywords and consent records, so your list is built only from patients who agreed to receive texts. It also helps to tell us which treatments, events or schedule gaps you most want to promote."
+  },
+  {
+   "q": "How long does it take before the first campaign goes out?",
+   "a": "It depends on the practice. Carrier registration of your number has to be completed before messages are delivered reliably, and the time that takes varies, as does the work needed to build a list of patients who have opted in. After a free analysis we give you a plan that shows the steps and the expected timing for your situation."
+  },
+  {
+   "q": "Who answers when a patient replies to a text?",
+   "a": "Replies are routed to your front desk or to an AI agent, depending on what fits your practice. We set up the routing so a patient who wants to book or ask a question reaches someone who can respond. Our reports then show replies, bookings and opt-outs so you can see what each campaign produced."
+  },
+  {
+   "q": "What should we watch out for when texting patients?",
+   "a": "The main risks are texting people who never agreed to it and putting too much information in the message. We only text patients who opted in, every message includes a way to opt out, and we keep health details out of the text itself. Sending too often is the other common mistake, since it drives opt-outs, so we plan the schedule around messages that are useful, such as open appointments, seasonal offers and reminders for repeat treatments."
+  }
+ ],
+ "physician-content-marketing": [
+  {
+   "q": "Who actually writes the content for our practice?",
+   "a": "Our writers are physicians and internet staff. A physician writes or reviews the medical content, and our internet staff then makes sure it is search engine friendly, because writing for the web is different from writing for journals or print."
+  },
+  {
+   "q": "How much of our time will this take?",
+   "a": "Very little. For website content we work from the information you provide about your practice and services, and from there we do the writing ourselves. Some website firms leave articles and blogs to the physician or office staff, but we do all the work and do not ask you to help write."
+  },
+  {
+   "q": "Do you use AI to write the content, and how do you keep it accurate?",
+   "a": "We use AI tools to research and draft faster, and a physician checks the result. With AI assistants now quoting websites directly, accuracy matters more than ever, so medical content is not published on the strength of an AI draft alone."
+  },
+  {
+   "q": "What does physician content marketing cost, and how soon will we see new content?",
+   "a": "Both depend on your practice, including how much content your site needs and whether you want newsletters, articles, press releases and blogs. We start with a free analysis and then provide a quote and a plan. New content is then added regularly as part of ongoing maintenance, which keeps information fresh for readers and gives search engines something new to index."
+  }
+ ],
+ "video-testimonials": [
+  {
+   "q": "How does a filming day at our office work?",
+   "a": "Our videographers travel to your office and spend half a day filming patient testimonials along with footage of your practice. Our staff prepares and interviews each patient, so your team does not need to script anything or run the camera. After the shoot, our editors turn the footage into the finished video for your website."
+  },
+  {
+   "q": "What do we need to provide on our end?",
+   "a": "You will need to invite a few satisfied patients who are willing to appear on camera and set aside space in your office for the half day of filming. As with any patient marketing, your practice should obtain each patient's written permission before they are filmed. We take care of the interviewing, filming and editing."
+  },
+  {
+   "q": "What if our patients are nervous or have never been on camera?",
+   "a": "Most patients are not used to being filmed, and that is fine. Our interviewers are experienced and friendly, and they guide each volunteer through a relaxed conversation instead of asking them to memorize lines. That approach is what makes the testimonials come across as natural and believable."
+  },
+  {
+   "q": "How much does it cost, and who owns the video afterward?",
+   "a": "The package is offered for one all-inclusive fee with no additional charges, covering on-site production, patient interviews and post production. Pricing depends on your practice, so we provide a current quote after a free analysis of your needs. The video files and the final product are yours to keep."
+  }
+ ],
+ "patient-crm-automation": [
+  {
+   "q": "Who answers a new inquiry when our front desk is busy or the office is closed?",
+   "a": "New inquiries get an instant reply, followed by a sequence of follow-ups, so nobody waits until your staff is free. If you prefer, we can manage the first response for you, either with an AI agent or with our own team. Your staff then works from a scored list and calls the hottest leads first."
+  },
+  {
+   "q": "What do you need from us to set this up?",
+   "a": "We need access to the places your inquiries come from: your website forms, phone and call tracking, text and chat, social accounts and ad accounts. It also helps to know how your team handles inquiries today and who should receive which type of lead, so we can set up routing that matches your practice. We handle the connections and the setup of the inbox, follow-ups and pipeline."
+  },
+  {
+   "q": "How long does it take and what does it cost?",
+   "a": "Both depend on the practice: how many channels bring in inquiries, what systems you already use and whether you want us to manage the first response. We start with a free analysis, then give you a plan and a quote based on what we find."
+  },
+  {
+   "q": "How will we know whether the system is producing booked patients?",
+   "a": "Each lead is tagged with the campaign that produced it, and the pipeline view shows inquiries, consultations booked and treatments done. Every week you get a report with leads in, contacted, booked and lost, along with the reasons they were lost. Because the CRM is connected to your website, ads and call tracking, you can see which marketing produces patients and not just clicks."
+  }
+ ],
+ "new-service-launch": [
+  {
+   "q": "How long does it take to launch a new service, and what does it cost?",
+   "a": "Both depend on your practice, the procedure and how much of the launch you need, such as whether you already have a patient list to announce to or a website that can take a new service page. We start with a free analysis of your practice and local market, then give you a plan and a quote so you know the scope before you commit."
+  },
+  {
+   "q": "What do we need to provide to get started?",
+   "a": "We need the details of the procedure as you plan to offer it, access to your website and patient contact list for the announcement emails and texts, and some of your time to review the content and record short videos explaining the treatment. We also need your decision on the introductory offer, since the booking form and campaigns are built around it. We prepare the materials, and you approve them before anything goes out."
+  },
+  {
+   "q": "Do we have to take every part of the launch, or can it be fitted to our practice?",
+   "a": "The launch is built around what your practice already has and what it lacks. If you already have consent forms or in-office materials you are happy with, for example, we can focus on the pages, the patient announcements and the campaigns. The free analysis is where we sort out which pieces you need."
+  },
+  {
+   "q": "What should we watch out for when launching a new procedure?",
+   "a": "The most common mistake is going straight to advertising and overlooking your current patients, who already trust you and are usually your fastest first bookings. Another is driving interest before the practice is ready for it, which is why the launch includes a front desk script, a booking form, consent forms and pre and post treatment instructions. We also set up tracking from the start, so you can see which channels bring bookings and whether the training is paying for itself."
+  }
+ ],
+ "marketing-strategy": [
+  {
+   "q": "How does the process work once we decide to move forward?",
+   "a": "We start with an audit of your website, rankings, ads, reviews and competitors, and our MBAs study your specialty and local market. From there we build a plan that sets priorities and a budget for each channel, along with a 90-day roadmap that has clear owners and dates. After that, we meet with you every month to review results and decide what to change."
+  },
+  {
+   "q": "How much does a marketing plan cost, and how long does it take to put together?",
+   "a": "Both depend on your practice, including your specialty, your market, how many channels you already use and how much competition you face. We begin with a free analysis, then give you a quote and a plan with a schedule that fits your situation."
+  },
+  {
+   "q": "What do you need from us to get started?",
+   "a": "It helps to have access to your website analytics, ad accounts and review profiles, plus a clear picture of your goals, the services you want to grow and what you currently spend on marketing. We also ask for some time from the physician or practice manager for consultations with our physicians, business and marketing staff. The more accurate the information we start with, the more useful the audit and plan will be."
+  },
+  {
+   "q": "Is this a good fit for a new practice, or only for established ones?",
+   "a": "It works for both. A newer practice usually needs help deciding where to spend a limited budget first, while an established one often needs to find what is underperforming and where the next stage of growth can come from. In either case the plan is built around your specialty and competitors, and our physician advisory board adds insight into how patients choose a provider."
+  }
+ ],
+ "medical-graphic-design": [
+  {
+   "q": "We already have a logo. Can you work with it, or do we have to start over?",
+   "a": "You do not have to start over. Our designers can build your brochures, postcards and other materials around your current logo and practice details, and we can set the colors, type and templates that keep everything consistent. If your logo no longer fits the look of your practice, we can create an original one as part of the project."
+  },
+  {
+   "q": "What do we need to provide to get a brochure or postcard started?",
+   "a": "We need the basics about your practice: your credentials and background, the services you offer, your address and phone number, and any special promotions you want to feature. Our staff writes the copy about your background and services, and our physician staff can write patient information material on individual services. You review the drafts for accuracy before anything goes to print."
+  },
+  {
+   "q": "How much does a branding or print project cost, and how long does it take?",
+   "a": "Both depend on the practice and on what you need, since a single services postcard is a very different project from a new logo with a full set of brochures, stationery and displays. We start with a free analysis of your practice and then give you a quote and a plan that fits your budget. Review rounds and how quickly you approve drafts are usually the biggest factors in timing."
+  },
+  {
+   "q": "How do we keep everything looking consistent across print, our office and social media?",
+   "a": "Consistency comes from deciding on the logo, colors, type and templates first, then applying them to every piece you publish. We use that same identity for your brochures, referral pieces, 6x9 services postcards, posters, table top and seminar displays, invitations, stationery, business cards, and graphics for social media and ads. The common thing to watch out for is ordering pieces one at a time from different sources, which is how a practice's image starts to drift."
+  }
+ ],
+ "printing": [
+  {
+   "q": "How does the process work from design to delivery?",
+   "a": "We design the piece, send you a proof to review, and print only after you approve it. The finished materials ship directly to your office, so you do not have to coordinate with a separate printer."
+  },
+  {
+   "q": "What do we need to provide to get started?",
+   "a": "It helps to have your logo, brand colors, and the text or details you want included, such as services, contact information and office hours. If we already manage your website, we work from the same colors and logos so your printed pieces match what patients see online."
+  },
+  {
+   "q": "How much does it cost and how long does it take?",
+   "a": "Both depend on what you order, including the type of piece, the quantity, and whether design work or mailing is involved. After a free analysis of what your practice needs, we provide a quote and a plan so you know what to expect before anything goes to print."
+  },
+  {
+   "q": "Can you handle a direct mail campaign, or do we have to mail the pieces ourselves?",
+   "a": "We can print, address and mail a campaign to the neighborhoods around your practice. If you prefer to hand out postcards in the office or mail them yourself, we can ship the printed pieces to you instead."
+  }
+ ],
+ "medical-practice-kit": [
+  {
+   "q": "What is included in the Medical Practice Marketing Kit?",
+   "a": "The kit is designed to work as your entire marketing program. It includes a custom website with email capture, an integrated blog and online patient forms, print materials such as brochures, a services postcard and business cards, our Front Office Fundamentals staff manual, consent and treatment forms, and ongoing consultation with our physicians and business staff."
+  },
+  {
+   "q": "How long does it take, and what does it cost?",
+   "a": "Both depend on your practice, including your specialty, the number of procedures you offer and how much material you already have. We start with a free analysis and then give you a quote and a plan that fit your situation."
+  },
+  {
+   "q": "What will we need to provide to get started?",
+   "a": "We will need accurate information about your background, your services and the procedures you perform, since the website, brochures and consent forms are all built around them. It also helps to have someone in the practice who can review drafts and answer questions, and to set aside time for your front office staff to work through the training manual."
+  },
+  {
+   "q": "Our practice already has a website. Why would we need a new one?",
+   "a": "Many websites look attractive but are poorly coded, which makes them hard for patients to find in search. The websites we build are custom rather than templates, and they are developed by designers, programmers and SEO staff with search visibility in mind from the start. We cannot promise specific rankings, but a well-built site gives your practice a stronger foundation and room to expand as technology changes."
+  }
+ ],
+ "analytics-call-tracking": [
+  {
+   "q": "How does call tracking work with our existing phone number?",
+   "a": "We assign a separate tracking number to each marketing source, such as paid search, your Google listing or a social campaign. Calls to those numbers forward to your regular office line, so your front desk answers the phone the same way as always. Your main number stays yours, and we can see which campaign produced each call."
+  },
+  {
+   "q": "Is it safe to run analytics and call recording on a medical website?",
+   "a": "Medical sites need more care than a typical business site, because patients may share health details in forms, chats and calls. We configure tracking so that health information patients share with you is not passed to advertising platforms. We recommend that you also review call recording and your privacy notices with your own compliance advisor, since the rules vary by state and by practice."
+  },
+  {
+   "q": "What do we need to provide to get started, and how long does setup take?",
+   "a": "We usually need access to your website, your advertising accounts, your online booking tool and details on how calls are routed in your office. Timing depends on how many channels and systems your practice uses, so we give you a plan after a free analysis. The same applies to cost, which we quote once we have seen your current setup."
+  },
+  {
+   "q": "What will we see in the reports, and will we have to interpret the data ourselves?",
+   "a": "You get a live dashboard you can open at any time, showing calls, form submissions, chat conversations and online bookings, along with the cost per inquiry for each channel. Each month we send a report in plain language, with AI-assisted summaries of call recordings so you learn what patients ask for. We then hold a review call with you to decide what to change next."
+  }
+ ]
+}

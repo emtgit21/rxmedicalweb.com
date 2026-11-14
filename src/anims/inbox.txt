@@ -1,0 +1,1 @@
+A newsletter email assembles itself, flies off as an envelope, and three recipients show the statuses Opened, Clicked and Booked.

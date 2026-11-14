@@ -1,0 +1,1 @@
+A stylised street map where location pins drop in and the practice's green pin pulses, while below it the row "Your practice" rises to first place in a local results list with an "Open now" label.

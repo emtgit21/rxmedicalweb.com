@@ -1,0 +1,1 @@
+A camera viewfinder records a seated patient with a blinking record light, running timecode and moving audio meter, then shrinks into a finished video card with a play button labelled Patient story.

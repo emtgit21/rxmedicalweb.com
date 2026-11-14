@@ -1,0 +1,1 @@
+Forms, appointment and refill links travel from a practice website across a secure, locked connection and land as checked items in the patient portal.
