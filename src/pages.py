@@ -830,25 +830,18 @@ TESTIMONIALS = [
 ]
 
 WORK = [
-    dict(name="Empire Medical Training", url="https://www.empiremedicaltraining.com/", img="portfolio-emt-700x525.png", shot="work-emt",
+    dict(name="Empire Medical Training", url="https://www.empiremedicaltraining.com/", img="portfolio-emt-700x525.png", shot="work-emt", did=["Website", "SEO", "E-mail and SMS campaigns", "Lead management", "Mobile app"],
          note="Continuing medical education for physicians"),
-    dict(name="American Academy of Procedural Medicine", url="https://www.aaopm.com/", img="portfolio-aaopm-700x525.png", shot="work-aaopm",
+    dict(name="American Academy of Procedural Medicine", url="https://www.aaopm.com/", img="portfolio-aaopm-700x525.png", shot="work-aaopm", did=["Website", "SEO", "E-mail campaigns"],
          note="CME training in aesthetics, pain management and functional medicine"),
-    dict(name="Empire On-Demand", url="https://www.empireondemand.com/", img="portfolio-eod-700x525.png", shot="work-eod",
+    dict(name="Empire On-Demand", url="https://www.empireondemand.com/", img="portfolio-eod-700x525.png", shot="work-eod", did=["Website", "Online store", "SEO"],
          note="Online continuing medical education platform"),
 ]
 
 ABOUT_BODY = """
-<figure><img src="/assets/img/hero-team.webp" width="1280" height="720" alt="A marketing team and a physician advisor reviewing website designs" loading="lazy"></figure>
 <p>Rx Medical Web is a family owned marketing agency dedicated to one thing: the online presence and marketing of medical practices. Since 2008 we have developed marketing and practice building strategies for more than 400 physicians and dentists of all specialties.</p>
 <p>Our staff includes website designers and programmers, search engine optimization specialists, physicians and business personnel. All of our people work on site in Fort Lauderdale. We do not outsource.</p>
 <p>Part of our success comes from understanding our clients. We understand medical marketing and the dynamics of a medical practice. In addition to our internet staff, we maintain a physician advisory board of specialists who help create and market our clients' websites. Our physician staff writes and reviews website content and marketing emails, and is available for support and consultation.</p>
-
-<h2>The latest AI, checked by people</h2>
-<p>We use the latest AI technology across our work: research, design, content drafts, video, call analysis, reporting and the AI agents we set up for our clients. It lets a focused team do more for each practice, faster. Because this is medicine, nothing AI produces is published until our staff and physician advisors have reviewed it.</p>
-
-<h2>Strategic partner of Empire Medical Training</h2>
-<p>Rx Medical Web is the strategic marketing partner of <a href="https://www.empiremedicaltraining.com/">Empire Medical Training</a>, a leading provider of continuing medical education for physicians in aesthetics, pain management and anti-aging medicine. We have built and marketed Empire's websites for more than fifteen years, and many of our clients are physicians who trained there and came to us to launch their new services.</p>
 
 <h2>What we do for you</h2>
 <ul>
@@ -858,14 +851,6 @@ ABOUT_BODY = """
   <li>Show you clear, measurable results and regular work on the growth of your practice</li>
 </ul>
 
-<h2>Our story</h2>
-<ul class="timeline">
-  <li><b>2008</b><span>Company founded in Fort Lauderdale.</span></li>
-  <li><b>2010</b><span>Became the main source of online marketing for Empire Medical Training.</span></li>
-  <li><b>2012</b><span>Set our focus on the success of doctors and their private practices, and began serving Empire Medical Training's vendors.</span></li>
-  <li><b>2016</b><span>Joined forces with Empire Medical Training, after the success stories of so many of its attendees.</span></li>
-  <li><b>Today</b><span>A strategic partner of Empire Medical Training, combining an in-house team, a physician advisory board and the latest AI technology.</span></li>
-</ul>
 """
 
 WHY_BODY = """

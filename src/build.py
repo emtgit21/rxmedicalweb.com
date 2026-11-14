@@ -687,7 +687,16 @@ def build_services():
         body += f"""
 <nav class="next" aria-label="Next service"><div class="wrap"><a href="{svc_url(nxt)}"><span><small>Next service</small><b>{e(nxt["name"])}</b></span><i aria-hidden="true"></i></a></div></nav>
 {closing()}"""
-        page(svc_url(s), f'{s["h1"]} | Rx Medical Web', s["lead"], body, extra_head=faq_ld, og_img=f'/assets/img/{s["img"]}.jpg')
+        ld = {"@context": "https://schema.org", "@graph": [
+            {"@type": "Service", "name": s["h1"], "description": s["lead"], "serviceType": s["name"], "url": SITE + svc_url(s),
+             "areaServed": "US", "audience": {"@type": "Audience", "audienceType": "Medical practices"},
+             "provider": {"@type": "ProfessionalService", "name": "Rx Medical Web", "url": SITE + "/", "telephone": "+1-888-599-4548"}},
+            {"@type": "BreadcrumbList", "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Home", "item": SITE + "/"},
+                {"@type": "ListItem", "position": 2, "name": group, "item": SITE + "/#services"},
+                {"@type": "ListItem", "position": 3, "name": s["name"], "item": SITE + svc_url(s)}]}]}
+        svc_ld = '<script type="application/ld+json">' + json.dumps(ld, ensure_ascii=False).replace("</", "<\\/") + "</script>\n"
+        page(svc_url(s), f'{s["h1"]} | Rx Medical Web', s["lead"], body, extra_head=faq_ld + svc_ld, og_img=f'/assets/img/{s["img"]}.jpg')
 
 
 def build_gallery():
@@ -701,9 +710,34 @@ def build_gallery():
 # ---------------------------------------------------------------- other pages
 def build_about():
     about_nav = [("Why choose us", "/about/why-choose-us/"), ("Testimonials", "/about/testimonials/"), ("Our work", "/portfolio/")]
-    body = f"""{page_head([("About us", None)], "The agency dedicated to medical presence and marketing.", "Family owned, physician owned and in house since 2008. Strategic partner of Empire Medical Training.")}
+    story = [("2008", "Company founded in Fort Lauderdale."),
+             ("2010", "Became the main source of online marketing for Empire Medical Training."),
+             ("2012", "Set our focus on the success of doctors and their private practices, and began serving Empire's vendors."),
+             ("2016", "Joined forces with Empire Medical Training, after the success stories of so many of its attendees."),
+             ("Today", "A strategic partner of Empire, combining an in-house team, a physician advisory board and the latest AI.")]
+    tl = "".join(f"<li><b>{y}</b><p>{e(t)}</p></li>" for y, t in story)
+    body = f"""{page_head([("About us", None)], "The agency dedicated to medical presence and marketing.", "Family owned, physician owned and in house since 2008. Strategic partner of Empire Medical Training.", "hero-team", "A marketing team and a physician advisor reviewing website designs")}
+<section class="section"><div class="wrap xp-two">
+  <div><p class="xp-kicker">Who we are</p><p class="xp-big">We do one thing: the online presence and marketing of medical practices. Designers, programmers, marketers, MBAs and physicians work under one roof in Fort Lauderdale, and we do not outsource.</p></div>
+  <dl class="about-facts">
+    <div><dt>Established</dt><dd>2008</dd></div>
+    <div><dt>Practices served</dt><dd>400+ physicians and dentists</dd></div>
+    <div><dt>Team</dt><dd>In house, Fort Lauderdale</dd></div>
+    <div><dt>Advisors</dt><dd>Physician advisory board</dd></div>
+  </dl>
+</div></section>
+<section class="section on-dark"><div class="wrap">
+  {sec_title("The latest AI, checked by people", "AI lets a focused team do more for each practice, faster. Because this is medicine, nothing it produces is published until our staff and physician advisors have reviewed it.")}
+  <div class="cols-3 about-ai">
+    <div><h3>In our own work</h3><p>Research, design, content drafts, video editing, call analysis and reporting all move faster with current AI tools.</p></div>
+    <div><h3>For your patients</h3><p>AI agents answer by chat, text and phone at any hour, using only the information you approve.</p></div>
+    <div><h3>With physicians in the loop</h3><p>Our physician advisory board reviews medical content, so what carries your name is accurate.</p></div>
+  </div>
+</div></section>
+{partner()}
+<section class="section on-mint"><div class="wrap">{sec_title("Our story")}<ol class="story-line">{tl}</ol></div></section>
 <section class="section"><div class="wrap layout">
-  <div class="prose">{ABOUT_BODY}</div>
+  <div class="prose"><p class="xp-kicker">The details</p>{ABOUT_BODY}</div>
   {slip("Talk to our team", "Tell us about your practice and your goals.", about_nav, "More about us")}
 </div></section>
 {closing()}"""
@@ -728,10 +762,32 @@ def build_about():
 
 
 def build_portfolio():
-    body = f"""{page_head([("Our work", None)], "Our work", "Some of our most recent website launches.")}
-<section class="section"><div class="wrap"><div class="work-3">{work_cards("h2")}</div></div></section>
-{closing("Need more for your marketing?", "Have specific requirements? Send us the details.")}"""
-    page("/portfolio/", "Our work | Rx Medical Web", "Recent website launches by Rx Medical Web.", body)
+    cases = ""
+    for w in WORK:
+        tags = "".join(f"<li>{e(t)}</li>" for t in w.get("did", []))
+        cases += f"""<article class="case reveal">
+  <a class="shot" href="{w["url"]}" rel="noopener"><img src="/assets/img/{w["shot"]}.webp" width="1400" height="801" alt="Screenshot of the {e(w["name"])} website" loading="lazy"></a>
+  <div><h2>{e(w["name"])}</h2><p>{e(w["note"])}</p>
+    <p class="case-label">What we do for them</p><ul class="case-tags">{tags}</ul>
+    <a class="btn btn-line" href="{w["url"]}" rel="noopener">Visit the site</a></div>
+</article>"""
+    body = f"""{page_head([("Our work", None)], "Our work", "Websites and marketing we build and run every day for our strategic partner, Empire Medical Training, and its family of brands.")}
+<section class="section"><div class="wrap cases">{cases}</div></section>
+{closing("Want this for your practice?", "Tell us what you have in mind and we will show you how we would build it.")}"""
+    page("/portfolio/", "Our work | Rx Medical Web", "Websites and marketing built and run by Rx Medical Web.", body)
+
+
+def build_404():
+    body = f"""<section class="page-head lost"><div class="wrap">
+  <p class="lost-rx" aria-hidden="true">℞</p>
+  <h1>This page is out of stock.</h1>
+  <p class="lead">The address may have changed in our redesign. Here is where most people are headed.</p>
+  <div class="hero-actions"><a class="btn btn-primary" href="/">Go to the home page</a><a class="btn btn-ghost" href="/#services">See all services</a><a class="btn btn-ghost" href="/contact-us/">Contact us</a></div>
+</div></section>"""
+    page("/404/", "Page not found | Rx Medical Web", "Page not found.", body, extra_head='<meta name="robots" content="noindex">\n')
+    os.replace(os.path.join(ROOT, "404", "index.html"), os.path.join(ROOT, "404.html"))
+    os.rmdir(os.path.join(ROOT, "404"))
+    BUILT.remove("/404/")
 
 
 def build_contact():
@@ -802,6 +858,7 @@ if __name__ == "__main__":
     build_portfolio()
     build_contact()
     build_articles()
+    build_404()
     build_sitemap()
     build_gallery()
     print(f"built {len(BUILT)} pages")
