@@ -785,6 +785,42 @@ SERVICES = [
   <li><strong>Business cards.</strong> Matched to the rest of your print portfolio.</li>
 </ul>
 """),
+    dict(group=3, slug="integrations", name="Integrations with your tools", new=True,
+         h1="Integrations with the tools you already use",
+         lead="You do not have to replace your systems to work with us. What we build connects to your current tools whenever they offer an API or webhooks.",
+         blurb="Our systems connect to your EMR, scheduling, CRM and payment tools through their APIs and webhooks.",
+         img="analytics-desk", alt="Screens showing connected data and charts",
+         anim=("flow", ["Your current tools", "API or webhook", "Our systems", "One view of every patient"]),
+         body="""
+<p>Most practices already run on several systems: an EMR, a scheduler, a phone system, a payment processor, maybe a CRM. Replacing them is expensive and disruptive, and in most cases it is not necessary.</p>
+<p>Our websites, apps, AI agents and campaigns are built to exchange information with the tools you have. If your system offers an API or webhooks, we can connect to it.</p>
+
+<h2>What we connect</h2>
+<ul class="two">
+  <li>EMR and practice management systems</li>
+  <li>Online scheduling and calendars</li>
+  <li>CRM and lead management</li>
+  <li>Phone systems and call tracking</li>
+  <li>Text messaging and e-mail platforms</li>
+  <li>Payment processors and online stores</li>
+  <li>Review and reputation platforms</li>
+  <li>Accounting and reporting tools</li>
+</ul>
+
+<h2>What an integration does for you</h2>
+<ul>
+  <li>A booking made on your website or app appears in your scheduler without anyone retyping it</li>
+  <li>A new lead from an ad lands in your CRM with the campaign that produced it</li>
+  <li>An AI agent can check open times and pass a request to your front desk</li>
+  <li>A completed visit can trigger a review request or a follow-up message</li>
+  <li>Your reports show calls, bookings and revenue in one place</li>
+</ul>
+
+<h2>When a tool cannot connect</h2>
+<p>Not every system allows it. Some vendors do not offer an API, limit what it can do or charge for access. We check this before we promise anything, tell you plainly what is possible, and suggest a workaround or an alternative when it is not.</p>
+
+<div class="note"><p>Any connection that carries patient information is set up with HIPAA requirements in mind, using the vendor's approved methods and with your compliance contact involved.</p></div>
+"""),
     dict(group=3, slug="analytics-call-tracking", name="Analytics and call tracking", new=True,
          h1="Analytics and call tracking",
          lead="See which campaigns make the phone ring. One dashboard for calls, forms, bookings and what each of them cost.",

@@ -520,5 +520,23 @@
    "q": "What happens after the app is published?",
    "a": "We keep it working as Apple and Google update their phones, fix anything that comes up and add features when you ask for them. We also send you reports on how many patients installed the app and what they use most."
   }
+ ],
+ "integrations": [
+  {
+   "q": "Do we have to change our EMR or scheduling system to work with you?",
+   "a": "No. We start from the tools you already use and connect to them wherever they allow it. We only suggest a change when a tool cannot do something you have told us you need."
+  },
+  {
+   "q": "How do we know whether our system can be connected?",
+   "a": "It depends on whether your vendor offers an API or webhooks and what they permit. We check that for each tool before we commit to anything, and we tell you plainly what is possible."
+  },
+  {
+   "q": "What if our vendor does not offer an API?",
+   "a": "Then a direct connection is not possible, and we will say so. There is often a workaround, such as a scheduled export or a form that hands off to your staff, and we will explain the trade-offs."
+  },
+  {
+   "q": "Is patient information safe when systems are connected?",
+   "a": "We use the vendor's approved methods, limit each connection to the information it needs and set everything up with HIPAA requirements in mind. Your compliance contact is involved before any patient information moves."
+  }
  ]
 }

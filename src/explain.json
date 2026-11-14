@@ -2434,5 +2434,89 @@
     "d": "The check Apple and Google run on every app and update before they allow it in their stores."
    }
   ]
+ },
+ "integrations": {
+  "plain": "An integration is a connection that lets two pieces of software share information automatically. It means the website, app, AI agents and campaigns we build can work with the systems your practice already uses, so you keep your tools and nobody has to copy data by hand. It is possible whenever your current tool offers an API or webhooks, which are the standard ways software lets other software in.",
+  "deliverables": [
+   {
+    "t": "Integration review",
+    "d": "A check of each tool you use to see whether it offers an API or webhooks and what it allows."
+   },
+   {
+    "t": "Connection plan",
+    "d": "A plain-language map of what information moves between which systems, and when."
+   },
+   {
+    "t": "Built connections",
+    "d": "The links themselves, built and tested so bookings, leads and messages reach the right system."
+   },
+   {
+    "t": "Automations",
+    "d": "Follow-ups, reminders and review requests that start on their own when something happens in one of your tools."
+   },
+   {
+    "t": "Monitoring",
+    "d": "We watch the connections and fix them when a vendor changes something, before it affects your office."
+   },
+   {
+    "t": "Documentation",
+    "d": "A short written record of what is connected and how, so you are never dependent on memory."
+   }
+  ],
+  "steps": [
+   {
+    "t": "List your tools",
+    "d": "You tell us what you use for records, scheduling, phones, payments and marketing. We look up what each one allows."
+   },
+   {
+    "t": "Agree the plan",
+    "d": "We show you what can connect, what cannot and what we recommend. You decide what is worth building first."
+   },
+   {
+    "t": "Build and test",
+    "d": "We build the connections and test them with sample data before any real patient information moves."
+   },
+   {
+    "t": "Monitor",
+    "d": "After launch we keep watching the connections and adjust them as your tools and your practice change."
+   }
+  ],
+  "tools": [
+   {
+    "t": "API",
+    "d": "A doorway a software company provides so other programs can read or send information. We use your vendor's API to exchange bookings, leads and messages."
+   },
+   {
+    "t": "Webhooks",
+    "d": "Automatic notices one system sends to another the moment something happens, such as a new booking. We use them to start follow-ups right away."
+   },
+   {
+    "t": "Automation platforms",
+    "d": "Services that link apps without custom code. We use them for simple connections and build custom ones when more control is needed."
+   },
+   {
+    "t": "AI agents",
+    "d": "Assistants that can use those connections to check open times or log a request. They work only with the access you approve."
+   }
+  ],
+  "fit": [
+   "you are happy with your EMR or scheduler and do not want to replace it",
+   "your staff retypes the same information into more than one system",
+   "you want your website, ads and front desk to share one view of each patient"
+  ],
+  "glossary": [
+   {
+    "t": "API",
+    "d": "Short for application programming interface: the official way one program lets another exchange information with it."
+   },
+   {
+    "t": "Webhook",
+    "d": "A message one system sends automatically to another when a specific event happens."
+   },
+   {
+    "t": "Two-way sync",
+    "d": "A connection where a change in either system is reflected in the other."
+   }
+  ]
  }
 }

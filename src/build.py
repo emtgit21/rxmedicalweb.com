@@ -30,7 +30,7 @@ CUSTOM_ANIM = {
     "marketing-strategy": "roadmap", "medical-graphic-design": "brand", "printing": "press",
     "medical-practice-kit": "kit", "analytics-call-tracking": "dashboard", "medical-e-commerce": "cart",
     "emr-patient-portals": "portal", "website-accessibility-compliance": "a11y", "website-maintenance": "uptime",
-    "landing-pages-funnels": "abtest", "mobile-apps": "apps", "medical-spa-website-design": "devices",
+    "landing-pages-funnels": "abtest", "integrations": "hub", "mobile-apps": "apps", "medical-spa-website-design": "devices",
 }
 try:
     import json
@@ -551,6 +551,18 @@ def build_home():
 </section>
 
 {partner()}
+
+<section class="section on-dark integrate">
+  <div class="wrap xp-two even">
+    <div>
+      <h2>Keep the tools you already use.</h2>
+      <p class="lead">You do not have to replace your EMR, your scheduler or your CRM to work with us. Our websites, apps, AI agents and campaigns connect to your current systems whenever they offer an API or webhooks.</p>
+      <ul class="chips"><li>EMR</li><li>Scheduling</li><li>CRM</li><li>Phones</li><li>Text and e-mail</li><li>Payments</li><li>Reviews</li></ul>
+      <p class="split-cta"><a class="btn btn-primary" href="/service/integrations/">How integrations work</a></p>
+    </div>
+    {anim(pick("hub", ("flow", ["Your current tools", "API or webhook", "Our systems", "One view of every patient"])))}
+  </div>
+</section>
 
 <section class="copy-sheet">
   <div class="wrap">
