@@ -305,6 +305,24 @@
    "a": "We send reports that show opens, clicks and the bookings each campaign produced, so you can see which newsletters, promotions and event invitations patients respond to. Keep in mind that email works through steady contact over time, so results are best judged across several campaigns instead of a single send."
   }
  ],
+ "sms-marketing": [
+  {
+   "q": "What do we need to provide to get started?",
+   "a": "We need your business phone number so we can register it with the carriers, plus a clear picture of how patients currently give you their contact details. From there we set up the opt-in forms, keywords and consent records, so your list is built only from patients who agreed to receive texts. It also helps to tell us which treatments, events or schedule gaps you most want to promote."
+  },
+  {
+   "q": "How long does it take before the first campaign goes out?",
+   "a": "It depends on the practice. Carrier registration of your number has to be completed before messages are delivered reliably, and the time that takes varies, as does the work needed to build a list of patients who have opted in. After a free analysis we give you a plan that shows the steps and the expected timing for your situation."
+  },
+  {
+   "q": "Who answers when a patient replies to a text?",
+   "a": "Replies are routed to your front desk or to an AI agent, depending on what fits your practice. We set up the routing so a patient who wants to book or ask a question reaches someone who can respond. Our reports then show replies, bookings and opt-outs so you can see what each campaign produced."
+  },
+  {
+   "q": "What should we watch out for when texting patients?",
+   "a": "The main risks are texting people who never agreed to it and putting too much information in the message. We only text patients who opted in, every message includes a way to opt out, and we keep health details out of the text itself. Sending too often is the other common mistake, since it drives opt-outs, so we plan the schedule around messages that are useful, such as open appointments, seasonal offers and reminders for repeat treatments."
+  }
+ ],
  "physician-content-marketing": [
   {
    "q": "Who actually writes the content for our practice?",
