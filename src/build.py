@@ -8,6 +8,7 @@ repo root, plus sitemap.xml. No dependencies beyond the standard library.
 """
 import datetime
 import html
+import json
 import os
 import sys
 
@@ -209,8 +210,52 @@ def footer():
 </footer>"""
 
 
-def page(path, title, desc, body, extra_head="", og_img="/assets/img/hero-clinic.jpg"):
+SEO = json.load(open(os.path.join(ROOT, "src", "seo.json"), encoding="utf-8"))
+ORG_ID, WEB_ID = SITE + "/#organization", SITE + "/#website"
+CRUMB_PARENTS = {"about": ("About us", "/about/"), "resources": ("Resources", "/resources/"), "specialties": ("Specialties", "/specialties/")}
+PAGE_TYPES = {"/about/": "AboutPage", "/contact-us/": "ContactPage", "/resources/": "CollectionPage", "/specialties/": "CollectionPage", "/portfolio/": "CollectionPage"}
+LASTMOD = {}
+
+
+def fit_title(t):
+    """Search results cut titles at about 60 characters: drop the brand suffix before a title gets cut."""
+    suffix = " | Rx Medical Web"
+    return t[:-len(suffix)] if len(t) > 60 and t.endswith(suffix) else t
+
+
+def fit_desc(d):
+    """Keep whole sentences up to 160 characters."""
+    d = " ".join(d.split())
+    if len(d) <= 160:
+        return d
+    out = ""
+    for sent in _re.split(r"(?<=[.!?])\s+", d):
+        if len(out) + len(sent) + 1 > 160:
+            break
+        out = (out + " " + sent).strip()
+    return out if len(out) >= 90 else d[:157].rsplit(" ", 1)[0] + "…"
+
+
+def page(path, title, desc, body, extra_head="", og_img="/assets/img/hero-clinic.jpg", og_type="website"):
     """path like '/' or '/about/'."""
+    name = title.split(" | ")[0]
+    o = SEO.get(path, {})
+    title, desc = o.get("title") or fit_title(title), o.get("desc") or fit_desc(desc)
+    noindex = "noindex" in extra_head or path in UNLISTED
+    if path in UNLISTED and "noindex" not in extra_head:
+        extra_head += '<meta name="robots" content="noindex">\n'
+    if not noindex:
+        extra_head = '<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">\n' + extra_head
+        if path != "/" and '"BreadcrumbList"' not in extra_head:
+            seg = path.strip("/").split("/")
+            trail = [("Home", "/")] + ([CRUMB_PARENTS[seg[0]]] if len(seg) > 1 and seg[0] in CRUMB_PARENTS else []) + [(name, path)]
+            extra_head += ld({"@context": "https://schema.org", "@graph": [
+                {"@type": PAGE_TYPES.get(path, "WebPage"), "@id": SITE + path + "#webpage", "url": SITE + path, "name": name, "description": desc,
+                 "inLanguage": "en-US", "isPartOf": {"@id": WEB_ID}, "about": {"@id": ORG_ID}},
+                {"@type": "BreadcrumbList", "itemListElement": [
+                    {"@type": "ListItem", "position": n + 1, "name": t, "item": SITE + u} for n, (t, u) in enumerate(trail)]}]})
+        LASTMOD[path] = hashlib.sha1((title + desc + body).encode("utf-8")).hexdigest()[:16]
+    canonical = "" if path == "/404/" else f'<link rel="canonical" href="{SITE}{path}">\n'
     doc = f"""<!doctype html>
 <html lang="en">
 <head>
@@ -218,16 +263,21 @@ def page(path, title, desc, body, extra_head="", og_img="/assets/img/hero-clinic
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(title)}</title>
 <meta name="description" content="{e(desc)}">
-<link rel="canonical" href="{SITE}{path}">
-<meta property="og:type" content="website">
+{canonical}<meta property="og:type" content="{og_type}">
+<meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Rx Medical Web">
 <meta property="og:title" content="{e(title)}">
 <meta property="og:description" content="{e(desc)}">
 <meta property="og:url" content="{SITE}{path}">
 <meta property="og:image" content="{SITE}{og_img}">
 <meta name="theme-color" content="#0b2f38">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{e(title)}">
+<meta name="twitter:description" content="{e(desc)}">
+<meta name="twitter:image" content="{SITE}{og_img}">
 <link rel="preload" href="/assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>{FONT_CSS}</style>
 <link rel="stylesheet" href="/assets/site.css?v={ver("assets/site.css")}">
@@ -334,7 +384,7 @@ def testimonials_block(full=False):
     return f"""<div class="quote-lead">
   <figure><blockquote>“{e(lead["quote"])}”</blockquote><figcaption>{who(lead)}</figcaption></figure>
   <div class="quote-aside">
-    <h3>Good words from good people</h3>
+    <h2 class="quote-h">Good words from good people</h2>
     <p>Many of our clients first met us through Empire Medical Training, then asked us to build the website and marketing for the services they had just learned.</p>
     {more}
   </div>
@@ -614,11 +664,12 @@ def build_home():
 </section>
 
 {closing()}"""
-    ld = """<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Rx Medical Web","url":"https://rxmedicalweb.com/","logo":"https://rxmedicalweb.com/wp-content/uploads/mainlogo.png","image":"https://rxmedicalweb.com/assets/img/hero-clinic.jpg","description":"Marketing agency dedicated to medical presence and marketing: websites, SEO, advertising, social media and AI agents for medical practices.","telephone":"+1-888-599-4548","email":"support@rxmedicalweb.com","foundingDate":"2008","address":{"@type":"PostalAddress","streetAddress":"2720 E. Oakland Park Blvd, Suite 103","addressLocality":"Fort Lauderdale","addressRegion":"FL","postalCode":"33306","addressCountry":"US"},"openingHours":"Mo-Fr 09:00-18:00","sameAs":["https://www.linkedin.com/company/rx-medical-web","https://www.facebook.com/rxmedicalweb/"]}</script>
-"""
+    ld_home = ld({"@context": "https://schema.org", "@graph": [
+        {"@type": "ProfessionalService", "@id": ORG_ID, "name": "Rx Medical Web", "url": "https://rxmedicalweb.com/", "logo": {"@type": "ImageObject", "url": "https://rxmedicalweb.com/wp-content/uploads/mainlogo.png", "width": 400, "height": 83}, "image": "https://rxmedicalweb.com/assets/img/hero-clinic.jpg", "description": "Marketing agency dedicated to medical presence and marketing: websites, SEO, advertising, social media and AI agents for medical practices.", "telephone": "+1-888-599-4548", "email": "support@rxmedicalweb.com", "foundingDate": "2008", "address": {"@type": "PostalAddress", "streetAddress": "2720 E. Oakland Park Blvd, Suite 103", "addressLocality": "Fort Lauderdale", "addressRegion": "FL", "postalCode": "33306", "addressCountry": "US"}, "openingHours": "Mo-Fr 09:00-18:00", "sameAs": ["https://www.linkedin.com/company/rx-medical-web", "https://www.facebook.com/rxmedicalweb/"], "areaServed": {"@type": "Country", "name": "United States"}, "knowsAbout": ["Medical website design", "Search engine optimization for medical practices", "Local SEO", "Pay-per-click advertising", "Social media marketing", "AI agents for medical practices", "Reputation management"]},
+        {"@type": "WebSite", "@id": WEB_ID, "url": SITE + "/", "name": "Rx Medical Web", "inLanguage": "en-US", "publisher": {"@id": ORG_ID}}]})
     page("/", "Rx Medical Web | Medical website design and marketing agency",
          "The marketing agency for medical practices: websites, SEO, ads, social media and AI agents. Strategic partner of Empire Medical Training.",
-         body, extra_head=ld + '<link rel="preload" as="image" href="/assets/img/hero-clinic.webp" fetchpriority="high" media="(min-width: 701px)"><link rel="preload" as="image" href="/assets/img/hero-clinic-m.webp" fetchpriority="high" media="(max-width: 700px)">\n')
+         body, extra_head=ld_home + '<link rel="preload" as="image" href="/assets/img/hero-clinic.webp" fetchpriority="high" media="(min-width: 701px)"><link rel="preload" as="image" href="/assets/img/hero-clinic-m.webp" fetchpriority="high" media="(max-width: 700px)">\n')
 
 
 # ---------------------------------------------------------------- services
@@ -633,14 +684,14 @@ def sec_title(h2, p=""):
 
 def x_fit(x):
     items = "".join(f"<li>{e(t[0].upper() + t[1:])}</li>" for t in x.get("fit", []))
-    return f'<div class="fit"><h3>This is a good fit if</h3><ul>{items}</ul></div>' if items else ""
+    return f'<div class="fit"><h2 class="fit-h">This is a good fit if</h2><ul>{items}</ul></div>' if items else ""
 
 
 def x_deliverables(x, variant):
     d = x.get("deliverables", [])
     cells = "".join(f'<div><h3>{e(i["t"])}</h3><p>{e(i["d"])}</p></div>' for i in d)
     if variant == "sheet":
-        return f'<div class="dl-sheet"><div class="dl-sheet-in"><b>What you get <span>℞</span></b>{cells}</div></div>'
+        return f'<div class="dl-sheet"><div class="dl-sheet-in"><h2 class="dl-sheet-h">What you get <span>℞</span></h2>{cells}</div></div>'
     return f'<div class="dl-{variant}">{cells}</div>'
 
 
@@ -724,7 +775,7 @@ def build_services():
         ld = {"@context": "https://schema.org", "@graph": [
             {"@type": "Service", "name": s["h1"], "description": s["lead"], "serviceType": s["name"], "url": SITE + svc_url(s),
              "areaServed": "US", "audience": {"@type": "Audience", "audienceType": "Medical practices"},
-             "provider": {"@type": "ProfessionalService", "name": "Rx Medical Web", "url": SITE + "/", "telephone": "+1-888-599-4548"}},
+             "provider": {"@type": "ProfessionalService", "@id": ORG_ID, "name": "Rx Medical Web", "url": SITE + "/", "telephone": "+1-888-599-4548"}},
             {"@type": "BreadcrumbList", "itemListElement": [
                 {"@type": "ListItem", "position": 1, "name": "Home", "item": SITE + "/"},
                 {"@type": "ListItem", "position": 2, "name": group, "item": SITE + "/#services"},
@@ -1034,7 +1085,7 @@ def build_specialties():
   </div>
 </section>
 {closing(f"Let us look at your practice.", "Send us your website. We will tell you what we would fix first, at no charge.")}"""
-        page(url, f'{sp["h1"]} | Rx Medical Web', words(sp["lead"]) if len(sp["lead"]) < 165 else sp["lead"][:157].rsplit(" ", 1)[0] + "…", body, head, og_img=f'/assets/img/{sp["img"]}.jpg')
+        page(url, f'{sp["h1"]} | Rx Medical Web', sp["lead"], body, head, og_img=f'/assets/img/{sp["img"]}.jpg')
 
     body = f"""{page_head([("Specialties", None)], "Marketing built around your specialty", "Each field of medicine finds its patients differently. Choose yours to see the challenges we plan for, the services we would start with and what the first 90 days look like.")}
 <section class="section"><div class="wrap">
@@ -1057,7 +1108,7 @@ def build_resources():
         head = ld({"@context": "https://schema.org", "@type": "Article", "headline": a["title"], "description": a["dek"],
                    "image": f'{SITE}/assets/img/{a["img"]}.jpg', "datePublished": RES_ISO, "dateModified": RES_ISO,
                    "author": {"@type": "Organization", "name": "Rx Medical Web", "url": SITE + "/about/"},
-                   "publisher": {"@type": "Organization", "name": "Rx Medical Web", "logo": {"@type": "ImageObject", "url": f"{SITE}{UP}mainlogo.png"}},
+                   "publisher": {"@type": "Organization", "@id": ORG_ID, "name": "Rx Medical Web", "logo": {"@type": "ImageObject", "url": f"{SITE}{UP}mainlogo.png"}},
                    "mainEntityOfPage": SITE + url})
         body = f"""<section class="res-hero">
   <div class="wrap">
@@ -1082,7 +1133,7 @@ def build_resources():
   {guide_band()}
 </div></section>
 {closing()}"""
-        page(url, f'{a["title"]} | Rx Medical Web', a["dek"], body, head, og_img=f'/assets/img/{a["img"]}.jpg')
+        page(url, f'{a["title"]} | Rx Medical Web', a["dek"], body, head, og_img=f'/assets/img/{a["img"]}.jpg', og_type="article")
 
     f0 = RESOURCES[0]
     body = f"""{page_head([("Resources", None)], "Resources for medical practices", "Practical guides on finding patients, answering them and keeping them, written by our team for physicians and practice managers.")}
@@ -1219,14 +1270,6 @@ def build_articles():
 {closing()}"""
         page(f'/{a["path"]}/', f'{a["title"]} | Rx Medical Web', a["lead"], body, og_img=f'/assets/img/{a["img"]}.jpg')
 
-    # Old WordPress attachment URL: send visitors and search engines to the service page.
-    target = "/service/medical-website-design/"
-    out = os.path.join(ROOT, "medical-website-design", "index.html")
-    with open(out, "w", encoding="utf-8") as f:
-        f.write(f'<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Medical website design | Rx Medical Web</title>'
-                f'<link rel="canonical" href="{SITE}{target}"><meta http-equiv="refresh" content="0; url={target}">'
-                f'<meta name="robots" content="noindex"></head><body><p><a href="{target}">Medical website design</a></p></body></html>\n')
-
 
 def build_chat_index():
     """Knowledge for the site assistant: every answer is text that already exists on the site."""
@@ -1263,10 +1306,33 @@ def build_chat_index():
 
 
 def build_sitemap():
+    """lastmod only changes when the page's own content changes (kept in src/lastmod.json)."""
+    store_path = os.path.join(ROOT, "src", "lastmod.json")
+    store = json.load(open(store_path, encoding="utf-8")) if os.path.exists(store_path) else {}
     today = datetime.date.today().isoformat()
-    urls = "".join(f"<url><loc>{SITE}{p}</loc><lastmod>{today}</lastmod></url>\n" for p in BUILT)
+    for p in BUILT:
+        if store.get(p, {}).get("hash") != LASTMOD.get(p):
+            store[p] = {"hash": LASTMOD.get(p), "date": today}
+    store = {p: store[p] for p in BUILT}
+    with open(store_path, "w", encoding="utf-8") as f:
+        json.dump(store, f, indent=1, sort_keys=True)
+        f.write("\n")
+    urls = "".join(f"<url><loc>{SITE}{p}</loc><lastmod>{store[p]['date']}</lastmod></url>\n" for p in BUILT)
     with open(os.path.join(ROOT, "sitemap.xml"), "w", encoding="utf-8") as f:
         f.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + urls + "</urlset>\n")
+
+
+def build_llms():
+    """llms.txt: a plain summary of the site for AI assistants."""
+    L = ["# Rx Medical Web", "",
+         "> Marketing agency dedicated to medical practices: websites, SEO, advertising, social media, AI agents, apps, e-mail and text marketing, and printing. Physician owned, based in Fort Lauderdale, Florida. Strategic partner of Empire Medical Training.", "",
+         "Contact: 1-888-599-4548, support@rxmedicalweb.com, " + SITE + "/contact-us/", "", "## Services", ""]
+    L += [f"- [{s['name']}]({SITE}{svc_url(s)}): {s['lead']}" for s in SERVICES]
+    L += ["", "## Specialties", ""] + [f"- [{v['name']}]({SITE}/specialties/{k}/): {v['lead']}" for k, v in SPECS.items()]
+    L += ["", "## Guides", ""] + [f"- [{a['title']}]({SITE}/resources/{a['slug']}/): {a['dek']}" for a in RESOURCES]
+    L += ["", "## Company", "", f"- [About us]({SITE}/about/)", f"- [Why choose us]({SITE}/about/why-choose-us/)", f"- [Our work]({SITE}/portfolio/)", f"- [Privacy policy]({SITE}/privacy-policy/)"]
+    with open(os.path.join(ROOT, "llms.txt"), "w", encoding="utf-8") as f:
+        f.write("\n".join(L) + "\n")
 
 
 if __name__ == "__main__":
@@ -1283,5 +1349,6 @@ if __name__ == "__main__":
     build_404()
     build_chat_index()
     build_sitemap()
+    build_llms()
     build_gallery()
     print(f"built {len(BUILT)} pages")

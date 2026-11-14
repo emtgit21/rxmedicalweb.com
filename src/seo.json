@@ -1,0 +1,65 @@
+{
+ "/about/": {
+  "title": "About Rx Medical Web | Medical marketing agency"
+ },
+ "/about/testimonials/": {
+  "title": "Client testimonials from physicians | Rx Medical Web",
+  "desc": "Read what physicians and practice owners say about working with Rx Medical Web on their websites, search visibility, advertising and patient marketing."
+ },
+ "/book-a-call/": {
+  "title": "Book a free 30-minute marketing call | Rx Medical Web"
+ },
+ "/contact-us/": {
+  "title": "Contact Rx Medical Web | Fort Lauderdale, Florida"
+ },
+ "/portfolio/": {
+  "title": "Our work: medical websites and marketing | Rx Medical Web",
+  "desc": "See medical websites, apps and marketing campaigns designed, built and run by Rx Medical Web, including our work for Empire Medical Training."
+ },
+ "/privacy-policy/": {
+  "desc": "How Rx Medical Web collects, uses and protects the information you share through rxmedicalweb.com, including forms, analytics and call booking."
+ },
+ "/dental-website-design/": {
+  "title": "Why dental practices need a modern website | Rx Medical Web"
+ },
+ "/medical-internet-marketing/": {
+  "title": "Why medical internet marketing matters | Rx Medical Web"
+ },
+ "/resources/missed-calls-and-ai-agents/": {
+  "title": "Missed calls: what AI agents and text-back can do"
+ },
+ "/resources/new-procedure-launch-checklist/": {
+  "title": "New procedure? A first-month marketing checklist",
+  "desc": "An ordered checklist for the first month after training: what to prepare, who to tell first, and how to know if the new service is gaining traction."
+ },
+ "/resources/short-video-ideas-for-physicians/": {
+  "title": "Short videos for physicians: 20 topics patients want"
+ },
+ "/resources/ai-search-for-medical-practices/": {
+  "desc": "How AI assistants and AI search summaries pick practices to mention, and the groundwork that makes yours easier to find, understand and verify."
+ },
+ "/resources/email-and-text-that-patients-welcome/": {
+  "desc": "A practical guide to patient e-mail and SMS: consent, useful content, reminder timing, opt-outs and keeping health details out of messages."
+ },
+ "/resources/questions-before-hiring-a-medical-marketing-agency/": {
+  "desc": "A checklist for physicians and practice managers: ownership, contracts, medical content, measurement, advertising rules and what happens if you leave."
+ },
+ "/resources/what-a-medical-website-needs-in-2026/": {
+  "desc": "A checklist for physicians and practice managers: speed, booking, credentials, reviews, accessibility, structured data and physician review."
+ },
+ "/service/analytics-call-tracking/": {
+  "desc": "See which campaigns make the phone ring. One dashboard for calls, forms, bookings and what each of them cost your practice."
+ },
+ "/service/medical-graphic-design/": {
+  "desc": "Logos, brochures, postcards and print materials that give your medical practice one consistent, professional image everywhere."
+ },
+ "/service/video-testimonials/": {
+  "desc": "Our videographers come to your office, interview your patients and deliver a finished, edited testimonial video for your practice website."
+ },
+ "/service/website-maintenance/": {
+  "desc": "A designated team keeps your medical website current, secure and fast, and makes your requested changes within 24 to 48 hours."
+ },
+ "/specialties/weight-loss/": {
+  "desc": "Physician-supervised weight loss is in demand, and telehealth brands compete hard. We help local practices win patients within prescription advertising rules."
+ }
+}
