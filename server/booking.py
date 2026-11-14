@@ -8,15 +8,20 @@ systemd unit rxbooking. Bookings live in SQLite outside the web root.
   POST /api/booking/book           create a booking (JSON)
   GET  /api/booking/ics?t=<token>  calendar file for a booking
   GET  /api/booking/cancel?t=<token>  cancel a booking (link in the confirmation)
+  POST /api/booking/contact        relay the contact form to the office by e-mail (nothing is stored)
 
 Settings come from the environment (see /etc/rxbooking.env on the server):
   RXB_DB        path of the SQLite file            (default /var/lib/rxbooking/bookings.db)
   RXB_PORT      port to listen on, loopback only   (default 8791)
   RXB_NOTIFY    optional command run after each booking or cancellation; it receives
                 the booking as JSON on standard input and "booked" or "cancelled" as argument
+  MAILGUN_SENDING_KEY  sending key of the Mailgun domain; without it no e-mail is sent
+  RXB_MAIL_DOMAIN      Mailgun sending domain          (default mg.rxmedicalweb.com)
+  RXB_MAIL_TO          where notices and form requests go (default support@rxmedicalweb.com)
 
 Staff commands:  python3 booking.py list | cancel <id> | block <YYYY-MM-DD> [note] | unblock <YYYY-MM-DD>
 """
+import base64
 import datetime as dt
 import json
 import os
@@ -27,14 +32,18 @@ import subprocess
 import sys
 import threading
 import time
+import urllib.request
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
-from urllib.parse import parse_qs, urlparse
+from urllib.parse import parse_qs, urlencode, urlparse
 from zoneinfo import ZoneInfo
 
 TZ = ZoneInfo("America/New_York")
 DB = os.environ.get("RXB_DB", "/var/lib/rxbooking/bookings.db")
 PORT = int(os.environ.get("RXB_PORT", "8791"))
 NOTIFY = os.environ.get("RXB_NOTIFY", "")
+MAIL_KEY = os.environ.get("MAILGUN_SENDING_KEY", "").strip()
+MAIL_DOMAIN = os.environ.get("RXB_MAIL_DOMAIN", "mg.rxmedicalweb.com")
+MAIL_TO = os.environ.get("RXB_MAIL_TO", "support@rxmedicalweb.com")
 
 OPEN, CLOSE = dt.time(9, 0), dt.time(18, 0)   # office hours, Eastern time, Monday to Friday
 SLOT_MIN = 30          # length of a call
@@ -133,19 +142,53 @@ def ics(row):
     return "\r\n".join(lines) + "\r\n"
 
 
+def send_mail(subject, text, reply_to=""):
+    """Send a plain-text message to the office through Mailgun. True when Mailgun accepted it."""
+    if not MAIL_KEY:
+        return False
+    fields = {"from": f"Rx Medical Web website <website@{MAIL_DOMAIN}>", "to": MAIL_TO, "subject": subject[:200], "text": text}
+    if reply_to:
+        fields["h:Reply-To"] = reply_to
+    req = urllib.request.Request(f"https://api.mailgun.net/v3/{MAIL_DOMAIN}/messages", data=urlencode(fields).encode())
+    req.add_header("Authorization", "Basic " + base64.b64encode(("api:" + MAIL_KEY).encode()).decode())
+    try:
+        with urllib.request.urlopen(req, timeout=20) as r:
+            return r.status == 200
+    except Exception as ex:
+        print("mail error:", getattr(ex, "code", ""), ex, flush=True)
+        return False
+
+
+def booking_text(row, event):
+    lines = [("A call was booked on the website." if event == "booked" else "This call was CANCELLED by the visitor."), "",
+             "When:     " + describe(row["slot"]), "Name:     " + row["name"], "Practice: " + (row["practice"] or "-"),
+             "Phone:    " + row["phone"], "E-mail:   " + row["email"], "Website:  " + (row["website"] or "-"),
+             "Topic:    " + row["topic"], "", "Note from the visitor:", row["notes"] or "-", "",
+             "We call them at the number above; they are not expecting a meeting link."]
+    return "\n".join(lines)
+
+
 def notify(row, event):
-    if not NOTIFY:
+    if not NOTIFY and not MAIL_KEY:
         return
     data = {k: row[k] for k in row.keys() if k not in ("ip",)}
     data["when"] = describe(row["slot"])
     def run():
         try:
-            r = subprocess.run(NOTIFY.split() + [event], input=json.dumps(data).encode(), timeout=60, capture_output=True)
-            if r.returncode == 0 and event == "booked":
+            ok = False
+            if MAIL_KEY:
+                word = "New call booked" if event == "booked" else "Call cancelled"
+                ok = send_mail(f"{word}: {row['name']}, {describe(row['slot'])}", booking_text(row, event), row["email"])
+            if NOTIFY:
+                r = subprocess.run(NOTIFY.split() + [event], input=json.dumps(data).encode(), timeout=60, capture_output=True)
+                ok = ok or r.returncode == 0
+                if r.returncode:
+                    print("notify failed:", r.stderr.decode()[:300], flush=True)
+            if ok and event == "booked":
                 with db() as con:
                     con.execute("UPDATE booking SET notified = 1 WHERE id = ?", (row["id"],))
-            elif r.returncode:
-                print("notify failed:", r.stderr.decode()[:300], flush=True)
+            elif not ok:
+                print(f"notice not delivered for booking #{row['id']} ({event})", flush=True)
         except Exception as ex:  # a failed notice must never lose the booking
             print("notify error:", ex, flush=True)
     threading.Thread(target=run, daemon=True).start()
@@ -226,7 +269,7 @@ class Handler(BaseHTTPRequestHandler):
                     con.execute("UPDATE booking SET status = 'cancelled' WHERE id = ?", (row["id"],))
                 notify(row, "cancelled")
             return self.send(200, SHELL.format(title="Call cancelled", body=CANCELLED.format(when=describe(row["slot"]))), "text/html")
-        if u.path != "/api/booking/book":
+        if u.path not in ("/api/booking/book", "/api/booking/contact"):
             return self.send(404, {"error": "not found"})
         ip = self.headers.get("X-Real-IP", self.client_address[0])
         try:
@@ -241,6 +284,8 @@ class Handler(BaseHTTPRequestHandler):
             return self.send(200, {"ok": True, "when": "", "token": ""})
         if too_many(ip):
             return self.send(429, {"error": "Too many requests. Please call us at 1-888-599-4548."})
+        if u.path == "/api/booking/contact":
+            return self.contact(d)
         f = {"name": clean(d.get("name"), 80), "practice": clean(d.get("practice"), 120), "phone": clean(d.get("phone"), 40),
              "email": clean(d.get("email"), 120).lower(), "topic": clean(d.get("topic"), 60), "notes": clean(d.get("notes"), 1000),
              "website": clean(d.get("website"), 200), "visitor_tz": clean(d.get("tz"), 60)}
@@ -270,6 +315,28 @@ class Handler(BaseHTTPRequestHandler):
         notify(row, "booked")
         self.send(200, {"ok": True, "token": token, "slot": slot, "when": describe(slot),
                         "utc": slot_dt(slot).astimezone(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")})
+
+
+def contact(self, d):
+    """Contact form: relayed to the office by e-mail and not stored here. 502 tells the page to fall back to the visitor's mail app."""
+    f = {k: clean(d.get(k), n) for k, n in (("name", 80), ("practice", 120), ("phone", 40), ("email", 120), ("website", 200), ("topic", 60))}
+    f["email"] = f["email"].lower()
+    message = re.sub(r"[\x00-\x08\x0b-\x1f\x7f]+", " ", str(d.get("message") or "")).strip()[:4000]
+    if len(f["name"]) < 2:
+        return self.send(422, {"error": "Please enter your name.", "field": "name"})
+    if not re.fullmatch(r"[^@\s]+@[^@\s]+\.[a-z]{2,}", f["email"]):
+        return self.send(422, {"error": "Please enter a valid e-mail address.", "field": "email"})
+    text = "\n".join(["A request was sent from the contact form on rxmedicalweb.com.", "",
+                      "Name:          " + f["name"], "Practice:      " + (f["practice"] or "-"), "Phone:         " + (f["phone"] or "-"),
+                      "E-mail:        " + f["email"], "Website:       " + (f["website"] or "-"), "Interested in: " + (f["topic"] or "-"),
+                      "", "Message:", message or "-", "", "Reply to this e-mail to answer them directly."])
+    subject = f"{f['topic'] or 'Website inquiry'}: {f['practice'] or f['name']}"
+    if not send_mail(subject, text, f["email"]):
+        return self.send(502, {"error": "We could not send your request."})
+    self.send(200, {"ok": True})
+
+
+Handler.contact = contact
 
 
 def cli(args):

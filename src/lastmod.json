@@ -1,238 +1,242 @@
 {
  "/": {
   "date": "2026-11-14",
-  "hash": "e3089bfe03ae085a"
+  "hash": "865cfcea5d20af83"
  },
  "/about/": {
   "date": "2026-11-14",
-  "hash": "b7146af5ded3484b"
+  "hash": "17b86d55b5ec5532"
  },
  "/about/testimonials/": {
   "date": "2026-11-14",
-  "hash": "2aadfb0210685975"
+  "hash": "1cff5dfef0ef59f9"
  },
  "/about/why-choose-us/": {
   "date": "2026-11-14",
-  "hash": "3cf890d8030ab468"
+  "hash": "c2d41dcfe5cc9338"
+ },
+ "/book-a-call/": {
+  "date": "2026-11-14",
+  "hash": "742d152dba3787c6"
  },
  "/contact-us/": {
   "date": "2026-11-14",
-  "hash": "1bc715b1aef90d0a"
+  "hash": "5a40c5d25dcd3441"
  },
  "/dental-website-design/": {
   "date": "2026-11-14",
-  "hash": "2d5ed3d69b14a833"
+  "hash": "fecc23c465b4982a"
  },
  "/medical-internet-marketing/": {
   "date": "2026-11-14",
-  "hash": "8ac5d2c8f0622c3d"
+  "hash": "4a72d6f5e241f2ac"
  },
  "/portfolio/": {
   "date": "2026-11-14",
-  "hash": "9337d7f3064ed869"
+  "hash": "5be3ce671e46da8f"
  },
  "/privacy-policy/": {
   "date": "2026-11-14",
-  "hash": "033cb376782e6c05"
+  "hash": "5b01c3383205163c"
  },
  "/resources/": {
   "date": "2026-11-14",
-  "hash": "e751ccb0297a1328"
+  "hash": "dad8c242eca2caa8"
  },
  "/resources/ai-search-for-medical-practices/": {
   "date": "2026-11-14",
-  "hash": "abfa2664389300b6"
+  "hash": "a3e62f309810d4b9"
  },
  "/resources/asking-patients-for-reviews/": {
   "date": "2026-11-14",
-  "hash": "53d1fedd041955e4"
+  "hash": "3ed8aa9bbcf88211"
  },
  "/resources/email-and-text-that-patients-welcome/": {
   "date": "2026-11-14",
-  "hash": "f0455cc8a785477a"
+  "hash": "d48a793cf459e71c"
  },
  "/resources/google-business-profile-for-doctors/": {
   "date": "2026-11-14",
-  "hash": "fd8c92c94c620134"
+  "hash": "df18649b14a273ae"
  },
  "/resources/missed-calls-and-ai-agents/": {
   "date": "2026-11-14",
-  "hash": "0edbfe144503266e"
+  "hash": "e6dfb23e95352304"
  },
  "/resources/new-procedure-launch-checklist/": {
   "date": "2026-11-14",
-  "hash": "817c018cfc0d980d"
+  "hash": "fba693c89a446caa"
  },
  "/resources/questions-before-hiring-a-medical-marketing-agency/": {
   "date": "2026-11-14",
-  "hash": "4f65dd7c9671ef9a"
+  "hash": "caf6abe9a43c619d"
  },
  "/resources/short-video-ideas-for-physicians/": {
   "date": "2026-11-14",
-  "hash": "b8e855ab150da0f2"
+  "hash": "630c121a5a1cb114"
  },
  "/resources/website-privacy-checklist-for-practices/": {
   "date": "2026-11-14",
-  "hash": "78b73d0b299b582e"
+  "hash": "a9b24bea3e79f2da"
  },
  "/resources/what-a-medical-website-needs-in-2026/": {
   "date": "2026-11-14",
-  "hash": "537c5e1d2b0e2338"
+  "hash": "4d1059327d0145cd"
  },
  "/service/ai-chat-messaging/": {
   "date": "2026-11-14",
-  "hash": "9f2682fce8e08cfa"
+  "hash": "35818f916535e3fa"
  },
  "/service/ai-search-optimization/": {
   "date": "2026-11-14",
-  "hash": "9171e16946827316"
+  "hash": "b8cbc384890bd8c8"
  },
  "/service/analytics-call-tracking/": {
   "date": "2026-11-14",
-  "hash": "8b4d61d2fc35052f"
+  "hash": "7fc776a987249b97"
  },
  "/service/e-mail-marketing/": {
   "date": "2026-11-14",
-  "hash": "bb4159e5b4d70780"
+  "hash": "3d3d2fd53f59256d"
  },
  "/service/emr-patient-portals/": {
   "date": "2026-11-14",
-  "hash": "ce60810c91a1922b"
+  "hash": "fc416d308d78e4e7"
  },
  "/service/integrations/": {
   "date": "2026-11-14",
-  "hash": "e31e44ca66799633"
+  "hash": "6fcc994619f70394"
  },
  "/service/landing-pages-funnels/": {
   "date": "2026-11-14",
-  "hash": "8a5bb356308b885c"
+  "hash": "e7b44e1cfec3f34b"
  },
  "/service/local-seo/": {
   "date": "2026-11-14",
-  "hash": "12338153180c2214"
+  "hash": "2ea32ce0251a2b9b"
  },
  "/service/marketing-strategy/": {
   "date": "2026-11-14",
-  "hash": "b703f778cc0b6f67"
+  "hash": "54009276d012aba1"
  },
  "/service/medical-e-commerce/": {
   "date": "2026-11-14",
-  "hash": "339e89900575f2d5"
+  "hash": "59f3acbb5bd93464"
  },
  "/service/medical-graphic-design/": {
   "date": "2026-11-14",
-  "hash": "f891cbe7b6862c58"
+  "hash": "165b4eaa79cda9c0"
  },
  "/service/medical-practice-kit/": {
   "date": "2026-11-14",
-  "hash": "352310ab7cec60ea"
+  "hash": "764c97759ee1b168"
  },
  "/service/medical-spa-website-design/": {
   "date": "2026-11-14",
-  "hash": "aca1e5984db01fe9"
+  "hash": "27e75f0f77fdfa0f"
  },
  "/service/medical-website-design/": {
   "date": "2026-11-14",
-  "hash": "70bd74d8dccc9f26"
+  "hash": "2e4068cdcc05aa62"
  },
  "/service/mobile-apps/": {
   "date": "2026-11-14",
-  "hash": "a8b51ed9b3f4c18b"
+  "hash": "3a21ceda6f0ee3f2"
  },
  "/service/new-service-launch/": {
   "date": "2026-11-14",
-  "hash": "bccaf21098a2fbee"
+  "hash": "b3434870833a1795"
  },
  "/service/online-booking/": {
   "date": "2026-11-14",
-  "hash": "861cf5f918a23739"
+  "hash": "c775dbdd4292ca54"
  },
  "/service/patient-crm-automation/": {
   "date": "2026-11-14",
-  "hash": "b329f448c4687aaf"
+  "hash": "67a8c2b53e878457"
  },
  "/service/pay-per-click/": {
   "date": "2026-11-14",
-  "hash": "92c1f09374d9bf21"
+  "hash": "41eb0003c1c46fce"
  },
  "/service/physician-content-marketing/": {
   "date": "2026-11-14",
-  "hash": "2c437571a906c1b8"
+  "hash": "ce413fd9a65b4719"
  },
  "/service/printing/": {
   "date": "2026-11-14",
-  "hash": "488d8d20e6dbcb39"
+  "hash": "bf076b63aabc50f9"
  },
  "/service/reputation-management/": {
   "date": "2026-11-14",
-  "hash": "ffa4b0a5ed0eaf9e"
+  "hash": "7233d84ea6b3d465"
  },
  "/service/search-engine-marketing/": {
   "date": "2026-11-14",
-  "hash": "5c27356d6d3a1bca"
+  "hash": "d620bdbd0e74f384"
  },
  "/service/search-engine-optimization/": {
   "date": "2026-11-14",
-  "hash": "9e9c1cf89e547f0a"
+  "hash": "e17a1337eb4701c4"
  },
  "/service/short-form-video/": {
   "date": "2026-11-14",
-  "hash": "4197457633599b57"
+  "hash": "390d13ffa46a58bb"
  },
  "/service/sms-marketing/": {
   "date": "2026-11-14",
-  "hash": "a78a5c7b6597e298"
+  "hash": "2e723d32c4b29dc2"
  },
  "/service/social-media/": {
   "date": "2026-11-14",
-  "hash": "680e628d1d950ba8"
+  "hash": "3004977036c9af32"
  },
  "/service/video-testimonials/": {
   "date": "2026-11-14",
-  "hash": "4a395031fd2fb61b"
+  "hash": "0f596b468404e06e"
  },
  "/service/website-accessibility-compliance/": {
   "date": "2026-11-14",
-  "hash": "5a4df9da5d5ac7ec"
+  "hash": "d4312738402b7a54"
  },
  "/service/website-maintenance/": {
   "date": "2026-11-14",
-  "hash": "affd7a33e2136ae8"
+  "hash": "6b8e151d7510da5e"
  },
  "/specialties/": {
   "date": "2026-11-14",
-  "hash": "e81d9831e6ac1550"
+  "hash": "a24c031f65438679"
  },
  "/specialties/dental/": {
   "date": "2026-11-14",
-  "hash": "84bf32d5269de347"
+  "hash": "9f36fd6a6472ab09"
  },
  "/specialties/dermatology/": {
   "date": "2026-11-14",
-  "hash": "1c7c1f6379421040"
+  "hash": "0b475e2f814a8f80"
  },
  "/specialties/family-practice/": {
   "date": "2026-11-14",
-  "hash": "655e47bb662c954f"
+  "hash": "297bb3c1ff6f18d1"
  },
  "/specialties/hormone-anti-aging/": {
   "date": "2026-11-14",
-  "hash": "0bc49d3b4cb72245"
+  "hash": "63e1c2d0a20b0e77"
  },
  "/specialties/med-spa-aesthetics/": {
   "date": "2026-11-14",
-  "hash": "2d6cb610d4bdbb11"
+  "hash": "685b3db1df0dcc73"
  },
  "/specialties/pain-management/": {
   "date": "2026-11-14",
-  "hash": "21542a76b26793d4"
+  "hash": "f53b60b1422b34f7"
  },
  "/specialties/plastic-surgery/": {
   "date": "2026-11-14",
-  "hash": "7d7a4140b8a1e733"
+  "hash": "06084a7fb83f012b"
  },
  "/specialties/weight-loss/": {
   "date": "2026-11-14",
-  "hash": "b7ce21c0761e0ab5"
+  "hash": "daae4999ae8195d4"
  }
 }

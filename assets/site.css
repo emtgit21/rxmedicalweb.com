@@ -1299,3 +1299,9 @@ video { max-width: 100%; height: auto; }
 
 /* v9: clips no longer autoplay from the markup (site.js starts them when visible), so phones never download the hero clip. */
 @media (min-width: 701px) { .hero-video { background: var(--ink) url(/assets/img/hero-clinic.webp) center / cover; } }
+
+/* v10: contact form sent from the page, and the link to the booking page */
+.form { position: relative; }
+.form-ok { margin: 18px 0 0; padding: 14px 18px; border-radius: 12px; background: #e3f4ee; color: var(--ink); font-weight: 600; }
+.closing-contact .closing-book { justify-self: start; margin-top: 14px; color: #cfe3e0; font-weight: 600; text-underline-offset: 4px; }
+.closing-contact .closing-book:hover, .closing-contact .closing-book:focus-visible { color: var(--green); }

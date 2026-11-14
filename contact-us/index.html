@@ -23,7 +23,7 @@
 <meta name="twitter:image" content="https://rxmedicalweb.com/assets/img/hero-clinic.jpg">
 <link rel="preload" href="/assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>@font-face { font-family: 'Archivo'; font-style: normal; font-weight: 100 900; font-stretch: 62% 125%; font-display: swap; src: url(/assets/fonts/archivo-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; } @font-face { font-family: 'Archivo'; font-style: normal; font-weight: 100 900; font-stretch: 62% 125%; font-display: swap; src: url(/assets/fonts/archivo-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; } @font-face { font-family: 'Caveat'; font-style: normal; font-weight: 500; font-display: swap; src: url(/assets/fonts/caveat-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; } @font-face { font-family: 'Caveat'; font-style: normal; font-weight: 500; font-display: swap; src: url(/assets/fonts/caveat-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; } @font-face { font-family: 'Caveat'; font-style: normal; font-weight: 600; font-display: swap; src: url(/assets/fonts/caveat-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; } @font-face { font-family: 'Caveat'; font-style: normal; font-weight: 600; font-display: swap; src: url(/assets/fonts/caveat-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }</style>
-<link rel="stylesheet" href="/assets/site.css?v=ce0a0458">
+<link rel="stylesheet" href="/assets/site.css?v=e00f3f05">
 <script>document.documentElement.className='js'</script>
 <!-- Google tag (Analytics property "Rx Medical Web") -->
 <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-TP682R68"></script>
@@ -76,11 +76,12 @@
       <div><dt>Toll free</dt><dd><a href="tel:+18885994548">1-888-599-4548</a></dd></div>
       <div><dt>Phone</dt><dd><a href="tel:+19543582856">(954) 358-2856</a></dd></div>
       <div><dt>E-mail</dt><dd><a href="mailto:support@rxmedicalweb.com">support@rxmedicalweb.com</a></dd></div>
+      <div><dt>Call with us</dt><dd><a href="/book-a-call/">Pick a time and we call you</a></dd></div>
       <div><dt>Address</dt><dd>2720 E. Oakland Park Blvd, Suite 103<br>Fort Lauderdale, FL 33306<br><a href="https://maps.google.com/?q=2720+E+Oakland+Park+Blvd+Fort+Lauderdale+FL+33306" rel="noopener">See on the map</a></dd></div>
       <div><dt>Hours</dt><dd>Monday to Friday<br>9 am to 6 pm</dd></div>
     </dl>
   </div>
-  <form class="form" id="analysis" data-mailto="support@rxmedicalweb.com" action="mailto:support@rxmedicalweb.com" method="post" enctype="text/plain">
+  <form class="form" id="analysis" data-mailto="support@rxmedicalweb.com" data-endpoint="/api/booking/contact" action="mailto:support@rxmedicalweb.com" method="post" enctype="text/plain">
     <h2>Request a free website analysis</h2>
     <div class="form-row">
       <label class="field"><span>Your name</span><input name="name" autocomplete="name" required></label>
@@ -93,8 +94,11 @@
     <label class="field"><span>Current website, if you have one</span><input name="website" type="text" inputmode="url" placeholder="yourpractice.com"></label>
     <label class="field"><span>What are you interested in?</span><select name="topic"><option>Free website analysis</option><option>Medical website design</option><option>Medical spa website design</option><option>Landing pages and funnels</option><option>Mobile apps for iPhone and Android</option><option>Medical e-commerce</option><option>EMR and patient portals</option><option>Online booking and intake</option><option>Accessibility and compliance</option><option>Website maintenance</option><option>Search engine optimization</option><option>Local SEO</option><option>AI search optimization</option><option>Pay-per-click</option><option>Search and social advertising</option><option>Reviews and reputation</option><option>AI agents: chat, text and voice</option><option>Social media management</option><option>Short-form video</option><option>E-mail marketing management</option><option>SMS campaign management</option><option>Physician content marketing</option><option>Video testimonials</option><option>Lead management and CRM</option><option>New service launch</option><option>Marketing strategy</option><option>Branding and graphic design</option><option>Printing and fulfillment</option><option>Medical practice kit</option><option>Integrations with your tools</option><option>Analytics and call tracking</option><option>Something else</option></select></label>
     <label class="field"><span>Tell us about your practice</span><textarea name="message"></textarea></label>
-    <button class="btn btn-ink" type="submit">Send request by e-mail</button>
-    <small>This opens your e-mail app with the details filled in. Please do not include patient information. You can also call us at 1-888-599-4548. See our <a href="/privacy-policy/">privacy policy</a>.</small>
+    <label class="bk-hp" aria-hidden="true">Company URL<input type="text" name="company_url" tabindex="-1" autocomplete="off"></label>
+    <button class="btn btn-ink" type="submit">Send request</button>
+    <p class="bk-error" role="alert"></p>
+    <p class="form-ok" role="status" hidden>Thank you. Your request is on its way to our team, and we reply within 24 business hours.</p>
+    <small>Your request goes to our team by e-mail. Please do not include patient information. You can also call us at 1-888-599-4548. See our <a href="/privacy-policy/">privacy policy</a>.</small>
   </form>
 </div></section>
 </main>
@@ -111,6 +115,7 @@
         <li><a href="tel:+19543582856">(954) 358-2856</a></li>
         <li><a href="mailto:support@rxmedicalweb.com">support@rxmedicalweb.com</a></li>
         <li><a href="/contact-us/">Contact us</a></li>
+        <li><a href="/book-a-call/">Book a call</a></li>
       </ul></div>
       <div><p class="fh">Company</p><ul>
         <li><a href="/about/">About us</a></li>
@@ -131,7 +136,7 @@
     <div class="footer-legal"><span>© 2026 Rx Medical Web. All rights reserved. <a href="/privacy-policy/">Privacy policy</a></span><span>Medical presence and marketing, Fort Lauderdale, Florida</span></div>
   </div>
 </footer>
-<script src="/assets/site.js?v=d14fd42e" defer></script>
+<script src="/assets/site.js?v=1fc04be3" defer></script>
 <script src="/assets/chat.js?v=91ebb3a6" defer></script>
 </body>
 </html>

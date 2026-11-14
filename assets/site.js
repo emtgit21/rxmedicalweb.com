@@ -202,13 +202,12 @@
     graphics.forEach(function (g) { g.classList.add('in'); });
   }
 
-  // Contact form: this static site has no server-side handler, so the form
-  // composes an email in the visitor's own mail app, addressed to support@.
+  // Contact form: sent to the office through the site's own endpoint. If that fails
+  // (or the browser has no fetch), it composes an e-mail in the visitor's mail app instead.
   var form = document.querySelector('form[data-mailto]');
   if (form) {
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var d = new FormData(form);
+    var fErr = form.querySelector('.bk-error'), fOk = form.querySelector('.form-ok'), fBtn = form.querySelector('button[type="submit"]');
+    var viaMailApp = function (d) {
       var lines = [
         'Name: ' + (d.get('name') || ''),
         'Practice: ' + (d.get('practice') || ''),
@@ -222,6 +221,33 @@
       var subject = (d.get('topic') || 'Website inquiry') + ' - ' + (d.get('practice') || d.get('name') || '');
       window.location.href = 'mailto:' + form.getAttribute('data-mailto') +
         '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(lines.join('\n'));
+    };
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var d = new FormData(form), url = form.getAttribute('data-endpoint');
+      if (!url || !window.fetch) { viaMailApp(d); return; }
+      var body = {};
+      ['name', 'practice', 'phone', 'email', 'website', 'topic', 'message', 'company_url'].forEach(function (k) { body[k] = d.get(k) || ''; });
+      if (fErr) fErr.textContent = '';
+      fBtn.disabled = true;
+      fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) })
+        .then(function (r) { return r.json().then(function (j) { return { status: r.status, j: j }; }); })
+        .then(function (res) {
+          fBtn.disabled = false;
+          if (res.status === 200 && res.j.ok) {
+            form.reset();
+            fBtn.style.display = 'none';
+            if (fOk) { fOk.hidden = false; fOk.focus && fOk.focus(); }
+            if (window.dataLayer) window.dataLayer.push({ event: 'generate_lead', form_id: 'analysis' });
+          } else if (res.status === 422 || res.status === 429) {
+            if (fErr) fErr.textContent = res.j.error || 'Please check the form.';
+            var bad = res.j.field && form.querySelector('[name="' + res.j.field + '"]');
+            if (bad) bad.focus();
+          } else {
+            viaMailApp(d);
+          }
+        })
+        .catch(function () { fBtn.disabled = false; viaMailApp(d); });
     });
   }
 })();

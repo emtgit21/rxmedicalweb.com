@@ -20,7 +20,7 @@ SITE = "https://rxmedicalweb.com"
 YEAR = datetime.date.today().year
 UP = "/wp-content/uploads/"
 BUILT = []
-UNLISTED = {"/book-a-call/"}   # live but not linked or in the sitemap until booking notices are set up
+UNLISTED = set()   # pages that are live but kept out of the sitemap and marked noindex
 PAGE_CSS = []          # stylesheets for the custom animated graphics used on the page being built
 ANIM_DIR = os.path.join(ROOT, "src", "anims")
 # custom animated graphic for each service (falls back to the generic one in pages.py if the file is missing)
@@ -161,6 +161,7 @@ def closing(title="Ready to get started?", text="Tell us about your practice. We
       <a class="big" href="{PHONE_HREF}">{PHONE}</a>
       <a class="big" href="mailto:{EMAIL}">{EMAIL}</a>
       <a class="btn btn-primary" href="/contact-us/#analysis">Request a free website analysis</a>
+      <a class="closing-book" href="/book-a-call/">Or pick a time for a call</a>
     </div>
   </div>
 </section>"""
@@ -188,6 +189,7 @@ def footer():
         <li><a href="{LOCAL_PHONE_HREF}">{LOCAL_PHONE}</a></li>
         <li><a href="mailto:{EMAIL}">{EMAIL}</a></li>
         <li><a href="/contact-us/">Contact us</a></li>
+        <li><a href="/book-a-call/">Book a call</a></li>
       </ul></div>
       <div><p class="fh">Company</p><ul>
         <li><a href="/about/">About us</a></li>
@@ -873,7 +875,7 @@ PRIVACY_BODY = """
 
 <h2>Information you give us</h2>
 <ul>
-  <li><strong>When you contact us.</strong> If you call, e-mail or use the request form, we receive what you choose to send: typically your name, practice name, phone number, e-mail address, website and your message. The form on this site does not store anything on our server. It opens your own e-mail application with the details filled in, and nothing is sent until you send that e-mail.</li>
+  <li><strong>When you contact us.</strong> If you call, e-mail or use the request form, we receive what you choose to send: typically your name, practice name, phone number, e-mail address, website and your message. When you send the request form, our server passes what you entered to our team by e-mail through our e-mail delivery provider (Mailgun) and does not keep a copy on the web server. If that delivery fails, the form opens your own e-mail application with the details filled in instead.</li>
   <li><strong>When you book a call.</strong> The booking page stores what you enter on our server: the time you picked, your name, phone number, e-mail address and, if you add them, your practice, website and a note. We use it to prepare for and make that call. You can cancel from the link shown after you book.</li>
   <li><strong>When you use the site assistant.</strong> The assistant in the corner of each page runs entirely in your browser. It looks up answers in the content of this website. What you type is not sent to us or to anyone else, and it is not stored.</li>
 </ul>
@@ -1234,11 +1236,12 @@ def build_contact():
       <div><dt>Toll free</dt><dd><a href="{PHONE_HREF}">{PHONE}</a></dd></div>
       <div><dt>Phone</dt><dd><a href="{LOCAL_PHONE_HREF}">{LOCAL_PHONE}</a></dd></div>
       <div><dt>E-mail</dt><dd><a href="mailto:{EMAIL}">{EMAIL}</a></dd></div>
+      <div><dt>Call with us</dt><dd><a href="/book-a-call/">Pick a time and we call you</a></dd></div>
       <div><dt>Address</dt><dd>2720 E. Oakland Park Blvd, Suite 103<br>Fort Lauderdale, FL 33306<br><a href="https://maps.google.com/?q=2720+E+Oakland+Park+Blvd+Fort+Lauderdale+FL+33306" rel="noopener">See on the map</a></dd></div>
       <div><dt>Hours</dt><dd>Monday to Friday<br>9 am to 6 pm</dd></div>
     </dl>
   </div>
-  <form class="form" id="analysis" data-mailto="{EMAIL}" action="mailto:{EMAIL}" method="post" enctype="text/plain">
+  <form class="form" id="analysis" data-mailto="{EMAIL}" data-endpoint="/api/booking/contact" action="mailto:{EMAIL}" method="post" enctype="text/plain">
     <h2>Request a free website analysis</h2>
     <div class="form-row">
       <label class="field"><span>Your name</span><input name="name" autocomplete="name" required></label>
@@ -1251,8 +1254,11 @@ def build_contact():
     <label class="field"><span>Current website, if you have one</span><input name="website" type="text" inputmode="url" placeholder="yourpractice.com"></label>
     <label class="field"><span>What are you interested in?</span><select name="topic"><option>Free website analysis</option>{topics}<option>Something else</option></select></label>
     <label class="field"><span>Tell us about your practice</span><textarea name="message"></textarea></label>
-    <button class="btn btn-ink" type="submit">Send request by e-mail</button>
-    <small>This opens your e-mail app with the details filled in. Please do not include patient information. You can also call us at {PHONE}. See our <a href="/privacy-policy/">privacy policy</a>.</small>
+    <label class="bk-hp" aria-hidden="true">Company URL<input type="text" name="company_url" tabindex="-1" autocomplete="off"></label>
+    <button class="btn btn-ink" type="submit">Send request</button>
+    <p class="bk-error" role="alert"></p>
+    <p class="form-ok" role="status" hidden>Thank you. Your request is on its way to our team, and we reply within 24 business hours.</p>
+    <small>Your request goes to our team by e-mail. Please do not include patient information. You can also call us at {PHONE}. See our <a href="/privacy-policy/">privacy policy</a>.</small>
   </form>
 </div></section>"""
     page("/contact-us/", "Contact us | Rx Medical Web",
