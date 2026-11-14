@@ -936,3 +936,5 @@ video { max-width: 100%; height: auto; }
   .js .hero .lead { animation-delay: .25s; } .js .hero .hero-actions { animation-delay: .32s; } .js .hero .facts { animation-delay: .5s; }
   .js .hero .pad-wrap { animation-delay: .1s; animation-duration: .9s; }
 }
+
+.more-work { margin: 40px 0 0; }

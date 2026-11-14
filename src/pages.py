@@ -38,14 +38,14 @@ SERVICES = [
          img="studio", alt="Designers working on website layouts in a bright studio",
          anim=("build",),
          body="""
-<p>Patients look for doctors online first. Marketing your medical, aesthetic or dental practice through the internet is the most effective tool you have to reach new patients, and your website is where every campaign ends up.</p>
+<p>Your website is where every campaign ends up, whether a patient finds you through search, maps, social media or an AI assistant. For a medical, aesthetic or dental practice, it is the most effective tool you have to reach new patients.</p>
 <p>Our designers and programmers build each site from scratch. We learn your goals, your budget and your taste, then assign a designer who stays with your project from the first sketch to launch. We use the latest AI tools to speed up research, drafts and testing, and people review everything before it goes live.</p>
 
 <h2>Why practices choose us</h2>
 <ul>
   <li><strong>We specialize in medical marketing.</strong> As a physician owned company, we understand patient treatments and the dynamics of a medical practice.</li>
   <li><strong>We care about our clients.</strong> Public companies such as Aerolase, and other large private companies, trust us to create website and marketing programs for their own clients.</li>
-  <li><strong>We prove our results.</strong> Our results and phone tracking system lets you see the calls your website produces.</li>
+  <li><strong>We show our results.</strong> Our results and phone tracking system lets you see the calls your website produces.</li>
   <li><strong>Design that has been tested.</strong> We use layouts and features that have been shown to generate results, not decoration for its own sake.</li>
 </ul>
 
@@ -58,16 +58,16 @@ SERVICES = [
 </ol>
 
 <h2>Already have a website?</h2>
-<p>We can review your current site to make sure it is as effective as possible, and recommend simple changes that suit your practice and your budget. The best way to judge a website is whether patients can find it and whether it brings in revenue.</p>
+<p>We can review your current site for speed, mobile experience and how clearly it guides a patient to contact you, then recommend simple changes that suit your practice and your budget. The best way to judge a website is whether patients can find it and whether it brings in revenue.</p>
 
 <h2>What every site includes</h2>
 <ul class="two">
   <li>Mobile-first, fast-loading pages</li>
-  <li>Search engine friendly structure</li>
+  <li>Clean structure and structured data for search engines and AI search</li>
   <li>Content management system you can edit</li>
   <li>Online patient forms</li>
   <li>Integrated blog</li>
-  <li>Social media integration</li>
+  <li>Links to your social media profiles</li>
   <li>Bilingual options</li>
   <li>Phone support with our staff</li>
 </ul>
@@ -80,15 +80,15 @@ SERVICES = [
          anim=("flow", ["Sees you on Instagram", "Visits your site", "Books a consult", "Treatment", "Review and referral"]),
          body="""
 <p>Whether you are a plastic surgeon, dermatologist or family practitioner adding aesthetics to your practice, or an established skin care and aesthetics center, our team can create a website and marketing campaign that fits your goals.</p>
-<p>The most effective strategy available to aesthetic physicians is an impressive website that stands out, paired with strong internet and social media marketing. Our designers, programmers and internet specialists all work in house. We do not outsource and we do not use templates.</p>
+<p>The most effective strategy available to aesthetic physicians is a distinctive website that loads fast on any phone, paired with strong search and social media marketing. Our designers, programmers and marketing specialists all work in house. We do not outsource and we do not use templates.</p>
 
-<h2>Website and internet marketing together</h2>
+<h2>Website and marketing together</h2>
 <p>Your website is your practice online, and the image it shows must match your practice. A professional look is half of the job. The other half is making sure patients can find it.</p>
-<p>After learning your goals, we design a strategy around the technology that works today. Search engines change their algorithms constantly, and now AI assistants answer many patient questions directly, so our staff keeps up with both.</p>
+<p>After learning your goals, we design a strategy around what works now. Search engines change their algorithms constantly, and AI Overviews and AI assistants now answer many patient questions directly, so our staff keeps up with both.</p>
 
 <h2>Every spa website includes</h2>
 <ul class="two">
-  <li>Search engine friendly build</li>
+  <li>Mobile-first build with fast pages and structured data</li>
   <li>Physician staff to help write content</li>
   <li>Professional, custom appearance</li>
   <li>Website maintenance and support</li>
@@ -99,11 +99,11 @@ SERVICES = [
 <h2>Services for medical spas</h2>
 <ul>
   <li>Custom websites that match your practice</li>
-  <li>Social media pages and campaigns</li>
+  <li>Social media pages and campaigns, including Instagram, TikTok and short-form video</li>
   <li>Online booking for consultations and treatments</li>
-  <li>Email marketing with newsletters written by our physician staff</li>
+  <li>Email marketing with automated newsletters written by our physician staff</li>
   <li>EMR integration</li>
-  <li>Patient education resources</li>
+  <li>Patient education resources reviewed by our physician staff</li>
 </ul>
 """),
     dict(group=0, slug="landing-pages-funnels", name="Landing pages and funnels", new=True,
@@ -172,7 +172,7 @@ SERVICES = [
 <p>Our team sets up everything for you: the design of the store, the merchant account and all of your products.</p>
 
 <h2>Custom shopping carts</h2>
-<p>We build the shopping cart into your practice website so you can promote your products online. You choose how you accept payment, and every payment option we set up is secure for your patients.</p>
+<p>We build the shopping cart into your practice website so you can promote your products online. The store is designed for phones first, with fast pages and a short checkout. You choose how you accept payment, and every payment option we set up is secure for your patients.</p>
 <ul>
   <li>Store design that matches your website</li>
   <li>Secure card payments and digital wallets</li>
@@ -188,18 +188,18 @@ SERVICES = [
          img="front-desk", alt="Front desk coordinator helping a caller",
          anim=("flow", ["Your website", "Patient portal", "Forms and records", "Appointment"]),
          body="""
-<p>Electronic medical records are one of the most effective tools a busy practitioner can use, and integrating them with your website is easier than you think.</p>
-<p>As part of an overall integration plan, our staff connects your EMR's online patient portal to your medical website. It shows new patients that you use current technology to take care of them, and it helps your office run smoothly.</p>
+<p>Your electronic medical record system already holds the tools patients expect to find online. We connect it to your website so they can reach those tools in one tap, from any device.</p>
+<p>As part of an overall integration plan, our staff connects your EMR's online patient portal to your medical website. New patients see that booking, forms and records are easy to manage with your practice, and your office spends less time on phone calls and paperwork.</p>
 
 <h2>What a patient portal gives you</h2>
 <ul>
-  <li>Convenience for patients</li>
+  <li>Convenience for patients, on mobile as well as desktop</li>
   <li>Improved record keeping</li>
-  <li>Transmission of lab data, imaging studies and patient vital information</li>
-  <li>Prescription refills</li>
-  <li>Online patient forms</li>
-  <li>Online appointments</li>
-  <li>A base for internet marketing campaigns</li>
+  <li>Secure delivery of lab results, imaging studies and patient vital information</li>
+  <li>Prescription refill requests</li>
+  <li>Online patient forms completed before the visit</li>
+  <li>Online appointment booking</li>
+  <li>A foundation for patient communication and marketing, such as email and text message follow-up</li>
 </ul>
 <p>To speak with a representative about integrating your EMR or patient portal, call us at <a href="tel:+19543582856">954-358-2856</a>.</p>
 """),
@@ -257,7 +257,7 @@ SERVICES = [
          img="analytics-desk", alt="Analyst reviewing website performance charts",
          anim=("flow", ["You send a request", "Changed in 24 to 48 hours", "Backed up", "Security updated", "Monthly report"]),
          body="""
-<p>A website that markets your practice well needs new information, regular updates and ongoing optimization to hold its place on the first page of Google and other search engines.</p>
+<p>A website that markets your practice well needs accurate information, regular updates and ongoing attention to speed, security and search visibility, both in Google and in AI search.</p>
 <p>Our team understands how important this is and assigns people to maintain your website daily.</p>
 
 <h2>What maintenance includes</h2>
@@ -287,9 +287,9 @@ SERVICES = [
          img="analytics-desk", alt="Analyst looking at search performance charts",
          anim=("serp",),
          body="""
-<p>Search engine optimization is the most effective tool to promote your website and your practice. When patients look for information online, having your website appear near the top is what generates traffic.</p>
-<p>A well built medical website combines an attractive design with proper coding for optimization. Once your site is optimized correctly, only a small maintenance effort is needed to hold your rankings, which makes SEO more cost effective than paying for every click.</p>
-<p>Optimizing a medical website is not a one-time setup. Our staff works on your website daily.</p>
+<p>Search engine optimization helps patients find your website and your practice. When patients look for a doctor or a treatment, they turn to Google, map results and, increasingly, AI assistants. Being visible in those places is what brings them to your website.</p>
+<p>A well built medical website combines an attractive design with clean, fast code that search engines can read easily. Visibility earned through SEO does not require paying for every click, which can make it more cost effective than advertising over time.</p>
+<p>Optimizing a medical website is not a one-time setup. Our staff keeps working on your website on an ongoing basis.</p>
 
 <h2>What is included</h2>
 <ul class="two">
@@ -301,17 +301,17 @@ SERVICES = [
   <li>Infographic creation</li>
 </ul>
 
-<h2>Keywords</h2>
-<p>Keywords are the words a patient types into a search engine. Our staff builds a list of keywords for your practice. That work starts with understanding your practice, which we take the time to learn, and a thorough analysis of your competition.</p>
+<h2>Keywords and search intent</h2>
+<p>Keywords are the words and questions a patient types or speaks into a search engine or an AI assistant. Our staff builds a list of the terms that matter for your practice and maps each one to the page that answers it best. That work starts with understanding your practice, which we take the time to learn, and a thorough analysis of your competition.</p>
 
-<h2>Initial programming</h2>
-<p>Before we begin designing, we set up your website with the code search engines read: title tags, descriptions, image tags and structured data for every page.</p>
+<h2>Technical setup</h2>
+<p>Before we begin designing, we set up your website with the code search engines read: title tags, descriptions, image alt text and structured data for every page. We plan for mobile screens first and for fast loading pages, because both affect how patients and search engines experience your website.</p>
 
 <h2>Link building</h2>
-<p>A link points to your website from another place. The more relevant incoming links your website has, the better it ranks. We use ethical, white hat strategies only.</p>
+<p>A link points to your website from another place. Search engines look at the quality and relevance of the websites that link to you, not the number of links. We use ethical, white hat strategies only.</p>
 
 <h2>Content</h2>
-<p>The quality of the information on your website is essential to its rankings. We have physicians on staff who write and review content for your website, your email campaigns and your social media.</p>
+<p>The quality of the information on your website is essential to how it performs in search. Search engines and AI search tools favor content that is accurate, helpful and written for patients. We have physicians on staff who write and review content for your website, your email campaigns and your social media.</p>
 """),
     dict(group=1, slug="local-seo", name="Local SEO",
          h1="Local search engine optimization",
@@ -320,18 +320,18 @@ SERVICES = [
          img="patient-phone", alt="Woman searching for a nearby doctor on her phone",
          anim=("flow", ["Clean up listings", "Google Business Profile", "Local pages", "Reviews", "Map results"]),
          body="""
-<p>Most companies only submit your information to the major data directories. They do not look for the incomplete, duplicate or wrong listings of your practice that are already out there and that hurt your rankings.</p>
+<p>Most companies only push your information out to the major data directories. They do not look for the incomplete, duplicate or wrong listings of your practice that are already out there and that hurt your local visibility, both in Google and in the AI assistants that draw on the same data.</p>
 <p>We find and fix those first, then build on a clean base.</p>
 
 <h2>What is included</h2>
 <ul>
-  <li>Directory submission and optimization</li>
+  <li>Listing cleanup and consistent practice information across the major data directories</li>
   <li>Google Business Profile setup and upkeep</li>
   <li>Google Maps placement</li>
   <li>Medical directory listings</li>
-  <li>Landing pages for each location and service</li>
+  <li>Fast, mobile-first landing pages for each location and service</li>
   <li>Call-to-action buttons that let patients call or book in one tap</li>
-  <li>Organic SEO results for searches in your area</li>
+  <li>Organic SEO for searches in your area</li>
 </ul>
 """),
     dict(group=1, slug="ai-search-optimization", name="AI search optimization", new=True,
@@ -363,15 +363,15 @@ SERVICES = [
          img="analytics-desk", alt="Analyst reviewing campaign charts on two monitors",
          anim=("chart",),
          body="""
-<p>Pay-per-click ads appear above the organic search results. When patients search for terms related to your practice, the ads identify them and bring them to your website.</p>
+<p>Pay-per-click ads appear above the organic search results. When patients search for terms related to your practice, the ads reach them at that moment and bring them to your website.</p>
 
 <h2>How we manage a campaign</h2>
 <ul class="two">
   <li>Account organization and structure</li>
   <li>Budget assignment</li>
-  <li>Quality score</li>
-  <li>Keyword coverage</li>
-  <li>Landing pages for each campaign</li>
+  <li>Ad relevance and quality</li>
+  <li>Coverage of the searches patients make</li>
+  <li>Fast, mobile-first landing pages for each campaign</li>
   <li>Call and booking tracking</li>
 </ul>
 
@@ -385,29 +385,29 @@ SERVICES = [
          img="studio", alt="Marketing team working at their desks",
          anim=("chart",),
          body="""
-<p>Sometimes a sound SEO plan needs a paid advertising strategy beside it. We can set it up and show you how to create ads, bid on keywords and maintain your own account, or we can manage it for you.</p>
+<p>Sometimes a sound SEO plan needs a paid advertising strategy beside it. We can set it up and show you how to create ads, choose keywords and bidding, and maintain your own account, or we can manage it for you.</p>
 
 <h2>The benefits</h2>
 <ul class="two">
-  <li>High placement means more visibility and more traffic</li>
-  <li>Cost effective</li>
+  <li>Prominent placement that brings more visibility and more traffic</li>
+  <li>Cost control, with a budget you set</li>
   <li>Highly targeted traffic</li>
   <li>Ongoing marketing to potential patients</li>
-  <li>High return on investment</li>
+  <li>Return on investment you can measure</li>
 </ul>
 
 <h2>Google Ads</h2>
-<p>With paid search, your website appears at the top of the results page the moment the campaign starts. When a patient types a phrase such as “Botox Fort Lauderdale”, your ad is visible immediately. Each click uses part of your budget, which is paid to Google, so the setup matters. Think of a broker managing a portfolio: campaign management works the same way.</p>
+<p>With paid search, your practice can appear at the top of the results page as soon as the campaign starts. When a patient searches a phrase such as “Botox Fort Lauderdale” on a phone, your ad is eligible to show right away, with a link to call or book. Each click uses part of your budget, which is paid to Google, so the setup matters. Think of a broker managing a portfolio: campaign management works the same way.</p>
 
 <h2>Social advertising</h2>
-<p>Paid campaigns on Instagram, Facebook and TikTok are also very effective and often cost less per click than search. We build the audiences, produce the creative, and follow each platform's rules for health and aesthetic advertising.</p>
+<p>Paid campaigns on Instagram, Facebook and TikTok can also be very effective and often cost less per click than search. We build the audiences, produce the creative, including short-form video, and follow each platform's rules for health and aesthetic advertising.</p>
 
 <h2>Advanced campaigns</h2>
 <ul>
   <li>Retargeting for visitors who did not book</li>
   <li>Lookalike audiences built from your best patients, without sharing health information</li>
   <li>Seasonal promotions and event campaigns</li>
-  <li>AI-assisted creative testing across many versions of an ad</li>
+  <li>AI-assisted creative testing across many versions of an ad, with human review</li>
 </ul>
 """),
     dict(group=1, slug="reputation-management", name="Reviews and reputation", new=True,
@@ -468,8 +468,8 @@ SERVICES = [
          img="social-reel", alt="Creator filming a doctor with a phone on a gimbal",
          anim=("flow", ["Plan", "Create", "Publish", "Engage", "Report"]),
          body="""
-<p>Whatever your specialty, people use social media to find health information. An effective physician marketing program includes social media, and you do not need to use it personally for it to work for your practice.</p>
-<p>Our team of social media professionals focuses entirely on creating and maintaining your networks. We develop content for your practice and build a connection with your audience.</p>
+<p>Whatever your specialty, patients turn to social media for health information and to get a sense of a practice before they book. An effective physician marketing program includes social media, and you do not need to use it personally for it to work for your practice.</p>
+<p>Our team of social media professionals focuses entirely on creating and maintaining your channels, including Instagram, TikTok and Facebook where they fit your audience. We develop content for your practice, with AI-assisted drafting and human and physician review, and build a connection with your audience.</p>
 
 <h2>What each project includes</h2>
 <ul class="two">
@@ -479,21 +479,21 @@ SERVICES = [
   <li>Ad management</li>
   <li>Community management</li>
   <li>Events and promotions</li>
-  <li>Content creation</li>
+  <li>Content creation, including short-form video</li>
   <li>Conversion optimization</li>
 </ul>
 
 <h2>Benefits for your practice</h2>
 <ul>
-  <li><strong>Brand awareness.</strong> Photos and video build your practice's image.</li>
-  <li><strong>Feedback.</strong> Hear from current and potential patients and improve your service.</li>
+  <li><strong>Brand awareness.</strong> Photos and short-form video build your practice's image.</li>
+  <li><strong>Feedback.</strong> Hear from current and potential patients in comments and messages, and improve your service.</li>
   <li><strong>Loyalty.</strong> Regular interaction builds confidence in your practice.</li>
-  <li><strong>A base of potential patients.</strong> Followers become patients over time.</li>
+  <li><strong>A base of potential patients.</strong> Followers can become patients over time.</li>
 </ul>
 
 <h2>Work process</h2>
 <ol class="steps">
-  <li>Research of social networks</li>
+  <li>Research of the platforms your patients use</li>
   <li>Profile setup</li>
   <li>Launch</li>
   <li>Ongoing weekly posts</li>
@@ -526,12 +526,12 @@ SERVICES = [
          img="content-physician", alt="A physician and a writer reviewing pages together",
          anim=("flow", ["Capture the email", "Send the free report", "Regular newsletter", "Timely offer", "Booking"]),
          body="""
-<p>Email campaigns are a vital part of your internet marketing plan. We build an information management system that stores your patients' names and email addresses, because staying in contact with patients is part of any effective campaign.</p>
+<p>Email remains one of the most direct ways to stay in contact with your patients, and it is a channel your practice owns. We keep your patients' names and email addresses in a patient CRM, organized so that each message goes to the people it is relevant to.</p>
 
 <h2>Managed for you</h2>
 <ul>
   <li>List setup, clean-up and segmentation by treatment and interest</li>
-  <li>Templates designed to match your brand</li>
+  <li>Templates designed to match your brand and read well on a phone</li>
   <li>A monthly calendar of newsletters, promotions and event invitations</li>
   <li>Automations: welcome series, post-visit follow-up, birthdays and win-back</li>
   <li>Deliverability set up correctly, so your emails reach the inbox</li>
@@ -539,11 +539,11 @@ SERVICES = [
 </ul>
 <p>This is the same email operation we run for Empire Medical Training, sized for a practice.</p>
 
-<h2>Physician written emails</h2>
-<p>Our physicians write and review fresh, informative newsletters that are emailed to your list. You set the interval and can review or change the content. These emails are not sales pitches. They are information your patients will enjoy receiving, and that ongoing contact helps them remember who you are, what services you offer and how to reach you when they are ready for a procedure.</p>
+<h2>Physician-written emails</h2>
+<p>Our physicians write and review informative newsletters that are emailed to your list. You set the interval and can review or change the content before it goes out. These emails are not sales pitches. They are helpful information your patients will want to read, and that ongoing contact helps them remember who you are, what services you offer and how to reach you when they are ready for a procedure.</p>
 
-<h2>Email capture system</h2>
-<p>Our email capture system saves a visitor's email address when they request information from you, such as a free report on healthy skin. The reports are written by our physicians and built into your website. Once the visitor enters an email address, the report is sent, and you can keep in touch with newsletters they will be happy to receive.</p>
+<h2>Email sign-up and capture</h2>
+<p>Our email capture system adds a visitor to your list when they request information from you, such as a short guide to healthy skin. The guides are written by our physicians and built into your website. Once the visitor enters an email address and agrees to hear from you, the guide is sent automatically, and you can keep in touch with newsletters they will be happy to receive.</p>
 """),
     dict(group=2, slug="sms-marketing", name="SMS campaign management", new=True,
          h1="SMS campaign management",
@@ -573,17 +573,17 @@ SERVICES = [
          img="content-physician", alt="A physician reviewing written content with a writer",
          anim=("flow", ["Research", "Draft with AI", "Physician review", "Publish", "Refresh"]),
          body="""
-<p>Effective material on your website captures readers' interest and is vital for optimization and internet marketing.</p>
-<p>Our writers are physicians and internet staff. A physician writes or reviews the medical content, then our internet staff makes sure it is search engine friendly. Writing for the web is different from writing for journals or print, and with AI assistants now quoting websites directly, accuracy matters more than ever. We use AI tools to research and draft faster, and a physician checks the result.</p>
+<p>Clear, accurate content on your website holds readers' attention and helps patients find your practice through search engines and AI assistants.</p>
+<p>Our writers are physicians and digital marketing staff. A physician writes or reviews the medical content, then our digital staff makes sure it is clearly structured and easy for search engines and AI search tools to understand. Writing for the web is different from writing for journals or print, and with AI assistants now quoting websites directly, accuracy matters more than ever. We use AI tools to research and draft faster, and a physician checks the result.</p>
 
 <h2>Website content</h2>
-<p>Our physicians and writers prepare custom content along with the information you provide. As part of ongoing maintenance, new content is added regularly, both to keep information fresh for readers and to give search engines something new to index.</p>
+<p>Our physicians and writers prepare custom content along with the information you provide. As part of ongoing maintenance, we add new content regularly so the information on your site stays current and useful for readers.</p>
 
 <h2>Email marketing and newsletters</h2>
-<p>Your website has an information management system that gathers patient email addresses. Our physicians write articles and newsletters that we email to your patients. Patients are always at different stages of a decision, so regular contact means they know who you are, what you offer and how to find you when they are ready.</p>
+<p>Your website is connected to a patient CRM that collects patient email addresses. Our physicians write articles and newsletters that we email to your patients. Patients are always at different stages of a decision, so regular contact means they know who you are, what you offer and how to find you when they are ready.</p>
 
 <h2>Articles, press releases and blogs</h2>
-<p>Publishing articles, press releases and blogs is a vital part of search engine optimization. It is time consuming work that some website firms leave to the physician or the office staff. We do all the work, and we do not ask you to help write.</p>
+<p>Publishing helpful, physician-reviewed articles, press releases and blog posts is an important part of being found in search and in AI answers. It is time consuming work that some agencies leave to the physician or the office staff. We do all the work, and we do not ask you to help write.</p>
 """),
     dict(group=2, slug="video-testimonials", name="Video testimonials",
          h1="Medical video testimonials",
@@ -592,15 +592,15 @@ SERVICES = [
          img="video-shoot", alt="A video crew filming a patient testimonial in a clinic",
          anim=("flow", ["Plan", "Film at your office", "Interview patients", "Edit", "Deliver"]),
          body="""
-<p>Video testimonials are one of the most effective ways to stay competitive and to make a strong first impression on new visitors. They separate your practice from your competitors and help optimize your website.</p>
-<p>Watching real patients talk about their experience creates comfort and trust in a way written testimonials cannot. Patients are more likely to contact you after watching a satisfied patient describe the benefits they experienced.</p>
+<p>Video testimonials are one of the most effective ways to make a strong first impression on new visitors. They show what sets your practice apart, in your patients' own words.</p>
+<p>Watching real patients talk about their experience creates comfort and trust in a way written reviews cannot. A prospective patient who has heard a satisfied patient describe their visit has a clearer reason to contact you.</p>
 
 <h2>What the production package includes</h2>
 <ul>
   <li><strong>On-site production.</strong> Our videographers travel to your office and spend half a day filming patient testimonials.</li>
-  <li><strong>Patient interviewing and preparation.</strong> Our staff is friendly and makes the experience fun for your volunteers. They are experienced interviewers.</li>
+  <li><strong>Patient interviewing and preparation.</strong> Our staff are experienced interviewers. They are friendly and make the experience comfortable and fun for your volunteers.</li>
   <li><strong>Post production.</strong> Our editors turn the footage of your office and patients into the finished video.</li>
-  <li><strong>Final video.</strong> A professional video with believable testimonials. The video files and final product are yours to keep.</li>
+  <li><strong>Final video.</strong> A professional video with authentic, believable testimonials. The video files and final product are yours to keep and reuse on your website, your Google Business Profile and your social channels.</li>
   <li><strong>One all-inclusive fee.</strong> No additional charges. Ask us for current package pricing.</li>
 </ul>
 
@@ -609,7 +609,7 @@ SERVICES = [
   <li>Creates trust and credibility with website visitors</li>
   <li>Makes your medical or aesthetics website stand out</li>
   <li>Adds emotion and personality to your practice</li>
-  <li>Improves search engine optimization</li>
+  <li>Supports your visibility in search and AI search with original, first-hand content</li>
 </ul>
 """),
     dict(group=2, slug="patient-crm-automation", name="Lead management and CRM", new=True,
@@ -692,22 +692,22 @@ SERVICES = [
          img="print-flatlay", alt="Brochures, business cards and a stethoscope on a desk",
          anim=("flow", ["Brief", "Concepts", "Revisions", "Final files", "Print"]),
          body="""
-<p>Our graphic design team has the creativity and the experience to deliver graphics that will not exceed your budget, only your expectations. Professionally designed brochures and print materials get your patients' attention and present a consistent image.</p>
+<p>Our graphic design team has the creativity and the experience to deliver work that stays within your budget and exceeds your expectations. Professionally designed brochures and print materials get your patients' attention and present a consistent image everywhere they see your practice.</p>
 
 <h2>Logo and brand identity</h2>
-<p>Our designers create an original logo consistent with your practice's theme and overall look, along with the colors, type and templates that keep everything you publish looking like you.</p>
+<p>Our designers create an original logo that fits your practice's theme and overall look, along with the colors, type and templates that keep everything you publish looking like you.</p>
 
 <h2>Medical practice brochures</h2>
-<p>Patients expect information about your credentials, your practice and your services, and it is an essential marketing tool. Our staff writes the information about your background and services, then our design team creates a custom brochure with your logo and practice details.</p>
+<p>Patients expect clear information about your credentials, your practice and your services, and a practice brochure remains an essential marketing tool. Our staff writes the content about your background and services, then our design team creates a custom brochure with your logo and practice details.</p>
 
 <h2>Patient information brochures</h2>
-<p>Brochures that explain an individual service your patient may be interested in. Our physician staff can write this material for you.</p>
+<p>These brochures explain an individual service your patient may be interested in. Our physician staff can write this material for you.</p>
 
 <h2>Patient referral brochures</h2>
 <p>Referrals are an important part of promoting your practice. We create customized referral brochures for your staff to give to patients, who pass them to friends and family. They detail your credentials, your services and any special promotions.</p>
 
 <h2>Services postcards</h2>
-<p>An attractive 6×9 postcard listing your services, practice information, address and phone number, along with any special promotions. Larger than a business card and easy to keep as a quick reference.</p>
+<p>An attractive 6×9 postcard listing your services, practice information, address and phone number, along with any special promotions. It is larger than a business card and easy to keep as a quick reference.</p>
 
 <h2>More print and display work</h2>
 <ul class="two">
@@ -751,18 +751,18 @@ SERVICES = [
          img="aesthetic-consult", alt="A physician consulting with a patient in a treatment room",
          anim=("flow", ["Custom website", "Print kit", "Staff training", "Compliance forms", "Consultation"]),
          body="""
-<p>The Medical Practice Marketing Kit works as your entire marketing program. We create a custom website built for internet placement and search engine optimization, so patients find you when they search for a service you offer. Many websites look attractive but are poorly coded, which makes them hard to find.</p>
-<p>The websites we develop are custom, not templates. Alongside designers, programmers and SEO staff, we keep videographers on staff, because video is one of the most effective ways to increase conversions.</p>
+<p>The Medical Practice Marketing Kit works as your entire marketing program. We create a custom website built for search visibility, so patients find you when they look for a service you offer, whether they use Google or an AI assistant. Many websites look attractive but are slow or poorly structured, which makes them hard to find.</p>
+<p>The websites we develop are custom, not templates. Alongside designers, programmers and SEO staff, we keep videographers on staff, because video is one of the most effective ways to turn visitors into patients.</p>
 <p>We develop websites for physicians and dentists of many specialties: aesthetics, plastic surgery, dentistry, gynecology, chiropractic, cosmetic dentistry, cardiology, pain management and others.</p>
 
 <h2>What the website includes</h2>
 <ul class="two">
-  <li>Email capture and database management</li>
-  <li>Physician-written e-books for download</li>
+  <li>Email capture with a patient CRM</li>
+  <li>Physician-written patient guides</li>
   <li>Online patient forms</li>
-  <li>Mobile compatibility</li>
+  <li>Mobile-first, fast pages</li>
   <li>Integrated blog</li>
-  <li>Social media integration</li>
+  <li>Social media integration, including Instagram and TikTok</li>
   <li>Content management system</li>
   <li>Room to expand as technology changes</li>
 </ul>
@@ -830,12 +830,27 @@ TESTIMONIALS = [
 ]
 
 WORK = [
-    dict(name="Empire Medical Training", url="https://www.empiremedicaltraining.com/", img="portfolio-emt-700x525.png", shot="work-emt", did=["Website", "SEO", "E-mail and SMS campaigns", "Lead management", "Mobile app"],
-         note="Continuing medical education for physicians"),
-    dict(name="American Academy of Procedural Medicine", url="https://www.aaopm.com/", img="portfolio-aaopm-700x525.png", shot="work-aaopm", did=["Website", "SEO", "E-mail campaigns"],
-         note="CME training in aesthetics, pain management and functional medicine"),
-    dict(name="Empire On-Demand", url="https://www.empireondemand.com/", img="portfolio-eod-700x525.png", shot="work-eod", did=["Website", "Online store", "SEO"],
-         note="Online continuing medical education platform"),
+    dict(name="Empire Medical Training", url="https://www.empiremedicaltraining.com/", img="portfolio-emt-700x525.png", shot="work-emt",
+         note="The main website of our strategic partner: continuing medical education for physicians, with hundreds of course pages and online registration.",
+         did=["Website", "SEO", "E-mail and SMS campaigns", "Lead management", "Online registration"]),
+    dict(name="Empire Member Portal", url="https://portal3.empiremedicaltraining.com/", img="portfolio-emt-700x525.png", shot="work-portal",
+         note="The portal where Empire's members sign in with a one-time code to reach their courses, CME certificates and account.",
+         did=["Web portal", "Passwordless sign-in", "Online payments", "CME certificates"]),
+    dict(name="Empire Medical Training app", url="https://apps.apple.com/us/app/empire-medical-training-portal/id6786016946", img="portfolio-emt-700x525.png", shot="work-app",
+         note="The member app for iPhone and Android: upcoming courses, certificates and the membership card, in the member's pocket.",
+         did=["iPhone app", "Android app", "Course access", "Push notifications"]),
+    dict(name="Empire On-Demand", url="https://www.empireondemand.com/", img="portfolio-eod-700x525.png", shot="work-eod",
+         note="Empire's online education platform, with its own store, memberships and video library.",
+         did=["Website", "Online store", "SEO", "Video platform"]),
+    dict(name="American Academy of Procedural Medicine", url="https://www.aaopm.com/", img="portfolio-aaopm-700x525.png", shot="work-aaopm",
+         note="CME training in aesthetics, pain management and functional medicine.",
+         did=["Website", "SEO", "E-mail campaigns"]),
+    dict(name="Empire Verified", url="https://empireverified.com/", img="portfolio-emt-700x525.png", shot="work-verified",
+         note="A directory where patients find Empire-trained providers, compare treatments and contact the practice directly.",
+         did=["Website", "Provider directory", "Patient reviews"]),
+    dict(name="Find an Empire-Trained Provider", url="https://www.empiremedicaltraining.com/find-a-doctor/", img="portfolio-emt-700x525.png", shot="work-findadoctor",
+         note="A map search that connects patients with the physicians Empire has trained.",
+         did=["Provider locator", "Map search"]),
 ]
 
 ABOUT_BODY = """
@@ -855,28 +870,26 @@ ABOUT_BODY = """
 
 WHY_BODY = """
 <h2>Our guarantee</h2>
-<p>We offer a full, 100% money back guarantee in writing if you are not satisfied with your website. If you are not happy with your website within the first 15 days after your initial deposit, you will be refunded your entire advance payment. We are confident you will love our work.</p>
+<p>We offer a full, 100% money back guarantee in writing if you are not satisfied with your website. If you are not happy with your website within the first 15 days after your initial deposit, we refund your entire advance payment. We are confident you will love our work.</p>
 
 <h2>Our pricing</h2>
-<p>Our pricing is reasonable and in most cases more cost effective because of the efficiency of our work. Be careful with website firms whose prices are unbelievably low and whose promises are unrealistic. A refund policy protects you somewhat, but it cannot give back the time you lost. When you choose a web firm, shop around, compare prices, quality and staff, review their portfolio and make sure there is a written refund policy.</p>
+<p>Our pricing is reasonable and in most cases more cost effective because of how efficiently we work. Be careful with agencies whose prices are unbelievably low and whose promises are unrealistic. A refund policy protects you somewhat, but it cannot give back the time you lost. When you choose an agency, shop around, compare prices, quality and staff, review their portfolio and make sure there is a written refund policy.</p>
 
-<h2>Our experience</h2>
-<p>No matter how much traffic your website gets, the end result should always be a phone call to your practice from a patient interested in your services. Our results and phone tracking system lets you track that. Our clients only pay our fees when we achieve first page results for them.</p>
-
-<figure><img src="/assets/img/hero-team.webp" width="1280" height="720" alt="Agency staff and a physician advisor around a table" loading="lazy"></figure>
+<h2>How we measure results</h2>
+<p>No matter how much traffic your website gets, the end result should always be a patient contacting your practice about your services, most often by phone. Our results and call tracking system lets you see that for yourself. Our clients pay our fees only when we achieve first page results for them.</p>
 
 <h2>Our team</h2>
 <ul>
   <li><strong>Family owned.</strong> We are a family owned business, dedicated to the best results and service for our clients.</li>
   <li><strong>In house.</strong> We are a medium sized firm in Fort Lauderdale, Florida. All of our work is performed in house.</li>
-  <li><strong>The internet team.</strong> Website designers, programmers, graphic designers, videographers, and internet marketing and search engine optimization specialists.</li>
+  <li><strong>The digital team.</strong> Web designers, developers, graphic designers, videographers, and digital marketing and search specialists.</li>
   <li><strong>The business team.</strong> MBAs and marketing experts, plus a physician and legal advisory board for our medical websites.</li>
   <li><strong>AI at work.</strong> We use the latest AI tools to research, draft, test and report faster, with people reviewing the result.</li>
 </ul>
 
-<h2>We are unique</h2>
+<h2>What sets us apart</h2>
 <p>We genuinely care about our clients and want you to be successful. We do more than build websites and campaigns. We focus on results you can notice in your practice.</p>
-<p>Our MBAs take the time to study your specialty and your competitors, in order to build a marketing plan that is cost effective and aimed at results. Our physician advisory board is made up of physicians from different specialties who provide medical material for your website and marketing that is compelling and medically accurate.</p>
+<p>Our MBAs take the time to study your specialty and your competitors, so your marketing plan is cost effective and aimed at results. Our physician advisory board is made up of physicians from different specialties who provide material for your website and marketing that is helpful to patients and medically accurate.</p>
 <p>We give our clients personal service and attention, and we take direction only from you.</p>
 """
 
@@ -885,16 +898,15 @@ ARTICLES = [
          date="October 23, 2016", img="dental-office", alt="A dentist talking with a patient in a modern operatory",
          lead="Being the best dentist does not mean you can ignore current marketing. Patients now search for practices online.",
          body="""
-<p>The modern patient does more than rely on word of mouth. Having an attractive, informative website for your practice reaches new patients through internet exposure and a strong social media presence. It is important to give potential patients information about yourself, your practice and the technology you provide.</p>
-<p>Dental internet marketing is the most cost effective way to grow your practice and increase revenue, and using a professional dental marketing company makes sure your site is as effective as it can be.</p>
-<p>Internet marketing is the easiest and most effective way to attract new patients and to create loyalty with your current ones.</p>
+<p>Patients compare dentists online before they call. They read reviews, look at your Google Business Profile, ask AI assistants for recommendations and visit your website on their phones. A clear, attractive and informative website, supported by an active social media presence, gives them what they need to know about you, your practice and the technology you provide.</p>
+<p>Dental internet marketing is the most cost-effective way to grow your practice and increase revenue, and working with a professional dental marketing company makes sure your site is as effective as it can be. It is also the easiest way to attract new patients and build loyalty with your current ones.</p>
 <p>Rx Medical Web has a complete team of designers, programmers and internet specialists who work closely with dentists to make sure content is medically accurate. Each site is custom tailored for the practice, not a prefabricated template.</p>
 
 <h2>Dental website features</h2>
 <ul>
-  <li>Exceptional dental website design</li>
+  <li>Exceptional dental website design that is mobile-first, fast and accessible</li>
   <li>Online dental education videos</li>
-  <li>Internet visibility and high search engine rankings</li>
+  <li>Helpful, dentist-reviewed content and structured data for visibility in search engines and AI search</li>
   <li>Simple navigation</li>
   <li>Optional video testimonials</li>
 </ul>
@@ -902,8 +914,8 @@ ARTICLES = [
 <h2>Dental website and internet services</h2>
 <ul>
   <li>Custom dental marketing website to match your practice</li>
-  <li>Social media pages and marketing</li>
-  <li>Email marketing campaigns</li>
+  <li>Social media pages and marketing, including Instagram, TikTok and short-form video</li>
+  <li>Email marketing campaigns and automation</li>
   <li>Full EMR integration</li>
   <li>Patient education resources</li>
 </ul>
@@ -913,8 +925,8 @@ ARTICLES = [
          date="October 25, 2016", img="physician-laptop", alt="A physician working on a laptop",
          lead="Is your medical website one in a million, or one of a million? Creating a website does not mean anyone is looking at it.",
          body="""
-<p>Without effective internet marketing, the chances of your medical website being seen are little to none. Without a strong plan, your website is drifting along, collecting virtual dust.</p>
-<p>Businesses connect to their customers through internet marketing better than through any other source. People are connected at home, in the office and in their back pockets. To the average patient, searching for a medical practitioner can be monotonous, and without an appealing design and an effective strategy your website will be passed over, if it is noticed at all.</p>
+<p>A medical website without a marketing plan behind it is rarely seen. Patients find practices through search results, maps, reviews and, increasingly, AI assistants, and a site that does not show up in those places sits unused.</p>
+<p>Patients compare practices on their phones, often in a few minutes, before they ever call. A site that loads slowly, is hard to read on a small screen or does not answer their questions gets passed over. A clear design and a strategy built around how patients actually choose a practitioner give your practice a fair chance of being considered.</p>
 
 <h2>Internet marketing options for medical practitioners</h2>
 <ul class="two">
@@ -924,21 +936,22 @@ ARTICLES = [
   <li>Newsletters and email marketing</li>
   <li>Local advertising</li>
   <li>Medical directory placement</li>
-  <li>Online listings</li>
-  <li>Banner ads</li>
+  <li>Google Business Profile and online listings</li>
+  <li>Display advertising</li>
   <li>Press releases</li>
   <li>Custom brochures for direct mail</li>
 </ul>
 <p>Rx Medical Web is a Fort Lauderdale, Florida based company that works only on medical websites. Our team works with practitioners to implement marketing plans designed for each practice. Whether you want a new website or want to improve an existing one, we will create a strategy to fit your needs.</p>
 
-<h2>What medical internet marketing can achieve</h2>
+<h2>What medical internet marketing is designed to do</h2>
 <ul>
-  <li>First page listings on search engines like Google</li>
-  <li>A dramatic increase of visitors to your website</li>
-  <li>New patients and revenue for your practice</li>
-  <li>Social media marketing that reaches patients directly</li>
-  <li>Directory listings that maximize exposure</li>
+  <li>Make your practice easier to find in Google search, maps and AI search results</li>
+  <li>Bring more of the right visitors to your website</li>
+  <li>Turn those visits into new patient inquiries and appointments</li>
+  <li>Reach patients directly on the social platforms they use</li>
+  <li>Keep your directory and listing information accurate and consistent wherever patients look</li>
 </ul>
+<p>Results depend on your specialty, your market and your starting point, so we set goals with each practice individually.</p>
 <p>Feel free to contact us at <a href="tel:+19543582856">954-358-2856</a>.</p>
 """),
 ]

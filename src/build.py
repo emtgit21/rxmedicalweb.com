@@ -323,10 +323,10 @@ def testimonials_block(full=False):
 <div class="quotes">{rest}</div>"""
 
 
-def work_cards(tag="h3"):
+def work_cards(tag="h3", only=None):
     return "".join(
         f'<a href="{w["url"]}" rel="noopener"><div class="shot"><img src="/assets/img/{w["shot"]}.webp" width="1400" height="801" alt="Screenshot of the {e(w["name"])} website" loading="lazy"></div>'
-        f'<{tag}>{e(w["name"])}</{tag}><p>{e(w["note"])}</p></a>' for w in WORK)
+        f'<{tag}>{e(w["name"])}</{tag}><p>{e(w["note"])}</p></a>' for w in WORK if not only or w["shot"] in only)
 
 
 def page_head(crumbs, h1, lead, img=None, alt=""):
@@ -571,7 +571,8 @@ def build_home():
       <h2>Recent work</h2>
       <p>Some of our most recent website launches.</p>
     </div>
-    <div class="work-3">{work_cards()}</div>
+    <div class="work-3">{work_cards(only=("work-emt", "work-app", "work-eod"))}</div>
+    <p class="more-work"><a class="btn btn-line" href="/portfolio/">See all our work</a></p>
   </div>
 </section>
 
