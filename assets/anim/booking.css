@@ -8,7 +8,7 @@
 .ax-booking-title{margin:0;font-size:.9rem;font-weight:700}
 .ax-booking-sub{display:block;width:40%;height:7px;margin-top:7px;border-radius:4px;background:#dfeae7}
 .ax-booking-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-top:16px}
-.ax-booking-day{font-size:.72rem;font-weight:600;text-align:center;opacity:.6}
+.ax-booking-day{font-size:.72rem;font-weight:600;text-align:center;opacity:.78}
 .ax-booking-slot{position:relative;height:34px;display:grid;place-items:center;border-radius:10px;font-size:.72rem;font-weight:600;background-color:#fff;box-shadow:inset 0 0 0 1px var(--rule)}
 .ax-booking-off{background-color:var(--mint);box-shadow:none}
 .ax-booking-off::after{content:'';width:18px;height:7px;border-radius:4px;background:#dfeae7}

@@ -173,7 +173,7 @@
   // Living-photo clips play only while visible.
   // Phones show the hero as a still image, so the hero clip is never downloaded there.
   var heroClip = document.querySelector('.hero-bg');
-  if (heroClip && window.matchMedia('(max-width: 700px)').matches) { heroClip.removeAttribute('autoplay'); heroClip.preload = 'none'; heroClip.removeAttribute('loop'); }
+  if (heroClip && window.matchMedia('(max-width: 700px)').matches) heroClip.removeAttribute('loop');   // hidden on phones: never observed, never downloaded
   var clips = document.querySelectorAll('video[loop]');
   if ('IntersectionObserver' in window) {
     var vo = new IntersectionObserver(function (entries) {
@@ -182,7 +182,7 @@
         else en.target.pause();
       });
     }, { threshold: 0.1 });
-    clips.forEach(function (v) { if (calm) { v.removeAttribute('autoplay'); v.pause(); } vo.observe(v); });
+    if (!calm) clips.forEach(function (v) { vo.observe(v); });
   }
 
   // Start each animated graphic when it scrolls into view, and pause it when it leaves.

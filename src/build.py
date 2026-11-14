@@ -86,7 +86,7 @@ def words(text):
 def media(name, alt, cls, w=1248, h=832, lazy=True):
     """A living-photo clip when one exists, otherwise the still."""
     if has_video(name):
-        return (f'<video class="{cls}" autoplay muted loop playsinline preload="metadata" poster="/assets/img/{name}.webp" '
+        return (f'<video class="{cls}" muted loop playsinline preload="none" poster="/assets/img/{name}.webp" '
                 f'width="{w}" height="{h}" aria-label="{e(alt)}"><source src="/assets/video/{name}.mp4?v={ver("assets/video/" + name + ".mp4")}" type="video/mp4"></video>')
     return f'<img class="{cls}" src="/assets/img/{name}.webp" width="{w}" height="{h}" alt="{e(alt)}"{" loading=lazy" if lazy else ""}>'
 
@@ -516,7 +516,7 @@ def build_home():
         groups.append(f'<div class="formulary-group"><h3>{e(gname)}<small>{e(gdesc)}</small></h3><ul class="formulary-list">{rows}</ul></div>')
 
     body = f"""<section class="hero hero-video">
-  <video class="hero-bg" autoplay muted loop playsinline preload="metadata" poster="/assets/img/hero-clinic.webp" aria-hidden="true" tabindex="-1">
+  <video class="hero-bg" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1">
     <source src="/assets/video/hero.mp4?v={ver("assets/video/hero.mp4")}" type="video/mp4">
   </video>
   <div class="wrap">

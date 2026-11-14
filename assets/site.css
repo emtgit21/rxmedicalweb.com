@@ -1296,3 +1296,6 @@ video { max-width: 100%; height: auto; }
   .c-card i { display: none; } .c-card u { height: 30px; } .c2 { top: 10%; } .c3 { left: 22%; } .c-card p { font-size: .68rem; padding: 6px 9px; }
 }
 .quote-h { font-size: 1.3rem; letter-spacing: -0.01em; line-height: 1.2; }
+
+/* v9: clips no longer autoplay from the markup (site.js starts them when visible), so phones never download the hero clip. */
+@media (min-width: 701px) { .hero-video { background: var(--ink) url(/assets/img/hero-clinic.webp) center / cover; } }
