@@ -2350,5 +2350,89 @@
     "t": "Review call with our team"
    }
   ]
+ },
+ "mobile-apps": {
+  "plain": "A mobile app is a program patients install on their phone from the Apple App Store or Google Play, with your practice's name and logo on the icon. It puts booking, reminders, offers and messages one tap away, and it gives you a way to see and run your practice from your own phone. A practice needs one when it wants patients to come back often and wants to reach them without depending on email or social media.",
+  "deliverables": [
+   {
+    "t": "iPhone and Android apps",
+    "d": "Two apps, one for each kind of phone, built from a single code base so they look and work the same."
+   },
+   {
+    "t": "App design in your brand",
+    "d": "Screens, icon and colors designed to match your website and your office, so patients recognize you at once."
+   },
+   {
+    "t": "Store listings",
+    "d": "Your app published under your practice's name in the App Store and on Google Play, with screenshots and descriptions written for you."
+   },
+   {
+    "t": "Notifications",
+    "d": "Messages that appear on the patient's phone for reminders, open slots and offers, sent by you or automatically."
+   },
+   {
+    "t": "Connections to your systems",
+    "d": "The app talks to your booking system, website and CRM, so appointments and patient details stay in one place."
+   },
+   {
+    "t": "Updates and support",
+    "d": "We keep the app working as Apple and Google release new phone software, and add features as your practice grows."
+   }
+  ],
+  "steps": [
+   {
+    "t": "Plan",
+    "d": "We agree on what the app should do first for your patients and for you. You tell us which systems you use for booking and records."
+   },
+   {
+    "t": "Design",
+    "d": "We design the screens and the icon and show you a version you can tap through on your own phone. You approve it before anything is built."
+   },
+   {
+    "t": "Build and test",
+    "d": "We build both apps, connect them to your systems and test them on real phones. Your staff tries the app and tells us what to change."
+   },
+   {
+    "t": "Publish and improve",
+    "d": "We submit the app to Apple and Google, handle their review and launch it to your patients. After that we watch how it is used and release updates."
+   }
+  ],
+  "tools": [
+   {
+    "t": "Apple App Store",
+    "d": "The only place iPhone owners can install apps. We set up your developer account, prepare the listing and handle Apple's review."
+   },
+   {
+    "t": "Google Play",
+    "d": "The store for Android phones. We publish and update your app there in step with the iPhone version."
+   },
+   {
+    "t": "Cross-platform framework",
+    "d": "A way of writing one app that runs on both iPhone and Android. We use it so you pay for one build and both apps stay in sync."
+   },
+   {
+    "t": "Push notifications",
+    "d": "Short messages that appear on a phone's lock screen from your app. We set up reminders and offers, and patients choose whether to receive them."
+   }
+  ],
+  "fit": [
+   "your patients return for repeat treatments and you want to stay in front of them between visits",
+   "you want to see your schedule, leads and messages from your phone",
+   "you sell products, memberships or packages and want patients to buy and rebook easily"
+  ],
+  "glossary": [
+   {
+    "t": "Native app",
+    "d": "An app installed from a store that lives on the phone, as opposed to a website opened in a browser."
+   },
+   {
+    "t": "Push notification",
+    "d": "A message your app sends to a patient's phone, which shows up even when the app is closed."
+   },
+   {
+    "t": "App review",
+    "d": "The check Apple and Google run on every app and update before they allow it in their stores."
+   }
+  ]
  }
 }

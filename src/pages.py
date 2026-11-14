@@ -126,6 +126,41 @@ SERVICES = [
 </ul>
 <p>AI tools let us produce and test variations quickly. Our physician advisors review the medical claims on every page.</p>
 """),
+    dict(group=0, slug="mobile-apps", name="Mobile apps for iPhone and Android", new=True,
+         h1="Mobile apps for your practice",
+         lead="Your own app in the App Store and on Google Play, with your name and your brand, so patients carry your practice in their pocket and you run it on the go.",
+         blurb="Your own iPhone and Android app, for your patients and for running your practice on the go.",
+         img="mobile-app", alt="A physician checking an app on a phone in a clinic hallway",
+         anim=("flow", ["Plan the features", "Design your app", "Build for iPhone and Android", "Publish in the stores", "Updates and support"]),
+         body="""
+<p>Patients spend most of their phone time inside apps, not in a browser. An app with your practice's name on their home screen keeps you one tap away, and a notification from your app gets seen in a way an email often does not.</p>
+<p>We design and build the app, publish it in the Apple App Store and on Google Play under your practice's name, and keep it updated. We have done this for Empire Medical Training, whose app is live in both stores.</p>
+
+<h2>What patients can do in your app</h2>
+<ul class="two">
+  <li>Book and manage appointments</li>
+  <li>Get reminders and offers as notifications</li>
+  <li>Fill in forms before a visit</li>
+  <li>See treatments, prices and before-and-after galleries</li>
+  <li>Buy products and gift cards</li>
+  <li>Earn and redeem loyalty rewards</li>
+  <li>Message your front desk</li>
+  <li>Find directions and call in one tap</li>
+</ul>
+
+<h2>What you can do on the go</h2>
+<ul>
+  <li>See today's schedule, new leads and messages from your phone</li>
+  <li>Approve content, reviews and replies wherever you are</li>
+  <li>Send a notification about an open slot or a promotion in a minute</li>
+  <li>Check calls, bookings and campaign results without opening a laptop</li>
+</ul>
+
+<h2>How we build it</h2>
+<p>One code base produces both the iPhone and the Android app, which keeps the cost and the timeline reasonable and means new features reach both at once. The app connects to your website, your booking system and your CRM, so nothing is entered twice. We handle the developer accounts, the store listings, the review process and every update after launch.</p>
+
+<div class="note"><p>Anything in the app that touches patient information is built with HIPAA requirements in mind, and we work with your compliance contact on the details.</p></div>
+"""),
     dict(group=0, slug="medical-e-commerce", name="Medical e-commerce",
          h1="Online medical stores and shopping carts",
          lead="Sell skincare, supplements and other products from your practice website. We set up the store, the payments and the products.",

@@ -30,7 +30,7 @@ CUSTOM_ANIM = {
     "marketing-strategy": "roadmap", "medical-graphic-design": "brand", "printing": "press",
     "medical-practice-kit": "kit", "analytics-call-tracking": "dashboard", "medical-e-commerce": "cart",
     "emr-patient-portals": "portal", "website-accessibility-compliance": "a11y", "website-maintenance": "uptime",
-    "landing-pages-funnels": "abtest", "medical-spa-website-design": "devices",
+    "landing-pages-funnels": "abtest", "mobile-apps": "apps", "medical-spa-website-design": "devices",
 }
 try:
     import json

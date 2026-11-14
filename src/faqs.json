@@ -502,5 +502,23 @@
    "q": "What will we see in the reports, and will we have to interpret the data ourselves?",
    "a": "You get a live dashboard you can open at any time, showing calls, form submissions, chat conversations and online bookings, along with the cost per inquiry for each channel. Each month we send a report in plain language, with AI-assisted summaries of call recordings so you learn what patients ask for. We then hold a review call with you to decide what to change next."
   }
+ ],
+ "mobile-apps": [
+  {
+   "q": "We already have a mobile-friendly website. Why would we need an app?",
+   "a": "A website is where new patients find you. An app is for the patients you already have: it sits on their home screen, remembers who they are and can send them a reminder or an offer directly. Practices with repeat treatments, memberships or products tend to get the most from one."
+  },
+  {
+   "q": "Will the app be under our practice's name or yours?",
+   "a": "Under yours. The app appears in the App Store and on Google Play with your practice's name, icon and description. We set up the developer accounts in your name and manage them for you."
+  },
+  {
+   "q": "How long does it take and what does it cost?",
+   "a": "Both depend on what the app needs to do and which systems it has to connect to. After a free analysis and a planning conversation we give you a quote and a schedule. Building one code base for both iPhone and Android keeps both lower than building two separate apps."
+  },
+  {
+   "q": "What happens after the app is published?",
+   "a": "We keep it working as Apple and Google update their phones, fix anything that comes up and add features when you ask for them. We also send you reports on how many patients installed the app and what they use most."
+  }
  ]
 }
