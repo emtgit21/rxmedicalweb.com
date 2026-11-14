@@ -1152,7 +1152,7 @@ video { max-width: 100%; height: auto; }
 .bk-what li::before { content: counter(bw); position: absolute; left: 6px; top: 10px; font-family: var(--hand); font-size: 2.3rem; line-height: 1; color: var(--green); }
 .bk-what b { display: block; color: #fff; font-stretch: 108%; }
 .bk-alt { margin: 26px 0 0; color: #a9c8c6; font-size: .98rem; }
-.bk-alt a { color: #fff; font-weight: 650; }
+.bk-alt a { color: #fff; font-weight: 650; } .bk-alt a:hover { color: var(--green); }
 .bk-card { background: #fff; color: var(--ink); border-radius: 20px; padding: clamp(20px, 3vw, 36px); box-shadow: 0 50px 90px -50px rgba(0,0,0,.85), 0 0 0 1px rgba(255,255,255,.08); }
 .bk-card h2 { font-size: 1.15rem; display: flex; align-items: center; gap: 10px; margin: 0 0 14px; letter-spacing: -.01em; }
 .bk-card h2 i { font-style: normal; flex: none; width: 28px; height: 28px; border-radius: 50%; background: var(--ink); color: #fff; display: grid; place-items: center; font-size: .85rem; font-weight: 700; }
