@@ -45,7 +45,7 @@ MAIL_KEY = os.environ.get("MAILGUN_SENDING_KEY", "").strip()
 MAIL_DOMAIN = os.environ.get("RXB_MAIL_DOMAIN", "mg.rxmedicalweb.com")
 MAIL_TO = os.environ.get("RXB_MAIL_TO", "support@rxmedicalweb.com")
 
-OPEN, CLOSE = dt.time(9, 0), dt.time(18, 0)   # office hours, Eastern time, Monday to Friday
+OPEN, CLOSE = dt.time(9, 0), dt.time(19, 0)   # office hours, Eastern time, Monday to Saturday (confirmed 2026-11-14)
 SLOT_MIN = 30          # length of a call
 STEP_MIN = 30          # distance between start times
 LEAD_HOURS = 3         # earliest bookable time from now
@@ -91,7 +91,7 @@ def open_slots():
     days = []
     for n in range(DAYS_AHEAD + 1):
         day = (now + dt.timedelta(days=n)).date()
-        if day.weekday() > 4 or day.isoformat() in closed:
+        if day.weekday() > 5 or day.isoformat() in closed:
             continue
         t = dt.datetime.combine(day, OPEN, TZ)
         end = dt.datetime.combine(day, CLOSE, TZ)

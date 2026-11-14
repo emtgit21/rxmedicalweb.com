@@ -182,7 +182,7 @@ def footer():
     <div class="footer-top">
       <div class="footer-brand">
         <img src="{UP}mainlogo.png" width="400" height="83" alt="Rx Medical Web" loading="lazy">
-        <address>2720 E. Oakland Park Blvd, Suite 103<br>Fort Lauderdale, FL 33306<br>Monday to Friday, 9 am to 6 pm</address>
+        <address>2720 E. Oakland Park Blvd, Suite 103<br>Fort Lauderdale, FL 33306<br>Monday to Saturday, 9 am to 7 pm</address>
       </div>
       <div><p class="fh">Contact</p><ul>
         <li><a href="{PHONE_HREF}">{PHONE}</a></li>
@@ -1169,7 +1169,7 @@ def build_booking():
         <li><b>On the call</b>We tell you what we would fix first, and answer your questions.</li>
         <li><b>After the call</b>You get a written plan with packages and pricing. No obligation.</li>
       </ol>
-      <p class="bk-alt">Rather call now? <a href="{PHONE_HREF}">{PHONE}</a>, Monday to Friday, 9 am to 6 pm Eastern.</p>
+      <p class="bk-alt">Rather call now? <a href="{PHONE_HREF}">{PHONE}</a>, Monday to Saturday, 9 am to 7 pm Eastern.</p>
     </div>
     <div class="bk-card" data-booking>
       <div class="bk-pick">
@@ -1238,7 +1238,7 @@ def build_contact():
       <div><dt>E-mail</dt><dd><a href="mailto:{EMAIL}">{EMAIL}</a></dd></div>
       <div><dt>Call with us</dt><dd><a href="/book-a-call/">Pick a time and we call you</a></dd></div>
       <div><dt>Address</dt><dd>2720 E. Oakland Park Blvd, Suite 103<br>Fort Lauderdale, FL 33306<br><a href="https://maps.google.com/?q=2720+E+Oakland+Park+Blvd+Fort+Lauderdale+FL+33306" rel="noopener">See on the map</a></dd></div>
-      <div><dt>Hours</dt><dd>Monday to Friday<br>9 am to 6 pm</dd></div>
+      <div><dt>Hours</dt><dd>Monday to Saturday<br>9 am to 7 pm</dd></div>
     </dl>
   </div>
   <form class="form" id="analysis" data-mailto="{EMAIL}" data-endpoint="/api/booking/contact" action="mailto:{EMAIL}" method="post" enctype="text/plain">
